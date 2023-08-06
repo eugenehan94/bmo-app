@@ -1,0 +1,47 @@
+<section>
+  <div>
+    <div class="title"><h1>BMO Personal Banking</h1></div>
+    <div class="sub-title"><h2>What can we help you find today?</h2></div>
+    <div>
+      <mat-tab-group animationDuration="0ms">
+        <mat-tab
+          [label]="tabContent.label"
+          *ngFor="let tabContent of tabContents"
+        >
+          <div style="padding: 1rem">
+            <mat-card
+              *ngFor="let card of tabContent.cardData"
+              style="margin-bottom: 1.5rem"
+            >
+              <img
+                *ngIf="card.image"
+                mat-card-image
+                src="{{ card.image }}"
+                alt="Photo of a Shiba Inu"
+                style="
+                  height: 164px;
+                  object-fit: fill;
+                  border-bottom-left-radius: 10000px 2000px;
+                  border-bottom-right-radius: 10000px 2000px;
+                "
+              />
+              <img
+                *ngIf="card.svg"
+                src="{{ card.svg }}"
+                alt="FIX"
+                style="width: 60px; height: 60px"
+              />
+              <mat-card-content>
+                <h3>{{ card.title }}</h3>
+                <p>
+                  {{ card.description }}
+                </p>
+                <a href="`${card.src}`" alt="">{{ card.srcTitle }}</a>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</section>

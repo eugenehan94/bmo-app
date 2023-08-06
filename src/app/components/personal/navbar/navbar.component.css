@@ -1,0 +1,148 @@
+mat-toolbar {
+  border-bottom: 1px solid #d9dce1;
+  padding-left: 1rem;
+}
+
+.toolbar-small {
+  height: 101px;
+  padding-left: 2rem;
+}
+
+.mobile-logo-container {
+  flex: 1;
+}
+
+mat-toolbar div {
+  /* flex: 1; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo-xsmall {
+  width: 100px;
+  height: 28px;
+}
+
+.logo-small {
+  width: 116px;
+  height: 40px;
+}
+
+.site-select-container {
+  position: relative;
+  height: 100%;
+  width: 270px;
+  cursor: pointer;
+}
+.site-select-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-right: 1px solid #d9dce1
+}
+.site-select-wrapper span {
+  font-size: 1rem;
+  color: #646c76;
+  padding-left:16px;
+  /* text-indent: 16px; */
+}
+.site-select-list {
+  position: absolute;
+  top: 64px;
+  background-color: white;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  box-shadow: 0 1.5px 1.5px 1.5px #d9dce1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.site-select-list li {
+  font-size: 1rem;
+  color: #001928;
+  text-indent: 16px;
+}
+.mobile-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.mobile-btn-container button {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.signin-btn {
+  color: #0075be;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  height: 100%;
+  padding: 0 2rem;
+}
+.signing-btn-border {
+  border-left: 1px solid #d9dce1;
+  border-right: 1px solid #d9dce1;
+}
+
+.signin-btn span {
+  display: flex;
+  align-items: center;
+}
+.signin-btn:hover {
+  text-decoration: underline;
+}
+.signin-btn:hover,
+.mobile-menu-btn {
+  cursor: pointer;
+}
+
+.signin-btn mat-icon {
+  margin-right: 2px;
+}
+.mobile-menu-btn {
+  border: none;
+  padding: 0 1.5rem;
+}
+
+/* Mobile menu and hamburger icon */
+
+.close-container {
+  transition: transform 0.2s;
+}
+.close-container.open {
+  transition: transform 0.2s ease 0s;
+  padding: 10px 0px;
+  transform: rotate(90deg);
+}
+
+.hamburger-icon-top,
+.hamburger-icon-middle,
+.hamburger-icon-bottom {
+  border-top: 2px solid #646c76;
+  display: block;
+  width: 20px;
+}
+
+.hamburger-icon-top.open {
+  transform: rotate(45deg);
+}
+
+.hamburger-icon-middle {
+  margin: 5px 0;
+}
+
+.hamburger-icon-middle.open {
+  opacity: 0;
+  margin: -2px 0;
+}
+
+.hamburger-icon-bottom.open {
+  transform: rotate(135deg);
+}

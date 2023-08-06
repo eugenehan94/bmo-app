@@ -1,0 +1,156 @@
+<div>
+  <mat-toolbar [ngClass]="{ 'toolbar-small': currentScreenSize === 'Small' }">
+    <div class="mobile-logo-container">
+      <a
+        style="text-align: left"
+        *ngIf="currentScreenSize === 'XSmall' || currentScreenSize === 'Small'"
+      >
+        <div>
+          <img
+            src="../../../assets/svg/bmoLogo.svg"
+            alt="Bank of Montreal logo"
+            [ngClass]="{
+              'logo-xsmall': currentScreenSize === 'XSmall',
+              'logo-small': currentScreenSize === 'Small'
+            }"
+          />
+        </div>
+      </a>
+      <div class="site-select-container" *ngIf="currentScreenSize === 'Medium'">
+        <div
+          class="site-select-wrapper"
+          (click)="isSelectedSiteOpen = !isSelectedSiteOpen"
+        >
+          <span>{{ selectedSiteOption }}</span
+          ><span *ngIf="!isSelectedSiteOpen"
+            ><mat-icon>expand_more</mat-icon></span
+          >
+          <span *ngIf="isSelectedSiteOpen"
+            ><mat-icon>expand_less</mat-icon></span
+          >
+        </div>
+        <ul class="site-select-list" *ngIf="isSelectedSiteOpen">
+          <li *ngFor="let option of siteOptions">{{ option.title }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mobile-btn-container">
+      <button
+        class="signin-btn"
+        [ngClass]="{ 'signing-btn-border': currentScreenSize === 'XSmall' }"
+        (click)="isMobileSignInMenuOpen = !isMobileSignInMenuOpen"
+      >
+        <span *ngIf="isMobileSignInMenuOpen">
+          <mat-icon>close</mat-icon><span>Close</span></span
+        >
+        <span *ngIf="!isMobileSignInMenuOpen"
+          ><mat-icon>lock_open</mat-icon><span>Sign In</span></span
+        >
+      </button>
+
+      <button
+        *ngIf="currentScreenSize === 'XSmall' || currentScreenSize === 'Small'"
+        class="mobile-menu-btn"
+        (click)="isMobileMenuOpen = !isMobileMenuOpen"
+      >
+        <span
+          class="close-container"
+          [ngClass]="isMobileMenuOpen ? 'open' : null"
+        >
+          <span
+            class="hamburger-icon-top"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+          <span
+            class="hamburger-icon-middle"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+          <span
+            class="hamburger-icon-bottom"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+        </span>
+      </button>
+    </div>
+  </mat-toolbar>
+  <div
+    *ngIf="currentScreenSize === 'Medium'"
+    style="
+      display: flex;
+      align-items: center;
+      padding-left: 2rem;
+      padding-top: 0.5rem;
+      padding-right: 2rem;
+    "
+  >
+    <div>
+      <img
+        src="../../../assets/svg/bmoLogo.svg"
+        alt="Bank of Montreal logo"
+        class="logo-small"
+      />
+    </div>
+    <div>
+      <nav>
+        <ul style="display: flex; list-style-type: none">
+          <li *ngFor="let navOption of navbarOptions">
+            <button
+              style="
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                font-size: 1rem;
+                padding: 0 12px;
+              "
+            >
+              {{ navOption.title }}
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- <div>
+    <div>
+      <div>
+        <div (click)="isSelectedSiteOpen = !isSelectedSiteOpen">
+          <span>{{ selectedSiteOption }}</span
+          ><span
+            ><mat-icon
+              aria-label="Expand more icon"
+              fontIcon="expand_more"
+            ></mat-icon
+          ></span>
+        </div>
+        <ul *ngIf="isSelectedSiteOpen">
+          <li *ngFor="let option of siteOptions">{{ option.title }}</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <input type="text" placeholder="Search" />
+    </div>
+    <div>
+      <select>
+        <option>CA</option>
+      </select>
+      <select>
+        <option>EN</option>
+      </select>
+      <span> Sign In</span>
+    </div>
+    <h1>{{ currentScreenSize }}</h1>
+  </div>
+  <div>
+    <div>
+      <img src="../../../assets/svg/bmoLogo.svg" alt="Bank of Montreal logo" />
+    </div>
+    <div>
+      <nav>
+        <ul>
+          <li *ngFor="let navOption of navbarOptions">{{ navOption.title }}</li>
+        </ul>
+      </nav>
+    </div>
+  </div> -->
+</div>
