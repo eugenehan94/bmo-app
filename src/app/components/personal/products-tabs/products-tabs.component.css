@@ -25,6 +25,40 @@ section {
   margin-bottom: 1rem;
 }
 
+.tab-content-container {
+  padding: 1.5rem;
+}
+
+.mat-card-image {
+  height: 164px;
+  object-fit: cover;
+  border-bottom-left-radius: 10000px 2000px;
+  border-bottom-right-radius: 10000px 2000px;
+  overflow: hidden;
+}
+.mat-card-svg {
+  width: 60px;
+  height: 60px;
+}
+.mat-card-content-title {
+  font-size: 22px;
+  font-weight: 500;
+}
+.mat-card-content-desc {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  padding-bottom: 0.8rem;
+}
+.mat-card-content-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
 /* Angular Material Styles */
 
 :host ::ng-deep .mat-mdc-tab .mdc-tab-indicator__content--underline {
@@ -36,4 +70,25 @@ section {
   .mat-mdc-tab.mdc-tab--active:focus
   .mdc-tab-indicator__content--underline {
   border-color: #0075be;
+}
+.blue {
+  background-color: #0075be;
+}
+.ultramarine {
+  background-color: #005587;
+}
+.albicant {
+  background-color: #f5f6f7;
+}
+.text-white {
+  color: white;
+}
+.text-blue {
+  color: #0075be;
+}
+mat-card {
+  margin-bottom: 1.5rem;
+}
+mat-card-content {
+  padding: 0 2rem 1.5rem;
 }
