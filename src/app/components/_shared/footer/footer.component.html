@@ -1,0 +1,79 @@
+<section>
+  <div>
+    <div class="section-container">
+      <div class="cdic-wrapper">
+        <a
+          *ngFor="let cdic of cdicData"
+          href="{{ cdic.href }}"
+          target="_blank"
+          [attr.aria-label]="cdic.ariaLabel"
+          class="cdic-image-wrapper"
+        >
+          <img src="{{ cdic.src }}" alt="{{ cdic.alt }}" style="width: 100%" />
+        </a>
+      </div>
+      <p class="cdic-description">
+        We are members of the
+        <a
+          href="https://www.bmo.com/main/personal/cdic/"
+          aria-label="Canada Deposit Insurance Corporation C D I C, opens an external page in a new tab"
+          target="_blank"
+          rel="noopener"
+          class="cdic-description-link"
+          >Canada Deposit Insurance Corporation (CDIC)</a
+        >
+      </p>
+    </div>
+    <div class="section-container blue-background">
+      <div *ngFor="let categoryLinks of footerCategoryLinks" class="category-links-wrapper">
+        <div class="category-links-title text-white">{{ categoryLinks.title }}</div>
+        <a
+          *ngFor="let link of categoryLinks.links"
+          href="{{ link.src }}"
+          [attr.aria-label]="link.ariaLabel"
+          target="_blank"
+          >{{ link.name }}</a
+        >
+      </div>
+    </div>
+    <div class="section-container blue-background">
+      <div>
+        <a
+          *ngFor="let supportLink of footerSupportLinks"
+          href="{{ supportLink.src }}"
+          target="_blank"
+          [attr.aria-label]="supportLink.ariaLabel"
+          ><img
+            src="{{ supportLink.icon }}"
+            style="width: 2rem; height: 2rem"
+          />{{ supportLink.title }}</a
+        >
+      </div>
+    </div>
+    <div class="section-container blue-background">
+      <div>
+        <div *ngFor="let socialMedia of socialMediaData">
+          <a
+            href="{{ socialMedia.href }}"
+            target="_blank"
+            [attr.aria-label]="socialMedia.ariaLabel"
+          >
+            <img
+              src="{{ socialMedia.icon }}"
+              alt="{{ socialMedia.alt }}"
+              style="width: 28px; height: 28px"
+            />
+          </a>
+        </div>
+      </div>
+      <div>
+        <a
+          *ngFor="let aboutData of aboutBmoData"
+          href="{{ aboutData.href }}"
+          [attr.aria-label]="aboutData.ariaLabel"
+          >{{ aboutData.text }}</a
+        >
+      </div>
+    </div>
+  </div>
+</section>

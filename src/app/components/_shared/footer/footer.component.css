@@ -1,0 +1,39 @@
+.section-container {
+  padding: 1.5rem;
+}
+
+.cdic-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0 1.5rem;
+}
+.cdic-image-wrapper {
+  width: 106px;
+  height: 3rem;
+}
+.cdic-description {
+  text-align: center;
+}
+.cdic-description-link {
+  color: #0075be;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.blue-background {
+  background-color: #0075be;
+}
+.text-white {
+  color: white;
+}
+
+.category-links-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.category-links-title {
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
