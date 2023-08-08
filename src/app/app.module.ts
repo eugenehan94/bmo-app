@@ -13,7 +13,10 @@ import { NgOptimizedImage } from '@angular/common'
 import {MaterialDesignModule} from "./material-design/material-design.module";
 import { NavbarComponent } from './components/personal/navbar/navbar.component';
 import { HeroComponent } from './components/personal/hero/hero.component';
-import { ProductsTabsComponent } from './components/personal/products-tabs/products-tabs.component'
+import { ProductsTabsComponent } from './components/personal/products-tabs/products-tabs.component';
+import { DownloadBannerComponent } from './components/personal/download-banner/download-banner.component';
+import { WhereToBeginComponent } from './components/personal/where-to-begin/where-to-begin.component';
+import { FooterComponent } from './components/_shared/footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { ProductsTabsComponent } from './components/personal/products-tabs/produ
     NavbarComponent,
     HeroComponent,
     ProductsTabsComponent,
+    DownloadBannerComponent,
+    WhereToBeginComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
