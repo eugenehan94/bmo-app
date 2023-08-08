@@ -1,0 +1,29 @@
+<section class="where-to-begin-container">
+  <div>
+    <h2 class="title">{{ title }}</h2>
+    <div>
+      <mat-grid-list cols="1" rowHeight="1.4:1">
+        <mat-grid-tile *ngFor="let cardData of cardDatas">
+          <div>
+            <div>
+              <img
+                src="{{ cardData.icon }}"
+                alt="{{ cardData.iconAlt }}"
+                class="tile-img"
+              />
+            </div>
+            <h3 class="tile-title">{{ cardData.title }}</h3>
+            <p class="tile-description">{{ cardData.description }}</p>
+            <a
+              href="{{ cardData.linkSrc }}"
+              target="_blank"
+              class="tile-link"
+              [attr.aria-label]="cardData.linkAriaLabel"
+              >{{ cardData.linkTitle }}<mat-icon>chevron_right</mat-icon></a
+            >
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</section>
