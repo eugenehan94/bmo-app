@@ -8,6 +8,7 @@ import { ProductsTabsService } from './products-tabs.service';
 })
 export class ProductsTabsComponent {
   constructor(private productsTabService: ProductsTabsService) {}
-
+  title: string = "BMO Personal Banking";
+  subTitle: string = "What can we help you find today?";
   tabContents = this.productsTabService.tabs;
 }
