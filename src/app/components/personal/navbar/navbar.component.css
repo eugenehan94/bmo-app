@@ -86,10 +86,6 @@ mat-toolbar div {
   height: 100%;
   padding: 0 2rem;
 }
-.signing-btn-border {
-  border-left: 1px solid #d9dce1;
-  border-right: 1px solid #d9dce1;
-}
 
 .signin-btn span {
   display: flex;

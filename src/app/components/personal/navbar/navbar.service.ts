@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
-
+import {
+  SiteOptionsType,
+  NavigationOptionsType,
+} from '../../_shared/interfaces';
 @Injectable({
   providedIn: 'root',
 })
 export class NavbarService {
-  siteOptions = [
+  siteOptions: SiteOptionsType[] = [
     {
       title: 'Personal',
     },
@@ -16,7 +19,7 @@ export class NavbarService {
     { title: 'About BMO' },
   ];
 
-  navigationOptions = [
+  navigationOptions: NavigationOptionsType[] = [
     {
       title: 'Bank Accounts',
     },
