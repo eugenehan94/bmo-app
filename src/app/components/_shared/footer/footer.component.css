@@ -11,8 +11,12 @@
   width: 106px;
   height: 3rem;
 }
+.cdic-description-wrapper {
+  padding: 0.5rem 1.25rem;
+}
 .cdic-description {
   text-align: center;
+  line-height: 1.5rem;
 }
 .cdic-description-link {
   color: #0075be;
@@ -35,5 +39,57 @@
   font-weight: 300;
   font-size: 18px;
   margin-top: 2rem;
+  margin-bottom: 1.8rem;
+}
+.category-links {
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+.category-links:hover {
+  text-decoration: underline;
+}
+
+.download-btn-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.2rem 0;
+}
+
+.border-top-bottom {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.support-link-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.support-link {
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
   margin-bottom: 1.5rem;
+}
+
+.support-link:hover {
+  text-decoration: underline;
+}
+.social-media-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+}
+
+.about-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
 }

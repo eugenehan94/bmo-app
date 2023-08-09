@@ -1,12 +1,19 @@
 import { Injectable } from '@angular/core';
-
+import {
+  CidcDataType,
+  FooterCategoryLinksType,
+  FooterSupportLinksType,
+  SocialMediaDataType,
+  AboutBmoDataType,
+  DownloadAppDataType,
+} from '../interfaces';
 @Injectable({
   providedIn: 'root',
 })
 export class FooterService {
   constructor() {}
 
-  cdicData: any = [
+  cdicData: CidcDataType[] = [
     {
       href: 'https://www.cdic.ca/your-coverage/list-of-member-institutions/',
       ariaLabel:
@@ -23,7 +30,7 @@ export class FooterService {
     },
   ];
 
-  footerCategoryLinks: any = [
+  footerCategoryLinks: FooterCategoryLinksType[] = [
     {
       title: 'Explore our services',
       links: [
@@ -181,7 +188,7 @@ export class FooterService {
     },
   ];
 
-  footerSupportLinks: any = [
+  footerSupportLinks: FooterSupportLinksType[] = [
     {
       icon: 'assets/svg/person-headset-white.svg',
       title: 'Customer Support',
@@ -201,7 +208,7 @@ export class FooterService {
       ariaLabel: '',
     },
   ];
-  socialMediaData: any = [
+  socialMediaData: SocialMediaDataType[] = [
     {
       icon: 'assets/svg/youtube-white.svg',
       ariaLabel:
@@ -239,7 +246,7 @@ export class FooterService {
     },
   ];
 
-  aboutBmoData: any = [
+  aboutBmoData: AboutBmoDataType[] = [
     {
       href: 'https://www.bmo.com/main/about-bmo/?icid=tl-FEAT2953BRND4-AJBMOH348',
       ariaLabel: 'About BMO',
@@ -289,6 +296,22 @@ export class FooterService {
       href: 'https://www.bmo.com/main/about-bmo/complaint-handling-process?icid=tl-FEAT2953BRND4-AJBMOH418',
       ariaLabel: 'Customer Complaint Handling Process',
       text: 'Customer Complaint Handling Process',
+    },
+  ];
+  downloadAppData: DownloadAppDataType[] = [
+    {
+      href: 'https://apps.apple.com/ca/app/bmo-mobile-banking/id429080319',
+      ariaLabel:
+        'Click to download BMO mobile banking app on Apple Store, opens in a new tab',
+      imageSrc: 'assets/svg/apple-app-btn.svg',
+      imageAlt: 'Download apple app',
+    },
+    {
+      href: 'https://play.google.com/store/apps/details?id=com.bmo.mobile',
+      ariaLabel:
+        'Click to download BMO mobile banking app on Google Play store, opens in a new tab',
+      imageSrc: 'assets/svg/google-app-btn.svg',
+      imageAlt: 'Download google app',
     },
   ];
 }
