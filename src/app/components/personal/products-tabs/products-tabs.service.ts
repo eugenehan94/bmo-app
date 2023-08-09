@@ -1,26 +1,11 @@
 import { Injectable } from '@angular/core';
-
-interface tabsType {
-  label: string;
-  cardData: cardDataType[];
-}
-
-interface cardDataType {
-  image?: string;
-  svg?: string;
-  imageAlt?: string;
-  svgAlt?: string;
-  title: string;
-  description: string;
-  src: string;
-  srcTitle: string;
-}
+import {TabsType} from "../../_shared/interfaces"
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsTabsService {
-  tabs: tabsType[] = [
+  tabs: TabsType[] = [
     {
       label: 'Featured',
       cardData: [
