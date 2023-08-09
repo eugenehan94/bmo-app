@@ -2,16 +2,16 @@
   <div>
     <h2 class="title">{{ title }}</h2>
     <div>
-      <mat-grid-list cols="1" rowHeight="1.4:1">
-        <mat-grid-tile *ngFor="let cardData of cardDatas">
+      <div>
+        <div *ngFor="let cardData of cardDatas" class="tile">
           <div>
-            <div>
-              <img
-                src="{{ cardData.icon }}"
-                alt="{{ cardData.iconAlt }}"
-                class="tile-img"
-              />
-            </div>
+            <img
+              src="{{ cardData.icon }}"
+              alt="{{ cardData.iconAlt }}"
+              class="tile-img"
+            />
+          </div>
+          <div class="tile-description-wrapper">
             <h3 class="tile-title">{{ cardData.title }}</h3>
             <p class="tile-description">{{ cardData.description }}</p>
             <a
@@ -22,8 +22,8 @@
               >{{ cardData.linkTitle }}<mat-icon>chevron_right</mat-icon></a
             >
           </div>
-        </mat-grid-tile>
-      </mat-grid-list>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,14 +1,5 @@
 import { Injectable } from '@angular/core';
-
-interface cardContentType {
-  icon: string;
-  iconAlt: string;
-  title: string;
-  description: string;
-  linkTitle: string;
-  linkSrc: string;
-  linkAriaLabel: string;
-}
+import { CardContentType } from '../../_shared/interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +7,7 @@ interface cardContentType {
 export class WhereToBeginService {
   constructor() {}
 
-  cardContent: cardContentType[] = [
+  cardContent: CardContentType[] = [
     {
       icon: 'assets/svg/bank-blue-icon.svg',
       iconAlt: 'Bank icon',

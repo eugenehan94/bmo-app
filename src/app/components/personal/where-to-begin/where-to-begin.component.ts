@@ -1,16 +1,6 @@
 import { Component } from '@angular/core';
 import { WhereToBeginService } from './where-to-begin.service';
-
-interface cardContentType {
-  icon: string;
-  iconAlt: string;
-  title: string;
-  description: string;
-  linkTitle: string;
-  linkSrc: string;
-  linkAriaLabel: string
-}
-
+import { CardContentType } from '../../_shared/interfaces';
 
 @Component({
   selector: 'app-personal-where-to-begin',
@@ -19,6 +9,6 @@ interface cardContentType {
 })
 export class WhereToBeginComponent {
   title: string = 'Not sure where to begin? We’ll help you choose';
-  cardDatas: cardContentType[] = this.service.cardContent;
+  cardDatas: CardContentType[] = this.service.cardContent;
   constructor(private service: WhereToBeginService){}
 }
