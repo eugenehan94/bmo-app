@@ -1,11 +1,5 @@
 import { Injectable } from '@angular/core';
-
-interface downloadAppDataType {
-  href: string;
-  ariaLabel: string;
-  imageSrc: string;
-  imageAlt: string;
-}
+import { DownloadAppDataType } from '../../_shared/interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +7,7 @@ interface downloadAppDataType {
 export class DownloadBannerService {
   constructor() {}
 
-  downloadAppData: downloadAppDataType[] = [
+  downloadAppData: DownloadAppDataType[] = [
     {
       href: 'https://apps.apple.com/ca/app/bmo-mobile-banking/id429080319',
       ariaLabel:

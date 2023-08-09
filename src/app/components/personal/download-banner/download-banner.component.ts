@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { DownloadBannerService } from './download-banner.service';
-
-interface downloadAppDataType {
-  href: string;
-  ariaLabel: string;
-  imageSrc: string;
-  imageAlt: string;
-}
+import { DownloadAppDataType } from '../../_shared/interfaces';
 
 @Component({
   selector: 'app-person-download-banner',
@@ -19,6 +13,6 @@ export class DownloadBannerComponent {
     'Our app ranked #1 number onein Canada for digital money management. Enjoy 20+ twenty plusfeatures – from spending insights to global transfers.';
   linkName: string = 'Explore Features';
 
-  downloadAppBtns: downloadAppDataType[] = this.service.downloadAppData;
+  downloadAppBtns: DownloadAppDataType[] = this.service.downloadAppData;
   constructor(private service: DownloadBannerService) {}
 }
