@@ -1,7 +1,10 @@
 .hero-section {
   padding-top: 2rem;
 }
-
+.hero-container-medium {
+  display: flex;
+  flex-direction: row-reverse;
+}
 .image-container {
   padding: 0 1.5rem;
 }
@@ -10,6 +13,10 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   text-align: center;
+}
+.hero-description-container-medium {
+  text-align: left;
+  padding: 0 2rem;
 }
 .description-title {
   font-size: 28px;
