@@ -1,5 +1,6 @@
+// Set own breakpoints: https://stackoverflow.com/questions/73561379/customize-angular-layout-breakpoints
 import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver } from '@angular/cdk/layout';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,27 +14,25 @@ export class HomeComponent {
   ngOnInit() {
     this.breakpointObserver
       .observe([
-        Breakpoints.XSmall,
-        Breakpoints.Small,
-        Breakpoints.Medium,
-        Breakpoints.Large,
-        // Breakpoints.XLarge,
+        '(max-width: 767.99px)',
+        '(min-width: 768px) and (max-width: 1023.99px)',
+        '(min-width: 1024px)',
       ])
       .subscribe((result) => {
         const breakpoints = result.breakpoints;
         console.log('HOME breakpoints: ', breakpoints);
 
-        if (breakpoints[Breakpoints.XSmall]) {
-          console.log('screens matches XSmall');
-          this.currentScreenSize = 'XSmall';
-        } else if (breakpoints[Breakpoints.Small]) {
+        if (this.breakpointObserver.isMatched('(max-width: 767.99px)')) {
           console.log('screens matches Small');
           this.currentScreenSize = 'Small';
-        } else if (breakpoints[Breakpoints.Medium]) {
+        } else if (
+          this.breakpointObserver.isMatched(
+            '(min-width: 768px) and (max-width:1024px)'
+          )
+        ) {
           console.log('screens matches Medium');
           this.currentScreenSize = 'Medium';
-        } 
-        else {
+        } else {
           console.log('screens matches Large');
           this.currentScreenSize = 'Large';
         }
