@@ -28,6 +28,15 @@ section {
 .tab-content-container {
   padding: 1.5rem;
 }
+.tab-content-container-medium {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.tab-content-container-medium mat-card {
+  flex: 45%;
+}
 
 .mat-card-image {
   height: 164px;

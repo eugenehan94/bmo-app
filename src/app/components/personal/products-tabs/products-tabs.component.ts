@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProductsTabsService } from './products-tabs.service';
 import { TabsType } from '../../_shared/interfaces';
 @Component({
@@ -11,4 +11,5 @@ export class ProductsTabsComponent {
   title: string = 'BMO Personal Banking';
   subTitle: string = 'What can we help you find today?';
   tabContents: TabsType[] = this.productsTabService.tabs;
+  @Input() currentScreenSize?: string
 }

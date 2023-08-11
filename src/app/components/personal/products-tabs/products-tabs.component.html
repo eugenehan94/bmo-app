@@ -1,15 +1,26 @@
 <!-- @TODO: Add aria-label to a tags of cards -->
 <section>
   <div>
-    <div class="title"><h1>{{title}}</h1></div>
-    <div class="sub-title"><h2>{{subTitle}}</h2></div>
+    <div class="title">
+      <h1>{{ title }}</h1>
+    </div>
+    <div class="sub-title">
+      <h2>{{ subTitle }}</h2>
+    </div>
     <div>
       <mat-tab-group animationDuration="0ms">
         <mat-tab
           [label]="tabContent.label"
           *ngFor="let tabContent of tabContents"
         >
-          <div class="tab-content-container">
+          <div
+            [ngClass]="{
+              'tab-content-container': currentScreenSize === 'Small',
+              'tab-content-container-medium':
+                currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+            }"
+            class="tab-content-container"
+          >
             <mat-card
               *ngFor="let card of tabContent.cardData; let i = index"
               [ngClass]="{
