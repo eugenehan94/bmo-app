@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DownloadBannerService } from './download-banner.service';
 import { DownloadAppDataType } from '../../_shared/interfaces';
 
@@ -12,7 +12,7 @@ export class DownloadBannerComponent {
   description: string =
     'Our app ranked #1 number onein Canada for digital money management. Enjoy 20+ twenty plusfeatures – from spending insights to global transfers.';
   linkName: string = 'Explore Features';
-
+  @Input() currentScreenSize?: string;
   downloadAppBtns: DownloadAppDataType[] = this.service.downloadAppData;
   constructor(private service: DownloadBannerService) {}
 }

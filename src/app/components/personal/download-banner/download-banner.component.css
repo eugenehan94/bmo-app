@@ -1,5 +1,13 @@
 .download-banner-container {
-  padding: 1.5rem;
+  padding: 2rem;
+}
+.download-banner-inner-container-medium {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1.5rem;
+}
+.download-banner-inner-container-medium div {
+  flex: 45%;
 }
 .title {
   font-size: 1.75rem;
@@ -27,6 +35,6 @@
 }
 
 .download-btn-container {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
