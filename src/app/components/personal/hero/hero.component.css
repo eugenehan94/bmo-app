@@ -25,7 +25,13 @@
   font-weight: 700;
   color: #001928;
 }
-
+.description-title-medium {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #001928;
+}
 .subscript {
   color: #0075be;
   text-decoration: none;

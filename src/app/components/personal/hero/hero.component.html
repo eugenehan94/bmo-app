@@ -19,7 +19,14 @@
           currentScreenSize === 'Medium' || currentScreenSize === 'Large'
       }"
     >
-      <p class="description-title" [innerHTML]="selectedBanner.title"></p>
+      <p
+        [ngClass]="{
+          'description-title': currentScreenSize === 'Small',
+          'description-title-medium':
+            currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+        }"
+        [innerHTML]="selectedBanner.title"
+      ></p>
       <p class="description" [innerHTML]="selectedBanner.description"></p>
       <a
         href="{{ selectedBanner.linkHref }}"
