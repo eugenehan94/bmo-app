@@ -57,6 +57,8 @@ export interface HeroBannerOptionsType {
 //personal navbar
 export interface SiteOptionsType {
   title: string;
+  linkHref?: string;
+  ariaLabel?: string;
 }
 export interface NavigationOptionsType {
   title: string;

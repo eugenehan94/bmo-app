@@ -1,6 +1,17 @@
 <div>
-  <mat-toolbar [ngClass]="{ 'toolbar-small': currentScreenSize === 'Medium' }">
-    <div class="mobile-logo-container">
+  <mat-toolbar
+    [ngClass]="{
+      'toolbar-small': currentScreenSize === 'Medium',
+      'toolbar-large': currentScreenSize === 'Large'
+    }"
+  >
+    <div
+      [ngClass]="{
+        'mobile-logo-container':
+          currentScreenSize === 'Small' || currentScreenSize === 'Medium',
+        'mobile-logo-container-large': currentScreenSize === 'Large'
+      }"
+    >
       <a
         style="text-align: left"
         *ngIf="currentScreenSize === 'Small' || currentScreenSize === 'Medium'"
@@ -18,23 +29,57 @@
       </a>
       <div class="site-select-container" *ngIf="currentScreenSize === 'Large'">
         <div
-          class="site-select-wrapper"
+          class="site-select-wrapper open"
           (click)="isSelectedSiteOpen = !isSelectedSiteOpen"
+          [ngClass]="{ open: isSelectedSiteOpen }"
         >
-          <span>{{ selectedSiteOption }}</span
-          ><span *ngIf="!isSelectedSiteOpen"
-            ><mat-icon>expand_more</mat-icon></span
-          >
-          <span *ngIf="isSelectedSiteOpen"
-            ><mat-icon>expand_less</mat-icon></span
-          >
+          <span>{{ selectedSiteOption }}</span>
+          <div class="expand-more-chevron-wrapper">
+            <mat-icon
+              class="expand-more-chevron"
+              [ngClass]="{ open: isSelectedSiteOpen }"
+              >expand_more</mat-icon
+            >
+          </div>
         </div>
         <ul class="site-select-list" *ngIf="isSelectedSiteOpen">
-          <li *ngFor="let option of siteOptions">{{ option.title }}</li>
+          <li *ngFor="let option of siteOptions">
+            <a
+              href="{{ option.linkHref }}"
+              target="_blank"
+              [attr.aria-label]="option.ariaLabel"
+              >{{ option.title }}</a
+            >
+          </li>
         </ul>
       </div>
     </div>
+    <div *ngIf="currentScreenSize === 'Large'" class="search-bar-container">
+      <div>
+        <mat-icon>search</mat-icon>
+      </div>
+    </div>
     <div class="mobile-btn-container">
+      <div>
+        <div
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          <span
+            style="display: flex; align-items: center; justify-content: center"
+            ><img
+              src="assets/svg/flag-canada.svg"
+              alt="Canada flag"
+              style="width: 25px; height: 25px"
+          /></span>
+          <mat-icon>expand_more</mat-icon>
+        </div>
+      </div>
+      <div>
+        <div>
+          <span>EN</span>
+          <mat-icon>expand_more</mat-icon>
+        </div>
+      </div>
       <button
         class="signin-btn"
         (click)="isMobileSignInMenuOpen = !isMobileSignInMenuOpen"
