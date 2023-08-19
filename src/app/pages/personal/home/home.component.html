@@ -1,7 +1,9 @@
 <div>
-  <app-personal-navbar
+  <app-navbar [currentScreenSize]="currentScreenSize"></app-navbar>
+  <!-- @TODO: See if you can delete app-personal-navbar - for now just comment out -->
+  <!-- <app-personal-navbar
     [currentScreenSize]="currentScreenSize"
-  ></app-personal-navbar>
+  ></app-personal-navbar> -->
   <app-personal-hero
     [currentScreenSize]="currentScreenSize"
   ></app-personal-hero>

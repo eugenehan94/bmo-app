@@ -1,0 +1,51 @@
+<div>
+  <mat-toolbar>
+    <div class="mobile-logo-container">
+      <a style="text-align: left">
+        <div>
+          <img
+            src="assets/svg/bmoLogo.svg"
+            alt="Bank of Montreal logo"
+            class="logo-xsmall"
+          />
+        </div>
+      </a>
+    </div>
+    <div class="mobile-btn-container">
+      <button
+        class="signin-btn"
+        (click)="isMobileSignInMenuOpen = !isMobileSignInMenuOpen"
+      >
+        <span *ngIf="isMobileSignInMenuOpen">
+          <mat-icon>close</mat-icon><span>Close</span></span
+        >
+        <span *ngIf="!isMobileSignInMenuOpen"
+          ><mat-icon>lock_open</mat-icon><span>Sign In</span></span
+        >
+      </button>
+
+      <button
+        class="mobile-menu-btn"
+        (click)="isMobileMenuOpen = !isMobileMenuOpen"
+      >
+        <span
+          class="close-container"
+          [ngClass]="isMobileMenuOpen ? 'open' : null"
+        >
+          <span
+            class="hamburger-icon-top"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+          <span
+            class="hamburger-icon-middle"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+          <span
+            class="hamburger-icon-bottom"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+        </span>
+      </button>
+    </div>
+  </mat-toolbar>
+</div>

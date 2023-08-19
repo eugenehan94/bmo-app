@@ -1,19 +1,9 @@
-mat-toolbar {
+.toolbar-large {
+  height: 45px;
   border-bottom: 1px solid #d9dce1;
   padding-left: 1rem;
 }
 
-.toolbar-small {
-  height: 101px;
-  padding-left: 2rem;
-}
-.toolbar-large {
-  height: 45px;
-}
-
-.mobile-logo-container {
-  flex: 1;
-}
 .mobile-logo-container-large {
   flex: 0;
 }
@@ -22,11 +12,6 @@ mat-toolbar div {
   height: 100%;
   display: flex;
   align-items: center;
-}
-
-.logo-xsmall {
-  width: 100px;
-  height: 28px;
 }
 
 .logo-small {
@@ -121,13 +106,11 @@ mat-toolbar div {
   width: 43px;
   overflow: hidden;
   transition: width 0.2s;
-
   /* flex-grow: 0; */
   box-sizing: border-box;
 }
 .search-icon-wrapper-open {
   display: flex;
-
   width: 100%;
   flex-grow: 1;
 }
@@ -165,18 +148,46 @@ mat-toolbar div {
   background-image: none;
   padding: 0 56px 0 1rem;
 }
-.mobile-btn-container {
+.btns-container {
   display: flex;
   justify-content: flex-end;
 }
-.mobile-btn-container button {
+.btns-container button {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
 }
-
+.country-select-container {
+  position: relative;
+  height: 44px;
+  border-left: 1px solid #d9dce1;
+  width: 84px;
+  flex-grow: 0;
+}
+.country-select-inner-container {
+  margin: 0;
+  color: #646c76;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.country-select-icon {
+  position: absolute;
+  right: 17px;
+}
+.country-select-image-wrapper {
+  width: 25px;
+  min-width: 25px;
+  max-height: 25px;
+  line-height: unset;
+}
 .signin-btn {
   color: #0075be;
   text-transform: uppercase;
@@ -193,52 +204,9 @@ mat-toolbar div {
 }
 .signin-btn:hover {
   text-decoration: underline;
-}
-.signin-btn:hover,
-.mobile-menu-btn {
   cursor: pointer;
 }
 
 .signin-btn mat-icon {
   margin-right: 2px;
-}
-.mobile-menu-btn {
-  border: none;
-  padding: 0 1.5rem;
-}
-
-/* Mobile menu and hamburger icon */
-
-.close-container {
-  transition: transform 0.2s;
-}
-.close-container.open {
-  transition: transform 0.2s ease 0s;
-  padding: 10px 0px;
-  transform: rotate(90deg);
-}
-
-.hamburger-icon-top,
-.hamburger-icon-middle,
-.hamburger-icon-bottom {
-  border-top: 2px solid #646c76;
-  display: block;
-  width: 20px;
-}
-
-.hamburger-icon-top.open {
-  transform: rotate(45deg);
-}
-
-.hamburger-icon-middle {
-  margin: 5px 0;
-}
-
-.hamburger-icon-middle.open {
-  opacity: 0;
-  margin: -2px 0;
-}
-
-.hamburger-icon-bottom.open {
-  transform: rotate(135deg);
 }

@@ -1,16 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { NavbarService } from './navbar.service';
-import {
-  SiteOptionsType,
-  NavigationOptionsType,
-} from '../../_shared/interfaces';
-
+import { NavbarService } from '../../../../components/personal/navbar/navbar.service';
+import { SiteOptionsType, NavigationOptionsType } from '../../interfaces';
 @Component({
-  selector: 'app-personal-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'],
+  selector: 'app-desktop',
+  templateUrl: './desktop.component.html',
+  styleUrls: ['./desktop.component.css'],
 })
-export class Navbar2Component {
+export class DesktopComponent {
   siteOptions: SiteOptionsType[] = this.navbarService.siteOptions;
   navbarOptions: NavigationOptionsType[] = this.navbarService.navigationOptions;
   selectedSiteOption: string = 'Personal';
@@ -21,5 +17,5 @@ export class Navbar2Component {
   isMobileMenuOpen: boolean = false;
   isMobileSignInMenuOpen: boolean = false;
 
-  constructor(public navbarService: NavbarService) {}
+  constructor(private navbarService: NavbarService) {}
 }

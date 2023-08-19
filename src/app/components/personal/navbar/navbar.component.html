@@ -62,18 +62,19 @@
         }"
         (click)="isSearchBarOpen = !isSearchBarOpen"
       >
-        <form>
-          <div class="search-form-inner-wrapper">
-            <mat-icon *ngIf="!isSearchBarOpen" class="search-form-icon"
-              >search</mat-icon
-            >
-            <input placeholder="Search" class="search-form-input" />
-          </div>
-        </form>
+        <!-- <div class="search-icon-wrapper"> -->
+        <div style="border-left: 1px solid #d9dce1; position: relative">
+          <form>
+            <div class="search-form-inner-wrapper">
+              <input placeholder="Search" class="search-form-input" />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
+
     <div class="mobile-btn-container">
-      <div>
+      <!-- <div>
         <div
           style="display: flex; align-items: center; justify-content: center"
         >
@@ -85,6 +86,49 @@
               style="width: 25px; height: 25px"
           /></span>
           <mat-icon>expand_more</mat-icon>
+        </div>
+      </div> -->
+      <div
+        style="
+          position: relative;
+          height: 44px;
+          border-left: 1px solid #d9dce1;
+          width: 84px;
+          flex-grow: 0;
+        "
+      >
+        <div
+          style="
+            margin: 0;
+            color: #646c76;
+            font-size: 1rem;
+            text-rendering: optimizeLegibility;
+            height: 100%;
+            width: 100%;
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          "
+        >
+          <mat-icon style="position: absolute; right: 17px"
+            >expand_more</mat-icon
+          >
+          <div style="width: 100%; display: inline-flex; align-items: center">
+            <span
+              style="
+                width: 25px;
+                min-width: 25px;
+                max-height: 25px;
+                line-height: unset;
+              "
+              ><img
+                alt=""
+                height="25"
+                width="25"
+                src="assets/svg/flag-canada.svg" /></span
+            ><span><span></span></span>
+          </div>
         </div>
       </div>
       <div>
