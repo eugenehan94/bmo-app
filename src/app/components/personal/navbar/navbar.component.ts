@@ -15,7 +15,7 @@ export class NavbarComponent {
   navbarOptions: NavigationOptionsType[] = this.navbarService.navigationOptions;
   selectedSiteOption: string = 'Personal';
   isSelectedSiteOpen: boolean = false;
-
+  isSearchBarOpen: boolean = false;
   @Input() currentScreenSize?: string;
 
   isMobileMenuOpen: boolean = false;

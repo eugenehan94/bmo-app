@@ -55,8 +55,21 @@
       </div>
     </div>
     <div *ngIf="currentScreenSize === 'Large'" class="search-bar-container">
-      <div>
-        <mat-icon>search</mat-icon>
+      <div
+        [ngClass]="{
+          'search-icon-wrapper-open': isSearchBarOpen,
+          'search-icon-wrapper': !isSearchBarOpen
+        }"
+        (click)="isSearchBarOpen = !isSearchBarOpen"
+      >
+        <form>
+          <div class="search-form-inner-wrapper">
+            <mat-icon *ngIf="!isSearchBarOpen" class="search-form-icon"
+              >search</mat-icon
+            >
+            <input placeholder="Search" class="search-form-input" />
+          </div>
+        </form>
       </div>
     </div>
     <div class="mobile-btn-container">
