@@ -47,9 +47,23 @@
       </div>
     </div>
     <div class="btns-container">
-      <div class="country-select-container">
+      <div
+        [ngClass]="
+          isCountrySelectMenuOpen
+            ? 'country-select-container open'
+            : 'country-select-container'
+        "
+        (click)="handleCountrySelectMenuClick()"
+      >
         <div class="country-select-inner-container">
-          <mat-icon class="country-select-icon">expand_more</mat-icon>
+          <mat-icon
+            [ngClass]="
+              isCountrySelectMenuOpen
+                ? 'country-select-icon open'
+                : 'country-select-icon'
+            "
+            >expand_more</mat-icon
+          >
           <div style="width: 100%; display: inline-flex; align-items: center">
             <span class="country-select-image-wrapper"
               ><img
@@ -61,31 +75,109 @@
           </div>
         </div>
         <div
-          style="
-            background-color: white;
-            position: absolute;
-            top: 44px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            width: 170px;
-            left: 0;
-            padding: 8px 0;
-            filter: drop-shadow(rgb(153, 153, 153) 0px 0px 5px);
+          *ngIf="isCountrySelectMenuOpen"
+          [ngClass]="
+            isCountrySelectMenuOpen
+              ? 'country-select-dropdown-list open'
+              : 'country-select-dropdown-list'
           "
         >
-          <!-- List of country -->
-          <div>Canada</div>
-          <div>USA</div>
-          <div>China</div>
+          <!-- @TODO: Refactor when you have another component that shares this  -->
+          <div class="country-select-option">
+            <div class="country-select-option-wrapper">
+              <span
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 25px;
+                  min-width: 25px;
+                  max-height: 30px;
+                  line-height: unset;
+                "
+                ><img
+                  src="assets/svg/checkmark-circle.svg"
+                  alt=""
+                  width="25"
+                  height="25"
+              /></span>
+              <span>Canada</span>
+            </div>
+          </div>
+          <div class="country-select-option">
+            <div class="country-select-option-wrapper">
+              <span
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 25px;
+                  min-width: 25px;
+                  max-height: 30px;
+                  line-height: unset;
+                "
+                ><img
+                  src="assets/svg/flag-usa-icon.svg"
+                  alt=""
+                  width="25"
+                  height="25"
+              /></span>
+              <span>US</span>
+            </div>
+          </div>
+          <div class="country-select-option">
+            <div class="country-select-option-wrapper">
+              <span
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 25px;
+                  min-width: 25px;
+                  max-height: 30px;
+                  line-height: unset;
+                "
+                ><img
+                  src="assets/svg/flag-china-icon.svg"
+                  alt=""
+                  width="25"
+                  height="25"
+              /></span>
+              <span>China</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <div>
+      <div
+        [ngClass]="
+          isLanguageSelectMenuOpen
+            ? 'language-container open'
+            : 'language-container'
+        "
+        class="language-container"
+        (click)="handleLanguageSelectMenuClick()"
+      >
+        <div class="language-selector-container">
+          <mat-icon class="language-selector-icon">expand_more</mat-icon>
           <span>EN</span>
-          <mat-icon>expand_more</mat-icon>
         </div>
+        <ul
+          [ngClass]="
+            isLanguageSelectMenuOpen
+              ? 'language-dropdown-list open'
+              : 'language-dropdown-list'
+          "
+        >
+          <li class="language-dropdown-list-option">
+            <div>English</div>
+          </li>
+          <li class="language-dropdown-list-option">
+            <a>Français</a>
+          </li>
+        </ul>
       </div>
-      <button
+
+      <!-- <button
         class="signin-btn"
         (click)="isMobileSignInMenuOpen = !isMobileSignInMenuOpen"
       >
@@ -95,7 +187,79 @@
         <span *ngIf="!isMobileSignInMenuOpen"
           ><mat-icon>lock_open</mat-icon><span>Sign In</span></span
         >
-      </button>
+      </button> -->
+
+      <div class="signin-btn-container">
+        <div class="signin-btn-inner-container">
+          <button class="signin-btn">
+            <span class="signin-btn-inner-wrapper"
+              ><span><mat-icon>lock</mat-icon></span
+              ><span style="display: none">Close</span><span>Sign In</span
+              ><span> <mat-icon>expand_more</mat-icon></span></span
+            >
+          </button>
+          <div
+            style="
+              height: auto;
+              min-height: auto;
+              transition: height 0.2s ease 0s;
+              position: absolute;
+              top: 44px;
+              right: 0;
+              width: 288px;
+              border-bottom-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+              overflow: hidden;
+              background-color: white;
+              padding: 0;
+            "
+          >
+            <div
+              style="
+                width: 288px;
+                position: initial;
+                padding: 0px;
+                background-color: white;
+                height: auto;
+              "
+            >
+              <div style="padding: 1.5rem 1.25rem 0px">
+                <a
+                  style="
+                    font-weight: 700;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    letter-spacing: 0.25px;
+                    color: #0075be;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                  "
+                >
+                  <div>Sign in to Online Banking</div>
+                  <div>
+                    <mat-icon>chevron_right</mat-icon>
+                  </div>
+                </a>
+              </div>
+              <div style="
+              letter-spacing: 0.25px;
+              font-size: 14px;
+              padding: 1.5rem 1.25rem;
+              
+              ">
+                <span>
+                  <p>
+                    Register for online banking with a <a>BMO Debit Card</a> or
+                    <a>Credit Card</a>
+                  </p>
+                </span>
+              </div>
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </mat-toolbar>
   <div

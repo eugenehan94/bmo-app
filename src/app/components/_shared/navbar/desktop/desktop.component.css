@@ -61,7 +61,7 @@ mat-toolbar div {
 }
 .site-select-list {
   position: absolute;
-  top: 42px;
+  top: 43px;
   left: 0;
   background-color: white;
   list-style-type: none;
@@ -166,6 +166,12 @@ mat-toolbar div {
   width: 84px;
   flex-grow: 0;
 }
+.country-select-container.open {
+  transform: translateZ(0px);
+  filter: drop-shadow(rgb(153, 153, 153) 0px 0px 5px);
+  z-index: 1;
+  background-color: white;
+}
 .country-select-inner-container {
   margin: 0;
   color: #646c76;
@@ -178,9 +184,17 @@ mat-toolbar div {
   align-items: center;
   justify-content: flex-start;
 }
+.country-select-inner-container:hover {
+  cursor: pointer;
+}
 .country-select-icon {
   position: absolute;
   right: 17px;
+  transform: rotate(0deg);
+}
+.country-select-icon.open {
+  transform: rotate(180deg);
+  color: black;
 }
 .country-select-image-wrapper {
   width: 25px;
@@ -188,25 +202,139 @@ mat-toolbar div {
   max-height: 25px;
   line-height: unset;
 }
-.signin-btn {
-  color: #0075be;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  height: 100%;
-  padding: 0 2rem;
+.country-select-dropdown-list {
+  display: none;
+}
+.country-select-dropdown-list.open {
+  background-color: white;
+  position: absolute;
+  top: 44px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 170px;
+  left: 0;
+  padding: 8px 0;
+  /* filter: drop-shadow(rgb(153, 153, 153) 0px 10px 5px); */
+  height: 130px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.signin-btn span {
+.country-select-option {
+  /* padding: 0.2rem 1rem; */
+  width: 100%;
   display: flex;
-  align-items: center;
+  text-indent: 8px;
 }
-.signin-btn:hover {
-  text-decoration: underline;
+.country-select-option-wrapper {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.language-container {
+  position: relative;
+  height: 44px;
+  border-left: 1px solid #d9dce1;
+  width: 86px;
+  flex-grow: 0;
+}
+.language-container:hover {
   cursor: pointer;
 }
-
-.signin-btn mat-icon {
-  margin-right: 2px;
+.language-container.open {
+  border-left: 1px solid #d9dce1;
+  width: 86px;
+  flex-grow: 0;
+  transform: translateZ(0px);
+  filter: drop-shadow(rgb(153, 153, 153) 0px 0px 5px);
+  z-index: 1;
+  background-color: white;
+}
+.language-selector-container {
+  box-sizing: border-box;
+  margin: 0;
+  color: #646c76;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  padding: 0 0 0 16px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+.language-selector-icon {
+  position: absolute;
+  right: 24px;
+  transform: rotate(0deg);
+  transition: initial;
+}
+.language-dropdown-list {
+  width: 170px;
+  right: 0px;
+  left: initial;
+  position: absolute;
+  top: 44px;
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: none 0s ease 0s;
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+.language-dropdown-list.open {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.language-dropdown-list-option {
+  list-style: none;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  text-indent: 16px;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+.signin-btn-container {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signin-btn-inner-container {
+  position: relative;
+  border-left: 1px solid #d9dce1;
+}
+.signin-btn {
+  padding: 2px 1rem;
+  height: 44px;
+  border-radius: 0;
+  color: #0075be;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  white-space: nowrap;
+  margin: 0;
+  justify-content: center;
+  z-index: 0;
+  border: none;
+}
+.signin-btn-inner-wrapper {
+  cursor: pointer;
+  color: #0075be;
+  text-transform: uppercase;
+  line-height: 1.25rem;
+  box-sizing: inherit;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
 }

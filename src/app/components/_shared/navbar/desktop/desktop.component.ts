@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+// @TODO: Refactor service - make sure to keep dynamic for other pages have different values
 import { NavbarService } from '../../../../components/personal/navbar/navbar.service';
 import { SiteOptionsType, NavigationOptionsType } from '../../interfaces';
 @Component({
@@ -17,5 +18,16 @@ export class DesktopComponent {
   isMobileMenuOpen: boolean = false;
   isMobileSignInMenuOpen: boolean = false;
 
+  isCountrySelectMenuOpen: boolean = false;
+  isLanguageSelectMenuOpen: boolean = false;
   constructor(private navbarService: NavbarService) {}
+
+  handleCountrySelectMenuClick(): void {
+    this.isLanguageSelectMenuOpen = false;
+    this.isCountrySelectMenuOpen = !this.isCountrySelectMenuOpen;
+  }
+  handleLanguageSelectMenuClick(): void {
+    this.isCountrySelectMenuOpen = false;
+    this.isLanguageSelectMenuOpen = !this.isLanguageSelectMenuOpen;
+  }
 }
