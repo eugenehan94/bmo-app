@@ -4,7 +4,7 @@
       <div class="site-select-container">
         <div
           class="site-select-wrapper open"
-          (click)="isSelectedSiteOpen = !isSelectedSiteOpen"
+          (click)="handleSelectedSiteMenuClick()"
           [ngClass]="{ open: isSelectedSiteOpen }"
         >
           <span>{{ selectedSiteOption }}</span>
@@ -30,17 +30,40 @@
     </div>
     <div class="search-bar-container">
       <div
-        [ngClass]="{
-          'search-icon-wrapper-open': isSearchBarOpen,
-          'search-icon-wrapper': !isSearchBarOpen
-        }"
-        (click)="isSearchBarOpen = !isSearchBarOpen"
+        [ngClass]="
+          isSearchBarOpen ? 'search-icon-wrapper-open' : 'search-icon-wrapper'
+        "
+        (click)="handleSearchBarClick(true)"
       >
-        <!-- <div class="search-icon-wrapper"> -->
-        <div style="border-left: 1px solid #d9dce1; position: relative">
-          <form>
+        <div
+          style="
+            border-left: 1px solid #d9dce1;
+            position: relative;
+            width: 100%;
+          "
+        >
+          <form style="width: 100%" onsubmit="return false">
             <div class="search-form-inner-wrapper">
-              <input placeholder="Search" class="search-form-input" />
+              <input
+                placeholder="Search"
+                class="search-form-input"
+                [ngClass]="
+                  isSearchBarOpen
+                    ? 'search-form-input open'
+                    : 'search-form-input'
+                "
+              />
+              <button
+                style="
+                  position: absolute;
+                  right: 1.25rem;
+                  border: none;
+                  background: none;
+                  color: #929ba9;
+                "
+              >
+                <mat-icon>close</mat-icon>
+              </button>
             </div>
           </form>
         </div>
@@ -82,68 +105,19 @@
               : 'country-select-dropdown-list'
           "
         >
-          <!-- @TODO: Refactor when you have another component that shares this  -->
-          <div class="country-select-option">
+          <div
+            *ngFor="let countryOption of countryOptions"
+            class="country-select-option"
+          >
             <div class="country-select-option-wrapper">
-              <span
-                style="
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 25px;
-                  min-width: 25px;
-                  max-height: 30px;
-                  line-height: unset;
-                "
+              <span class="country-select-icon-wrapper"
                 ><img
-                  src="assets/svg/checkmark-circle.svg"
+                  src="{{ countryOption.icon }}"
                   alt=""
                   width="25"
                   height="25"
               /></span>
-              <span>Canada</span>
-            </div>
-          </div>
-          <div class="country-select-option">
-            <div class="country-select-option-wrapper">
-              <span
-                style="
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 25px;
-                  min-width: 25px;
-                  max-height: 30px;
-                  line-height: unset;
-                "
-                ><img
-                  src="assets/svg/flag-usa-icon.svg"
-                  alt=""
-                  width="25"
-                  height="25"
-              /></span>
-              <span>US</span>
-            </div>
-          </div>
-          <div class="country-select-option">
-            <div class="country-select-option-wrapper">
-              <span
-                style="
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 25px;
-                  min-width: 25px;
-                  max-height: 30px;
-                  line-height: unset;
-                "
-                ><img
-                  src="assets/svg/flag-china-icon.svg"
-                  alt=""
-                  width="25"
-                  height="25"
-              /></span>
-              <span>China</span>
+              <span>{{ countryOption.country }}</span>
             </div>
           </div>
         </div>
@@ -176,86 +150,59 @@
           </li>
         </ul>
       </div>
-
-      <!-- <button
-        class="signin-btn"
-        (click)="isMobileSignInMenuOpen = !isMobileSignInMenuOpen"
-      >
-        <span *ngIf="isMobileSignInMenuOpen">
-          <mat-icon>close</mat-icon><span>Close</span></span
-        >
-        <span *ngIf="!isMobileSignInMenuOpen"
-          ><mat-icon>lock_open</mat-icon><span>Sign In</span></span
-        >
-      </button> -->
-
       <div class="signin-btn-container">
-        <div class="signin-btn-inner-container">
-          <button class="signin-btn">
-            <span class="signin-btn-inner-wrapper"
+        <div
+          [ngClass]="
+            isSigninMenuOpen
+              ? 'signin-btn-inner-container open'
+              : 'signin-btn-inner-container'
+          "
+        >
+          <button class="signin-btn" (click)="handleSigninMenuClick()">
+            <span
+              [ngClass]="
+                isSigninMenuOpen
+                  ? 'signin-btn-inner-wrapper open'
+                  : 'signin-btn-inner-wrapper'
+              "
               ><span><mat-icon>lock</mat-icon></span
-              ><span style="display: none">Close</span><span>Sign In</span
+              ><span class="signin-btn-signin-text">Sign In</span
               ><span> <mat-icon>expand_more</mat-icon></span></span
             >
           </button>
-          <div
-            style="
-              height: auto;
-              min-height: auto;
-              transition: height 0.2s ease 0s;
-              position: absolute;
-              top: 44px;
-              right: 0;
-              width: 288px;
-              border-bottom-left-radius: 10px;
-              border-bottom-right-radius: 10px;
-              overflow: hidden;
-              background-color: white;
-              padding: 0;
-            "
-          >
-            <div
-              style="
-                width: 288px;
-                position: initial;
-                padding: 0px;
-                background-color: white;
-                height: auto;
-              "
-            >
-              <div style="padding: 1.5rem 1.25rem 0px">
-                <a
-                  style="
-                    font-weight: 700;
-                    font-size: 1rem;
-                    line-height: 1.5rem;
-                    letter-spacing: 0.25px;
-                    color: #0075be;
-                    display: flex;
-                    align-items: center;
-                    gap: 4px;
-                  "
-                >
+          <div *ngIf="isSigninMenuOpen" class="signin-btn-menu-container">
+            <div class="signin-btn-menu-inner-container">
+              <div class="signin-btn-online-banking-wrapper">
+                <a class="signin-btn-online-banking-link">
                   <div>Sign in to Online Banking</div>
                   <div>
                     <mat-icon>chevron_right</mat-icon>
                   </div>
                 </a>
               </div>
-              <div style="
-              letter-spacing: 0.25px;
-              font-size: 14px;
-              padding: 1.5rem 1.25rem;
-              
-              ">
-                <span>
+              <div class="signin-btn-register-container">
+                <span class="signin-btn-register-wrapper">
+                  <p style="margin: 0px; color: #9da2a8">
+                    Register for online banking with a
+                  </p>
                   <p>
-                    Register for online banking with a <a>BMO Debit Card</a> or
-                    <a>Credit Card</a>
+                    <a class="signin-btn-register-link">BMO Debit Card</a>
+                    or
+                    <a class="signin-btn-register-link">Credit Card</a>
                   </p>
                 </span>
               </div>
-              <ul></ul>
+              <ul class="signin-btn-dropdown-list">
+                <li *ngFor="let signInOption of signInMenuOptions">
+                  <a
+                    class="signin-btn-dropdown-option-link"
+                    [attr.aria-label]="signInOption.ariaLabel"
+                    href="{{ signInOption.link }}"
+                    target="_blank"
+                    ><div>{{ signInOption.title }}</div></a
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </div>

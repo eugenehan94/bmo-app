@@ -106,13 +106,14 @@ mat-toolbar div {
   width: 43px;
   overflow: hidden;
   transition: width 0.2s;
-  /* flex-grow: 0; */
   box-sizing: border-box;
 }
 .search-icon-wrapper-open {
   display: flex;
   width: 100%;
   flex-grow: 1;
+  filter: drop-shadow(rgb(153, 153, 153) 0px 0px 5px);
+  z-index: 1001;
 }
 .search-icon-wrapper:hover {
   width: 108px;
@@ -140,13 +141,14 @@ mat-toolbar div {
   background-image: url("/assets/svg/search-icon.svg");
   background-repeat: no-repeat;
 }
+.search-form-input.open {
+  background-image: none;
+  padding: 0 56px 0 1rem;
+}
 .search-form-input:focus {
   border: 2px solid #005587;
   outline: none;
-  width: 100%;
   color: #001827;
-  background-image: none;
-  padding: 0 56px 0 1rem;
 }
 .btns-container {
   display: flex;
@@ -235,7 +237,15 @@ mat-toolbar div {
   padding: 0 1rem;
   font-size: 1rem;
 }
-
+.country-select-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  min-width: 25px;
+  max-height: 30px;
+  line-height: unset;
+}
 .language-container {
   position: relative;
   height: 44px;
@@ -312,6 +322,12 @@ mat-toolbar div {
   position: relative;
   border-left: 1px solid #d9dce1;
 }
+.signin-btn-inner-container.open {
+  transform: translateZ(0px);
+  filter: drop-shadow(rgb(153, 153, 153) 0px 0px 5px);
+  z-index: 1;
+  background-color: white;
+}
 .signin-btn {
   padding: 2px 1rem;
   height: 44px;
@@ -337,4 +353,84 @@ mat-toolbar div {
   vertical-align: middle;
   display: inline-flex;
   align-items: center;
+}
+.signin-btn-inner-wrapper.open {
+  color: #000000;
+}
+.signin-btn-signin-text:hover {
+  text-decoration: underline;
+}
+.signin-btn-menu-container {
+  height: auto !important;
+  min-height: auto;
+  transition: height 0.2s ease 0s;
+  position: absolute;
+  top: 44px;
+  right: 0;
+  width: 288px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  padding: 0;
+  display: flex;
+}
+.signin-btn-menu-inner-container {
+  width: 288px;
+  position: initial;
+  padding: 0px;
+  background-color: white;
+  /* height: auto; */
+
+  box-sizing: border-box;
+  overflow: initial;
+  flex-direction: column;
+}
+.signin-btn-online-banking-wrapper {
+  width: 100%;
+}
+
+.signin-btn-online-banking-link {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.25px;
+  color: #0075be;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1.5rem 1.25rem 0px;
+}
+.signin-btn-register-container {
+  letter-spacing: 0.25px;
+  font-size: 14px;
+  background-color: white;
+  border-bottom: 1px solid #d9dce1;
+  width: 100%;
+}
+.signin-btn-register-wrapper {
+  word-wrap: break-word;
+  line-height: 0.5rem;
+  padding: 2rem 1.25rem;
+}
+.signin-btn-register-link {
+  color: #0075be;
+  font-weight: 700;
+  text-decoration: none;
+}
+.signin-btn-dropdown-list {
+  list-style-type: none;
+  width: 100%;
+  background-color: #f5f6f7;
+  margin: 0;
+}
+.signin-btn-dropdown-list li {
+  margin: 18px 0;
+}
+.signin-btn-dropdown-option-link {
+  text-decoration: none;
+  color: #001928;
+  letter-spacing: 0.25px;
+  width: 100%;
+  font-size: 14px;
 }

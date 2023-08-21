@@ -60,6 +60,15 @@ export interface SiteOptionsType {
   linkHref?: string;
   ariaLabel?: string;
 }
+export interface CountryOptionsType {
+  country: string;
+  icon: string;
+}
+export interface SignInMenuOptionsType {
+  title: string;
+  ariaLabel: string;
+  link: string;
+}
 export interface NavigationOptionsType {
   title: string;
 }
