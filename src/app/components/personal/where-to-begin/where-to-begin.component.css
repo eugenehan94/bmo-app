@@ -8,6 +8,12 @@
   line-height: 2rem;
   text-align: center;
 }
+.title.large {
+  font-size: 2rem;
+}
+.card-wrapper {
+  display: flex;
+}
 .tile {
   display: flex;
   flex-direction: column;

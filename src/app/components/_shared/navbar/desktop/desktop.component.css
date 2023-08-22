@@ -121,6 +121,11 @@ mat-toolbar div {
 .search-form-inner-wrapper {
   display: flex;
 }
+.search-bar-form-wrapper {
+  border-left: 1px solid #d9dce1;
+  position: relative;
+  width: 100%;
+}
 .search-form-icon {
   width: 40px;
   display: flex;
@@ -149,6 +154,19 @@ mat-toolbar div {
   border: 2px solid #005587;
   outline: none;
   color: #001827;
+}
+.search-form-close-wrapper {
+  position: absolute;
+  right: 1.25rem;
+  border: none;
+  background: none;
+  color: #929ba9;
+  z-index: 99999;
+  display: none;
+}
+.search-form-close-wrapper.open {
+  display: flex;
+  cursor: pointer;
 }
 .btns-container {
   display: flex;

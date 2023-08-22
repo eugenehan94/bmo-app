@@ -1,6 +1,12 @@
 <section>
   <div>
-    <div class="section-container">
+    <div
+      [ngClass]="
+        currentScreenSize === 'Large'
+          ? 'section-container large'
+          : 'section-container'
+      "
+    >
       <div class="cdic-wrapper">
         <a
           *ngFor="let cdic of cdicData"
@@ -29,14 +35,14 @@
     <div class="section-container blue-background">
       <div
         [ngClass]="{
-          'section-container-inner-medium':
-            currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+          'section-container-inner-medium': currentScreenSize === 'Medium',
+          'section-container-inner-large': currentScreenSize === 'Large'
         }"
       >
         <div
           [ngClass]="{
-            'category-container-medium':
-              currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+            'category-container-medium': currentScreenSize === 'Medium',
+            'category-container-large': currentScreenSize === 'Large'
           }"
         >
           <div
@@ -56,7 +62,13 @@
             >
           </div>
         </div>
-        <div class="download-btn-container">
+        <div
+          [ngClass]="
+            currentScreenSize === 'Large'
+              ? 'download-btn-container large'
+              : 'download-btn-container'
+          "
+        >
           <a
             *ngFor="let downloadApp of downloadAppBtns"
             target="_blank"
@@ -81,7 +93,13 @@
           currentScreenSize === 'Medium' || currentScreenSize === 'Large'
       }"
     >
-      <div class="support-link-wrapper">
+      <div
+        [ngClass]="
+          currentScreenSize === 'Large'
+            ? 'support-link-wrapper large'
+            : 'support-link-wrapper'
+        "
+      >
         <a
           *ngFor="let supportLink of footerSupportLinks"
           href="{{ supportLink.src }}"

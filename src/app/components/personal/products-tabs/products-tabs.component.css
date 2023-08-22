@@ -2,10 +2,13 @@ section {
   padding-top: 2rem;
 }
 
-.title {
+.title-wrapper {
   margin: 0 1.5rem 0.5rem;
 }
-.title h1 {
+.title-wrapper.large {
+  text-align: center;
+}
+.title {
   font-size: 0.875rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -14,10 +17,14 @@ section {
   letter-spacing: 2px;
 }
 
-.sub-title {
+.sub-title-wrapper {
   margin: 0 1.5rem;
 }
-.sub-title h2 {
+.sub-title-wrapper.large {
+  text-align: center;
+  font-size: 2rem;
+}
+.sub-title {
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 2rem;
@@ -37,7 +44,15 @@ section {
 .tab-content-container-medium mat-card {
   flex: 45%;
 }
-
+.tab-content-container-large {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.tab-content-container-large mat-card {
+  flex: 25%;
+}
 .mat-card-image {
   height: 164px;
   object-fit: cover;

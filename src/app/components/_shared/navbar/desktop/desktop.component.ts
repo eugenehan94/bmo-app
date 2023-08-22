@@ -35,7 +35,8 @@ export class DesktopComponent {
     this.isSelectedSiteOpen = !this.isSelectedSiteOpen;
   }
 
-  handleSearchBarClick(input: boolean): void {
+  handleSearchBarClick(e: Event, input: boolean): void {
+    e.stopPropagation();
     this.isSearchBarOpen = input;
   }
 

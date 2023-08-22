@@ -17,7 +17,9 @@
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
+.title.large {
+  font-size: 2rem;
+}
 .description {
   font-weight: 300;
   line-height: 1.5rem;

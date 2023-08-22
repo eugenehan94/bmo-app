@@ -22,8 +22,8 @@
       <p
         [ngClass]="{
           'description-title': currentScreenSize === 'Small',
-          'description-title-medium':
-            currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+          'description-title-medium': currentScreenSize === 'Medium',
+          'description-title-large': currentScreenSize === 'Large'
         }"
         [innerHTML]="selectedBanner.title"
       ></p>

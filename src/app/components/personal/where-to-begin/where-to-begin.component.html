@@ -1,8 +1,10 @@
 <section class="where-to-begin-container">
   <div>
-    <h2 class="title">{{ title }}</h2>
+    <h2 [ngClass]="currentScreenSize === 'Large' ? 'title large' : 'title'">
+      {{ title }}
+    </h2>
     <div>
-      <div>
+      <div [ngClass]="currentScreenSize === 'Large' ? 'card-wrapper': ''">
         <div *ngFor="let cardData of cardDatas" class="tile">
           <div>
             <img

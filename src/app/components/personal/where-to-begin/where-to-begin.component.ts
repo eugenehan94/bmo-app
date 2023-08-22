@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { WhereToBeginService } from './where-to-begin.service';
 import { CardContentType } from '../../_shared/interfaces';
 
@@ -10,5 +10,6 @@ import { CardContentType } from '../../_shared/interfaces';
 export class WhereToBeginComponent {
   title: string = 'Not sure where to begin? We’ll help you choose';
   cardDatas: CardContentType[] = this.service.cardContent;
-  constructor(private service: WhereToBeginService){}
+  @Input() currentScreenSize?: string;
+  constructor(private service: WhereToBeginService) {}
 }
