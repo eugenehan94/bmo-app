@@ -3,7 +3,8 @@ import {
   SiteOptionsType,
   NavigationOptionsType,
   CountryOptionsType,
-  SignInMenuOptionsType
+  SignInMenuOptionsType,
+  MobileBottomNavOptionsType
 } from '../../_shared/interfaces';
 @Injectable({
   providedIn: 'root',
@@ -96,6 +97,30 @@ export class NavbarService {
       title: 'Online Banking for Business',
       ariaLabel: 'Sign into online banking for businesses',
       link: 'https://www21.bmo.com/?eaiLocaleString=en',
+    },
+  ];
+
+  mobileBottomNavOptions: MobileBottomNavOptionsType[] = [
+    {
+      title: "Support",
+      ariaLabel: 'Contact BMO customer support, opens in a new tab',
+      href: 'https://www.bmo.com/main/contact-us/',
+      image: 'assets/svg/footer-sticky-support-blue.svg',
+      imageAlt: 'Support icon',
+    },
+    {
+      title: "Branches",
+      ariaLabel: 'Use our BMO branch locator tool, opens in a new tab',
+      href: 'https://branchlocator.bmo.com/',
+      image: 'assets/svg/footer-sticky-branch-blue.svg',
+      imageAlt: 'Branch icon',
+    },
+    {
+      title: "Appointment",
+      ariaLabel: 'Make an appointment, opens in a new tab',
+      href: 'https://www.bmo.com/oab/start?_lang=en',
+      image: 'assets/svg/footer-sticky-appointment-blue.svg',
+      imageAlt: 'Calendar icon',
     },
   ];
 

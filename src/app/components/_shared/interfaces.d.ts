@@ -72,7 +72,13 @@ export interface SignInMenuOptionsType {
 export interface NavigationOptionsType {
   title: string;
 }
-
+export interface MobileBottomNavOptionsType {
+  title: string;
+  ariaLabel: string;
+  href: string;
+  image: string;
+  imageAlt: string;
+}
 //personal products-tabs
 export interface TabsType {
   label: string;

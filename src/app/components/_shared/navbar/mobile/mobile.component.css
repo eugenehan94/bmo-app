@@ -2,21 +2,27 @@ mat-toolbar {
   border-bottom: 1px solid #d9dce1;
   padding-left: 1rem;
 }
-mat-toolbar div {
+
+.top-nav-container {
   height: 100%;
   display: flex;
   align-items: center;
+  flex: 1;
 }
 .mobile-logo-container {
+  height: 100%;
   flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .logo-xsmall {
   width: 100px;
-  height: 28px;
+  height: 27px;
 }
 
 .mobile-btn-container {
+  height: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -27,14 +33,28 @@ mat-toolbar div {
   justify-content: center;
   background-color: transparent;
 }
+.signin-btn-container {
+  display: flex;
+  border-left: 1px solid #d9dce1;
+  border-right: 1px solid #d9dce1;
+  align-items: center;
+}
 .signin-btn {
   color: #0075be;
   text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 600;
+  width: 140px;
+  padding: 2px 24px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
   border: none;
+  white-space: nowrap;
+  margin: 0;
   height: 100%;
-  padding: 0 2rem;
+  justify-content: center;
 }
 .signin-btn span {
   display: flex;
@@ -52,6 +72,88 @@ mat-toolbar div {
   margin-right: 2px;
 }
 
+.mobile-signin-btn-menu-container {
+  height: auto;
+  min-height: calc(100vh - 56.9886px);
+  background-color: #f5f6f7;
+  transition: width 0.2s ease 0s;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 801;
+  top: 57px;
+  right: 0px;
+  height: 100vh;
+  width: 0;
+  overflow-x: hidden;
+}
+.mobile-signin-btn-menu-container.open {
+  width: 100%;
+}
+.mobile-signin-btn-menu-inner-container {
+  transition: width 0.2s ease 0s;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f5f6f7;
+  color: #fefefe;
+  overflow: initial;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+.mobile-online-banking-signin-container {
+  width: 100%;
+  background-color: white;
+  height: auto !important;
+}
+.online-banking-signin-link {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+  font-weight: 700;
+  display: flex;
+  color: #0075be;
+  padding: 1.5rem 1.5rem 0px;
+}
+
+.mobile-signin-register-container {
+  width: 100%;
+  background-color: white;
+  color: #646c76;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  line-height: 0.5rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #d9dce1;
+  height: auto !important;
+  display: flex;
+}
+.mobile-signin-register-wrapper {
+  padding: 1.5rem;
+}
+.mobile-signin-register-link {
+  color: #0075be;
+  margin-bottom: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.mobile-signin-dropdown-menu {
+  margin: 0;
+  padding: 1.5rem;
+  list-style-type: none;
+}
+.mobile-signin-dropdown-link {
+  color: #001928;
+  letter-spacing: 0.15px;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  display: flex;
+  text-decoration: none;
+}
 .mobile-menu-btn {
   cursor: pointer;
   border: none;
@@ -90,4 +192,45 @@ mat-toolbar div {
 
 .hamburger-icon-bottom.open {
   transform: rotate(135deg);
+}
+
+.bottom-nav-container {
+  position: fixed;
+  z-index: 802;
+  transition: all 0.2s ease 0s;
+  bottom: -90px;
+  height: auto !important;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(19, 40, 71, 0.25) 0px 3px 14px 5px;
+  background-color: white;
+}
+.bottom-nav-container.open {
+  bottom: 0px;
+}
+.bottom-nav-link {
+  width: 33.33%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  color: #0075be;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.bottom-nav-link-content-wrapper {
+  width: 100%;
+  height: 100%;
+  color: #0075be;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottom-nav-link-image-wrapper {
+  height: 30px !important;
+  width: 30px;
+  margin-top: 5px;
 }

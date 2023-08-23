@@ -1,54 +1,132 @@
 <div>
   <mat-toolbar>
-    <div class="mobile-logo-container">
-      <a style="text-align: left">
-        <div>
-          <img
-            src="assets/svg/bmoLogo.svg"
-            alt="Bank of Montreal logo"
-            class="logo-xsmall"
-          />
+    <div class="top-nav-container">
+      <div class="mobile-logo-container">
+        <a style="text-align: left">
+          <div style="margin-top: 10px">
+            <img
+              src="assets/svg/bmoLogo.svg"
+              alt="Bank of Montreal logo"
+              class="logo-xsmall"
+            />
+          </div>
+        </a>
+      </div>
+      <div class="mobile-btn-container">
+        <div class="signin-btn-container">
+          <button
+            class="signin-btn"
+            (click)="isMobileSignInMenuOpen = !isMobileSignInMenuOpen"
+          >
+            <span *ngIf="isMobileSignInMenuOpen">
+              <mat-icon>close</mat-icon><span>Close</span></span
+            >
+            <span *ngIf="!isMobileSignInMenuOpen"
+              ><mat-icon>lock_open</mat-icon><span>Sign In</span></span
+            >
+          </button>
+          <div
+            [ngClass]="
+              isMobileSignInMenuOpen
+                ? 'mobile-signin-btn-menu-container open'
+                : 'mobile-signin-btn-menu-container'
+            "
+          >
+            <div class="mobile-signin-btn-menu-inner-container">
+              <div class="mobile-online-banking-signin-container">
+                <a class="online-banking-signin-link">
+                  <div>Online Banking</div>
+                  <mat-icon>chevron_right</mat-icon>
+                </a>
+              </div>
+              <div class="mobile-signin-register-container">
+                <span class="mobile-signin-register-wrapper"
+                  ><p>
+                    Register for online banking with a
+                    <a
+                      class="mobile-signin-register-link"
+                      href="https://www1.bmo.com/selfreg/#/step0"
+                      target="_blank"
+                      >BMO Debit Card</a
+                    >
+                    or
+                  </p>
+                  <p>
+                    <a
+                      class="mobile-signin-register-link"
+                      href="https://www.bmo.com/online/creditcards/registration/?lang=en"
+                      target="_blank"
+                      >Credit Card</a
+                    >
+                  </p></span
+                >
+              </div>
+              <ul class="mobile-signin-dropdown-menu">
+                <li *ngFor="let options of signInMenuOptions">
+                  <a
+                    class="mobile-signin-dropdown-link"
+                    [attr.aria-label]="options.ariaLabel"
+                    href="{{ options.link }}"
+                    target="_blank"
+                    ><div>{{ options.title }}</div></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </a>
+        <div style="width: 72px; display: block; cursor: pointer">
+          <button
+            class="mobile-menu-btn"
+            (click)="isMobileMenuOpen = !isMobileMenuOpen"
+          >
+            <span
+              class="close-container"
+              [ngClass]="isMobileMenuOpen ? 'open' : null"
+            >
+              <span
+                class="hamburger-icon-top"
+                [ngClass]="isMobileMenuOpen ? 'open' : null"
+              ></span>
+              <span
+                class="hamburger-icon-middle"
+                [ngClass]="isMobileMenuOpen ? 'open' : null"
+              ></span>
+              <span
+                class="hamburger-icon-bottom"
+                [ngClass]="isMobileMenuOpen ? 'open' : null"
+              ></span>
+            </span>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="mobile-btn-container">
-      <div style="">
-        <button
-          class="signin-btn"
-          (click)="isMobileSignInMenuOpen = !isMobileSignInMenuOpen"
-        >
-          <span *ngIf="isMobileSignInMenuOpen">
-            <mat-icon>close</mat-icon><span>Close</span></span
-          >
-          <span *ngIf="!isMobileSignInMenuOpen"
-            ><mat-icon>lock_open</mat-icon><span>Sign In</span></span
-          >
-        </button>
-      </div>
-      <div>
-        <button
-          class="mobile-menu-btn"
-          (click)="isMobileMenuOpen = !isMobileMenuOpen"
-        >
-          <span
-            class="close-container"
-            [ngClass]="isMobileMenuOpen ? 'open' : null"
-          >
-            <span
-              class="hamburger-icon-top"
-              [ngClass]="isMobileMenuOpen ? 'open' : null"
-            ></span>
-            <span
-              class="hamburger-icon-middle"
-              [ngClass]="isMobileMenuOpen ? 'open' : null"
-            ></span>
-            <span
-              class="hamburger-icon-bottom"
-              [ngClass]="isMobileMenuOpen ? 'open' : null"
-            ></span>
-          </span>
-        </button>
-      </div>
+    <div
+      [ngClass]="
+        isMobileSignInMenuOpen
+          ? 'bottom-nav-container open'
+          : 'bottom-nav-container'
+      "
+    >
+      <a
+        *ngFor="let option of mobileBottomNavOptions"
+        class="bottom-nav-link"
+        [attr.aria-label]="option.ariaLabel"
+        href="{{ option.href }}"
+        target="_blank"
+        ><div style="max-height: initial">
+          <div class="bottom-nav-link-content-wrapper">
+            <div class="bottom-nav-link-image-wrapper">
+              <img
+                alt="{{ option.imageAlt }}"
+                src="{{ option.image }}"
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            {{ option.title }}
+          </div>
+        </div></a
+      >
     </div>
   </mat-toolbar>
 </div>
