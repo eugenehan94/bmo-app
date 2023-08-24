@@ -4,7 +4,7 @@ import {
   NavigationOptionsType,
   CountryOptionsType,
   SignInMenuOptionsType,
-  MobileBottomNavOptionsType
+  MobileBottomNavOptionsType,
 } from '../../_shared/interfaces';
 @Injectable({
   providedIn: 'root',
@@ -102,31 +102,53 @@ export class NavbarService {
 
   mobileBottomNavOptions: MobileBottomNavOptionsType[] = [
     {
-      title: "Support",
+      title: 'Support',
       ariaLabel: 'Contact BMO customer support, opens in a new tab',
       href: 'https://www.bmo.com/main/contact-us/',
       image: 'assets/svg/footer-sticky-support-blue.svg',
       imageAlt: 'Support icon',
     },
     {
-      title: "Branches",
+      title: 'Branches',
       ariaLabel: 'Use our BMO branch locator tool, opens in a new tab',
       href: 'https://branchlocator.bmo.com/',
       image: 'assets/svg/footer-sticky-branch-blue.svg',
       imageAlt: 'Branch icon',
     },
     {
-      title: "Appointment",
+      title: 'Appointment',
       ariaLabel: 'Make an appointment, opens in a new tab',
       href: 'https://www.bmo.com/oab/start?_lang=en',
       image: 'assets/svg/footer-sticky-appointment-blue.svg',
       imageAlt: 'Calendar icon',
     },
   ];
-
-  navigationOptions: NavigationOptionsType[] = [
+  // navigationOptions: NavigationOptionsType[]
+  navigationOptions: any = [
     {
       title: 'Bank Accounts',
+      categories: [
+        {
+          title: 'Bank Accounts Overview',
+          src: 'https://www.bmo.com/main/personal/bank-accounts/?icid=tl-FEAT2953BRND4-AJBMOH32',
+          ariaLabel: 'Bank Accounts Overview',
+        },
+        {
+          title: 'Chequing Accounts',
+          src: '',
+          ariaLabel: '',
+          children: [
+            {
+              src: '',
+              ariaLabel: '',
+              icon: '',
+              alt: '',
+              title: 'All chequing accounts',
+              description: 'Explore your options',
+            },
+          ],
+        },
+      ],
     },
     {
       title: 'Credit Cards',

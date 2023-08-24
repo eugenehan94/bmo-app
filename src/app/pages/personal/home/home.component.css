@@ -1,0 +1,10 @@
+.home-page-content-wrapper {
+  position: initial;
+  height: auto;
+  overflow: initial;
+}
+.home-page-content-wrapper.mobile-signin-menu-open {
+  position: relative;
+  height: 533px;
+  overflow: hidden;
+}

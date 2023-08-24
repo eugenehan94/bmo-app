@@ -9,6 +9,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 export class HomeComponent {
   // https://blog.angular-university.io/angular-responsive-design/
   currentScreenSize?: string;
+  isMobileSignInMenuOpen?: boolean;
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit() {
@@ -32,5 +33,9 @@ export class HomeComponent {
           this.currentScreenSize = 'Large';
         }
       });
+  }
+
+  isMobileSignInMenuOpenHandler(isOpen: boolean): void {
+    this.isMobileSignInMenuOpen = isOpen;
   }
 }

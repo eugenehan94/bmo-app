@@ -1,10 +1,19 @@
 <div>
-  <app-navbar [currentScreenSize]="currentScreenSize"></app-navbar>
+  <app-navbar
+    [currentScreenSize]="currentScreenSize"
+    (isMobileSignInMenuOpenChanged)="isMobileSignInMenuOpenHandler($event)"
+  ></app-navbar>
   <!-- @TODO: See if you can delete app-personal-navbar - for now just comment out -->
   <!-- <app-personal-navbar
     [currentScreenSize]="currentScreenSize"
   ></app-personal-navbar> -->
-  <div>
+  <div
+    [ngClass]="
+      isMobileSignInMenuOpen
+        ? 'home-page-content-wrapper mobile-signin-menu-open'
+        : 'home-page-content-wrapper'
+    "
+  >
     <app-personal-hero
       [currentScreenSize]="currentScreenSize"
     ></app-personal-hero>
