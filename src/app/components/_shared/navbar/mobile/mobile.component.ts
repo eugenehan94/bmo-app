@@ -29,6 +29,8 @@ export class MobileComponent {
     this.navbarService.mobileBottomNavOptions;
   countryOptions: CountryOptionsType[] = this.navbarService.countryOptions;
   siteOptions: SiteOptionsType[] = this.navbarService.siteOptions;
+  navigationOptions: any = this.navbarService.navigationOptions;
+  
   handleSignInMenuClick(): void {
     this.isMobileSignInMenuOpen = !this.isMobileSignInMenuOpen;
     this.isMobileSignInMenuOpenChanged.emit(this.isMobileSignInMenuOpen);

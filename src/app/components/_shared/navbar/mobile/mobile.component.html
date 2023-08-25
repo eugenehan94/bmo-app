@@ -274,7 +274,48 @@
                   </ul>
                 </div>
               </div>
-              <nav></nav>
+              <nav class="mobile-menu-btn-navigation-container">
+                <div class="mobile-menu-btn-navigation-dropdown-wrapper">
+                  <ul class="mobile-menu-btn-navigation-dropdown">
+                    <li
+                      class="mobile-menu-btn-navigation-dropdown-option"
+                      *ngFor="let option of navigationOptions"
+                    >
+                      <button
+                        class="mobile-menu-btn-navigation-dropdown-content-wrapper"
+                      >
+                        {{ option.title }}
+                        <mat-icon
+                          class="mobile-menu-btn-navigation-dropdown-chevron"
+                          >chevron_right</mat-icon
+                        >
+                      </button>
+                      <div
+                        class="mobile-menu-btn-navigation-categories-container"
+                      >
+                        <ul
+                          class="mobile-menu-btn-navigation-categories-dropdown"
+                        >
+                          <li
+                            *ngFor="let category of option.categories"
+                            class="mobile-menu-btn-navigation-categories-dropdown-option"
+                          >
+                            <a></a>
+                            {{ category.title }}
+                            <button>
+                              <mat-icon
+                                class="mobile-menu-btn-navigation-dropdown-chevron"
+                                >chevron_right</mat-icon
+                              >
+                            </button>
+                            <div></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
             </div>
           </div>
         </div>
