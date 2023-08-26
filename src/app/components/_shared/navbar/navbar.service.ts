@@ -130,14 +130,14 @@ export class NavbarService {
       categories: [
         {
           title: 'Bank Accounts Overview',
-          src: 'https://www.bmo.com/main/personal/bank-accounts/?icid=tl-FEAT2953BRND4-AJBMOH32',
+          link: 'https://www.bmo.com/main/personal/bank-accounts/?icid=tl-FEAT2953BRND4-AJBMOH32',
           ariaLabel: 'Bank Accounts Overview',
         },
         {
           title: 'Chequing Accounts',
           children: [
             {
-              src: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/?icid=ba-FEAT1907EDB4-ATBMO14',
+              link: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/?icid=ba-FEAT1907EDB4-ATBMO14',
               ariaLabel: 'All chequing accounts',
               icon: 'assets/svg/all-layers-blue.svg',
               alt: 'Blue coloured layers',
@@ -145,7 +145,7 @@ export class NavbarService {
               description: 'Explore your options',
             },
             {
-              src: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/plus/?icid=tl-FEAT2953BRND4-AJBMOH372',
+              link: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/plus/?icid=tl-FEAT2953BRND4-AJBMOH372',
               ariaLabel: 'Plus Chequing accounts, Flexible, budget-friendly',
               icon: 'assets/svg/plus-circle-blue.svg',
               alt: 'Blue circle with plus sign',
@@ -153,7 +153,7 @@ export class NavbarService {
               description: 'Flexible, budget-friendly',
             },
             {
-              src: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/performance/?icid=tl-FEAT2953BRND4-AJBMOH370',
+              link: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/performance/?icid=tl-FEAT2953BRND4-AJBMOH370',
               ariaLabel: 'Performance chequing account, Most popular',
               icon: 'assets/svg/speedometer-blue.svg',
               alt: 'Blue speedometer',
@@ -161,7 +161,7 @@ export class NavbarService {
               description: 'Most popular',
             },
             {
-              src: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/practical/?icid=tl-FEAT2953BRND4-AJBMOH373',
+              link: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/practical/?icid=tl-FEAT2953BRND4-AJBMOH373',
               ariaLabel: 'Practical chequing account, Lowest fee',
               icon: 'assets/svg/hand-gear-blue.svg',
               alt: 'Blue hand with gear',
@@ -169,7 +169,7 @@ export class NavbarService {
               description: 'Lowest fee',
             },
             {
-              src: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/premium/?icid=tl-FEAT2953BRND4-AJBMOH371',
+              link: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/premium/?icid=tl-FEAT2953BRND4-AJBMOH371',
               ariaLabel: 'Premium chequing account, Most benefits',
               icon: 'assets/svg/diamond-blue.svg',
               alt: 'Blue diamond',
@@ -177,7 +177,7 @@ export class NavbarService {
               description: 'Most benefits',
             },
             {
-              src: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/air-miles/?icid=tl-FEAT2953BRND4-AJBMOH374',
+              link: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/air-miles/?icid=tl-FEAT2953BRND4-AJBMOH374',
               ariaLabel:
                 'Air miles rewards chequing account, For the rewards collector',
               icon: 'assets/svg/airmiles-blue.svg',
@@ -191,7 +191,7 @@ export class NavbarService {
           title: 'Savings Accounts',
           children: [
             {
-              src: 'https://www.bmo.com/main/personal/bank-accounts/savings-accounts/?icid=ba-FEAT1907EDB4-ATBMO16',
+              link: 'https://www.bmo.com/main/personal/bank-accounts/savings-accounts/?icid=ba-FEAT1907EDB4-ATBMO16',
               ariaLabel: 'All savings accounts',
               icon: 'assets/svg/all-layers-blue.svg',
               alt: 'Blue coloured layers',
@@ -207,7 +207,7 @@ export class NavbarService {
               description: 'Flexible and convenient',
             },
             {
-              src: 'https://www.bmo.com/main/personal/bank-accounts/savings-accounts/savings-amplifier/?icid=tl-FEAT2953BRND4-AJBMOH375',
+              link: 'https://www.bmo.com/main/personal/bank-accounts/savings-accounts/savings-amplifier/?icid=tl-FEAT2953BRND4-AJBMOH375',
               ariaLabel: 'Savings amplifier account, Most benefits',
               icon: 'assets/svg/bullseye-dollar-blue.svg',
               alt: 'Blue bulls eye with dollar sign',
@@ -224,7 +224,7 @@ export class NavbarService {
               description: 'Earn interest on U.S. dollars',
             },
             {
-              src: 'https://www.bmo.com/main/personal/bank-accounts/savings-accounts/savings-builder/?icid=tl-FEAT2953BRND4-AJBMOH377',
+              link: 'https://www.bmo.com/main/personal/bank-accounts/savings-accounts/savings-builder/?icid=tl-FEAT2953BRND4-AJBMOH377',
               ariaLabel: 'Savings builder account, Bonus interest',
               icon: 'assets/svg/steps-dollar-blue.svg',
               alt: 'Blue steps with dollar sign',
@@ -237,7 +237,7 @@ export class NavbarService {
           title: 'Banking For',
           children: [
             {
-              src: 'https://www.bmo.com/main/personal/students/?icid=tl-FEAT2953BRND4-AJBMOH28',
+              link: 'https://www.bmo.com/main/personal/students/?icid=tl-FEAT2953BRND4-AJBMOH28',
               ariaLabel:
                 'Banking options for students, Offers, bonuses and more',
               icon: 'assets/svg/students-icon-blue.svg',
@@ -246,7 +246,7 @@ export class NavbarService {
               description: 'Offers, bonuses and more',
             },
             {
-              src: 'https://www.bmo.com/main/personal/seniors-banking/?icid=US58746EDB-BMO049',
+              link: 'https://www.bmo.com/main/personal/seniors-banking/?icid=US58746EDB-BMO049',
               ariaLabel:
                 'Banking options for seniors, Over 60? We’ve got you covered',
               icon: 'assets/svg/seniors-icon-blue.svg',
@@ -255,7 +255,7 @@ export class NavbarService {
               description: 'Over 60? We’ve got you covered',
             },
             {
-              src: 'https://www.bmo.com/main/personal/newcomers-to-canada/?icid=tl-FEAT2953BRND4-AJBMOH29',
+              link: 'https://www.bmo.com/main/personal/newcomers-to-canada/?icid=tl-FEAT2953BRND4-AJBMOH29',
               ariaLabel: 'Banking options for newcomers to Canada',
               icon: 'assets/svg/maple-leaf-blue.svg',
               alt: 'Blue maple leaf',
@@ -263,7 +263,7 @@ export class NavbarService {
               description: 'Banking options for newcomers',
             },
             {
-              src: 'https://www.bmo.com/main/personal/canadian-defence-community-banking/?icid=tl-FEAT2953BRND4-AJBMOH30',
+              link: 'https://www.bmo.com/main/personal/canadian-defence-community-banking/?icid=tl-FEAT2953BRND4-AJBMOH30',
               ariaLabel:
                 'Banking options for Canadian defence community, Banking options for eligible members',
               icon: 'assets/svg/star-ribbon-blue.svg',
@@ -272,7 +272,7 @@ export class NavbarService {
               description: 'Banking options for eligible members',
             },
             {
-              src: 'https://www.bmo.com/main/personal/bank-accounts/family-bundle/?icid=tl-FEAT2953BRND4-AJBMOH26',
+              link: 'https://www.bmo.com/main/personal/bank-accounts/family-bundle/?icid=tl-FEAT2953BRND4-AJBMOH26',
               ariaLabel:
                 'Family bundle bank accounts, Benefits for the entire family',
               icon: 'assets/svg/family-blue.svg',
@@ -281,7 +281,7 @@ export class NavbarService {
               description: 'Benefits for the entire family',
             },
             {
-              src: 'https://www.bmo.com/main/personal/indigenous-banking/?icid=tl-FEAT2953BRND4-AJBMOH31',
+              link: 'https://www.bmo.com/main/personal/indigenous-banking/?icid=tl-FEAT2953BRND4-AJBMOH31',
               ariaLabel:
                 'Banking options for indigenous communities, Personalized support, offers and more',
               icon: 'assets/svg/avatar-blue.svg',
@@ -293,18 +293,18 @@ export class NavbarService {
         },
         {
           title: 'Special Offers',
-          src: 'https://www.bmo.com/main/personal/bank-accounts/new-bank-account-offers-and-promotions/?icid=tl-FEAT2953BRND4-AJBMOH379',
+          link: 'https://www.bmo.com/main/personal/bank-accounts/new-bank-account-offers-and-promotions/?icid=tl-FEAT2953BRND4-AJBMOH379',
           ariaLabel: 'Special bank account offers',
         },
         {
           title: 'BMO Digital Banking',
-          src: 'https://www.bmo.com/main/personal/ways-to-bank/digital-banking/?icid=tl-FEAT2953BRND4-AJBMOH27',
+          link: 'https://www.bmo.com/main/personal/ways-to-bank/digital-banking/?icid=tl-FEAT2953BRND4-AJBMOH27',
           ariaLabel: 'B M O digital banking',
         },
       ],
       resources: [
         {
-          src: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/compare/?icid=tl-FEAT2953BRND4-AJBMOH34',
+          link: 'https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/compare/?icid=tl-FEAT2953BRND4-AJBMOH34',
           ariaLabel: 'Compare chequing accounts, easily compare your options',
           icon: 'assets/svg/compass-blue.svg',
           alt: 'Blue compass',
@@ -312,7 +312,7 @@ export class NavbarService {
           description: 'Easily compare your options',
         },
         {
-          src: 'https://www.bmo.com/main/personal/bank-accounts/?icid=tl-FEAT2953BRND4-AJBMOH33#help-me-choose',
+          link: 'https://www.bmo.com/main/personal/bank-accounts/?icid=tl-FEAT2953BRND4-AJBMOH33#help-me-choose',
           ariaLabel: 'Help me choose, answer a few short questions',
           icon: 'assets/svg/helpme-choose-blue.svg',
           alt: 'Blue circle with question mark',
@@ -320,7 +320,7 @@ export class NavbarService {
           description: 'Answer a few short questions',
         },
         {
-          src: 'https://www.bmo.com/main/personal/bank-accounts/banking-agreements-and-fees/?icid=tl-FEAT2953BRND4-AJBMOH37',
+          link: 'https://www.bmo.com/main/personal/bank-accounts/banking-agreements-and-fees/?icid=tl-FEAT2953BRND4-AJBMOH37',
           ariaLabel: 'Banking fees and agreements',
           icon: 'assets/svg/banking-agreement-blue.svg',
           alt: 'Blue document icon',
@@ -328,7 +328,7 @@ export class NavbarService {
           description: 'Access more details about your bank plan',
         },
         {
-          src: 'https://www.bmo.com/oab/start?_lang=en&icid=tl-FEAT2953BRND4-AJBMOH35',
+          link: 'https://www.bmo.com/oab/start?_lang=en&icid=tl-FEAT2953BRND4-AJBMOH35',
           ariaLabel:
             'Book an appointment, Connect with us in person, opens in a new tab',
           icon: 'assets/svg/make-appointment-blue.svg',
@@ -340,9 +340,257 @@ export class NavbarService {
     },
     {
       title: 'Credit Cards',
+      categories: [
+        {
+          title: 'Credit Cards Overview',
+          link: 'https://www.bmo.com/main/personal/credit-cards/?icid=tl-FEAT2953BRND4-AJBMOH64',
+          ariaLabel: 'Credit Cards overview page',
+        },
+        {
+          title: 'Card Types',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/cashback/?icid=tl-FEAT2953BRND4-AJBMOH50',
+              ariaLabel: 'Cash Back Credit Card, Earn cash on all purchases',
+              icon: 'assets/svg/cash-flow-blue.svg',
+              alt: 'Blue cash flow',
+              title: 'Cash Back',
+              description: 'Earn cash on all purchases',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/low-interest-rate/?icid=tl-FEAT2953BRND4-AJBMOH54',
+              ariaLabel:
+                'Low interest rate credit cards,  Low fees, low interest',
+              icon: 'assets/svg/low-interest-blue.svg',
+              alt: 'Blue low interest rate icon',
+              title: 'Low Interest Rate',
+              description: 'Low fees, low interest',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/rewards/?icid=tl-FEAT2953BRND4-AJBMOH51',
+              ariaLabel: 'Rewards Credit card, Earn rewards on every dollar',
+              icon: 'assets/svg/bmo-rewards-blue.svg',
+              alt: 'Blue star',
+              title: 'Rewards',
+              description: 'Earn rewards on every dollar',
+            },
+            {
+              link: 'https://www.bmo.com/en-ca/main/personal/credit-cards/travel/?icid=tl-FEAT2953BRND4-AJBMOH55',
+              ariaLabel: 'Travel credit cards, Earn points on travel',
+              icon: 'assets/svg/retirement-calculator-blue.svg',
+              alt: 'Blue beach with palm tree and sun',
+              title: 'Travel',
+              description: 'Earn points on travel',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/airmiles/?icid=tl-FEAT2953BRND4-AJBMOH52',
+              ariaLabel:
+                'Air miles credit card, For travel, merchandise & more',
+              icon: 'assets/svg/airmiles-blue.svg',
+              alt: 'Blue plane',
+              title: 'AIR MILES',
+              description: 'For travel, merchandise & more',
+            },
+            {
+              link: 'https://www.bmo.com/en-ca/main/personal/credit-cards/lifestyle/?icid=tl-FEAT2953BRND4-AJBMOH56',
+              ariaLabel: 'Lifestyle credit cards, Enjoy everyday rewards',
+              icon: 'assets/svg/lifestyle-blue.svg',
+              alt: 'Blue avatar with star',
+              title: 'Lifestyle',
+              description: 'Enjoy everyday rewards',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/no-annual-fee/?icid=tl-FEAT2953BRND4-AJBMOH53',
+              ariaLabel: 'No annual fee credit card, Keep your costs low',
+              icon: 'assets/svg/card-no-fee-blue.svg',
+              alt: 'Blue card with crossed out dollar sign',
+              title: 'No Fee',
+              description: 'Keep your costs low',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/all-cards/?icid=tl-FEAT2953BRND4-AJBMOH61',
+              ariaLabel: 'All credit cards, Explore your options',
+              icon: 'assets/svg/credit-card-blue-icon.svg',
+              alt: 'Blue card with crossed out dollar sign',
+              title: 'No Fee',
+              description: 'Keep your costs low',
+            },
+          ],
+        },
+        {
+          title: 'Specialty Cards',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/students/?icid=tl-FEAT2953BRND4-AJBMOH57',
+              ariaLabel: 'Student credit cards, Enjoy no annual fee',
+              icon: 'assets/svg/students-icon-blue.svg',
+              alt: 'Blue student graduation cap',
+              title: 'Students',
+              description: 'Enjoy no annual fee',
+            },
+            {
+              src: 'https://www.bmo.com/main/personal/credit-cards/affinity/?icid=tl-FEAT2953BRND4-AJBMOH58',
+              ariaLabel: 'Affinity credit card, Cards that support your cause',
+              icon: 'assets/svg/card-heart-blue.svg',
+              alt: 'Blue card with heart',
+              title: 'Affinity',
+              description: 'Cards that support your cause',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/newcomers-to-canada/?icid=tl-US72013CC4-AMBMO14',
+              ariaLabel:
+                'Credit cards for those new to Canada, Build your credit history',
+              icon: 'assets/svg/maple-leaf-blue.svg',
+              alt: 'Blue maple leaf',
+              title: 'New to Canada',
+              description: 'Build your credit history',
+            },
+            {
+              src: 'https://www.bmo.com/main/personal/credit-cards/prepaid-credit-cards/?icid=tl-FEAT2953BRND4-AJBMOH60',
+              ariaLabel:
+                'Pre-paid credit cards, A reloadable, secure Mastercard',
+              icon: 'assets/svg/card-hand-blue.svg',
+              alt: 'Blue card with hand',
+              title: 'Pre-paid',
+              description: 'A reloadable, secure Mastercard',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/bank-accounts/savings-accounts/savings-builder/?icid=tl-FEAT2953BRND4-AJBMOH377',
+              ariaLabel:
+                'Business credit cards, Earn rewards, air miles and more',
+              icon: 'assets/svg/briefcase-blue.svg',
+              alt: 'Blue briefcase',
+              title: 'Business',
+              description: 'Earn rewards, AIR MILES, and more',
+            },
+          ],
+        },
+        {
+          title: 'Digital Wallet & Tools',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/credit-card-access-details/?icid=tl-FEAT2953BRND4-AJBMOH63',
+              ariaLabel:
+                'B M O Powerswitch option, Transfer your pre-authorized payments',
+              icon: 'assets/svg/arrows-left-blue.svg',
+              alt: 'Blue arrows pointing left and right',
+              title: 'BMO PowerSwitch',
+              description: 'Transfer your pre-authorized payments',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/google-pay?icid=tl-US25692CC1-JCBMO14',
+              ariaLabel: 'Google pay options, Pay securely using Google Pay',
+              icon: 'assets/svg/google-pay-blue.svg',
+              alt: 'Blue Google pay',
+              title: 'Google Pay',
+              description: 'Pay securely using Google Pay',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/paysmart-installment-plans/?icid=tl-FEAT2654CC1-AMBMO23',
+              ariaLabel:
+                'B M O Paysmart options, Pay your credit card off in interest-free instalments',
+              icon: 'assets/svg/auto-pay-blue.svg',
+              alt: 'Blue BMO PaySmart',
+              title: 'BMO PaySmart',
+              description:
+                'Pay your credit card off in interest-free instalments',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/click-to-pay/?icid=tl-FEAT2953BRND4-AJBMOH62',
+              ariaLabel: 'Click to pay options, Safely check out with B M O',
+              icon: 'assets/svg/click-to-pay-blue.svg',
+              alt: 'Blue click to pay',
+              title: 'Click to Pay',
+              description: 'Safely check out with BMO',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/apple-pay/?icid=tl-US817CC1-EYMCA14',
+              ariaLabel: 'Apple Pay options, Pay securely using Apple Pay',
+              icon: 'assets/svg/family-blue.svg',
+              alt: 'Blue Apple Pay',
+              title: 'Apple Pay',
+              description: 'Pay securely using Apple Pay',
+            },
+          ],
+        },
+        {
+          title: 'Safety & Travel',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/credit-card-security-protection/?icid=tl-FEAT2953BRND4-AJBMOH68',
+              ariaLabel: 'Safety and security',
+              icon: 'assets/svg/security-lock-blue.svg',
+              alt: 'Blue security lock',
+              title: 'Safety & Security',
+              description: 'Your protection is our priority',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/credit-card-travel-insurance/?icid=tl-FEAT2953BRND4-AJBMOH69',
+              ariaLabel: 'Travel Services',
+              icon: 'assets/svg/retirement-calculator-blue.svg',
+              alt: 'Blue beach with tree and sun',
+              title: 'Travel Services',
+              description: 'Everything you need on your trip',
+            },
+          ],
+        },
+      ],
+      resources: [
+        {
+          link: 'https://www.bmo.com/online/creditcards/activate-credit-card/?icid=tl-FEAT2953BRND4-AJBMOH65',
+          ariaLabel:
+            'Activate your card, Set up your card in 1 minute, opens in a new tab',
+          icon: 'assets/svg/card-resource-blue.svg',
+          alt: 'Blue bank card',
+          title: 'Activate your card',
+          description: 'Set up your card in 1 minute',
+        },
+        {
+          link: 'https://www.bmo.com/main/personal/credit-cards/compare-tool/?icid=tl-FEAT2953BRND4-AJBMOH66',
+          ariaLabel: 'Compare B M O credit cards, Easily compare your options',
+          icon: 'assets/svg/compass-blue.svg',
+          alt: 'Blue balance scale',
+          title: 'Compare credit cards',
+          description: 'Easily compare your options',
+        },
+        {
+          link: 'https://www.bmo.com/main/personal/bank-accounts/banking-agreements-and-fees/?icid=tl-FEAT2953BRND4-AJBMOH37',
+          ariaLabel: 'Banking fees and agreements',
+          icon: 'assets/svg/banking-agreement-blue.svg',
+          alt: 'Blue document icon',
+          title: 'Banking fees and agreements',
+          description: 'Access more details about your bank plan',
+        },
+        {
+          link: 'https://www.bmo.com/main/personal/credit-cards/how-to-choose-a-credit-card/?icid=tl-FEAT2953BRND4-AJBMOH67',
+          ariaLabel:
+            'Help me choose a credit card, Answer a few short questions',
+          icon: 'assets/svg/helpme-choose-blue.svg',
+          alt: 'Blue question mark',
+          title: 'Help me choose a card',
+          description: 'Answer a few short questions',
+        },
+      ],
     },
     {
       title: 'Mortgages',
+      categories: [
+        {
+          title: 'Mortgages Overview',
+          link: 'https://www.bmo.com/main/personal/mortgages/?icid=tl-FEAT2953BRND4-AJBMOH100',
+          ariaLabel: 'Mortgages Overview',
+        },
+        {
+          title: 'Mortgage Rates',
+          link: 'https://www.bmo.com/main/personal/mortgages/mortgage-rates/?icid=tl-FEAT2953BRND4-AJBMOH90',
+          ariaLabel: 'Mortgage rates',
+        },
+        {
+          title: 'Special Offers',
+          link: 'https://www.bmo.com/main/personal/mortgages/special-offers/?icid=tl-FEAT2953BRND4-AJBMOH381',
+          ariaLabel: 'Learn more about special mortgage offer at B M O',
+        },
+      ],
     },
     {
       title: 'Loans',

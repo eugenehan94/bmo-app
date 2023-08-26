@@ -279,9 +279,10 @@
                   <ul class="mobile-menu-btn-navigation-dropdown">
                     <li
                       class="mobile-menu-btn-navigation-dropdown-option"
-                      *ngFor="let option of navigationOptions"
+                      *ngFor="let option of navigationOptions; let j = index"
                     >
                       <button
+                        (click)="handleCategoryClick(j)"
                         class="mobile-menu-btn-navigation-dropdown-content-wrapper"
                       >
                         {{ option.title }}
@@ -297,20 +298,90 @@
                           class="mobile-menu-btn-navigation-categories-dropdown"
                         >
                           <li
-                            *ngFor="let category of option.categories"
+                            *ngFor="
+                              let category of option.categories;
+                              let i = index
+                            "
                             class="mobile-menu-btn-navigation-categories-dropdown-option"
                           >
-                            <a></a>
-                            {{ category.title }}
-                            <button>
+                            <a
+                              *ngIf="category.link"
+                              [attr.aria-label]="category.ariaLabel"
+                              target="_blank"
+                              href="{{ category.link }}"
+                              class="mobile-menu-btn-navigation-categories-dropdown-link-no-children"
+                              >{{ category.title }}</a
+                            >
+                            <button
+                              *ngIf="!category.link"
+                              (click)="testClick($event, i)"
+                              class="mobile-menu-btn-navigation-categories-dropdown-with-children"
+                            >
+                              {{ category.title }}
                               <mat-icon
-                                class="mobile-menu-btn-navigation-dropdown-chevron"
+                                class="mobile-menu-btn-navigation-categories-dropdown-chevron"
                                 >chevron_right</mat-icon
                               >
                             </button>
-                            <div></div>
+                            <div
+                              *ngIf="!category.link"
+                              class="mobile-menu-btn-navigation-categories-dropdown-child-container"
+                            >
+                              <ul
+                                class="mobile-menu-btn-navigation-categories-dropdown-child-dropdown"
+                              >
+                                <li
+                                  *ngFor="let child of category.children"
+                                  class="mobile-menu-btn-navigation-categories-dropdown-child-dropdown-option"
+                                >
+                                  <a
+                                    href="{{ child.link }}"
+                                    [attr.aria-label]="child.ariaLabel"
+                                    target="_blank"
+                                    class="mobile-menu-btn-navigation-categories-dropdown-child-dropdown-option-link"
+                                    ><span>{{ child.title }}</span></a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
                           </li>
                         </ul>
+                        <div
+                          class="mobile-menu-btn-navigation-resources-container"
+                        >
+                          <div
+                            class="mobile-menu-btn-navigation-resources-title"
+                          >
+                            Resources
+                          </div>
+                          <ul
+                            class="mobile-menu-btn-navigation-resources-list-container"
+                          >
+                            <li *ngFor="let resource of option.resources">
+                              <a
+                                href="{{ resource.link }}"
+                                [attr.aria-label]="resource.ariaLabel"
+                                target="_blank"
+                                class="mobile-menu-btn-navigation-resources-list-link"
+                              >
+                                <div
+                                  class="mobile-menu-btn-navigation-resources-image-wrapper"
+                                >
+                                  <img
+                                    src="{{ resource.icon }}"
+                                    alt="{{ resource.alt }}"
+                                    style="min-width: 1.25"
+                                  />
+                                </div>
+                                <div
+                                  class="mobile-menu-btn-navigation-resources-description"
+                                >
+                                  {{ resource.title }}
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </li>
                   </ul>

@@ -30,7 +30,7 @@ export class MobileComponent {
   countryOptions: CountryOptionsType[] = this.navbarService.countryOptions;
   siteOptions: SiteOptionsType[] = this.navbarService.siteOptions;
   navigationOptions: any = this.navbarService.navigationOptions;
-  
+
   handleSignInMenuClick(): void {
     this.isMobileSignInMenuOpen = !this.isMobileSignInMenuOpen;
     this.isMobileSignInMenuOpenChanged.emit(this.isMobileSignInMenuOpen);
@@ -46,5 +46,26 @@ export class MobileComponent {
   }
   handleLanguageSelectMenuClick(): void {
     this.isLanguageSelectMenuOpen = !this.isLanguageSelectMenuOpen;
+  }
+  handleCategoryClick(j: number): void {
+    const categoryContainer = document.querySelectorAll(
+      '.mobile-menu-btn-navigation-categories-container'
+    );
+    categoryContainer[j].classList.toggle('open');
+  }
+  testClick(event: any, i: number): void {
+    const childrenDropdownContainer = document.querySelectorAll(
+      '.mobile-menu-btn-navigation-categories-dropdown-child-container'
+    );
+    const chevron = document.querySelectorAll(
+      '.mobile-menu-btn-navigation-categories-dropdown-chevron'
+    );
+
+    const childrenTextOfDropdown = document.querySelectorAll(
+      '.mobile-menu-btn-navigation-categories-dropdown-with-children'
+    );
+    childrenDropdownContainer[i - 1].classList.toggle('open');
+    chevron[i - 1].classList.toggle('open');
+    childrenTextOfDropdown[i - 1].classList.toggle('open');
   }
 }
