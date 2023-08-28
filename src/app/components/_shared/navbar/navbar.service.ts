@@ -590,13 +590,448 @@ export class NavbarService {
           link: 'https://www.bmo.com/main/personal/mortgages/special-offers/?icid=tl-FEAT2953BRND4-AJBMOH381',
           ariaLabel: 'Learn more about special mortgage offer at B M O',
         },
+        {
+          title: 'Mortgage Options',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/pre-qualification/?icid=tl-FEAT2953BRND4-AJBMOH382',
+              ariaLabel:
+                'Mortgage pre-qualification, Estimate how much you can afford',
+              icon: 'assets/svg/house-stopwatch-blue.svg',
+              alt: 'Blue house with stopwatch',
+              title: 'Mortgage pre-qualification',
+              description: 'Estimate how much you can afford',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/renewal/?icid=tl-FEAT2953BRND4-AJBMOH383',
+              ariaLabel: 'Renew your mortgage, Explore your renewal options',
+              icon: 'assets/svg/house-one-cycle-blue.svg',
+              alt: 'Blue house with cycle',
+              title: 'Renew your mortgage',
+              description: 'Explore your renewal options',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/pre-approval/?icid=tl-FEAT2953BRND4-AJBMOH102',
+              ariaLabel:
+                'Mortgage pre-approval, learn more about pre-approvals',
+              icon: 'assets/svg/house-check-blue.svg',
+              alt: 'Blue house with checkmark',
+              title: 'Mortgage pre-approval',
+              description: 'Learn more about pre-approvals',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/refinance/?icid=tl-FEAT2953BRND4-AJBMOH384',
+              ariaLabel:
+                'Refinance your mortgage, fund your goals and big plans',
+              icon: 'assets/svg/house-dollar-blue.svg',
+              alt: 'Blue house with dollar sign',
+              title: 'Refinance your mortgage',
+              description: 'Fund your goals and big plans',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/homeowner-readiline/?icid=tl-FEAT2953BRND4-AJBMOH91',
+              ariaLabel:
+                'Learn more about homeowner ReadiLine, Combine a mortgage with a line of credit',
+              icon: 'assets/svg/house-circulate-blue.svg',
+              alt: 'Blue house with circulating arrows',
+              title: 'Homeowner ReadiLine®',
+              description: 'Combine a mortgage with a line of credit',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/special-offers/smart-fixed/?icid=tl-FEAT2953BRND4-AJBMOH94',
+              ariaLabel:
+                'Learn more about B M O Smart Fixed Mortgage, Lock in a 130-day rate',
+              icon: 'assets/svg/house-safety-lock-blue.svg',
+              alt: 'Blue house with lock',
+              title: 'BMO Smart Fixed Mortgage',
+              description: 'Lock in a 130-day rate',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/switch-mortgage/?icid=tl-FEAT2953BRND4-AJBMOH95',
+              ariaLabel:
+                'Switch my mortgage to B M O, Explore how you can switch',
+              icon: 'assets/svg/house-left-right-arrow-blue.svg',
+              alt: 'Blue house with arrows pointing left and right',
+              title: 'Switch your mortgage to BMO',
+              description: 'Explore how you can switch',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/mortgage-protection-insurance/?icid=tl-FEAT2953BRND4-AJBMOH93',
+              ariaLabel:
+                'Learn more about mortgage default insurance, Protect your investment',
+              icon: 'assets/svg/house-shield-blue.svg',
+              alt: 'Blue house with shield',
+              title: 'Mortgage insurance',
+              description: 'Protect your investment',
+            },
+          ],
+        },
+        {
+          title: 'Mortgage Calculators',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/calculators/?icid=tl-FEAT2953BRND4-AJBMOH97',
+              ariaLabel: 'All calculators, explore your options',
+              icon: 'assets/svg/all-layers-blue.svg',
+              alt: 'Blue layers',
+              title: 'All calculators',
+              description: 'Explore your options',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/calculators/payment-calculator/?icid=tl-FEAT2953BRND4-AJBMOH388',
+              ariaLabel:
+                'Access our mortgage payment calculator, Estimate your regular payments',
+              icon: 'assets/svg/house-dollar-plus-blue.svg',
+              alt: 'Blue house with dollar and plus sign',
+              title: 'Mortgage Payment Calculator',
+              description: 'Estimate your regular payments',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/calculators/affordability-calculator/?icid=tl-FEAT2953BRND4-AJBMOH386',
+              ariaLabel:
+                'Access our mortgage affordability calculator, Start setting your budget',
+              icon: 'assets/svg/house-percentage-plus-blue.svg',
+              alt: 'Blue house with percentage and plus sign',
+              title: 'Mortgage Affordability Calculator',
+              description: 'Start setting your budget',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/mortgage-rates/compare/?icid=tl-FEAT2953BRND4-AJBMOH389',
+              ariaLabel:
+                'Access our variable or fixed rate payment calculator, Start comparing your mortgage payments',
+              icon: 'assets/svg/house-speedometer-plus-blue.svg',
+              alt: 'Blue house with speedometer and plus sign',
+              title: 'Variable or Fixed Rate Calculator',
+              description: 'Start comparing your mortgage payments',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/calculators/prepayment-calculator/?icid=tl-FEAT2953BRND4-AJBMOH387',
+              ariaLabel:
+                'Access our mortgage prepayment calculator, Estimate your pre-payment charge',
+              icon: 'assets/svg/house-money-bag-plus-blue.svg',
+              alt: 'Blue house with money bag and plus sign',
+              title: 'Mortgage Pre-Payment Calculator',
+              description: 'Estimate your pre-payment charge',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/calculators/homeowner-readiline-calculator/',
+              ariaLabel:
+                'Find out how much you can borrow based on your home’s value',
+              icon: 'assets/svg/readiLine-calculator-blue.svg',
+              alt: 'Blue house with circulating arrow and plus sign',
+              title: 'Homeowner ReadiLine® Calculator',
+              description: 'Explore a flexible borrowing option',
+            },
+          ],
+        },
+        {
+          title: 'Tips and Advice',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/buying-a-home/?icid=tl-FEAT2953BRND4-AJBMOH92',
+              ariaLabel:
+                'Learn more about buying a home, Tips for your home-buying journey',
+              icon: 'assets/svg/house-moneybag-blue.svg',
+              alt: 'Blue house with money bag',
+              title: 'Buying a home',
+              description: 'Tips for your home-buying journey',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/renewal-vs-refinance/?icid=tl-FEAT2953BRND4-AJBMOH98',
+              ariaLabel:
+                'Renew versus refinance mortgage options, Compare your options ',
+              icon: 'assets/svg/house-one-cycle-blue.svg',
+              alt: 'Blue house with circular arrow',
+              title: 'Renew vs. refinance',
+              description: 'Compare your options',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/first-time-home-buyer/?icid=tl-FEAT2953BRND4-AJBMOH96',
+              ariaLabel:
+                'Learn more about first-time home buyer programs, Incentives, tax credits and more',
+              icon: 'assets/svg/house-key-blue.svg',
+              alt: 'Blue house with key',
+              title: 'First-time home-buyer programs',
+              description: 'Incentives, tax credits and more',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/increasing-interest-rates-and-your-mortgage/?icid=tl-FEAT2953BRND4-AJBMOH390',
+              ariaLabel:
+                'Learn about the impact of rising interest rates, How it may impact your mortgage',
+              icon: 'assets/svg/growth-dollar-blue.svg',
+              alt: 'Blue dollar with appreciating arrow',
+              title: 'Impact of rising interest rates',
+              description: 'How it may impact your mortgage',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/buy-another-property/?icid=tl-FEAT2953BRND4-AJBMOH99',
+              ariaLabel:
+                'Learn more about buying another property, Tips for your next move or investment',
+              icon: 'assets/svg/house-plus-blue.svg',
+              alt: 'Blue house with plus sign',
+              title: 'Buying your next property',
+              description: 'Tips for your next move or investment',
+            },
+            {
+              link: 'https://www.bmo.com/en-ca/main/personal/mortgages/eco-friendly-homes/',
+              ariaLabel:
+                'Learn more about how you can build a green home with B M O’s home-financing options',
+              icon: 'assets/svg/eco-friendly-home-blue.svg',
+              alt: 'Blue house with leaf sign',
+              title: 'Eco-friendly home guide',
+              description: 'Tips for a greener home',
+            },
+            {
+              link: 'https://www.bmo.com/en-ca/main/personal/mortgages/newcomers-to-canada/',
+              ariaLabel:
+                'Get tips on how you can start your homebuying journey as a newcomer to Canada',
+              icon: 'assets/svg/new-comer-mortgage-blue.svg',
+              alt: 'Blue house with dollar sign',
+              title: 'Newcomer mortgage options',
+              description: 'Home financing tips for newcomers',
+            },
+          ],
+        },
+      ],
+      resources: [
+        {
+          link: 'https://www.bmo.com/main/personal/mortgages/mortgage-applications/?icid=tl-FEAT2953BRND4-AJBMOH391',
+          ariaLabel:
+            'Apply for a Mortgage at B M O, Kickstart your mortgage journey',
+          icon: 'assets/svg/apply-online-blue.svg',
+          alt: 'Blue apply online',
+          title: 'Apply for a BMO Mortgage',
+          description: 'Kickstart your mortgage journey',
+        },
+        {
+          link: 'https://www.bmo.com/main/personal/mortgages/mortgage-contact-form/?icid=tl-FEAT2953BRND4-AJBMOH101',
+          ariaLabel:
+            'Talk to an expert, Request a call back, opens in a new tab',
+          icon: 'assets/svg/chat-blue.svg',
+          alt: 'Blue chat',
+          title: 'Talk to an expert',
+          description: 'Request a call back',
+        },
+        {
+          link: 'https://www.bmo.com/en-ca/main/personal/tel:18662621618',
+          ariaLabel: 'Call a home advisor, 1 8 6 6 2 6 2 1 6 1 8 ',
+          icon: 'assets/svg/schedule-call-blue.svg',
+          alt: 'Blue phone',
+          title: 'Call a home advisor',
+          description: '1-866-262-1618',
+        },
+        {
+          link: 'https://mortgagelocator.bmo.com/?icid=tl-FEAT2953BRND4-AJBMOH104',
+          ariaLabel:
+            'Find a local mortgage specialist, Connect with a specialist nearby, opens in a new tab',
+          icon: 'assets/svg/find-mortgage-blue.svg',
+          alt: 'Blue home',
+          title: 'Find a local mortgage specialist',
+          description: 'Connect with a specialist nearby',
+        },
       ],
     },
     {
       title: 'Loans',
+      categories: [
+        {
+          title: 'Loans & Lines of Credit Overview',
+          link: 'https://www.bmo.com/main/personal/loans-line-of-credit/?icid=tl-FEAT2953BRND4-AJBMOH135',
+          ariaLabel: 'Learn more about our Loans and Lines of Credit',
+        },
+        {
+          title: 'Loans',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/loans/personal-loan/?icid=tl-FEAT2953BRND4-AJBMOH123',
+              ariaLabel:
+                'Learn more about taking out a personal loan, Most popular',
+              icon: 'assets/svg/loans-line-of-credit-blue.svg',
+              alt: 'Blue hand with money bag',
+              title: 'Personal Loans',
+              description: 'Most popular',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/loans/car-loan/?icid=tl-FEAT2953BRND4-AJBMOH126',
+              ariaLabel:
+                'Learn more about auto loans, Get the vehicle you want',
+              icon: 'assets/svg/auto-loans-blue.svg',
+              alt: 'Blue car with dollar sign',
+              title: 'Auto Loans',
+              description: 'Get the vehicle you want',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/loans/home-equity-loan/?icid=tl-FEAT2953BRND4-AJBMOH124',
+              ariaLabel:
+                'Learn more about Home equity loans, Tap into your home equity',
+              icon: 'assets/svg/house-percent-dollar-blue.svg',
+              alt: 'Blue house with percent and dollar sign',
+              title: 'Home Equity Loan',
+              description: 'Tap into your home equity',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/loans/?icid=tl-FEAT2953BRND4-AJBMOH122',
+              ariaLabel: 'Learn more about loans, Explore your options',
+              icon: 'assets/svg/all-layers-blue.svg',
+              alt: 'Blue layers',
+              title: 'All loans',
+              description: 'Explore your options',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/loans/rrsp-retro-activator-loan/?icid=tl-FEAT2953BRND4-AJBMOH125',
+              ariaLabel:
+                'Registered retirement savings plan retro activator, Maximize your R R S P',
+              icon: 'assets/svg/vacation-checkmark-blue.svg',
+              alt: 'Blue tree with checkmark',
+              title: 'RRSP Retro Activator',
+              description: 'Maximize your RRSP',
+            },
+          ],
+        },
+        {
+          title: 'Lines of Credit',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/lines-of-credit/personal-line-of-credit/?icid=tl-FEAT2953BRND4-AJBMOH128',
+              ariaLabel:
+                'Learn more about a personal line of credit, Access cash when you need it',
+              icon: 'assets/svg/cycle-dollar-blue.svg',
+              alt: 'Blue dollar sign with clockwise rotating arrows',
+              title: 'Personal Line of Credit',
+              description: 'Access cash when you need it',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/lines-of-credit/rrsp-readiline/?icid=tl-FEAT2953BRND4-AJBMOH130',
+              ariaLabel:
+                'Registered retirement savings plan readiline, Maximize your R R S P',
+              icon: 'assets/svg/vacation-cycle-blue.svg',
+              alt: 'Blue tree with clockwise rotating arrows',
+              title: 'RRSP ReadiLine',
+              description: 'Maximize your RRSP',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/lines-of-credit/homeowners-line-of-credit/?icid=tl-FEAT2953BRND4-AJBMOH129',
+              ariaLabel:
+                "Learn more about a homeowner's line of credit, Tap into your home equity",
+              icon: 'assets/svg/house-cycle-blue.svg',
+              alt: 'Blue house with clockwise rotating arrows',
+              title: "Homeowner's Line of Credit",
+              description: 'Tap into your home equity',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/lines-of-credit/?icid=tl-FEAT2953BRND4-AJBMOH127',
+              ariaLabel: 'All lines of credit, Explore your options',
+              icon: 'assets/svg/all-layers-blue.svg',
+              alt: 'Blue layers',
+              title: 'All lines of credit',
+              description: 'Explore your options',
+            },
+          ],
+        },
+        {
+          title: 'Student Borrowing',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/student-borrowing/student-line-of-credit/?icid=tl-FEAT2953BRND4-AJBMOH132',
+              ariaLabel:
+                'Learn about a student line of credit, Affordable, flexible financing',
+              icon: 'assets/svg/students-icon-blue.svg',
+              alt: 'Blue graduation cap',
+              title: 'Student Line of Credit',
+              description: 'Affordable, flexible financing',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/student-borrowing/medical-dental-student-line-of-credit/?icid=tl-FEAT2953BRND4-AJBMOH134',
+              ariaLabel:
+                'Learn more about a student line of credit for medical or dental students, Enhanced credit limits',
+              icon: 'assets/svg/medical-or-dental-briefcase-blue.svg',
+              alt: 'Blue medical briefcase',
+              title: 'Medical or Dental Student Line of Credit',
+              description: 'Enhanced credit limits',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/student-borrowing/professional-student-line-of-credit/?icid=tl-FEAT2953BRND4-AJBMOH133',
+              ariaLabel:
+                'Learn more about a professional student line of credit, Pursue your studies worry-free',
+              icon: 'assets/svg/book-bookmark-blue.svg',
+              alt: 'Blue book with bookmark',
+              title: 'Professional Student Lines of Credit',
+              description: 'Pursue your studies worry-free',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/student-borrowing/?icid=tl-FEAT2953BRND4-AJBMOH131',
+              ariaLabel:
+                'Learn about all the lines of credit available for students, Explore your options',
+              icon: 'assets/svg/all-layers-blue.svg',
+              alt: 'Blue layers',
+              title: 'All student borrowing options',
+              description: 'Explore your options',
+            },
+          ],
+        },
+      ],
+      resources: [
+        {
+          link: 'https://www.bmo.com/main/personal/loans-line-of-credit/loans-calculator/?icid=tl-FEAT2953BRND4-AJBMOH138',
+          ariaLabel:
+            "Try our loan calculators, Let's calculate your loan payments",
+          icon: 'assets/svg/calculator-2-blue.svg',
+          alt: 'Blue calculator',
+          title: 'Loan calculators',
+          description: "Let's calculate your loan payments",
+        },
+        {
+          link: 'https://www.bmo.com/oab/start?_lang=en&icid=tl-FEAT2953BRND4-AJBMOH137',
+          ariaLabel:
+            'Make an appointment today, Speak to a B M O representative, opens in a new tab',
+          icon: 'assets/svg/make-appointment-blue.svg',
+          alt: 'Blue calendar',
+          title: 'Make an appointment',
+          description: 'Speak to a BMO representative',
+        },
+      ],
     },
     {
       title: 'Investing',
+      categories: [
+        {
+          title: 'Investments Overview',
+          link: 'https://www.bmo.com/main/personal/investments/?icid=tl-FEAT2953BRND4-AJBMOH182',
+          ariaLabel: 'learn more about investments',
+        },
+        {
+          title: 'Invest with Professional',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/investments/investing-with-a-professional/?icid=tl-FEAT2953BRND4-AJBMOH156',
+              ariaLabel:
+                'Learn about investing with a professional, Investment advice for your goals',
+              icon: 'assets/svg/person-trend-blue.svg',
+              alt: 'Blue person avatar with up trending arrow',
+              title: 'Investment Professionals',
+              description: 'Investment advice for your goals',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/financial-planning/?icid=tl-FEAT2953BRND4-AJBMOH157',
+              ariaLabel: 'Financial planners, ongoing support from experts',
+              icon: 'assets/svg/paper-pie-chart-blue.svg',
+              alt: 'Blue paper with pie chart',
+              title: 'Financial Planners',
+              description: 'Ongoing support from experts',
+            },
+            {
+              link: 'https://www.bmo.com/privatewealth/?icid=tl-FEAT2953BRND4-AJBMOH158',
+              ariaLabel:
+                'Learn from our Private Wealth experts, Bespoke advice from a proven team',
+              icon: 'assets/svg/money-bag-icon-blue.svg',
+              alt: 'Blue money bag',
+              title: 'Private Wealth',
+              description: 'Bespoke advice from a proven team',
+            },
+          ],
+        },
+      ],
+      resources: [{}],
     },
     {
       title: 'Insurance',
