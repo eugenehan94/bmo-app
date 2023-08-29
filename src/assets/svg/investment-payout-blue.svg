@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__Layer_1" x="0" y="0" height="48" width="48" view-box="0 0 48 48" enable-background="new 0 0 48 48" xml-space="preserve" role="img">
+  <style>
+    .prefix__st0 {
+      fill: none;
+      stroke: #0776ba;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+  </style>
+  <path class="prefix__st0" d="M35.4 7.5h5.7v6.2M7 30.6h4.7v10H7zM16.7 22.6h4.7v17.9h-4.7zM26.2 26.6h5v13.9h-5zM36.1 22.6h4.7v17.9h-4.7z"/>
+  <path class="prefix__st0" d="M40.5 8.2 29 19.8c-.4.4-1 .4-1.4 0l-7.8-8c-.4-.4-1-.4-1.4 0L6.9 23.7"/>
+</svg>
