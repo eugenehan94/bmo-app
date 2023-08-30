@@ -1208,24 +1208,208 @@ export class NavbarService {
               description: 'Compare your assets and liabilities',
             },
             {
-              link: 'https://www.bmo.com/main/personal/financial-planning/net-worth-calculator/?icid=tl-FEAT2953BRND4-AJBMOH176',
+              link: 'https://www.bmo.com/main/personal/financial-planning/investment-payout-calculator/?icid=tl-FEAT2953BRND4-AJBMOH177',
+              ariaLabel: 'Investment payout calculator',
+              icon: 'assets/svg/investment-payout-blue.svg',
+              alt: 'Blue bar graph with up trending arrow',
+              title: 'Investment Payout Calculator',
+              description: 'Learn more about your investments',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/financial-planning/rif-payment-calculator/?icid=tl-FEAT2953BRND4-AJBMOH178',
+              ariaLabel: 'R I F payment calculator',
+              icon: 'assets/svg/rif-payout-calculator-blue.svg',
+              alt: 'Blue hand with dollar sign',
+              title: 'RIF Payment Calculator',
+              description: 'Turn savings into steady income',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/investments/gic/gic-calculator/?icid=tl-FEAT2953BRND4-AJBMOH179',
               ariaLabel:
-                'Net worth worksheet, compare your assets and liabilities',
-              icon: 'assets/svg/net-worth-worksheet-blue.svg',
-              alt: 'Blue sheet with up trending arrow and avatar',
-              title: 'Net Worth Worksheet',
-              description: 'Compare your assets and liabilities',
+                'Guaranteed investment certificate calculator, Discover the effect of compounding',
+              icon: 'assets/svg/dollar-certificate-gic-blue.svg',
+              alt: 'Blue certificate with dollar sign and ribbon',
+              title: 'GIC Calculator',
+              description: 'Discover the effect of compounding',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/investments/tfsa/?icid=tl-FEAT2953BRND4-AJBMOH181#persTFSACalcSection',
+              ariaLabel:
+                'Tax free savings account Calculator, Watch your savings grow, tax-free',
+              icon: 'assets/svg/tfsa-calculator-blue.svg',
+              alt: 'Blue shield with percentage sign and dollar sign',
+              title: 'TFSA Calculator',
+              description: 'Watch your savings grow, tax-free',
+            },
+          ],
+        },
+      ],
+      resources: [
+        {
+          link: 'https://www.bmo.com/main/personal/investments/learning-centre/?icid=tl-FEAT2953BRND4-AJBMOH184',
+          ariaLabel:
+            'Investments learning centre, All Investment resources in one spot',
+          icon: 'assets/svg/book-blue.svg',
+          alt: 'Blue book',
+          title: 'Learning centre',
+          description: 'All Investment resources in one spot',
+        },
+        {
+          link: 'https://www.bmo.com/main/personal/investments/find-the-best-investment-options-for-you/?icid=tl-FEAT2953BRND4-AJBMOH185',
+          ariaLabel:
+            'help me choose the best investment options, Find the best investment option',
+          icon: 'assets/svg/helpme-choose-blue.svg',
+          alt: 'Blue question mark inside circle',
+          title: 'Help me choose',
+          description: 'Find the best investment option',
+        },
+        {
+          link: 'https://www.bmo.com/oab/start?_lang=en&icid=tl-FEAT2953BRND4-AJBMOH368',
+          ariaLabel: 'Book an appointment, investing resource link',
+          icon: 'assets/svg/make-appointment-blue.svg',
+          alt: 'Blue calendar',
+          title: 'Book an appointment',
+          description: 'Speak to a BMO representative',
+        },
+      ],
+    },
+    {
+      title: 'Insurance',
+      categories: [
+        {
+          title: 'Creditor Insurance',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/creditor-insurance/?icid=tl-FEAT2953BRND4-AJBMOH222',
+              ariaLabel:
+                'learn more about creditor insurance, Explore your options',
+              icon: 'assets/svg/document-shield-blue.svg',
+              alt: 'Blue document with shield icon in the middle',
+              title: 'Creditor Insurance Overview',
+              description: 'Explore your options',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/creditor-insurance/line-of-credit-and-loans-insurance/?icid=tl-FEAT2953BRND4-AJBMOH218',
+              ariaLabel:
+                'Loans lines of credit protection insurance insurance header menu',
+              icon: 'assets/svg/loans-line-of-credit-blue.svg',
+              alt: 'Blue hand with bag with dollar sign',
+              title: 'Loans & Lines of Credit Protection Insurance',
+              description: 'Loan or line of credit protection',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/mortgages/mortgage-protection-insurance/?icid=tl-FEAT2953BRND4-AJBMOH216',
+              ariaLabel: 'Mortgage protection insurance',
+              icon: 'assets/svg/mortgageprotection-insurance-blue.svg',
+              alt: 'Blue shield divided down the middle',
+              title: 'Mortgage Protection Insurance',
+              description: 'Protection from the unexpected',
+            },
+            {
+              link: 'https://www.bmo.com/main/business/loans-mortgages/commercial-loan-insurance/?icid=tl-FEAT2953BRND4-AJBMOH219',
+              ariaLabel: 'Commercial loan insurance plan',
+              icon: 'assets/svg/commercial-credit-blue.svg',
+              alt: 'Blue buildings',
+              title: 'Commercial Loan Insurance Plan',
+              description: 'Protect your business’ future',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/credit-card-balance-protection-enhanced/?icid=tl-FEAT2953BRND4-AJBMOH217',
+              ariaLabel: 'Credit card balance protection',
+              icon: 'assets/svg/credit-card-blue-icon.svg',
+              alt: 'Blue credit card',
+              title: 'Credit Card Balance Protection Enhanced',
+              description: 'Make payments in difficult times',
+            },
+          ],
+        },
+        {
+          title: 'Travel Insurance',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/travel-services/travel-insurance?icid=tl-FEAT2953BRND4-AJBMOH223',
+              ariaLabel:
+                'Learn more about Travel insurance, Explore your options',
+              icon: 'assets/svg/document-shield-blue.svg',
+              alt: 'Blue document with shield icon in the middle',
+              title: 'Travel Insurance Overview',
+              description: 'Explore your options',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/travel-services/travel-insurance-plans?icid=tl-FEAT2953BRND4-AJBMOH220#single-trip-travel-medical-plan',
+              ariaLabel: 'Single trip plans',
+              icon: 'assets/svg/shield-airplane-card-blue.svg',
+              alt: 'Blue shield with airplane in the center and card',
+              title: 'Single Trip Plans',
+              description: 'Get more out of your travel plan',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/travel-services/travel-insurance-plans?icid=tl-FEAT2953BRND4-AJBMOH221#multi-trip-travel-medical-plan',
+              ariaLabel: 'Multi trip plans',
+              icon: 'assets/svg/cross-border-support-plane-blue.svg',
+              alt: 'Blue shield with airplane in the center',
+              title: 'Multi-Trip Plans',
+              description: 'For frequent travellers',
+            },
+          ],
+        },
+      ],
+      resources: [
+        {
+          link: 'https://www.bmo.com/main/personal/creditor-insurance/?icid=tl-FEAT2953BRND4-AJBMOH224#guidemetool',
+          ariaLabel: 'Guide me tool',
+          icon: 'assets/svg/book-blue.svg',
+          alt: 'Blue book',
+          title: 'Guide me tool',
+          description: 'Find coverage that works for you',
+        },
+        {
+          link: 'https://www.bmo.com/main/personal/mortgages/calculators/mortgage-insurance-calculator/?icid=tl-FEAT2953BRND4-AJBMOH225',
+          ariaLabel: 'Mortgage insurance calculator',
+          icon: 'assets/svg/calculator-2-blue.svg',
+          alt: 'Blue calculator',
+          title: 'Mortgage insurance calculator',
+          description: "BMO's affordable coverage options",
+        },
+        {
+          link: 'https://sales.allianz-assistance.ca/en-us/bmo?icid=tl-FEAT2953BRND4-AJBMOH226',
+          ariaLabel:
+            'Get a travel insurance quote, Find the right insurance coverage, opens an external page in a new tab',
+          icon: 'assets/svg/travel-services-blue.svg',
+          alt: 'Blue airplane',
+          title: 'Get a travel insurance quote',
+          description: 'Find the right insurance coverage',
+        },
+        {
+          link: 'https://www.bmo.com/oab/start?_lang=en&icid=tl-FEAT2953BRND4-AJBMOH227',
+          ariaLabel:
+            'Make an appointment with your B M O representative, Connect with us in person, opens in a new tab',
+          icon: 'assets/svg/make-appointment-blue.svg',
+          alt: 'Blue calendar',
+          title: 'Make an appointment',
+          description: 'Connect with us in person',
+        },
+      ],
+    },
+    {
+      title: 'Offers & Programs',
+      categories: [
+        {
+          title: 'Newcomers to Canada',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/creditor-insurance/?icid=tl-FEAT2953BRND4-AJBMOH222',
+              ariaLabel:
+                'learn more about creditor insurance, Explore your options',
+              icon: 'assets/svg/document-shield-blue.svg',
+              alt: 'Blue document with shield icon in the middle',
+              title: 'Creditor Insurance Overview',
+              description: 'Explore your options',
             },
           ],
         },
       ],
       resources: [{}],
-    },
-    {
-      title: 'Insurance',
-    },
-    {
-      title: 'Offers & Programs',
     },
   ];
 }
