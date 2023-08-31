@@ -1,0 +1,33 @@
+.mobile-menu-btn {
+  cursor: pointer;
+  border: none;
+  padding: 0 1.5rem;
+}
+.close-container {
+  transition: transform 0.2s;
+}
+.close-container.open {
+  transition: transform 0.2s ease 0s;
+  padding: 10px 0px;
+  transform: rotate(90deg);
+}
+.hamburger-icon-top,
+.hamburger-icon-middle,
+.hamburger-icon-bottom {
+  border-top: 2px solid #646c76;
+  display: block;
+  width: 20px;
+}
+.hamburger-icon-top.open {
+  transform: rotate(45deg);
+}
+.hamburger-icon-middle {
+  margin: 5px 0;
+}
+.hamburger-icon-middle.open {
+  opacity: 0;
+  margin: -2px 0;
+}
+.hamburger-icon-bottom.open {
+  transform: rotate(135deg);
+}

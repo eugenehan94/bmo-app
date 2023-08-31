@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__Layer_1" x="0" y="0" height="48" width="48" view-box="0 0 48 48" enable-background="new 0 0 48 48" xml-space="preserve" role="img">
+  <style>
+    .prefix__st0,
+    .prefix__st1,
+    .prefix__st2 {
+      fill: #fff;
+      stroke: #0776ba;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+    .prefix__st1,
+    .prefix__st2 {
+      fill: none;
+    }
+    .prefix__st2 {
+      fill: #fff;
+      stroke: #0075be;
+    }
+  </style>
+  <circle class="prefix__st0" cx="24.1" cy="24.1" r="8"/>
+  <path class="prefix__st0" d="M24.1 32.1c-2-2.7-3-5.3-3-8s1-5.3 3-8"/>
+  <path class="prefix__st1" d="M24.1 32.1c2-2.7 3-5.3 3-8s-1-5.3-3-8"/>
+  <path class="prefix__st0" d="M17 26.3h14.2M17 21.7h14.2"/>
+  <circle class="prefix__st2" cx="24.1" cy="38.5" r="2.5"/>
+  <circle class="prefix__st2" cx="38.6" cy="24.2" r="2.5"/>
+  <circle class="prefix__st2" cx="9.4" cy="24.2" r="2.5"/>
+  <circle class="prefix__st2" cx="24.1" cy="9.5" r="2.5"/>
+  <path class="prefix__st1" d="M18.8 37.7c-3.7-1.4-6.7-4.3-8.2-7.9M37.4 29.8c-1.5 3.5-4.3 6.3-7.9 7.8M29.3 10.7c3.6 1.4 6.5 4.3 8.1 7.9M10.5 18.7C12 15 15 12 18.8 10.6"/>
+</svg>

@@ -1398,18 +1398,226 @@ export class NavbarService {
           title: 'Newcomers to Canada',
           children: [
             {
-              link: 'https://www.bmo.com/main/personal/creditor-insurance/?icid=tl-FEAT2953BRND4-AJBMOH222',
+              link: 'https://www.bmo.com/main/personal/newcomers-to-canada/?icid=tl-FEAT2953BRND4-AJBMOH240',
+              ariaLabel: 'Newcomers, Banking options for newcomers to Canada',
+              icon: 'assets/svg/maple-leaf-blue.svg',
+              alt: 'Blue maple leaf',
+              title: 'Newcomers',
+              description: 'Banking options for newcomers',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/newcomers-to-canada/newcomer-bank-account-offers/?icid=tl-FEAT2953BRND4-AJBMOH241',
               ariaLabel:
-                'learn more about creditor insurance, Explore your options',
-              icon: 'assets/svg/document-shield-blue.svg',
-              alt: 'Blue document with shield icon in the middle',
-              title: 'Creditor Insurance Overview',
-              description: 'Explore your options',
+                'Special banking offers for newcomers to Canada, Special banking offers and advice',
+              icon: 'assets/svg/newcommers-offers-blue.svg',
+              alt: 'Blue ribbon with star in the middle',
+              title: 'Special Offers',
+              description: 'Special banking offers and advice',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/bank-accounts/newcomers-banking/?icid=tl-FEAT2953BRND4-AJBMOH242',
+              ariaLabel:
+                'Bank accounts for newcomers to Canada, Save on everyday banking',
+              icon: 'assets/svg/bank-account-blue.svg',
+              alt: 'Blue wallet with card sticking out',
+              title: 'Bank Accounts',
+              description: 'Save on everyday banking',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/newcomers-to-canada/foreign-worker-permanent-resident/?icid=tl-FEAT2953BRND4-AJBMOH244',
+              ariaLabel: 'Permanent resident or foreign worker',
+              icon: 'assets/svg/permanent-resident-blue.svg',
+              alt: 'Blue world with four surrounding circles',
+              title: 'Permanent Resident or Foreign Worker',
+              description: 'Banking for your new life in Canada',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/newcomers-to-canada/?icid=tl-FEAT2953BRND4-AJBMOH243',
+              ariaLabel:
+                'Credit cards for newcomers to Canada, No credit history required',
+              icon: 'assets/svg/credit-card-blue-icon.svg',
+              alt: 'Blue world with four surrounding circles',
+              title: 'Credit Cards',
+              description: 'No credit history required',
+            },
+            {
+              link: 'https://jobs.bmo.com/ca/en/leadpage?formId=eum5lam9l4m33l46mld8kuvc4h&eventScheduleId=6298f11352faff0007122c55&icid=tl-FEAT2953BRND4-AJBMOH245',
+              ariaLabel:
+                'Newcomers to Canada talent program and career opportunities, Explore B M O career opportunities',
+              icon: 'assets/svg/maple-leaf-talent-blue.svg',
+              alt: 'Blue ribbon with maple leaf in the center',
+              title: 'Talent Program',
+              description: 'Explore BMO career opportunities',
+            },
+            {
+              link: 'https://www.bmo.com/en-ca/main/personal/mortgages/newcomers-to-canada/',
+              ariaLabel:
+                'Get tips on how you can start your homebuying journey as a newcomer to Canada',
+              icon: 'assets/svg/new-comer-mortgage-blue.svg',
+              alt: 'Blue house with dollar sign in the center',
+              title: 'Newcomer mortgage options',
+              description: 'Home financing tips for newcomers',
             },
           ],
         },
+        {
+          title: 'Students',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/students/?icid=tl-FEAT2953BRND4-AJBMOH246',
+              ariaLabel: 'Banking options for students',
+              icon: 'assets/svg/students-icon-blue.svg',
+              alt: 'Blue graduation cap',
+              title: 'Students',
+              description: 'Banking options for students',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/loans-line-of-credit/student-borrowing/?icid=tl-FEAT2953BRND4-AJBMOH250',
+              ariaLabel:
+                'Student borrowing overview, Flexible financing for school',
+              icon: 'assets/svg/students-icon-blue.svg',
+              alt: 'Blue graduation cap',
+              title: 'Borrowing',
+              description: 'Flexible financing for school',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/bank-accounts/student-banking/?icid=tl-FEAT2953BRND4-AJBMOH247',
+              ariaLabel: 'Student bank accounts, Enjoy student banking perks',
+              icon: 'assets/svg/bank-account-blue.svg',
+              alt: 'Blue wallet with card sticking out',
+              title: 'Bank Accounts',
+              description: 'Enjoy student banking perks',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/newcomers-to-canada/international-students-in-canada/?icid=tl-FEAT2953BRND4-AJBMOH251',
+              ariaLabel:
+                'Banking options for International Students,  International banking options',
+              icon: 'assets/svg/international-student-blue.svg',
+              alt: 'Blue globe',
+              title: 'International Students',
+              description: 'International banking options',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/students/?icid=tl-FEAT2953BRND4-AJBMOH249',
+              ariaLabel: 'Student credit cards, Enjoy no annual fee',
+              icon: 'assets/svg/credit-card-blue-icon.svg',
+              alt: 'Blue credit card',
+              title: 'Credit Cards',
+              description: 'Enjoy no annual fee',
+            },
+            {
+              link: 'https://jobs.bmo.com/ca/en/students/?icid=tl-FEAT2953BRND4-AJBMOH253',
+              ariaLabel: 'Talent program offers',
+              icon: 'assets/svg/student-talent-blue.svg',
+              alt: 'Blue ribbon with graduation cap in the middle',
+              title: 'Talent Program',
+              description: 'Explore BMO career opportunities',
+            },
+          ],
+        },
+        {
+          title: 'Canadian Defence Community',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/personal/canadian-defence-community-banking/?icid=tl-FEAT2953BRND4-AJBMOH254',
+              ariaLabel:
+                'Canadian defence community, Banking options for military families',
+              icon: 'assets/svg/cdcb-resource-blue.svg',
+              alt: 'Blue hand with maple leaf above',
+              title: 'Canadian Defence Community Overview',
+              description: 'Banking options for military families',
+            },
+            {
+              link: 'https://www.bmo.com/main/business/who-we-work-with/canadian-defence-community-banking/?icid=tl-FEAT2953BRND4-AJBMOH257',
+              ariaLabel:
+                'Business banking options for the Canadian defence community, Get special offers and advice',
+              icon: 'assets/svg/star-ribbon-blue.svg',
+              alt: 'Blue ribbon with star in the center',
+              title: 'Business Banking',
+              description: 'Get special offers and advice',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/bank-accounts/canadian-defence/?icid=tl-FEAT2953BRND4-AJBMOH255',
+              ariaLabel:
+                'Banking accounts for the Canadian defence community, Save on everyday banking',
+              icon: 'assets/svg/bank-account-blue.svg',
+              alt: 'Blue wallet with card sticking out',
+              title: 'Bank Accounts',
+              description: 'Save on everyday banking',
+            },
+            {
+              link: 'https://jobs.bmo.com/ca/en/military/?icid=tl-FEAT2953BRND4-AJBMOH258',
+              ariaLabel:
+                'Canadian defence community talent program and career opportunities, Explore career opportunities',
+              icon: 'assets/svg/newcommers-offers-blue.svg',
+              alt: 'Blue ribbon with star in the center',
+              title: 'Talent Program',
+              description: 'Explore career opportunities',
+            },
+            {
+              link: 'https://www.bmo.com/main/personal/credit-cards/affinity/cause-health/bmo-support-our-troops-mastercard/?icid=tl-FEAT2953BRND4-AJBMOH256',
+              ariaLabel:
+                'Mastercard credit card for the Canadian defence community, Enjoy a no-fee card',
+              icon: 'assets/svg/credit-card-blue.svg',
+              alt: 'Blue credit card',
+              title: 'Support Our Troops Mastercard',
+              description: 'Enjoy a no-fee card',
+            },
+          ],
+        },
+        {
+          title: 'Kids & Teens',
+          link: 'https://www.bmo.com/main/personal/bank-accounts/kids-and-teens/?icid=tl-FEAT2953BRND4-AJBMOH248',
+          ariaLabel: 'Bank accounts for kids and teens',
+        },
+        {
+          title: 'Seniors',
+          link: 'https://www.bmo.com/main/personal/seniors-banking/?icid=tl-FEAT2953BRND4-AJBMOH259',
+          ariaLabel: 'Banking options for seniors',
+        },
+        {
+          title: 'Indigenous',
+          link: 'https://www.bmo.com/main/personal/indigenous-banking/?icid=tl-FEAT2953BRND4-AJBMOH260',
+          ariaLabel: 'Banking options for indigenous communities',
+        },
       ],
-      resources: [{}],
+      resources: [
+        {
+          link: 'https://www.bmo.com/oab/start?_lang=en&icid=tl-FEAT2953BRND4-AJBMOH262',
+          ariaLabel:
+            'Make an appointment, Connect with us in person, opens in a new tab',
+          icon: 'assets/svg/make-appointment-blue.svg',
+          alt: 'Blue calendar',
+          title: 'Make an appointment',
+          description: 'Connect with us in person',
+        },
+        {
+          link: 'https://branchlocator.bmo.com/?icid=tl-FEAT2953BRND4-AJBMOH263',
+          ariaLabel:
+            'Find a B M O branch, Find a B M O location near you, opens in a new tab',
+          icon: 'assets/svg/pin-blue.svg',
+          alt: 'Blue locator pin',
+          title: 'Find a BMO branch',
+          description: 'Find a BMO location near you',
+        },
+        {
+          link: 'https://www.bmo.com/main/about-bmo/?icid=tl-FEAT2953BRND4-AJBMOH392',
+          ariaLabel:
+            'Learn about B M O, Find out more about our purpose and impact',
+          icon: 'assets/svg/learn-about-blue.svg',
+          alt: 'Blue document with magnify glass',
+          title: 'Learn about BMO',
+          description: 'Find out more about our purpose and impact',
+        },
+        {
+          link: 'https://bmosmartprogress.everfi-next.net/welcome/financialeducation?locale=en',
+          ariaLabel: 'BMO smart progress',
+          icon: 'assets/svg/computer-monitor-blue.svg',
+          alt: 'Blue computer monitor',
+          title: 'BMO SmartProgress',
+          description: 'Strengthen your financial literacy skills',
+        },
+      ],
     },
   ];
 }

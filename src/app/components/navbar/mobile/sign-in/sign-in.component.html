@@ -1,0 +1,64 @@
+<div class="signin-btn-container">
+  <button class="signin-btn" (click)="handleSignInMenuClick()">
+    <span *ngIf="isMobileSignInMenuOpen">
+      <mat-icon>close</mat-icon><span>Close</span></span
+    >
+    <span *ngIf="!isMobileSignInMenuOpen"
+      ><mat-icon>lock_open</mat-icon><span>Sign In</span></span
+    >
+  </button>
+  <div
+    [ngClass]="
+      isMobileSignInMenuOpen
+        ? 'mobile-signin-btn-menu-container open'
+        : 'mobile-signin-btn-menu-container'
+    "
+  >
+    <div class="mobile-signin-btn-menu-inner-container">
+      <div class="mobile-online-banking-signin-container">
+        <a
+          class="online-banking-signin-link"
+          aria-label="Access online banking"
+          href="https://mobile2.bmo.com/BMOMobile/BMOMobileBanking.html#/login/auth"
+          target="_blank"
+        >
+          <div>Online Banking</div>
+          <mat-icon>chevron_right</mat-icon>
+        </a>
+      </div>
+      <div class="mobile-signin-register-container">
+        <span class="mobile-signin-register-wrapper"
+          ><p>
+            Register for online banking with a
+            <a
+              class="mobile-signin-register-link"
+              href="https://www1.bmo.com/selfreg/#/step0"
+              target="_blank"
+              >BMO Debit Card</a
+            >
+            or
+          </p>
+          <p>
+            <a
+              class="mobile-signin-register-link"
+              href="https://www.bmo.com/online/creditcards/registration/?lang=en"
+              target="_blank"
+              >Credit Card</a
+            >
+          </p></span
+        >
+      </div>
+      <ul class="mobile-signin-dropdown-menu">
+        <li *ngFor="let options of signInMenuOptions">
+          <a
+            class="mobile-signin-dropdown-link"
+            [attr.aria-label]="options.ariaLabel"
+            href="{{ options.link }}"
+            target="_blank"
+            ><div>{{ options.title }}</div></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

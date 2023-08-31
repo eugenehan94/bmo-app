@@ -21,6 +21,9 @@ import { FooterComponent } from './components/_shared/footer/footer.component';
 import { MobileComponent } from './components/_shared/navbar/mobile/mobile.component';
 import { MediumComponent } from './components/_shared/navbar/medium/medium.component';
 import { DesktopComponent } from './components/_shared/navbar/desktop/desktop.component';
+import { SignInComponent } from './components/navbar/mobile/sign-in/sign-in.component';
+import { MenuComponent } from './components/navbar/mobile/menu/menu.component';
+import { HamburgerMenuComponent } from './components/navbar/mobile/menu/hamburger-menu/hamburger-menu.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { DesktopComponent } from './components/_shared/navbar/desktop/desktop.co
     MobileComponent,
     MediumComponent,
     DesktopComponent,
+    SignInComponent,
+    MenuComponent,
+    HamburgerMenuComponent,
   ],
   imports: [
     BrowserModule,
