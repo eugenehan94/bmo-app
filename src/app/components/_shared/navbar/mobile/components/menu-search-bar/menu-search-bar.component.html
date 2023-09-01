@@ -1,0 +1,30 @@
+<div style="box-sizing: border-box">
+  <div style="position: relative">
+    <div>
+      <form onsubmit="return false">
+        <div style="display: flex">
+          <label class="mobile-menu-btn-menu-search-label">Search</label>
+          <input
+            (click)="handleMobileMenuSearchClick(true)"
+            [ngClass]="
+              isMobileMenuSearchSelected
+                ? 'mobile-menu-btn-menu-search-input open'
+                : 'mobile-menu-btn-menu-search-input'
+            "
+            placeholder="Search"
+          />
+          <button
+            (click)="handleMobileMenuSearchClick(false)"
+            [ngClass]="
+              isMobileMenuSearchSelected
+                ? 'mobile-menu-btn-menu-search-cancel-btn open'
+                : 'mobile-menu-btn-menu-search-cancel-btn'
+            "
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

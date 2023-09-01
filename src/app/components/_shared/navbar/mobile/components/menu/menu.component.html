@@ -1,0 +1,21 @@
+<div class="mobile-menu-container">
+  <app-mobile-hamburger-menu></app-mobile-hamburger-menu>
+  <div
+    #menuContainer
+    [ngClass]="
+      isMobileMenuOpen
+        ? 'mobile-menu-btn-menu-container open'
+        : 'mobile-menu-btn-menu-container'
+    "
+  >
+    <div class="mobile-menu-btn-menu-inner-container">
+      <div class="mobile-menu-btn-menu-options-container">
+        <app-mobile-menu-search-bar></app-mobile-menu-search-bar>
+        <app-mobile-menu-country-select></app-mobile-menu-country-select>
+        <app-mobile-menu-site-selector></app-mobile-menu-site-selector>
+        <app-mobile-menu-language-selector></app-mobile-menu-language-selector>
+      </div>
+      <app-mobile-menu-inner-menu></app-mobile-menu-inner-menu>
+    </div>
+  </div>
+</div>

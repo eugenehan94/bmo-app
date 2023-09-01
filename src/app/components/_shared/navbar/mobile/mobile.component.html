@@ -12,38 +12,11 @@
           </div>
         </a>
       </div>
-      <!-- @TODO: transfer css to components -->
       <div class="mobile-btn-container">
         <app-mobile-sign-in></app-mobile-sign-in>
         <app-mobile-menu></app-mobile-menu>
       </div>
     </div>
-    <div
-      [ngClass]="
-        isMobileSignInMenuOpen
-          ? 'bottom-nav-container open'
-          : 'bottom-nav-container'
-      "
-    >
-      <a
-        *ngFor="let option of mobileBottomNavOptions"
-        class="bottom-nav-link"
-        [attr.aria-label]="option.ariaLabel"
-        href="{{ option.href }}"
-        target="_blank"
-        ><div style="max-height: initial">
-          <div class="bottom-nav-link-content-wrapper">
-            <div class="bottom-nav-link-image-wrapper">
-              <img
-                alt="{{ option.imageAlt }}"
-                src="{{ option.image }}"
-                style="width: 100%; height: 100%"
-              />
-            </div>
-            {{ option.title }}
-          </div>
-        </div></a
-      >
-    </div>
+    <app-mobile-bottom-navigation></app-mobile-bottom-navigation>
   </mat-toolbar>
 </div>

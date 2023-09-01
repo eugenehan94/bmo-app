@@ -1,0 +1,27 @@
+<div>
+  <label class="mobile-menu-btn-menu-search-label">Language Selector</label>
+  <div
+    (click)="handleLanguageSelectMenuClick()"
+    class="mobile-menu-language-selector-content-container"
+  >
+    <mat-icon
+      [ngClass]="
+        isLanguageSelectMenuOpen
+          ? 'mobile-menu-language-selector-chevron open'
+          : 'mobile-menu-language-selector-chevron'
+      "
+      >chevron_right</mat-icon
+    >
+    <span style="font-size: 1rem">English</span>
+  </div>
+  <ul
+    [ngClass]="
+      isLanguageSelectMenuOpen
+        ? 'mobile-menu-language-selector-dropdown open'
+        : 'mobile-menu-language-selector-dropdown'
+    "
+  >
+    <li class="mobile-menu-language-selector-dropdown-option">English</li>
+    <li class="mobile-menu-language-selector-dropdown-option">French</li>
+  </ul>
+</div>

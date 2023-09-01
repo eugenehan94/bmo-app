@@ -1,0 +1,34 @@
+<div class="mobile-menu-site-selector-container">
+  <label class="mobile-menu-btn-menu-search-label">Site Selector</label>
+  <div
+    (click)="handleSiteSelectMenuClick()"
+    class="mobile-menu-site-selector-content-container"
+  >
+    <mat-icon
+      [ngClass]="
+        isSiteSelectMenuOpen
+          ? 'mobile-menu-site-selector-chevron open'
+          : 'mobile-menu-site-selector-chevron'
+      "
+      >chevron_right</mat-icon
+    >
+    <span style="font-size: 1rem">Personal</span>
+  </div>
+  <ul
+    [ngClass]="
+      isSiteSelectMenuOpen
+        ? 'mobile-menu-site-selector-dropdown open'
+        : 'mobile-menu-site-selector-dropdown'
+    "
+  >
+    <li *ngFor="let option of siteOptions">
+      <a
+        class="mobile-menu-site-selector-link"
+        href="{{ option.linkHref }}"
+        target="_blank"
+        [attr.aria-label]="option.ariaLabel"
+        >{{ option.title }}</a
+      >
+    </li>
+  </ul>
+</div>

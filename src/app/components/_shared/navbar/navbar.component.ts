@@ -7,9 +7,5 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class NavbarComponent {
   @Input() currentScreenSize?: string;
-  @Output() isMobileSignInMenuOpenChanged = new EventEmitter<any>();
 
-  isMobileSignInMenuOpenHandler(isOpen: boolean): void {
-    this.isMobileSignInMenuOpenChanged.emit(isOpen)
-  }
 }

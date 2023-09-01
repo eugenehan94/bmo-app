@@ -1,6 +1,6 @@
 <div>
   <div *ngIf="currentScreenSize === 'Small'">
-    <app-mobile [currentScreenSize]="currentScreenSize" (isMobileSignInMenuOpenChanged)="isMobileSignInMenuOpenHandler($event)"></app-mobile>
+    <app-mobile [currentScreenSize]="currentScreenSize"></app-mobile>
   </div>
   <div *ngIf="currentScreenSize === 'Medium'">
     <app-medium [currentScreenSize]="currentScreenSize"></app-medium>
