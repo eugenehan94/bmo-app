@@ -8,3 +8,9 @@
   height: 533px;
   overflow: hidden;
 }
+
+.home-page-content-wrapper.mobile-menu-open {
+  position: relative;
+  height: 735px;
+  overflow: hidden;
+}

@@ -1,11 +1,11 @@
 <div>
   <app-navbar [currentScreenSize]="currentScreenSize"></app-navbar>
   <div
-    [ngClass]="
-      isMobileSignInMenuOpen
-        ? 'home-page-content-wrapper mobile-signin-menu-open'
-        : 'home-page-content-wrapper'
-    "
+    class="home-page-content-wrapper"
+    [ngClass]="{
+      'mobile-signin-menu-open': isMobileSignInMenuOpen,
+      'mobile-menu-open': isMobileMenuOpen
+    }"
   >
     <app-personal-hero
       [currentScreenSize]="currentScreenSize"

@@ -14,13 +14,12 @@ import {
 export class DesktopComponent {
   constructor(private navbarService: NavbarService) {}
 
-  siteOptions: SiteOptionsType[] = this.navbarService.siteOptions;
+
   navbarOptions: NavigationOptionsType[] = this.navbarService.navigationOptions;
-  selectedSiteOption: string = 'Personal';
-  countryOptions: CountryOptionsType[] = this.navbarService.countryOptions;
+
   signInMenuOptions: SignInMenuOptionsType[] =
     this.navbarService.signInMenuOptions;
-  isSearchBarOpen: boolean = false;
+
   @Input() currentScreenSize?: string;
 
   isSelectedSiteOpen: boolean = false;
@@ -28,30 +27,9 @@ export class DesktopComponent {
   isLanguageSelectMenuOpen: boolean = false;
   isSigninMenuOpen: boolean = false;
 
-  handleSelectedSiteMenuClick(): void {
-    this.isLanguageSelectMenuOpen = false;
-    this.isSigninMenuOpen = false;
-    this.isCountrySelectMenuOpen = false;
-    this.isSelectedSiteOpen = !this.isSelectedSiteOpen;
-  }
 
-  handleSearchBarClick(e: Event, input: boolean): void {
-    e.stopPropagation();
-    this.isSearchBarOpen = input;
-  }
 
-  handleCountrySelectMenuClick(): void {
-    this.isSelectedSiteOpen = false;
-    this.isLanguageSelectMenuOpen = false;
-    this.isSigninMenuOpen = false;
-    this.isCountrySelectMenuOpen = !this.isCountrySelectMenuOpen;
-  }
-  handleLanguageSelectMenuClick(): void {
-    this.isSelectedSiteOpen = false;
-    this.isCountrySelectMenuOpen = false;
-    this.isSigninMenuOpen = false;
-    this.isLanguageSelectMenuOpen = !this.isLanguageSelectMenuOpen;
-  }
+
   handleSigninMenuClick(): void {
     this.isSelectedSiteOpen = false;
     this.isLanguageSelectMenuOpen = false;

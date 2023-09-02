@@ -1,0 +1,28 @@
+<div class="mobile-logo-container-large">
+  <div class="site-select-container">
+    <div
+      class="site-select-wrapper open"
+      (click)="handleSelectedSiteMenuClick()"
+      [ngClass]="{ open: isSelectedSiteOpen }"
+    >
+      <span>{{ selectedSiteOption }}</span>
+      <div class="expand-more-chevron-wrapper">
+        <mat-icon
+          class="expand-more-chevron"
+          [ngClass]="{ open: isSelectedSiteOpen }"
+          >expand_more</mat-icon
+        >
+      </div>
+    </div>
+    <ul class="site-select-list" *ngIf="isSelectedSiteOpen">
+      <li *ngFor="let option of siteOptions">
+        <a
+          href="{{ option.linkHref }}"
+          target="_blank"
+          [attr.aria-label]="option.ariaLabel"
+          >{{ option.title }}</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>

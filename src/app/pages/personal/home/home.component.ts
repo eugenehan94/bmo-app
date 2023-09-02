@@ -12,6 +12,7 @@ export class HomeComponent {
   // https://blog.angular-university.io/angular-responsive-design/
   currentScreenSize?: string;
   isMobileSignInMenuOpen?: boolean;
+  isMobileMenuOpen?: boolean;
   constructor(
     private breakpointObserver: BreakpointObserver,
     private appService: AppService
@@ -41,6 +42,9 @@ export class HomeComponent {
 
     this.appService.isMobileSignInMenuOpen.subscribe((isOpen: any) => {
       this.isMobileSignInMenuOpen = isOpen;
+    });
+    this.appService.isMobileMenuOpen.subscribe((isOpen: boolean) => {
+      this.isMobileMenuOpen = isOpen;
     });
   }
 }

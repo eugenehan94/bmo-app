@@ -1,0 +1,48 @@
+<div
+  [ngClass]="
+    isCountrySelectMenuOpen
+      ? 'country-select-container open'
+      : 'country-select-container'
+  "
+  (click)="handleCountrySelectMenuClick()"
+>
+  <div class="country-select-inner-container">
+    <mat-icon
+      [ngClass]="
+        isCountrySelectMenuOpen
+          ? 'country-select-icon open'
+          : 'country-select-icon'
+      "
+      >expand_more</mat-icon
+    >
+    <div style="width: 100%; display: inline-flex; align-items: center">
+      <span class="country-select-image-wrapper"
+        ><img
+          alt=""
+          height="25"
+          width="25"
+          src="assets/svg/flag-canada.svg" /></span
+      ><span><span></span></span>
+    </div>
+  </div>
+  <div
+    *ngIf="isCountrySelectMenuOpen"
+    [ngClass]="
+      isCountrySelectMenuOpen
+        ? 'country-select-dropdown-list open'
+        : 'country-select-dropdown-list'
+    "
+  >
+    <div
+      *ngFor="let countryOption of countryOptions"
+      class="country-select-option"
+    >
+      <div class="country-select-option-wrapper">
+        <span class="country-select-icon-wrapper"
+          ><img src="{{ countryOption.icon }}" alt="" width="25" height="25"
+        /></span>
+        <span>{{ countryOption.country }}</span>
+      </div>
+    </div>
+  </div>
+</div>

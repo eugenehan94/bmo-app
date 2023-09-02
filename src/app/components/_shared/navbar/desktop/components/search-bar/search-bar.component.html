@@ -1,0 +1,35 @@
+<div class="search-bar-container">
+  <div
+    [ngClass]="
+      isSearchBarOpen ? 'search-icon-wrapper-open' : 'search-icon-wrapper'
+    "
+    (click)="handleSearchBarClick($event, true)"
+  >
+    <div class="search-bar-form-wrapper">
+      <form style="width: 100%" onsubmit="return false">
+        <div class="search-form-inner-wrapper">
+          <input
+            #searchInput
+            placeholder="Search"
+            class="search-form-input"
+            [ngClass]="
+              isSearchBarOpen ? 'search-form-input open' : 'search-form-input'
+            "
+          />
+          <button
+            [ngClass]="
+              isSearchBarOpen
+                ? 'search-form-close-wrapper open'
+                : 'search-form-close-wrapper'
+            "
+            (click)="
+              handleSearchBarClick($event, false); searchInput.value = ''
+            "
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

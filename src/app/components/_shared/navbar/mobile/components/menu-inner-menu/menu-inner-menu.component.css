@@ -46,7 +46,10 @@
   font-size: xx-large;
   width: auto;
 }
-
+.mobile-menu-btn-navigation-dropdown-chevron.open {
+  transform: rotate(90deg);
+  color: #0075be;
+}
 .mobile-menu-btn-navigation-categories-container {
   margin: 0;
   width: 100%;

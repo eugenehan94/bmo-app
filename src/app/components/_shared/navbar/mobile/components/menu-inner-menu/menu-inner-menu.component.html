@@ -10,11 +10,18 @@
           class="mobile-menu-btn-navigation-dropdown-content-wrapper"
         >
           {{ option.title }}
-          <mat-icon class="mobile-menu-btn-navigation-dropdown-chevron"
+          <mat-icon
+            #innerParentChevron
+            id="{{ 'inner-menu-parent-chevron' + i }}"
+            class="mobile-menu-btn-navigation-dropdown-chevron"
             >chevron_right</mat-icon
           >
         </button>
-        <div #tester class="mobile-menu-btn-navigation-categories-container">
+        <div
+          #innerMenuParent
+          id="{{ 'inner-menu-parent' + i }}"
+          class="mobile-menu-btn-navigation-categories-container"
+        >
           <ul class="mobile-menu-btn-navigation-categories-dropdown">
             <li
               *ngFor="let category of option.categories; let j = index"
@@ -30,16 +37,20 @@
               >
               <button
                 *ngIf="!category.link"
-                (click)="testClick($event, i, j)"
+                (click)="handleChildrenClicked(i, j)"
                 class="mobile-menu-btn-navigation-categories-dropdown-with-children"
               >
                 {{ category.title }}
                 <mat-icon
+                  #innerMenuParentChildChevron
+                  id="{{ 'inner-menu-parent' + i + 'child' + j + 'chevron' }}"
                   class="mobile-menu-btn-navigation-categories-dropdown-chevron"
                   >chevron_right</mat-icon
                 >
               </button>
               <div
+                #innerMenuParentChild
+                id="{{ 'inner-menu-parent' + i + 'child' + j }}"
                 *ngIf="!category.link"
                 class="mobile-menu-btn-navigation-categories-dropdown-child-container"
               >

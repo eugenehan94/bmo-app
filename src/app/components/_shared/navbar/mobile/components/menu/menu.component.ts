@@ -1,11 +1,11 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AppService } from 'src/app/app.service';
 @Component({
   selector: 'app-mobile-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
 })
-export class MenuComponent implements OnInit,AfterViewInit {
+export class MenuComponent implements OnInit {
   constructor(private appService: AppService) {}
 
   isMobileMenuOpen?: boolean;
@@ -14,8 +14,5 @@ export class MenuComponent implements OnInit,AfterViewInit {
     this.appService.isMobileMenuOpen.subscribe((isOpen: boolean) => {
       this.isMobileMenuOpen = isOpen;
     });
-  }
-  ngAfterViewInit() {
-    let height = this.container.nativeElement.offsetHeight;
   }
 }

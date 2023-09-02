@@ -1,121 +1,119 @@
 .signin-btn-container {
-    display: flex;
-    border-left: 1px solid #d9dce1;
-    border-right: 1px solid #d9dce1;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .signin-btn {
-    color: #0075be;
-    text-transform: uppercase;
-    width: 140px;
-    padding: 2px 24px 0;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    white-space: nowrap;
-    margin: 0;
-    height: 100%;
-    justify-content: center;
-  }
-  .signin-btn span {
-    display: flex;
-    align-items: center;
-  }
-  .signin-btn:hover {
-    text-decoration: underline;
-  }
-  .signin-btn mat-icon {
-    margin-right: 2px;
-  }
-  .mobile-signin-btn-menu-container {
-    height: auto;
-    min-height: calc(100vh - 56.9886px);
-    background-color: #f5f6f7;
-    transition: width 0.2s ease 0s;
-    box-sizing: border-box;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    z-index: 801;
-    top: 57px;
-    right: 0px;
-    height: 100vh;
-    width: 0;
-    overflow-x: hidden;
-  }
-  
-  .mobile-signin-btn-menu-container.open {
-    width: 100%;
-  }
-  
-  .mobile-signin-btn-menu-inner-container {
-    transition: width 0.2s ease 0s;
-    box-sizing: border-box;
-    width: 100%;
-    background-color: #f5f6f7;
-    color: #fefefe;
-    overflow: initial;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start !important;
-  }
-  .mobile-online-banking-signin-container {
-    width: 100%;
-    background-color: white;
-    height: auto !important;
-  }
-  .online-banking-signin-link {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.15px;
-    font-weight: 700;
-    display: flex;
-    color: #0075be;
-    padding: 1.5rem 1.5rem 0px;
-    text-decoration: none;
-  }
-  
-  .mobile-signin-register-container {
-    width: 100%;
-    background-color: white;
-    color: #646c76;
-    font-weight: 400;
-    letter-spacing: 0.15px;
-    line-height: 0.5rem;
-    font-size: 1rem;
-    border-bottom: 1px solid #d9dce1;
-    height: auto !important;
-    display: flex;
-  }
-  .mobile-signin-register-wrapper {
-    padding: 1.5rem;
-  }
-  .mobile-signin-register-link {
-    color: #0075be;
-    margin-bottom: 12px;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-  .mobile-signin-dropdown-menu {
-    margin: 0;
-    padding: 1.5rem;
-    list-style-type: none;
-  }
-  .mobile-signin-dropdown-link {
-    color: #001928;
-    letter-spacing: 0.15px;
-    line-height: 1.5rem;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-    display: flex;
-    text-decoration: none;
-  }
-  
+  display: flex;
+  border-left: 1px solid #d9dce1;
+  border-right: 1px solid #d9dce1;
+  align-items: center;
+  height: 100%;
+}
+
+.signin-btn {
+  color: #0075be;
+  text-transform: uppercase;
+  width: 140px;
+  padding: 2px 24px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  white-space: nowrap;
+  margin: 0;
+  height: 100%;
+  justify-content: center;
+}
+.signin-btn span {
+  display: flex;
+  align-items: center;
+}
+.signin-btn:hover {
+  text-decoration: underline;
+}
+.signin-btn mat-icon {
+  margin-right: 2px;
+}
+.mobile-signin-btn-menu-container {
+  height: auto;
+  min-height: calc(100vh - 56.9886px);
+  background-color: #f5f6f7;
+  transition: width 0.2s ease 0s;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 801;
+  top: 57px;
+  right: 0px;
+  height: 100vh;
+  width: 0;
+  overflow-x: hidden;
+}
+
+.mobile-signin-btn-menu-container.open {
+  width: 100%;
+}
+
+.mobile-signin-btn-menu-inner-container {
+  transition: width 0.2s ease 0s;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f5f6f7;
+  color: #fefefe;
+  overflow: initial;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+.mobile-online-banking-signin-container {
+  width: 100%;
+  background-color: white;
+  height: auto !important;
+}
+.online-banking-signin-link {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+  font-weight: 700;
+  display: flex;
+  color: #0075be;
+  padding: 1.5rem 1.5rem 0px;
+  text-decoration: none;
+}
+
+.mobile-signin-register-container {
+  width: 100%;
+  background-color: white;
+  color: #646c76;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  line-height: 0.5rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #d9dce1;
+  height: auto !important;
+  display: flex;
+}
+.mobile-signin-register-wrapper {
+  padding: 1.5rem;
+}
+.mobile-signin-register-link {
+  color: #0075be;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.mobile-signin-dropdown-menu {
+  margin: 0;
+  padding: 1.5rem;
+  list-style-type: none;
+}
+.mobile-signin-dropdown-link {
+  color: #001928;
+  letter-spacing: 0.15px;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  display: flex;
+  text-decoration: none;
+}

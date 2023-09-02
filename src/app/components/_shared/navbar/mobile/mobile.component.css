@@ -7,35 +7,12 @@ mat-toolbar {
   height: 100%;
   display: flex;
   align-items: center;
-  flex: 1;
-}
-.mobile-logo-container {
-  height: 100%;
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-.logo-xsmall {
-  width: 100px;
-  height: 27px;
+  width: 100%;
 }
 
 .mobile-btn-container {
   height: 100%;
   display: flex;
   justify-content: flex-end;
-}
-.mobile-btn-container button {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-}
-
-.mobile-menu-btn {
-  cursor: pointer;
-  border: none;
-  padding: 0 1.5rem;
+  flex: 1;
 }

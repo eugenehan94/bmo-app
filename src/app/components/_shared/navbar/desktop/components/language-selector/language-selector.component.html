@@ -1,0 +1,26 @@
+<div
+  [ngClass]="
+    isLanguageSelectMenuOpen ? 'language-container open' : 'language-container'
+  "
+  class="language-container"
+  (click)="handleLanguageSelectMenuClick()"
+>
+  <div class="language-selector-container">
+    <mat-icon class="language-selector-icon">expand_more</mat-icon>
+    <span>EN</span>
+  </div>
+  <ul
+    [ngClass]="
+      isLanguageSelectMenuOpen
+        ? 'language-dropdown-list open'
+        : 'language-dropdown-list'
+    "
+  >
+    <li class="language-dropdown-list-option">
+      <div>English</div>
+    </li>
+    <li class="language-dropdown-list-option">
+      <a>Français</a>
+    </li>
+  </ul>
+</div>

@@ -33,6 +33,11 @@ import { MenuSiteSelectorComponent } from './components/_shared/navbar/mobile/co
 import { MenuLanguageSelectorComponent } from './components/_shared/navbar/mobile/components/menu-language-selector/menu-language-selector.component';
 import { MenuInnerMenuComponent } from './components/_shared/navbar/mobile/components/menu-inner-menu/menu-inner-menu.component';
 import { BottomNavigationComponent } from './components/_shared/navbar/mobile/components/bottom-navigation/bottom-navigation.component';
+import { LogoComponent } from './components/_shared/navbar/mobile/components/logo/logo.component';
+import { SiteSelectorComponent } from './components/_shared/navbar/desktop/components/site-selector/site-selector.component';
+import { SearchBarComponent } from './components/_shared/navbar/desktop/components/search-bar/search-bar.component';
+import { CountrySelectorComponent } from './components/_shared/navbar/desktop/components/country-selector/country-selector.component';
+import { LanguageSelectorComponent } from './components/_shared/navbar/desktop/components/language-selector/language-selector.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +62,11 @@ import { BottomNavigationComponent } from './components/_shared/navbar/mobile/co
     MenuLanguageSelectorComponent,
     MenuInnerMenuComponent,
     BottomNavigationComponent,
+    LogoComponent,
+    SiteSelectorComponent,
+    SearchBarComponent,
+    CountrySelectorComponent,
+    LanguageSelectorComponent,
   ],
   imports: [
     BrowserModule,
