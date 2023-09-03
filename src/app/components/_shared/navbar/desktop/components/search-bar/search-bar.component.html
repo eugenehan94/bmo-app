@@ -8,20 +8,26 @@
     <div class="search-bar-form-wrapper">
       <form style="width: 100%" onsubmit="return false">
         <div class="search-form-inner-wrapper">
+          <label
+            for="header-search"
+            aria-hidden="true"
+            class="search-form-input-label"
+            >Search</label
+          >
           <input
             #searchInput
+            type="text"
+            id="header-search"
             placeholder="Search"
             class="search-form-input"
-            [ngClass]="
-              isSearchBarOpen ? 'search-form-input open' : 'search-form-input'
-            "
+            [ngClass]="isSearchBarOpen ? 'open' : null"
+            aria-label="Search"
           />
           <button
-            [ngClass]="
-              isSearchBarOpen
-                ? 'search-form-close-wrapper open'
-                : 'search-form-close-wrapper'
-            "
+            aria-label="Clear search results"
+            type="reset"
+            class="search-form-close-wrapper"
+            [ngClass]="isSearchBarOpen ? ' open' : null"
             (click)="
               handleSearchBarClick($event, false); searchInput.value = ''
             "

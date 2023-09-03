@@ -1,105 +1,15 @@
 <div>
-  <mat-toolbar class="toolbar-large">
+  <mat-toolbar class="navbar-mat-toolbar">
     <app-desktop-site-selector></app-desktop-site-selector>
     <app-desktop-search-bar style="flex: 1"></app-desktop-search-bar>
 
-    <div class="btns-container">
+    <div class="navbar-btns-container">
       <app-desktop-country-selector></app-desktop-country-selector>
       <app-desktop-language-selector></app-desktop-language-selector>
 
-      <div class="signin-btn-container">
-        <div
-          [ngClass]="
-            isSigninMenuOpen
-              ? 'signin-btn-inner-container open'
-              : 'signin-btn-inner-container'
-          "
-        >
-          <button class="signin-btn" (click)="handleSigninMenuClick()">
-            <span
-              [ngClass]="
-                isSigninMenuOpen
-                  ? 'signin-btn-inner-wrapper open'
-                  : 'signin-btn-inner-wrapper'
-              "
-              ><span><mat-icon>lock</mat-icon></span
-              ><span class="signin-btn-signin-text">Sign In</span
-              ><span> <mat-icon>expand_more</mat-icon></span></span
-            >
-          </button>
-          <div *ngIf="isSigninMenuOpen" class="signin-btn-menu-container">
-            <div class="signin-btn-menu-inner-container">
-              <div class="signin-btn-online-banking-wrapper">
-                <a class="signin-btn-online-banking-link">
-                  <div>Sign in to Online Banking</div>
-                  <div>
-                    <mat-icon>chevron_right</mat-icon>
-                  </div>
-                </a>
-              </div>
-              <div class="signin-btn-register-container">
-                <span class="signin-btn-register-wrapper">
-                  <p style="margin: 0px; color: #9da2a8">
-                    Register for online banking with a
-                  </p>
-                  <p>
-                    <a class="signin-btn-register-link">BMO Debit Card</a>
-                    or
-                    <a class="signin-btn-register-link">Credit Card</a>
-                  </p>
-                </span>
-              </div>
-              <ul class="signin-btn-dropdown-list">
-                <li *ngFor="let signInOption of signInMenuOptions">
-                  <a
-                    class="signin-btn-dropdown-option-link"
-                    [attr.aria-label]="signInOption.ariaLabel"
-                    href="{{ signInOption.link }}"
-                    target="_blank"
-                    ><div>{{ signInOption.title }}</div></a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      <app-desktop-sign-in></app-desktop-sign-in>
     </div>
   </mat-toolbar>
-  <div
-    style="
-      display: flex;
-      align-items: center;
-      padding-left: 2rem;
-      padding-top: 0.5rem;
-      padding-right: 2rem;
-    "
-  >
-    <div>
-      <img
-        src="assets/svg/bmoLogo.svg"
-        alt="Bank of Montreal logo"
-        class="logo-small"
-      />
-    </div>
-    <div>
-      <nav>
-        <ul style="display: flex; list-style-type: none">
-          <li *ngFor="let navOption of navbarOptions">
-            <button
-              style="
-                border: none;
-                background: transparent;
-                cursor: pointer;
-                font-size: 1rem;
-                padding: 0 12px;
-              "
-            >
-              {{ navOption.title }}
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+
+  <app-desktop-navigation-bar></app-desktop-navigation-bar>
 </div>

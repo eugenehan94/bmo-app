@@ -1,0 +1,51 @@
+<div class="signin-btn-container">
+  <div
+    class="signin-btn-inner-container"
+    [ngClass]="isSigninMenuOpen ? 'open' : null"
+  >
+    <button class="signin-btn" (click)="handleSigninMenuClick()">
+      <span
+        class="signin-btn-inner-wrapper"
+        [ngClass]="isSigninMenuOpen ? ' open' : null"
+        ><span><mat-icon>lock</mat-icon></span
+        ><span class="signin-btn-signin-text">Sign In</span
+        ><span> <mat-icon>expand_more</mat-icon></span></span
+      >
+    </button>
+    <div *ngIf="isSigninMenuOpen" class="signin-btn-menu-container">
+      <div class="signin-btn-menu-inner-container">
+        <div class="signin-btn-online-banking-wrapper">
+          <a class="signin-btn-online-banking-link">
+            <div>Sign in to Online Banking</div>
+            <div>
+              <mat-icon>chevron_right</mat-icon>
+            </div>
+          </a>
+        </div>
+        <div class="signin-btn-register-container">
+          <span class="signin-btn-register-wrapper">
+            <p style="margin: 0px; color: #9da2a8">
+              Register for online banking with a
+            </p>
+            <p>
+              <a class="signin-btn-register-link">BMO Debit Card</a>
+              or
+              <a class="signin-btn-register-link">Credit Card</a>
+            </p>
+          </span>
+        </div>
+        <ul class="signin-btn-dropdown-list">
+          <li *ngFor="let signInOption of signInMenuOptions">
+            <a
+              class="signin-btn-dropdown-option-link"
+              [attr.aria-label]="signInOption.ariaLabel"
+              href="{{ signInOption.link }}"
+              target="_blank"
+              ><div>{{ signInOption.title }}</div></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

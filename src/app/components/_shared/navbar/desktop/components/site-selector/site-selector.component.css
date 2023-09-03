@@ -1,14 +1,24 @@
-.mobile-logo-container-large {
+.site-selector-container {
   flex: 0;
   height: 100%;
 }
-.site-select-container {
+.site-selector-wrapper {
   position: relative;
   height: 100%;
   width: 270px;
   cursor: pointer;
 }
-
+.site-selector-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  font-size: 1rem;
+}
 .site-select-wrapper {
   display: flex;
   justify-content: space-between;
@@ -29,8 +39,6 @@
   font-size: 1rem;
   font-weight: 400;
   color: #646c76;
-  /* padding-left:16px; */
-  /* text-indent: 16px; */
 }
 .expand-more-chevron-wrapper {
   position: absolute;

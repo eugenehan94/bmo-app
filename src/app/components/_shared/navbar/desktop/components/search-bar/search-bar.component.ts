@@ -9,7 +9,6 @@ export class SearchBarComponent {
 
   isSearchBarOpen: boolean = false;
 
-
   handleSearchBarClick(e: Event, input: boolean): void {
     e.stopPropagation();
     this.isSearchBarOpen = input;

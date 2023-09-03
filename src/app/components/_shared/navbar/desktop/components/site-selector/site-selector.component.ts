@@ -1,25 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavbarService } from 'src/app/components/_shared/navbar/navbar.service';
-import {
-  SiteOptionsType,
-  NavigationOptionsType,
-  CountryOptionsType,
-  SignInMenuOptionsType,
-} from '../../../../interfaces';
+import { SiteOptionsType } from 'src/app/components/_shared/interfaces';
+import { DesktopService } from 'src/app/components/_shared/navbar/desktop/desktop.service';
 @Component({
   selector: 'app-desktop-site-selector',
   templateUrl: './site-selector.component.html',
   styleUrls: ['./site-selector.component.css'],
 })
-export class SiteSelectorComponent {
-  constructor(private navbarService: NavbarService) {}
-  isSelectedSiteOpen: boolean = false;
+export class SiteSelectorComponent implements OnInit {
+  constructor(
+    private navbarService: NavbarService,
+    private desktopService: DesktopService
+  ) {}
+  isSelectedSiteOpen?: boolean;
+
   selectedSiteOption: string = 'Personal';
   siteOptions: SiteOptionsType[] = this.navbarService.siteOptions;
+
+  ngOnInit(): void {
+    this.desktopService.isSelectedSiteOpen.subscribe((isOpen: boolean) => {
+      this.isSelectedSiteOpen = isOpen;
+    });
+  }
+
   handleSelectedSiteMenuClick(): void {
     // this.isLanguageSelectMenuOpen = false;
     // this.isSigninMenuOpen = false;
     // this.isCountrySelectMenuOpen = false;
-    this.isSelectedSiteOpen = !this.isSelectedSiteOpen;
+    this.desktopService.setIsSelectedSiteOpen(!this.isSelectedSiteOpen);
   }
 }

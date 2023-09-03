@@ -1,8 +1,6 @@
 <div
-  [ngClass]="
-    isLanguageSelectMenuOpen ? 'language-container open' : 'language-container'
-  "
   class="language-container"
+  [ngClass]="isLanguageSelectMenuOpen ? 'open' : null"
   (click)="handleLanguageSelectMenuClick()"
 >
   <div class="language-selector-container">
@@ -10,11 +8,8 @@
     <span>EN</span>
   </div>
   <ul
-    [ngClass]="
-      isLanguageSelectMenuOpen
-        ? 'language-dropdown-list open'
-        : 'language-dropdown-list'
-    "
+    class="language-dropdown-list"
+    [ngClass]="isLanguageSelectMenuOpen ? ' open' : null"
   >
     <li class="language-dropdown-list-option">
       <div>English</div>

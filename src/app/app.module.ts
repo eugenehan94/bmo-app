@@ -38,7 +38,8 @@ import { SiteSelectorComponent } from './components/_shared/navbar/desktop/compo
 import { SearchBarComponent } from './components/_shared/navbar/desktop/components/search-bar/search-bar.component';
 import { CountrySelectorComponent } from './components/_shared/navbar/desktop/components/country-selector/country-selector.component';
 import { LanguageSelectorComponent } from './components/_shared/navbar/desktop/components/language-selector/language-selector.component';
-
+import { DesktopSignInComponent} from "./components/_shared/navbar/desktop/components/sign-in/sign-in.component";
+import { NavigationBarComponent } from './components/_shared/navbar/desktop/components/navigation-bar/navigation-bar.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +68,8 @@ import { LanguageSelectorComponent } from './components/_shared/navbar/desktop/c
     SearchBarComponent,
     CountrySelectorComponent,
     LanguageSelectorComponent,
+    DesktopSignInComponent,
+    NavigationBarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+<div
+  style="
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    padding-right: 2rem;
+  "
+>
+  <div>
+    <img
+      src="assets/svg/bmoLogo.svg"
+      alt="Bank of Montreal logo"
+      class="logo-small"
+    />
+  </div>
+  <div>
+    <nav>
+      <ul style="display: flex; list-style-type: none">
+        <li *ngFor="let navOption of navbarOptions">
+          <button
+            style="
+              border: none;
+              background: transparent;
+              cursor: pointer;
+              font-size: 1rem;
+              padding: 0 12px;
+            "
+          >
+            {{ navOption.title }}
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
