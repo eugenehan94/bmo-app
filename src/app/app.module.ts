@@ -38,8 +38,11 @@ import { SiteSelectorComponent } from './components/_shared/navbar/desktop/compo
 import { SearchBarComponent } from './components/_shared/navbar/desktop/components/search-bar/search-bar.component';
 import { CountrySelectorComponent } from './components/_shared/navbar/desktop/components/country-selector/country-selector.component';
 import { LanguageSelectorComponent } from './components/_shared/navbar/desktop/components/language-selector/language-selector.component';
-import { DesktopSignInComponent} from "./components/_shared/navbar/desktop/components/sign-in/sign-in.component";
-import { NavigationBarComponent } from './components/_shared/navbar/desktop/components/navigation-bar/navigation-bar.component'
+import { DesktopSignInComponent } from './components/_shared/navbar/desktop/components/sign-in/sign-in.component';
+import { NavigationBarComponent } from './components/_shared/navbar/desktop/components/navigation-bar/navigation-bar.component';
+import { MediumLogoComponent } from './components/_shared/navbar/medium/components/logo/logo.component';
+import { MediumSignInComponent } from './components/_shared/navbar/medium/components/sign-in/sign-in.component';
+import { MediumHamburgerMenuComponent } from './components/_shared/navbar/medium/components/hamburger-menu/hamburger-menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +72,10 @@ import { NavigationBarComponent } from './components/_shared/navbar/desktop/comp
     CountrySelectorComponent,
     LanguageSelectorComponent,
     DesktopSignInComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    MediumLogoComponent,
+    MediumSignInComponent,
+    MediumHamburgerMenuComponent
   ],
   imports: [
     BrowserModule,

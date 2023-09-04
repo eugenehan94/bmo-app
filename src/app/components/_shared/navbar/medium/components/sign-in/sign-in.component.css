@@ -1,0 +1,28 @@
+.medium-signin-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signin-btn {
+  color: #0075be;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  height: 100%;
+  padding: 0 2rem;
+  cursor: pointer;
+  background: transparent;
+}
+
+.signin-btn span {
+  display: flex;
+  align-items: center;
+}
+.signin-btn:hover {
+  text-decoration: underline;
+}
+.signin-btn mat-icon {
+  margin-right: 2px;
+}

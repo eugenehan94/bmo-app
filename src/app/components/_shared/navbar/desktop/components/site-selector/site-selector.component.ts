@@ -24,9 +24,6 @@ export class SiteSelectorComponent implements OnInit {
   }
 
   handleSelectedSiteMenuClick(): void {
-    // this.isLanguageSelectMenuOpen = false;
-    // this.isSigninMenuOpen = false;
-    // this.isCountrySelectMenuOpen = false;
     this.desktopService.setIsSelectedSiteOpen(!this.isSelectedSiteOpen);
   }
 }

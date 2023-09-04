@@ -1,52 +1,12 @@
 <div>
-  <mat-toolbar class="toolbar-small">
-    <div class="mobile-logo-container">
-      <a style="text-align: left">
-        <div>
-          <img
-            src="assets/svg/bmoLogo.svg"
-            alt="Bank of Montreal logo"
-            class="logo-small"
-          />
-        </div>
-      </a>
+  <mat-toolbar class="mat-toolbar">
+    <div class="medium-logo-container">
+      <app-medium-logo></app-medium-logo>
     </div>
 
-    <div class="mobile-btn-container">
-      <button
-        class="signin-btn"
-        (click)="isMobileSignInMenuOpen = !isMobileSignInMenuOpen"
-      >
-        <span *ngIf="isMobileSignInMenuOpen">
-          <mat-icon>close</mat-icon><span>Close</span></span
-        >
-        <span *ngIf="!isMobileSignInMenuOpen"
-          ><mat-icon>lock_open</mat-icon><span>Sign In</span></span
-        >
-      </button>
-
-      <button
-        class="mobile-menu-btn"
-        (click)="isMobileMenuOpen = !isMobileMenuOpen"
-      >
-        <span
-          class="close-container"
-          [ngClass]="isMobileMenuOpen ? 'open' : null"
-        >
-          <span
-            class="hamburger-icon-top"
-            [ngClass]="isMobileMenuOpen ? 'open' : null"
-          ></span>
-          <span
-            class="hamburger-icon-middle"
-            [ngClass]="isMobileMenuOpen ? 'open' : null"
-          ></span>
-          <span
-            class="hamburger-icon-bottom"
-            [ngClass]="isMobileMenuOpen ? 'open' : null"
-          ></span>
-        </span>
-      </button>
+    <div class="medium-btn-container">
+      <app-medium-sign-in></app-medium-sign-in>
+      <app-medium-hamburger-menu></app-medium-hamburger-menu>
     </div>
   </mat-toolbar>
 </div>

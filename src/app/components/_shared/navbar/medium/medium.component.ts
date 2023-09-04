@@ -7,6 +7,4 @@ import { Component, Input } from '@angular/core';
 })
 export class MediumComponent {
   @Input() currentScreenSize?: string;
-  isMobileMenuOpen: boolean = false;
-  isMobileSignInMenuOpen: boolean = false;
 }

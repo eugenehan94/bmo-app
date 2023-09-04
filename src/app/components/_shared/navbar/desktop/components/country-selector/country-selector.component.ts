@@ -21,9 +21,6 @@ export class CountrySelectorComponent implements OnInit {
     });
   }
   handleCountrySelectMenuClick(): void {
-    // this.isSelectedSiteOpen = false;
-    // this.isLanguageSelectMenuOpen = false;
-    // this.isSigninMenuOpen = false;
     this.desktopService.setIsCountrySelectMenuOpen(
       !this.isCountrySelectMenuOpen
     );

@@ -1,0 +1,13 @@
+<div class="medium-signin-container">
+  <button
+    class="signin-btn"
+    (click)="isMobileSignInMenuOpen = !isMobileSignInMenuOpen"
+  >
+    <span *ngIf="isMobileSignInMenuOpen">
+      <mat-icon>close</mat-icon><span>Close</span></span
+    >
+    <span *ngIf="!isMobileSignInMenuOpen"
+      ><mat-icon>lock_open</mat-icon><span>Sign In</span></span
+    >
+  </button>
+</div>
