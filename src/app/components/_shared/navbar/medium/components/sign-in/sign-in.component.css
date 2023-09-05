@@ -26,3 +26,48 @@
 .signin-btn mat-icon {
   margin-right: 2px;
 }
+.medium-signin-menu-container {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: width 0.2s ease 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 800;
+}
+.medium-signin-menu-content-container {
+  background-color: white;
+  width: 430px;
+  z-index: 100;
+  transition: width 0.2s ease 0s;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 100%;
+}
+.medium-signin-menu-online-banking-container {
+  padding: 1.5rem 1.5rem 0px;
+}
+.medium-signin-menu-online-banking-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0075be;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+  font-weight: 700;
+}
+
+.medium-signin-menu-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #001928;
+  opacity: 0.5;
+  padding: 0;
+  margin: 0;
+  z-index: 50;
+}
