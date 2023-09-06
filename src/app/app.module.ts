@@ -15,7 +15,6 @@ import { NgOptimizedImage } from '@angular/common';
 // NOTE: This import houses all our Angular Material imports
 import { MaterialDesignModule } from './material-design/material-design.module';
 import { NavbarComponent } from './components/_shared/navbar/navbar.component';
-import { Navbar2Component } from './components/personal/navbar/navbar.component';
 import { HeroComponent } from './components/personal/hero/hero.component';
 import { ProductsTabsComponent } from './components/personal/products-tabs/products-tabs.component';
 import { DownloadBannerComponent } from './components/personal/download-banner/download-banner.component';
@@ -43,12 +42,13 @@ import { NavigationBarComponent } from './components/_shared/navbar/desktop/comp
 import { MediumLogoComponent } from './components/_shared/navbar/medium/components/logo/logo.component';
 import { MediumSignInComponent } from './components/_shared/navbar/medium/components/sign-in/sign-in.component';
 import { MediumHamburgerMenuComponent } from './components/_shared/navbar/medium/components/hamburger-menu/hamburger-menu.component';
+import { MediumBottomNavigationComponent } from './components/_shared/navbar/medium/components/bottom-navigation/bottom-navigation.component';
+import { MediumMenuComponent } from './components/_shared/navbar/medium/components/menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    Navbar2Component,
     HeroComponent,
     ProductsTabsComponent,
     DownloadBannerComponent,
@@ -75,7 +75,9 @@ import { MediumHamburgerMenuComponent } from './components/_shared/navbar/medium
     NavigationBarComponent,
     MediumLogoComponent,
     MediumSignInComponent,
-    MediumHamburgerMenuComponent
+    MediumHamburgerMenuComponent,
+    MediumBottomNavigationComponent,
+    MediumMenuComponent
   ],
   imports: [
     BrowserModule,

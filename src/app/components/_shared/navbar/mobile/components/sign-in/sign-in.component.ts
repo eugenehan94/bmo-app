@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/app.service';
 import { NavbarService } from 'src/app/components/_shared/navbar/navbar.service';
 import { SignInMenuOptionsType } from 'src/app/components/_shared/interfaces';
@@ -15,7 +15,7 @@ export class SignInComponent implements OnInit {
   isMobileSignInMenuOpen?: boolean;
   signInMenuOptions: SignInMenuOptionsType[] =
     this.navbarService.signInMenuOptions;
-  @ViewChild('signinContainer') container: any;
+
   ngOnInit(): void {
     this.appService.isMobileSignInMenuOpen.subscribe((isOpen: any) => {
       this.isMobileSignInMenuOpen = isOpen;

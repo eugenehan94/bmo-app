@@ -1,21 +1,22 @@
 <div class="medium-hamburger-menu-container">
   <button
     class="medium-menu-btn"
-    (click)="isMobileMenuOpen = !isMobileMenuOpen"
+    (click)="handleMenuClick()"
   >
-    <span class="close-container" [ngClass]="isMobileMenuOpen ? 'open' : null">
+    <span class="close-container" [ngClass]="isMediumMenuOpen ? 'open' : null">
       <span
         class="hamburger-icon-top"
-        [ngClass]="isMobileMenuOpen ? 'open' : null"
+        [ngClass]="isMediumMenuOpen ? 'open' : null"
       ></span>
       <span
         class="hamburger-icon-middle"
-        [ngClass]="isMobileMenuOpen ? 'open' : null"
+        [ngClass]="isMediumMenuOpen ? 'open' : null"
       ></span>
       <span
         class="hamburger-icon-bottom"
-        [ngClass]="isMobileMenuOpen ? 'open' : null"
+        [ngClass]="isMediumMenuOpen ? 'open' : null"
       ></span>
     </span>
   </button>
+  <app-medium-menu [isMediumMenuOpen]="isMediumMenuOpen"></app-medium-menu>
 </div>

@@ -1,30 +1,32 @@
 <div class="signin-btn-container">
-  <button class="signin-btn" (click)="handleSignInMenuClick()">
+  <button
+    aria-label="Toggle sign in menu navigation"
+    [attr.aria-expanded]="isMobileSignInMenuOpen"
+    class="signin-btn"
+    (click)="handleSignInMenuClick()"
+  >
     <span *ngIf="isMobileSignInMenuOpen">
-      <mat-icon>close</mat-icon><span>Close</span></span
+      <mat-icon aria-hidden="true">close</mat-icon><span>Close</span></span
     >
     <span *ngIf="!isMobileSignInMenuOpen"
-      ><mat-icon>lock_open</mat-icon><span>Sign In</span></span
+      ><mat-icon aria-hidden="true">lock_open</mat-icon
+      ><span>Sign In</span></span
     >
   </button>
   <div
-    #signinContainer
-    [ngClass]="
-      isMobileSignInMenuOpen
-        ? 'mobile-signin-btn-menu-container open'
-        : 'mobile-signin-btn-menu-container'
-    "
+    class="mobile-signin-btn-menu-container"
+    [ngClass]="isMobileSignInMenuOpen ? ' open' : null"
   >
     <div class="mobile-signin-btn-menu-inner-container">
       <div class="mobile-online-banking-signin-container">
         <a
-          class="online-banking-signin-link"
           aria-label="Access online banking"
+          class="online-banking-signin-link"
           href="https://mobile2.bmo.com/BMOMobile/BMOMobileBanking.html#/login/auth"
           target="_blank"
         >
           <div>Online Banking</div>
-          <mat-icon>chevron_right</mat-icon>
+          <mat-icon aria-hidden="true">chevron_right</mat-icon>
         </a>
       </div>
       <div class="mobile-signin-register-container">
@@ -49,8 +51,8 @@
           </p></span
         >
       </div>
-      <ul class="mobile-signin-dropdown-menu">
-        <li *ngFor="let options of signInMenuOptions">
+      <ul role="list" class="mobile-signin-dropdown-menu">
+        <li *ngFor="let options of signInMenuOptions" role="listitem">
           <a
             class="mobile-signin-dropdown-link"
             [attr.aria-label]="options.ariaLabel"

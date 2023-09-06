@@ -1,0 +1,15 @@
+<div class="medium-menu-container" [ngClass]="isMediumMenuOpen ? 'open' : null">
+  <div
+    class="medium-menu-content-container"
+    [ngClass]="isMediumMenuOpen ? 'open' : null"
+  >
+    <div style="background-color: #f5f6f7; padding: 1rem 1.5rem 1rem">
+      <app-mobile-menu-search-bar></app-mobile-menu-search-bar>
+      <app-mobile-menu-country-select></app-mobile-menu-country-select>
+      <app-mobile-menu-site-selector></app-mobile-menu-site-selector>
+      <app-mobile-menu-language-selector></app-mobile-menu-language-selector>
+    </div>
+    <app-mobile-menu-inner-menu></app-mobile-menu-inner-menu>
+  </div>
+  <div class="medium-menu-overlay"></div>
+</div>

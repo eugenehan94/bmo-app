@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
 }
+.mobile-logo-wrapper {
+  margin-top: 10px;
+}
 .logo-xsmall {
   width: 100px;
   height: 27px;

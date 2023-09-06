@@ -3,8 +3,14 @@
   <div
     class="home-page-content-wrapper"
     [ngClass]="{
-      'mobile-signin-menu-open': isMobileSignInMenuOpen,
-      'mobile-menu-open': isMobileMenuOpen
+      'mobile-signin-menu-open':
+        isMobileSignInMenuOpen &&
+        (this.currentScreenSize === 'Small' ||
+          this.currentScreenSize === 'Medium'),
+      'mobile-menu-open':
+        isMobileMenuOpen &&
+        (this.currentScreenSize === 'Small' ||
+          this.currentScreenSize === 'Medium')
     }"
   >
     <app-personal-hero

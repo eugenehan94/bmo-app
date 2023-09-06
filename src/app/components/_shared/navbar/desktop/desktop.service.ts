@@ -46,4 +46,12 @@ export class DesktopService {
     this.appService.setIsMobileSignInMenuOpen(false);
     this.desktopLanguageSelectorSource.next(isOpen);
   }
+
+  // NOTE: Closes the three selectors on desktop - b/c 
+  // the sign in state is stored elsewhere and is shared with all screen sizes
+  setCloseAll() {
+    this.desktopCountrySelector.next(false);
+    this.desktopSiteSelectorSource.next(false);
+    this.desktopLanguageSelectorSource.next(false);
+  }
 }

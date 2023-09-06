@@ -24,9 +24,7 @@ export class DesktopSignInComponent implements OnInit {
     });
   }
   handleSigninMenuClick(): void {
-    this.desktopService.setIsSelectedSiteOpen(false);
-    this.desktopService.setIsLanguageSelectMenuOpen(false);
-    this.desktopService.setIsCountrySelectMenuOpen(false);
+    this.desktopService.setCloseAll();
     this.appService.setIsMobileSignInMenuOpen(!this.isSigninMenuOpen);
   }
 }

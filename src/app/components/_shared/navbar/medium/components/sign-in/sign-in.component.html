@@ -1,17 +1,20 @@
 <div class="medium-signin-container">
-  <button
-    class="signin-btn"
-    (click)="isMobileSignInMenuOpen = !isMobileSignInMenuOpen"
-  >
-    <span *ngIf="isMobileSignInMenuOpen">
+  <button class="signin-btn" (click)="handleSignInClick()">
+    <span *ngIf="isMediumSignInMenuOpen">
       <mat-icon>close</mat-icon><span>Close</span></span
     >
-    <span *ngIf="!isMobileSignInMenuOpen"
+    <span *ngIf="!isMediumSignInMenuOpen"
       ><mat-icon>lock_open</mat-icon><span>Sign In</span></span
     >
   </button>
-  <div class="medium-signin-menu-container">
-    <div class="medium-signin-menu-content-container">
+  <div
+    class="medium-signin-menu-container"
+    [ngClass]="isMediumSignInMenuOpen ? 'open' : null"
+  >
+    <div
+      class="medium-signin-menu-content-container"
+      [ngClass]="isMediumSignInMenuOpen ? 'open' : null"
+    >
       <div class="medium-signin-menu-online-banking-container">
         <a
           class="medium-signin-menu-online-banking-link"
@@ -23,8 +26,41 @@
           <mat-icon aria-hidden="true">chevron_right</mat-icon>
         </a>
       </div>
-      <div></div>
-      <ul></ul>
+      <div class="medium-signin-menu-register-container">
+        <span class="medium-signin-menu-register-wrapper">
+          <p>
+            Register for online banking with a
+            <a
+              href="https://www1.bmo.com/selfreg/#/step0"
+              target="_blank"
+              class="medium-signin-menu-register-link"
+              >BMO Debit Card</a
+            >
+            or
+            <a
+              href="https://www.bmo.com/online/creditcards/registration/?lang=en"
+              target="_blank"
+              class="medium-signin-menu-register-link"
+              >Credit Card</a
+            >
+          </p>
+        </span>
+      </div>
+      <ul role="list" class="medium-signin-menu-dropdown-container">
+        <li
+          *ngFor="let options of signInMenuOptions"
+          role="listitem"
+          class="medium-signin-menu-dropdown-option"
+        >
+          <a
+            class="medium-signin-menu-dropdown-link"
+            [attr.aria-label]="options.ariaLabel"
+            href="{{ options.link }}"
+            target="_blank"
+            ><div>{{ options.title }}</div></a
+          >
+        </li>
+      </ul>
     </div>
     <div class="medium-signin-menu-overlay"></div>
   </div>
