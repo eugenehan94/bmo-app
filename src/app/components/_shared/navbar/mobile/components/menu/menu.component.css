@@ -1,9 +1,3 @@
-.mobile-menu-container {
-  width: 72px;
-  display: block;
-  cursor: pointer;
-  height: 100%;
-}
 .mobile-menu-btn-menu-container {
   height: auto;
   min-height: calc(100vh - 55px);

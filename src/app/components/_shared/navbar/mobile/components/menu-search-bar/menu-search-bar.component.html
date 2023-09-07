@@ -1,30 +1,34 @@
-<div style="box-sizing: border-box">
-  <div style="position: relative">
-    <div>
-      <form onsubmit="return false">
-        <div style="display: flex">
-          <label class="mobile-menu-btn-menu-search-label">Search</label>
-          <input
-            (click)="handleMobileMenuSearchClick(true)"
-            [ngClass]="
-              isMobileMenuSearchSelected
-                ? 'mobile-menu-btn-menu-search-input open'
-                : 'mobile-menu-btn-menu-search-input'
-            "
-            placeholder="Search"
-          />
-          <button
-            (click)="handleMobileMenuSearchClick(false)"
-            [ngClass]="
-              isMobileMenuSearchSelected
-                ? 'mobile-menu-btn-menu-search-cancel-btn open'
-                : 'mobile-menu-btn-menu-search-cancel-btn'
-            "
-          >
-            Cancel
-          </button>
-        </div>
-      </form>
-    </div>
+<div class="mobile-menu-search-bar-container">
+  <div>
+    <form onsubmit="return false">
+      <div class="mobile-menu-search-bar-wrapper">
+        <label
+          aria-hidden="true"
+          class="mobile-menu-btn-menu-search-label"
+          id="mobile-menu-btn-menu-search-label"
+          for="mobile-menu-search-bar"
+          >Search</label
+        >
+        <input
+          (click)="handleMobileMenuSearchClick(true)"
+          (focus)="handleMobileMenuSearchClick(true)"
+          id="mobile-menu-search-bar"
+          aria-label="Search"
+          aria-labelledby="mobile-menu-btn-menu-search-label"
+          class="mobile-menu-btn-menu-search-input"
+          [ngClass]="isMobileMenuSearchSelected ? ' open' : null"
+          placeholder="Search"
+        />
+        <button
+          (click)="handleMobileMenuSearchClick(false)"
+          (focusout)="handleMobileMenuSearchClick(false)"
+          aria-label="Clear search results"
+          class="mobile-menu-btn-menu-search-cancel-btn"
+          [ngClass]="isMobileMenuSearchSelected ? 'open' : null"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
   </div>
 </div>

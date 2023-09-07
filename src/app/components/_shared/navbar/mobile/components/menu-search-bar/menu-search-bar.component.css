@@ -1,3 +1,9 @@
+.mobile-menu-search-bar-container {
+  position: relative;
+}
+.mobile-menu-search-bar-wrapper {
+  display: flex;
+}
 .mobile-menu-btn-menu-search-label {
   position: absolute;
   width: 1px;

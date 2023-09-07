@@ -1,16 +1,24 @@
-<button class="mobile-menu-btn" (click)="handleClick()">
-  <span class="close-container" [ngClass]="isMobileMenuOpen ? 'open' : null">
-    <span
-      class="hamburger-icon-top"
-      [ngClass]="isMobileMenuOpen ? 'open' : null"
-    ></span>
-    <span
-      class="hamburger-icon-middle"
-      [ngClass]="isMobileMenuOpen ? 'open' : null"
-    ></span>
-    <span
-      class="hamburger-icon-bottom"
-      [ngClass]="isMobileMenuOpen ? 'open' : null"
-    ></span>
-  </span>
-</button>
+<div class="mobile-hamburger-container">
+  <button
+    aria-label="Toggle menu navigation"
+    [attr.aria-expanded]="isMobileMenuOpen"
+    class="mobile-menu-btn"
+    (click)="handleClick()"
+  >
+    <span class="close-container" [ngClass]="isMobileMenuOpen ? 'open' : null">
+      <span
+        class="hamburger-icon-top"
+        [ngClass]="isMobileMenuOpen ? 'open' : null"
+      ></span>
+      <span
+        class="hamburger-icon-middle"
+        [ngClass]="isMobileMenuOpen ? 'open' : null"
+      ></span>
+      <span
+        class="hamburger-icon-bottom"
+        [ngClass]="isMobileMenuOpen ? 'open' : null"
+      ></span>
+    </span>
+  </button>
+  <app-mobile-menu></app-mobile-menu>
+</div>

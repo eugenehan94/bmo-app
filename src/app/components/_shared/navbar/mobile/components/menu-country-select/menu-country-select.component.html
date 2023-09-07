@@ -1,16 +1,24 @@
 <div
   (click)="handleCountrySelectMenuClick()"
+  (keydown.enter)="handleCountrySelectMenuClick()"
+  (keydown.Space)="handleCountrySelectMenuClick(); $event.preventDefault()"
   class="mobile-menu-btn-menu-country-select-container"
 >
-  <!-- @TODO: this class is reused in this component per WCAG - refactor -->
-  <label class="mobile-menu-btn-menu-search-label">Country Selector</label>
-  <div class="mobile-menu-btn-menu-country-select-wrapper">
+  <label
+    class="mobile-menu-btn-menu-search-label"
+    id="mobile-menu-btn-menu-search-label"
+    >Country Selector</label
+  >
+  <div
+    [attr.aria-expanded]="isCountrySelectMenuOpen"
+    aria-labelledby="mobile-menu-btn-menu-search-label"
+    aria-controls="mobile-menu-btn-menu-country-dropdown-container"
+    tabindex="0"
+    class="mobile-menu-btn-menu-country-select-wrapper"
+  >
     <mat-icon
-      [ngClass]="
-        isCountrySelectMenuOpen
-          ? 'mobile-menu-btn-menu-country-select-chevron open'
-          : 'mobile-menu-btn-menu-country-select-chevron'
-      "
+      class="mobile-menu-btn-menu-country-select-chevron"
+      [ngClass]="isCountrySelectMenuOpen ? 'open' : null"
       >chevron_right</mat-icon
     >
     <div class="mobile-menu-btn-menu-country-select-content-wrapper">
@@ -24,14 +32,16 @@
     </div>
   </div>
   <div
-    [ngClass]="
-      isCountrySelectMenuOpen
-        ? 'mobile-menu-btn-menu-country-dropdown-container open'
-        : 'mobile-menu-btn-menu-country-dropdown-container'
-    "
+    role="listbox"
+    tabindex="-1"
+    class="mobile-menu-btn-menu-country-dropdown-container"
+    id="mobile-menu-btn-menu-country-dropdown-container"
+    [ngClass]="isCountrySelectMenuOpen ? 'open' : null"
   >
     <div
       *ngFor="let option of countryOptions"
+      role="option"
+      aria-selected="true"
       class="mobile-menu-btn-menu-country-wrapper"
     >
       <div class="mobile-menu-btn-menu-country-content-container">
