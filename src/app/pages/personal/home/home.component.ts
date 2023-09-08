@@ -47,4 +47,9 @@ export class HomeComponent {
       this.isMobileMenuOpen = isOpen;
     });
   }
+  // https://stackoverflow.com/questions/48277721/angular-how-to-make-link-to-jump-for-certain-section-in-the-same-page
+  handleSkipNav(event: any): void {
+    event.preventDefault();
+    console.log('window: ', window.location.hash);
+  }
 }

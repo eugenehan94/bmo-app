@@ -1,27 +1,35 @@
 <div class="mobile-menu-site-selector-container">
-  <label class="mobile-menu-btn-menu-search-label">Site Selector</label>
+  <label
+    class="mobile-menu-btn-menu-search-label"
+    id="mobile-menu-btn-menu-search-label"
+    >Site Selector</label
+  >
   <div
+    [attr.aria-expanded]="isSiteSelectMenuOpen"
+    aria-labelledby="mobile-menu-btn-menu-search-label"
+    tabindex="0"
+    role="combobox"
+    aria-activedescendant
     (click)="handleSiteSelectMenuClick()"
+    (keydown.enter)="handleSiteSelectMenuClick()"
+    (keydown.Space)="handleSiteSelectMenuClick(); $event.preventDefault()"
     class="mobile-menu-site-selector-content-container"
   >
     <mat-icon
-      [ngClass]="
-        isSiteSelectMenuOpen
-          ? 'mobile-menu-site-selector-chevron open'
-          : 'mobile-menu-site-selector-chevron'
-      "
+      class="mobile-menu-site-selector-chevron"
+      [ngClass]="isSiteSelectMenuOpen ? 'open' : null"
       >chevron_right</mat-icon
     >
-    <span style="font-size: 1rem">Personal</span>
+    <span style="font-size: 1rem" aria-hidden="true">Personal</span>
   </div>
   <ul
-    [ngClass]="
-      isSiteSelectMenuOpen
-        ? 'mobile-menu-site-selector-dropdown open'
-        : 'mobile-menu-site-selector-dropdown'
-    "
+    role="listbox"
+    aria-labelledby="mobile-menu-btn-menu-search-label"
+    tabindex="-1"
+    class="mobile-menu-site-selector-dropdown"
+    [ngClass]="isSiteSelectMenuOpen ? 'open' : null"
   >
-    <li *ngFor="let option of siteOptions">
+    <li *ngFor="let option of siteOptions" role="listbox">
       <a
         class="mobile-menu-site-selector-link"
         href="{{ option.linkHref }}"

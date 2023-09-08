@@ -26,6 +26,14 @@ export class MenuInnerMenuComponent implements AfterViewInit {
         document
           .getElementById(`${'inner-menu-parent-chevron' + i}`)
           ?.classList.toggle('open');
+        let ariaExpandedState = document.getElementById(
+          `${'inner-menu-parent-button' + i}`
+        );
+        if (ariaExpandedState?.getAttribute('aria-expanded') === 'true') {
+          ariaExpandedState?.setAttribute('aria-expanded', 'false');
+        } else {
+          ariaExpandedState?.setAttribute('aria-expanded', 'true');
+        }
       } else if (i !== this.selectedParentIndex) {
         document
           .getElementById(`${'inner-menu-parent' + i}`)
@@ -41,6 +49,18 @@ export class MenuInnerMenuComponent implements AfterViewInit {
             `${'inner-menu-parent-chevron' + this.selectedParentIndex}`
           )
           ?.classList.remove('open');
+        let ariaExpandedState = document.getElementById(
+          `${'inner-menu-parent-button' + i}`
+        );
+        let previousAriaExpandedState = document.getElementById(
+          `${'inner-menu-parent-button' + this.selectedParentIndex}`
+        );
+        if (ariaExpandedState?.getAttribute('aria-expanded') === 'true') {
+          ariaExpandedState?.setAttribute('aria-expanded', 'false');
+        } else {
+          ariaExpandedState?.setAttribute('aria-expanded', 'true');
+          previousAriaExpandedState?.setAttribute('aria-expanded', 'false');
+        }
         this.selectedParentIndex = i;
       }
     });

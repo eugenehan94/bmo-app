@@ -1,6 +1,15 @@
 <div>
-  <app-navbar [currentScreenSize]="currentScreenSize"></app-navbar>
-  <div
+  <header role="banner">
+    <a
+      href="#nav-skip"
+      tabindex="0"
+      (click)="handleSkipNav($event)"
+      >Skip navigation</a
+    >
+    <app-navbar [currentScreenSize]="currentScreenSize"></app-navbar>
+    <span id="nav-skip" tabindex="-1">Navigation skipped</span>
+  </header>
+  <main
     class="home-page-content-wrapper"
     [ngClass]="{
       'mobile-signin-menu-open':
@@ -12,6 +21,7 @@
         (this.currentScreenSize === 'Small' ||
           this.currentScreenSize === 'Medium')
     }"
+    role="main"
   >
     <app-personal-hero
       [currentScreenSize]="currentScreenSize"
@@ -25,6 +35,20 @@
     <app-personal-where-to-begin
       [currentScreenSize]="currentScreenSize"
     ></app-personal-where-to-begin>
+  </main>
+  <footer
+    role="contentinfo"
+    class="footer"
+    [ngClass]="{
+      hidden:
+        (isMobileSignInMenuOpen &&
+          (this.currentScreenSize === 'Small' ||
+            this.currentScreenSize === 'Medium')) ||
+        (isMobileMenuOpen &&
+          (this.currentScreenSize === 'Small' ||
+            this.currentScreenSize === 'Medium'))
+    }"
+  >
     <app-footer [currentScreenSize]="currentScreenSize"></app-footer>
-  </div>
+  </footer>
 </div>

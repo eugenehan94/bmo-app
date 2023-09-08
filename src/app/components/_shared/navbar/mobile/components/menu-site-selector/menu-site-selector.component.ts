@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { SiteOptionsType } from '../../../../interfaces';
-import { NavbarService } from '../../../navbar.service';
+import { SiteOptionsType } from 'src/app/components/_shared/interfaces';
+import { NavbarService } from 'src/app/components/_shared/navbar/navbar.service';
+
 @Component({
   selector: 'app-mobile-menu-site-selector',
   templateUrl: './menu-site-selector.component.html',

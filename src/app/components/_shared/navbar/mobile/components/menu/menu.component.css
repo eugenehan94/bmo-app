@@ -10,9 +10,11 @@
   right: 0px;
   width: 0;
   overflow-x: hidden;
+  visibility: hidden;
 }
 .mobile-menu-btn-menu-container.open {
   width: 100%;
+  visibility: visible;
 }
 .mobile-menu-btn-menu-inner-container {
   transition: width 0.2s ease 0s;

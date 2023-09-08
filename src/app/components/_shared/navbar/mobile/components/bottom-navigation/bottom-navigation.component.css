@@ -10,9 +10,11 @@
   align-items: center;
   box-shadow: rgba(19, 40, 71, 0.25) 0px 3px 14px 5px;
   background-color: white;
+  visibility: hidden;
 }
 .bottom-nav-container.open {
   bottom: 0px;
+  visibility: visible;
 }
 
 .bottom-nav-link {

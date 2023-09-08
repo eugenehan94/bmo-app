@@ -1,13 +1,17 @@
 <nav class="mobile-menu-btn-navigation-container">
   <div class="mobile-menu-btn-navigation-dropdown-wrapper">
-    <ul class="mobile-menu-btn-navigation-dropdown">
+    <ul role="list" class="mobile-menu-btn-navigation-dropdown">
       <li
+        role="listitem"
         class="mobile-menu-btn-navigation-dropdown-option"
         *ngFor="let option of navigationOptions; let i = index"
       >
         <button
           (click)="handleCategoryClick(i)"
+          aria-expanded="false"
+          [attr.aria-controls]="'inner-menu-parent' + i"
           class="mobile-menu-btn-navigation-dropdown-content-wrapper"
+          id="{{ 'inner-menu-parent-button' + i }}"
         >
           {{ option.title }}
           <mat-icon
@@ -22,9 +26,13 @@
           id="{{ 'inner-menu-parent' + i }}"
           class="mobile-menu-btn-navigation-categories-container"
         >
-          <ul class="mobile-menu-btn-navigation-categories-dropdown">
+          <ul
+            role="list"
+            class="mobile-menu-btn-navigation-categories-dropdown"
+          >
             <li
               *ngFor="let category of option.categories; let j = index"
+              role="listitem"
               class="mobile-menu-btn-navigation-categories-dropdown-option"
             >
               <a
@@ -37,6 +45,8 @@
               >
               <button
                 *ngIf="!category.link"
+                [attr.aria-expanded]=""
+                [attr.aria-controls]="'inner-menu-parent' + i + 'child' + j"
                 (click)="handleChildrenClicked(i, j)"
                 class="mobile-menu-btn-navigation-categories-dropdown-with-children"
               >
@@ -55,10 +65,12 @@
                 class="mobile-menu-btn-navigation-categories-dropdown-child-container"
               >
                 <ul
+                  role="list"
                   class="mobile-menu-btn-navigation-categories-dropdown-child-dropdown"
                 >
                   <li
                     *ngFor="let child of category.children"
+                    role="listitem"
                     class="mobile-menu-btn-navigation-categories-dropdown-child-dropdown-option"
                   >
                     <a
@@ -77,8 +89,11 @@
             <div class="mobile-menu-btn-navigation-resources-title">
               Resources
             </div>
-            <ul class="mobile-menu-btn-navigation-resources-list-container">
-              <li *ngFor="let resource of option.resources">
+            <ul
+              role="list"
+              class="mobile-menu-btn-navigation-resources-list-container"
+            >
+              <li *ngFor="let resource of option.resources" role="listitem">
                 <a
                   href="{{ resource.link }}"
                   [attr.aria-label]="resource.ariaLabel"
@@ -86,6 +101,7 @@
                   class="mobile-menu-btn-navigation-resources-list-link"
                 >
                   <div
+                    aria-hidden="true"
                     class="mobile-menu-btn-navigation-resources-image-wrapper"
                   >
                     <img
@@ -94,7 +110,10 @@
                       style="min-width: 1.25"
                     />
                   </div>
-                  <div class="mobile-menu-btn-navigation-resources-description">
+                  <div
+                    aria-hidden="true"
+                    class="mobile-menu-btn-navigation-resources-description"
+                  >
                     {{ resource.title }}
                   </div>
                 </a>

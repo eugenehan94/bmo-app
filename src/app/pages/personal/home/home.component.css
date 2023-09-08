@@ -7,10 +7,19 @@
   position: relative;
   height: 533px;
   overflow: hidden;
+  display: none;
 }
 
 .home-page-content-wrapper.mobile-menu-open {
   position: relative;
   height: 735px;
   overflow: hidden;
+  display: none;
+}
+
+.footer {
+  display: block;
+}
+.footer.hidden {
+  display: none;
 }

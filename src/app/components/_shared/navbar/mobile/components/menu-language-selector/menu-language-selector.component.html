@@ -1,27 +1,52 @@
 <div>
-  <label class="mobile-menu-btn-menu-search-label">Language Selector</label>
+  <label
+    class="mobile-menu-btn-menu-search-label"
+    id="mobile-menu-btn-menu-search-label"
+    >Language Selector</label
+  >
   <div
+    [attr.aria-expanded]="isLanguageSelectMenuOpen"
+    aria-controls="mobile-menu-language-selector-dropdown"
+    aria-haspopup="listbox"
+    aria-labelledby="mobile-menu-btn-menu-search-label"
+    role="combobox"
+    aria-activedescendant
+    tabindex="0"
     (click)="handleLanguageSelectMenuClick()"
+    (keydown.enter)="handleLanguageSelectMenuClick()"
+    (keydown.Space)="handleLanguageSelectMenuClick(); $event.preventDefault()"
     class="mobile-menu-language-selector-content-container"
   >
     <mat-icon
-      [ngClass]="
-        isLanguageSelectMenuOpen
-          ? 'mobile-menu-language-selector-chevron open'
-          : 'mobile-menu-language-selector-chevron'
-      "
+      class="mobile-menu-language-selector-chevron"
+      [ngClass]="isLanguageSelectMenuOpen ? 'open' : null"
       >chevron_right</mat-icon
     >
     <span style="font-size: 1rem">English</span>
   </div>
   <ul
-    [ngClass]="
-      isLanguageSelectMenuOpen
-        ? 'mobile-menu-language-selector-dropdown open'
-        : 'mobile-menu-language-selector-dropdown'
-    "
+    role="listbox"
+    aria-labelledby="mobile-menu-btn-menu-search-label"
+    tabindex="-1"
+    class="mobile-menu-language-selector-dropdown"
+    id="mobile-menu-language-selector-dropdown"
+    [ngClass]="isLanguageSelectMenuOpen ? 'open' : null"
   >
-    <li class="mobile-menu-language-selector-dropdown-option">English</li>
-    <li class="mobile-menu-language-selector-dropdown-option">French</li>
+    <li
+      role="option"
+      aria-selected="true"
+      aria-disabled="true"
+      class="mobile-menu-language-selector-dropdown-option"
+    >
+      English
+    </li>
+    <li
+      role="option"
+      aria-selected="false"
+      aria-disabled="false"
+      class="mobile-menu-language-selector-dropdown-option"
+    >
+      French
+    </li>
   </ul>
 </div>

@@ -14,4 +14,7 @@ export class MenuCountrySelectComponent {
   handleCountrySelectMenuClick(): void {
     this.isCountrySelectMenuOpen = !this.isCountrySelectMenuOpen;
   }
+  closeCountrySelectMenu(): void {
+    this.isCountrySelectMenuOpen = false;
+  }
 }
