@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {TabsType} from "../../_shared/interfaces"
+import { TabsType } from 'src/app/components/_shared/interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -10,8 +10,7 @@ export class ProductsTabsService {
       label: 'Featured',
       cardData: [
         {
-          image:
-            'assets/images/personal-special-offer-tile-picture.jpg',
+          image: 'assets/images/personal-special-offer-tile-picture.jpg',
           imageAlt: 'Special offers',
           title: 'Special Offers',
           description:
@@ -114,8 +113,7 @@ export class ProductsTabsService {
           srcTitle: 'Find out how',
         },
         {
-          image:
-            'assets/images/personal-tile-bank-savings-amplifier.jpg',
+          image: 'assets/images/personal-tile-bank-savings-amplifier.jpg',
           imageAlt: 'Savings amplifier',
           title: 'Savings Amplifier Account',
           description:
@@ -129,8 +127,7 @@ export class ProductsTabsService {
       label: 'Credit Cards',
       cardData: [
         {
-          image:
-            'assets/images/personal-tile-eclipse-top-image.jpeg',
+          image: 'assets/images/personal-tile-eclipse-top-image.jpeg',
           imageAlt: 'Eclipse credit card',
           title: 'BMO eclipse Visa Infinite* Card66',
           description:
@@ -293,8 +290,7 @@ export class ProductsTabsService {
           srcTitle: 'More details',
         },
         {
-          image:
-            'assets/images/personal-tile-investments-image.jpg',
+          image: 'assets/images/personal-tile-investments-image.jpg',
           imageAlt: 'Invest online',
           title: 'Invest online and earn up to $3,100 in cashback*',
           description:
@@ -308,8 +304,7 @@ export class ProductsTabsService {
       label: 'Learning',
       cardData: [
         {
-          image:
-            'assets/images/personal-tile-financial-resources.jpg',
+          image: 'assets/images/personal-tile-financial-resources.jpg',
           imageAlt: 'Financial resources',
           title: 'Financial resources',
           description:

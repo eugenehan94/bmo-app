@@ -6,11 +6,14 @@
     }"
   >
     <div>
-      <img
-        src="assets/images/personal-download-banner-image.jpg"
-        alt="Download banner"
-        style="width: 100%"
-      />
+      <picture>
+        <img
+          src="assets/images/personal-download-banner-image.jpg"
+          alt="Download banner"
+          style="width: 100%"
+          loading="lazy"
+        />
+      </picture>
     </div>
     <div>
       <h2 [ngClass]="currentScreenSize === 'Large' ? 'title large' : 'title'">
@@ -24,7 +27,7 @@
         href="https://www.bmo.com/main/personal/ways-to-bank/"
         target="_blank"
         aria-label="Explore the features on the b m o banking app"
-        >{{ linkName }} <mat-icon>chevron_right</mat-icon></a
+        >{{ linkName }} <mat-icon aria-hidden="true">chevron_right</mat-icon></a
       >
       <div class="download-btn-container">
         <a
@@ -38,6 +41,7 @@
             <img
               src="{{ downloadApp.imageSrc }}"
               alt="{{ downloadApp.imageAlt }}"
+              loading="lazy"
             />
           </picture>
         </a>

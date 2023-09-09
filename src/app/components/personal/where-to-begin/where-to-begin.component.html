@@ -4,7 +4,7 @@
       {{ title }}
     </h2>
     <div>
-      <div [ngClass]="currentScreenSize === 'Large' ? 'card-wrapper': ''">
+      <div [ngClass]="currentScreenSize === 'Large' ? 'card-wrapper' : ''">
         <div *ngFor="let cardData of cardDatas" class="tile">
           <div>
             <img
@@ -21,7 +21,8 @@
               target="_blank"
               class="tile-link"
               [attr.aria-label]="cardData.linkAriaLabel"
-              >{{ cardData.linkTitle }}<mat-icon>chevron_right</mat-icon></a
+              >{{ cardData.linkTitle
+              }}<mat-icon aria-hidden="true">chevron_right</mat-icon></a
             >
           </div>
         </div>

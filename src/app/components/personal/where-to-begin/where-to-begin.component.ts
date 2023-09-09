@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { WhereToBeginService } from './where-to-begin.service';
-import { CardContentType } from '../../_shared/interfaces';
+import { CardContentType } from 'src/app/components/_shared/interfaces';
 
 @Component({
   selector: 'app-personal-where-to-begin',

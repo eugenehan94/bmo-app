@@ -1,11 +1,8 @@
 <section>
   <div>
     <div
-      [ngClass]="
-        currentScreenSize === 'Large'
-          ? 'section-container large'
-          : 'section-container'
-      "
+      class="section-container"
+      [ngClass]="currentScreenSize === 'Large' ? ' large' : null"
     >
       <div class="cdic-wrapper">
         <a
@@ -63,11 +60,8 @@
           </div>
         </div>
         <div
-          [ngClass]="
-            currentScreenSize === 'Large'
-              ? 'download-btn-container large'
-              : 'download-btn-container'
-          "
+          class="download-btn-container"
+          [ngClass]="currentScreenSize === 'Large' ? 'large' : null"
         >
           <a
             *ngFor="let downloadApp of downloadAppBtns"
@@ -123,6 +117,7 @@
             [attr.aria-label]="socialMedia.ariaLabel"
           >
             <img
+              aria-hidden="true"
               src="{{ socialMedia.icon }}"
               alt="{{ socialMedia.alt }}"
               style="width: 28px; height: 28px"
@@ -140,6 +135,7 @@
             [attr.aria-label]="socialMedia.ariaLabel"
           >
             <img
+              aria-hidden="true"
               src="{{ socialMedia.icon }}"
               alt="{{ socialMedia.alt }}"
               style="width: 28px; height: 28px"

@@ -1,3 +1,4 @@
+<!-- @TODO: Make sure logo select goes back to selected page -->
 <div>
   <header role="banner">
     <a
@@ -12,32 +13,13 @@
       >Navigation skipped</span
     >
   </header>
-  <main
-    class="home-page-content-wrapper"
-    [ngClass]="{
-      'mobile-signin-menu-open':
-        isMobileSignInMenuOpen &&
-        (this.currentScreenSize === 'Small' ||
-          this.currentScreenSize === 'Medium'),
-      'mobile-menu-open':
-        isMobileMenuOpen &&
-        (this.currentScreenSize === 'Small' ||
-          this.currentScreenSize === 'Medium')
-    }"
-    role="main"
-  >
-    <app-personal-hero
+  <main>
+    <app-business-hero
       [currentScreenSize]="currentScreenSize"
-    ></app-personal-hero>
-    <app-personal-products-tabs
+    ></app-business-hero>
+    <app-business-products-tabs
       [currentScreenSize]="currentScreenSize"
-    ></app-personal-products-tabs>
-    <app-person-download-banner
-      [currentScreenSize]="currentScreenSize"
-    ></app-person-download-banner>
-    <app-personal-where-to-begin
-      [currentScreenSize]="currentScreenSize"
-    ></app-personal-where-to-begin>
+    ></app-business-products-tabs>
   </main>
   <footer
     role="contentinfo"

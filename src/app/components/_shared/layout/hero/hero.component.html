@@ -1,0 +1,41 @@
+<section class="hero-section">
+    <div
+      [ngClass]="{
+        'hero-container-medium':
+          currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+      }"
+    >
+      <div aria-hidden="false" class="image-container">
+        <img
+          src="{{ selectedBanner.src }}"
+          alt="{{ selectedBanner.alt }}"
+          style="width: 100%; border-radius: 1rem"
+        />
+      </div>
+      <div
+        [ngClass]="{
+          'hero-description-container': currentScreenSize === 'Small',
+          'hero-description-container-medium':
+            currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+        }"
+      >
+        <p
+          [ngClass]="{
+            'description-title': currentScreenSize === 'Small',
+            'description-title-medium': currentScreenSize === 'Medium',
+            'description-title-large': currentScreenSize === 'Large'
+          }"
+          [innerHTML]="selectedBanner.title"
+        ></p>
+        <p class="description" [innerHTML]="selectedBanner.description"></p>
+        <a
+          href="{{ selectedBanner.linkHref }}"
+          target="_target"
+          class="btn"
+          [attr.aria-label]="selectedBanner.linkAriaLabel"
+        >
+          {{ selectedBanner.linkName }}
+        </a>
+      </div>
+    </div>
+  </section>

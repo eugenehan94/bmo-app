@@ -1,24 +1,22 @@
-// Set own breakpoints: https://stackoverflow.com/questions/73561379/customize-angular-layout-breakpoints
 import { Component } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { AppService } from 'src/app/app.service';
-
 @Component({
-  selector: 'app-home',
+  selector: 'app-business-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
-  // https://blog.angular-university.io/angular-responsive-design/
-  currentScreenSize?: string;
-  isMobileSignInMenuOpen?: boolean;
-  isMobileMenuOpen?: boolean;
+export class BusinessHomeComponent {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private appService: AppService
   ) {}
 
-  ngOnInit() {
+  currentScreenSize?: string;
+  isMobileSignInMenuOpen?: boolean;
+  isMobileMenuOpen?: boolean;
+
+  ngOnInit(): void {
     this.breakpointObserver
       .observe([
         '(max-width: 767.99px)',

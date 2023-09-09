@@ -6,7 +6,11 @@ import { AppService } from './app.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+// Page imports
 import { HomeComponent } from './pages/personal/home/home.component';
+import { BusinessHomeComponent } from './pages/business/home/home.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // https://angular.io/guide/image-directive
@@ -14,6 +18,7 @@ import { NgOptimizedImage } from '@angular/common';
 
 // NOTE: This import houses all our Angular Material imports
 import { MaterialDesignModule } from './material-design/material-design.module';
+
 import { NavbarComponent } from './components/_shared/navbar/navbar.component';
 import { HeroComponent } from './components/personal/hero/hero.component';
 import { ProductsTabsComponent } from './components/personal/products-tabs/products-tabs.component';
@@ -44,6 +49,13 @@ import { MediumSignInComponent } from './components/_shared/navbar/medium/compon
 import { MediumHamburgerMenuComponent } from './components/_shared/navbar/medium/components/hamburger-menu/hamburger-menu.component';
 import { MediumBottomNavigationComponent } from './components/_shared/navbar/medium/components/bottom-navigation/bottom-navigation.component';
 import { MediumMenuComponent } from './components/_shared/navbar/medium/components/menu/menu.component';
+
+import { SharedHeroComponent } from './components/_shared/layout/hero/hero.component';
+import { SharedProductsTabComponent } from './components/_shared/layout/products-tab/products-tab.component';
+
+import { BusinessHeroComponent } from './components/business/hero/hero.component';
+import { BusinessProductsTabsComponent } from './components/business/products-tabs/products-tabs.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +89,12 @@ import { MediumMenuComponent } from './components/_shared/navbar/medium/componen
     MediumSignInComponent,
     MediumHamburgerMenuComponent,
     MediumBottomNavigationComponent,
-    MediumMenuComponent
+    MediumMenuComponent,
+    BusinessHomeComponent,
+    BusinessHeroComponent,
+    SharedHeroComponent,
+    SharedProductsTabComponent,
+    BusinessProductsTabsComponent,
   ],
   imports: [
     BrowserModule,

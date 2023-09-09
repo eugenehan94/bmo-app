@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HeroBannerOptionsType } from "../../_shared/interfaces"
+import { HeroBannerOptionsType } from "src/app/components/_shared/interfaces"
 @Injectable({
   providedIn: 'root',
 })

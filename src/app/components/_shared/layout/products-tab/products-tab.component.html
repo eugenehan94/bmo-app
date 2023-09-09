@@ -1,0 +1,91 @@
+<section>
+  <div>
+    <div
+      [ngClass]="
+        currentScreenSize === 'Large' ? 'title-wrapper large' : 'title-wrapper'
+      "
+    >
+      <h1 class="title">{{ title }}</h1>
+    </div>
+    <div
+      [ngClass]="
+        currentScreenSize === 'Large'
+          ? 'sub-title-wrapper large'
+          : 'sub-title-wrapper'
+      "
+    >
+      <h2 class="sub-title">{{ subTitle }}</h2>
+    </div>
+    <div>
+      <mat-tab-group animationDuration="0ms">
+        <mat-tab
+          [label]="tabContent.label"
+          *ngFor="let tabContent of tabContents"
+        >
+          <div
+            [ngClass]="{
+              'tab-content-container': currentScreenSize === 'Small',
+              'tab-content-container-medium': currentScreenSize === 'Medium',
+              'tab-content-container-large': currentScreenSize === 'Large'
+            }"
+            class="tab-content-container"
+          >
+            <mat-card
+              *ngFor="let card of tabContent.cardData; let i = index"
+              [ngClass]="{
+                albicant: i === 0 || i === 5,
+                blue: i === 1 || i === 4,
+                ultramarine: i === 2 || i === 3
+              }"
+            >
+              <img
+                *ngIf="card.image"
+                mat-card-image
+                src="{{ card.image }}"
+                alt="{{ card.imageAlt }}"
+                class="mat-card-image"
+              />
+              <mat-card-content>
+                <img
+                  *ngIf="card.svg"
+                  src="{{ card.svg }}"
+                  alt="{{ card.svgAlt }}"
+                  class="mat-card-svg"
+                />
+                <h3
+                  class="mat-card-content-title"
+                  [ngClass]="{
+                    'text-white': i === 1 || i === 2 || i === 3 || i === 4
+                  }"
+                >
+                  {{ card.title }}
+                </h3>
+                <p
+                  class="mat-card-content-desc"
+                  [ngClass]="{
+                    'text-white': i === 1 || i === 2 || i === 3 || i === 4
+                  }"
+                >
+                  {{ card.description }}
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <a
+                  href="{{ card.src }}"
+                  alt=""
+                  class="mat-card-content-link"
+                  [ngClass]="{
+                    'text-white': i === 1 || i === 2 || i === 3 || i === 4,
+                    'text-blue': i === 0 || i === 5
+                  }"
+                  target="_blank"
+                  >{{ card.srcTitle }} <mat-icon>chevron_right</mat-icon></a
+                >
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</section>

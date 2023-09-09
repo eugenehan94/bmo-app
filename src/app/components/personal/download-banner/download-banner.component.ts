@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { DownloadBannerService } from './download-banner.service';
-import { DownloadAppDataType } from '../../_shared/interfaces';
+import { DownloadAppDataType } from 'src/app/components/_shared/interfaces';
 
 @Component({
   selector: 'app-person-download-banner',
