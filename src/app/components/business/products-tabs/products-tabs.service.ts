@@ -99,5 +99,105 @@ export class ProductsTabsService {
         },
       ],
     },
+    {
+      label: 'Credit Cards',
+      cardData: [
+        {
+          image: 'assets/images/business-tile-credit-card-coffee.jpg',
+          imageAlt: 'People in coffee shop',
+          title: 'Credit cards',
+          description:
+            'Get even more from your business-related expenses with the right credit card for your exclusive needs.',
+          src: 'https://www.bmo.com/main/business/credit-cards/',
+          srcTitle: 'Browse Now',
+        },
+        {
+          svg: 'assets/svg/all-cards-polar-white.svg',
+          imageAlt: 'Cards',
+          title: 'BMO CashBack® Business Mastercard®*',
+          description:
+            'Get 10% cash back on common business expenses for 3 months with no annual fee!1',
+          src: 'https://www.bmo.com/main/business/credit-cards/bmo-cashback-no-fee-business-mastercard/',
+          srcTitle: 'Learn More',
+        },
+        {
+          svg: 'assets/svg/hand-card-polar-white.svg',
+          imageAlt: 'Hand holding card',
+          title: 'Help me choose a credit card',
+          description:
+            "Answer a few questions and we'll recommend one or two cards that suit you the best.",
+          src: 'https://www.bmo.com/main/personal/credit-cards/how-to-choose-a-credit-card/',
+          srcTitle: 'Get Started',
+        },
+        {
+          svg: 'assets/svg/clipboard-pen-polar-white.svg',
+          imageAlt: 'Clipboard with pen',
+          title: '5 ways to build your business credit',
+          description:
+            'Make building your business credit a priority to ensure you’re maximizing your borrowing power.',
+          src: 'https://www.bmo.com/main/business/news/build-credit/',
+          srcTitle: 'Learn More',
+        },
+        {
+          svg: 'assets/svg/list-dollar-polar-white.svg',
+          imageAlt: 'List with dollar sign',
+          title: 'Stay in control of your cash flow',
+          description:
+            'Get six tips for controlling your finances — and give your business a financial fresh start.',
+          src: 'https://www.bmo.com/main/business/news/small-business-finances/',
+          srcTitle: 'Learn More',
+        },
+        {
+          image: 'assets/images/business-tile-world-elite-cc.png',
+          imageAlt: 'Person holding world elite credit card',
+          title: 'BMO World Elite®* Business Mastercard®*',
+          description:
+            'Earn up to 50,000 points when you spend $5,000 in the first three months.1',
+          src: 'https://www.bmo.com/main/business/credit-cards/bmo-rewards-world-elite-business-mastercard/',
+          srcTitle: 'Learn More',
+        },
+      ],
+    },
+    {
+      label: 'Lending',
+      cardData: [
+        {
+          image: 'assets/images/business-tile-credit-line.png',
+          imageAlt: 'Person looking into laptop screen',
+          title: 'Credit Line for Business',
+          description:
+            'Borrow on demand and enjoy rates as low as BMO Prime +2%.1',
+          src: 'https://www.bmo.com/main/business/loans-mortgages/credit-line/',
+          srcTitle: 'Learn More',
+        },
+        {
+          svg: 'assets/svg/list-dollar-polar-white.svg',
+          imageAlt: 'List with dollar sign',
+          title: 'Business loans & commercial mortgages',
+          description:
+            'A growing business needs access to funds to stay competitive and realize its full potential.',
+          src: 'https://www.bmo.com/main/business/loans-mortgages/overview',
+          srcTitle: 'Learn More',
+        },
+        {
+          svg: 'assets/svg/calculator-polar-white.svg',
+          imageAlt: 'Calculator',
+          title: 'Business loan calculator',
+          description:
+            'Let’s crunch the numbers and find out what your payments could be.',
+          src: 'https://www.bmo.com/main/business/loans-mortgages/business-loan-calculator/',
+          srcTitle: 'Get Started',
+        },
+        {
+          svg: 'assets/svg/hand-coin-polar-white.svg',
+          imageAlt: 'Hand with dollar sign',
+          title: 'Trade Expansion Lending Program (TELP)',
+          description:
+            'A program to help Canadian businesses compete on a global scale.',
+          src: 'https://www.bmo.com/main/business/loans-mortgages/trade-expansion-lending-program/',
+          srcTitle: 'Learn More',
+        },
+      ],
+    },
   ];
 }
