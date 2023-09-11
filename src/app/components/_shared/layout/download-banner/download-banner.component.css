@@ -1,0 +1,42 @@
+.download-banner-container {
+  padding: 2rem;
+}
+.download-banner-inner-container-medium {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1.5rem;
+}
+.download-banner-inner-container-medium div {
+  flex: 45%;
+}
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2rem;
+  word-break: break-word;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.title.large {
+  font-size: 2rem;
+}
+.description {
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+.link {
+  color: #0075be;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.download-btn-container {
+  display: flex;
+  gap: 1rem;
+}

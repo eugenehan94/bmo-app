@@ -49,13 +49,14 @@ import { MediumSignInComponent } from './components/_shared/navbar/medium/compon
 import { MediumHamburgerMenuComponent } from './components/_shared/navbar/medium/components/hamburger-menu/hamburger-menu.component';
 import { MediumBottomNavigationComponent } from './components/_shared/navbar/medium/components/bottom-navigation/bottom-navigation.component';
 import { MediumMenuComponent } from './components/_shared/navbar/medium/components/menu/menu.component';
-
+// Layouts
 import { SharedHeroComponent } from './components/_shared/layout/hero/hero.component';
 import { SharedProductsTabComponent } from './components/_shared/layout/products-tab/products-tab.component';
+import { SharedDownloadBannerComponent } from './components/_shared/layout/download-banner/download-banner.component';
 
 import { BusinessHeroComponent } from './components/business/hero/hero.component';
 import { BusinessProductsTabsComponent } from './components/business/products-tabs/products-tabs.component';
-
+import { BusinessDownloadBannerComponent } from './components/business/download-banner/download-banner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -95,6 +96,8 @@ import { BusinessProductsTabsComponent } from './components/business/products-ta
     SharedHeroComponent,
     SharedProductsTabComponent,
     BusinessProductsTabsComponent,
+    SharedDownloadBannerComponent,
+    BusinessDownloadBannerComponent,
   ],
   imports: [
     BrowserModule,

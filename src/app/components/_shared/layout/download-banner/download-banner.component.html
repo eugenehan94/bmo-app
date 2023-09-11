@@ -1,0 +1,51 @@
+<section class="download-banner-container">
+  <div
+    [ngClass]="{
+      'download-banner-inner-container-medium':
+        currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+    }"
+  >
+    <div>
+      <picture>
+        <img
+          src="assets/images/personal-download-banner-image.jpg"
+          alt="Download banner"
+          style="width: 100%"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+    <div>
+      <h2 [ngClass]="currentScreenSize === 'Large' ? 'title large' : 'title'">
+        {{ title }}
+      </h2>
+      <p class="description">
+        {{ description }}
+      </p>
+      <a
+        class="link"
+        href="{{linkHref}}"
+        target="_blank"
+        [attr.aria-label]="linkAriaLabel"
+        >{{ linkName }} <mat-icon aria-hidden="true">chevron_right</mat-icon></a
+      >
+      <div class="download-btn-container">
+        <a
+          *ngFor="let downloadApp of downloadAppBtns"
+          target="_blank"
+          href="{{ downloadApp.href }}"
+          [attr.aria-label]="downloadApp.ariaLabel"
+          rel="noopener"
+        >
+          <picture>
+            <img
+              src="{{ downloadApp.imageSrc }}"
+              alt="{{ downloadApp.imageAlt }}"
+              loading="lazy"
+            />
+          </picture>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
