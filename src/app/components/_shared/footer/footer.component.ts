@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FooterCaptionsType } from 'src/app/components/_shared/interfaces';
 import { FooterService } from './footer.service';
 import {
   CidcDataType,
@@ -23,5 +24,6 @@ export class FooterComponent {
   aboutBmoData: AboutBmoDataType[] = this.service.aboutBmoData;
   downloadAppBtns: DownloadAppDataType[] = this.service.downloadAppData;
   @Input() currentScreenSize?: string;
+  @Input() footerCaptions?: FooterCaptionsType[];
   constructor(private service: FooterService) {}
 }

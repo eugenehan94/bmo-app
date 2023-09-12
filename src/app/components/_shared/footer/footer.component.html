@@ -1,4 +1,4 @@
-<section>
+<div>
   <div>
     <div
       class="section-container"
@@ -159,6 +159,20 @@
           >{{ aboutData.text }}</a
         >
       </div>
+      <div>
+        <ul
+          role="list"
+          style="padding-left: 1rem; color: white; font-size: 14px"
+        >
+          <li
+            *ngFor="let footerCaption of footerCaptions"
+            role="listitem"
+            style="line-height: 1.5rem"
+          >
+            {{ footerCaption.caption }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</section>
+</div>

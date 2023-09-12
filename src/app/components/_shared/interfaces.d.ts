@@ -105,3 +105,8 @@ export interface CardContentType {
   linkSrc: string;
   linkAriaLabel: string;
 }
+
+//Business - home page
+export interface FooterCaptionsType {
+  caption: string;
+}

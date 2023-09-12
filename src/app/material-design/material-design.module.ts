@@ -7,8 +7,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
-import {MatGridListModule} from '@angular/material/grid-list';
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list';
 @NgModule({
   declarations: [],
   imports: [CommonModule],
@@ -19,7 +19,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatSidenavModule,
     MatTabsModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatListModule,
   ],
 })
 export class MaterialDesignModule {}
