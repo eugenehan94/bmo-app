@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { FooterCaptionsType } from 'src/app/components/_shared/interfaces';
 import { FooterService } from './footer.service';
 import {
   CidcDataType,
@@ -8,7 +7,8 @@ import {
   SocialMediaDataType,
   AboutBmoDataType,
   DownloadAppDataType,
-} from '../interfaces';
+  FooterCaptionsType,
+} from 'src/app/components/_shared/interfaces';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -16,13 +16,12 @@ import {
 })
 export class FooterComponent {
   cdicData: CidcDataType[] = this.service.cdicData;
-  footerCategoryLinks: FooterCategoryLinksType[] =
-    this.service.footerCategoryLinks;
   footerSupportLinks: FooterSupportLinksType[] =
     this.service.footerSupportLinks;
-  socialMediaData: SocialMediaDataType[] = this.service.socialMediaData;
-  aboutBmoData: AboutBmoDataType[] = this.service.aboutBmoData;
   downloadAppBtns: DownloadAppDataType[] = this.service.downloadAppData;
+  socialMediaData: SocialMediaDataType[] = this.service.socialMediaData;
+  @Input() aboutBmoData?: AboutBmoDataType[];
+  @Input() footerCategoryLinks?: FooterCategoryLinksType[];
   @Input() currentScreenSize?: string;
   @Input() footerCaptions?: FooterCaptionsType[];
   constructor(private service: FooterService) {}

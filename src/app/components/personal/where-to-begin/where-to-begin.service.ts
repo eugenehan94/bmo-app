@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CardContentType } from '../../_shared/interfaces';
+import { CardContentType } from 'src/app/components/_shared/interfaces';
 
 @Injectable({
   providedIn: 'root',

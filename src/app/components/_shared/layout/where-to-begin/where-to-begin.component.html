@@ -1,0 +1,33 @@
+<section class="where-to-begin-container">
+    <div>
+      <h2 [ngClass]="currentScreenSize === 'Large' ? 'title large' : 'title'">
+        {{ title }}
+      </h2>
+      <div>
+        <div [ngClass]="currentScreenSize === 'Large' ? 'card-wrapper' : ''">
+          <div *ngFor="let cardData of cardDatas" class="tile">
+            <div>
+              <img
+                src="{{ cardData.icon }}"
+                alt="{{ cardData.iconAlt }}"
+                class="tile-img"
+              />
+            </div>
+            <div class="tile-description-wrapper">
+              <h3 class="tile-title">{{ cardData.title }}</h3>
+              <p class="tile-description">{{ cardData.description }}</p>
+              <a
+                href="{{ cardData.linkSrc }}"
+                target="_blank"
+                class="tile-link"
+                [attr.aria-label]="cardData.linkAriaLabel"
+                >{{ cardData.linkTitle
+                }}<mat-icon aria-hidden="true">chevron_right</mat-icon></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

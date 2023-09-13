@@ -49,14 +49,20 @@ import { MediumSignInComponent } from './components/_shared/navbar/medium/compon
 import { MediumHamburgerMenuComponent } from './components/_shared/navbar/medium/components/hamburger-menu/hamburger-menu.component';
 import { MediumBottomNavigationComponent } from './components/_shared/navbar/medium/components/bottom-navigation/bottom-navigation.component';
 import { MediumMenuComponent } from './components/_shared/navbar/medium/components/menu/menu.component';
+// Personal
+import { PersonalFooterComponent } from './components/personal/footer/footer.component';
+
 // Layouts
 import { SharedHeroComponent } from './components/_shared/layout/hero/hero.component';
 import { SharedProductsTabComponent } from './components/_shared/layout/products-tab/products-tab.component';
 import { SharedDownloadBannerComponent } from './components/_shared/layout/download-banner/download-banner.component';
-
+import { SharedWhereToBeginComponent } from './components/_shared/layout/where-to-begin/where-to-begin.component';
+// Business
 import { BusinessHeroComponent } from './components/business/hero/hero.component';
 import { BusinessProductsTabsComponent } from './components/business/products-tabs/products-tabs.component';
 import { BusinessDownloadBannerComponent } from './components/business/download-banner/download-banner.component';
+import { BusinessWhereToBeginComponent } from './components/business/where-to-begin/where-to-begin.component';
+import { BusinessFooterComponent } from './components/business/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,6 +104,10 @@ import { BusinessDownloadBannerComponent } from './components/business/download-
     BusinessProductsTabsComponent,
     SharedDownloadBannerComponent,
     BusinessDownloadBannerComponent,
+    SharedWhereToBeginComponent,
+    BusinessWhereToBeginComponent,
+    PersonalFooterComponent,
+    BusinessFooterComponent,
   ],
   imports: [
     BrowserModule,

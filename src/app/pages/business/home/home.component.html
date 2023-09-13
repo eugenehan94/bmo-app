@@ -22,6 +22,9 @@
     ></app-business-products-tabs>
     <app-business-download-banner [currentScreenSize]="currentScreenSize">
     </app-business-download-banner>
+    <app-business-where-to-begin
+      [currentScreenSize]="currentScreenSize"
+    ></app-business-where-to-begin>
   </main>
   <footer
     role="contentinfo"
@@ -36,9 +39,8 @@
             this.currentScreenSize === 'Medium'))
     }"
   >
-    <app-footer
+    <app-business-footer
       [currentScreenSize]="currentScreenSize"
-      [footerCaptions]="footerCaptions"
-    ></app-footer>
+    ></app-business-footer>
   </footer>
 </div>
