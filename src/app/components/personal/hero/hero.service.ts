@@ -11,7 +11,7 @@ export class HeroService {
       src: 'assets/images/personal-hero-banner-one.jpg',
       alt: 'Hero banner',
       title:
-        "Get up to $1200<a href='https://www.bmo.com/pdf/edb-total-value/terms-and-conditions.pdf' target='_blank' class='subscript'><sup>§</sup></a> in value",
+        "Get up to $1200<a href='https://www.bmo.com/pdf/edb-total-value/terms-and-conditions.pdf' target='_blank' class='superscript'><sup>§</sup></a> in value",
       description:
         'Feel good about your savings progress. This includes a 5% promo interest rate** when you open a chequing and a Savings Amplifier Account.',
       linkHref:
@@ -23,7 +23,7 @@ export class HeroService {
       src: 'assets/images/personal-hero-banner-two.jpg',
       alt: 'Hero banner',
       title:
-        'Get up to $4,000 cash back<a href="https://www.bmo.com/popups/mortgages/spring-mortgage-offer-tnc-2023-en/" target="_blank" class="subscript"><sup>†</sup></a>',
+        'Get up to $4,000 cash back<a href="https://www.bmo.com/popups/mortgages/spring-mortgage-offer-tnc-2023-en/" target="_blank" class="superscript"><sup>†</sup></a>',
       description:
         "Enjoy your cash back when you get a <strong>new qualifying BMO Mortgage or Homeowner ReadiLine®</strong>.",
       linkHref:

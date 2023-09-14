@@ -14,7 +14,8 @@ export class ProductsTabsService {
         {
           image: 'assets/images/business-tile-quick-flexible-top.png',
           imageAlt: 'Special offers',
-          title: 'Quick, flexible financing1',
+          title:
+            'Quick, flexible financing<a href="https://www.bmo.com/main/business/loans-mortgages/credit-line/" target="_blank" class="superscript" aria-label="footnote 1, opens an external page in a new tab"><sup>1</sup></a>',
           description:
             'Enjoy rates as low as BMO Prime +2% with a Credit Line for Business.1 ',
           src: 'https://www.bmo.com/main/business/loans-mortgages/credit-line/',
