@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" view-box="0 0 48 48" height="48" width="48">
+  <defs>
+    <style>
+      .c {
+        fill: none;
+      }
+      .b {
+        fill: #fff;
+      }
+      .b,
+      .c {
+        stroke: #0776ba;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path style="opacity: 0.1; fill: none" d="M0 .07h48v48H0z"/>
+  <path class="b" d="M7.18 18.7H34.1v22.43H7.18z"/>
+  <path class="b" d="M27.87 13.59V7.01H12.25v27.95h23.02V13.59h-7.4z"/>
+  <path class="c" d="m27.87 7.01 7.4 6.58M17.19 17.04h13.06M17.19 13.2h6.73M17.19 20.89h13.06M17.19 26.3h13.06"/>
+  <path class="b" d="M34.48 41.13H8.29l6.34-16.66h26.19l-6.34 16.66z"/>
+</svg>
