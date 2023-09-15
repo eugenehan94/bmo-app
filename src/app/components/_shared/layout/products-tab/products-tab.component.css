@@ -1,135 +1,128 @@
 section {
-    padding-top: 2rem;
-  }
-  
-  .title-wrapper {
-    margin: 0 1.5rem 0.5rem;
-  }
-  .title-wrapper.large {
-    text-align: center;
-  }
-  .title {
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: 1.75rem;
-    color: #646c76;
-    letter-spacing: 2px;
-  }
-  
-  .sub-title-wrapper {
-    margin: 0 1.5rem;
-  }
-  .sub-title-wrapper.large {
-    text-align: center;
-    font-size: 2rem;
-  }
-  .sub-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    line-height: 2rem;
-    margin: 0;
-    margin-bottom: 1rem;
-  }
-  
-  .tab-content-container {
-    padding: 1.5rem;
-  }
-  .tab-content-container-medium {
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .tab-content-container-medium mat-card {
-    flex: 45%;
-  }
-  .tab-content-container-large {
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .tab-content-container-large mat-card {
-    flex: 25%;
-  }
-  .mat-card-image {
-    height: 164px;
-    object-fit: cover;
-    border-bottom-left-radius: 10000px 2000px;
-    border-bottom-right-radius: 10000px 2000px;
-    overflow: hidden;
-  }
-  .mat-card-svg {
-    width: 60px;
-    height: 60px;
-  }
-  .mat-card-content-title {
-    font-size: 22px;
-    font-weight: 500;
-  }
-  .mat-card-content-desc {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5rem;
-    padding-bottom: 0.8rem;
-  }
-  .mat-card-content-link {
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Angular Material Styles */
-  
-  :host ::ng-deep .mat-mdc-tab .mdc-tab-indicator__content--underline {
-    border-color: #0075be;
-  }
-  
-  :host
-    ::ng-deep
-    .mat-mdc-tab.mdc-tab--active:focus
-    .mdc-tab-indicator__content--underline {
-    border-color: #0075be;
-  }
-  .blue {
-    background-color: #0075be;
-  }
-  .ultramarine {
-    background-color: #005587;
-  }
-  .albicant {
-    background-color: #f5f6f7;
-  }
-  .text-white {
-    color: white;
-  }
-  .text-blue {
-    color: #0075be;
-  }
-  mat-card {
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  mat-card-content {
-    padding: 0 2rem 1.5rem;
-    flex-grow: 1;
-    overflow: auto;
-  }
-  mat-card-actions {
-    padding: 0 2rem 1.5rem;
-  }
+  padding-top: 2rem;
+}
 
-  .superscript {
-    color: #0075be;
-    text-decoration: none;
-    font-size: 1rem;
-    vertical-align: top;
-    font-weight: 700;
-  }
-  
+.title-wrapper {
+  margin: 0 1.5rem 0.5rem;
+}
+.title-wrapper.large {
+  text-align: center;
+}
+.title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.75rem;
+  color: #646c76;
+  letter-spacing: 2px;
+}
+
+.sub-title-wrapper {
+  margin: 0 1.5rem;
+}
+.sub-title-wrapper.large {
+  text-align: center;
+  font-size: 2rem;
+}
+.sub-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.tab-content-container {
+  padding: 1.5rem;
+}
+.tab-content-container-medium {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.tab-content-container-medium mat-card {
+  flex: 45%;
+}
+.tab-content-container-large {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.tab-content-container-large mat-card {
+  flex: 25%;
+}
+.mat-card-image {
+  height: 164px;
+  object-fit: cover;
+  border-bottom-left-radius: 10000px 2000px;
+  border-bottom-right-radius: 10000px 2000px;
+  overflow: hidden;
+}
+.mat-card-svg {
+  width: 60px;
+  height: 60px;
+}
+.mat-card-content-title {
+  font-size: 22px;
+  font-weight: 500;
+}
+.mat-card-content-desc {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  padding-bottom: 0.8rem;
+}
+.mat-card-content-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+/* Angular Material Styles */
+
+:host ::ng-deep .mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border-color: #0075be;
+}
+
+:host
+  ::ng-deep
+  .mat-mdc-tab.mdc-tab--active:focus
+  .mdc-tab-indicator__content--underline {
+  border-color: #0075be;
+}
+.blue {
+  background-color: #0075be;
+}
+.ultramarine {
+  background-color: #005587;
+}
+.albicant {
+  background-color: #f5f6f7;
+}
+.text-white {
+  color: white;
+}
+.text-blue {
+  color: #0075be;
+}
+mat-card {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-content {
+  padding: 0 2rem 1.5rem;
+  flex-grow: 1;
+  overflow: auto;
+}
+mat-card-actions {
+  padding: 0 2rem 1.5rem;
+}
+
+

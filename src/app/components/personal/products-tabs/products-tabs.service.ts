@@ -73,7 +73,7 @@ export class ProductsTabsService {
           imageAlt: 'Special offers',
           title: 'Get up to $1,200 in value',
           description:
-            'This includes a 5% promo interest rate** when you open a Savings Amplifier Account.',
+            'This includes a 5% promo interest rate<a href="https://www.bmo.com/pdf/savings-amplifier-promotional-interest-rate-offer-en.pdf" target="_blank" aria-label="Bonus Rate Offer Terms and Conditions, opens in a new tab" class="superscript-link">**</a> when you open a Savings Amplifier Account.',
           src: 'https://www.bmo.com/main/personal/bank-accounts/new-bank-account-offers-and-promotions/?icid=ba-US37461EDB4-ATBMO18',
           srcTitle: 'More details',
         },
@@ -129,9 +129,10 @@ export class ProductsTabsService {
         {
           image: 'assets/images/personal-tile-eclipse-top-image.jpeg',
           imageAlt: 'Eclipse credit card',
-          title: 'BMO eclipse Visa Infinite* Card66',
+          title:
+            'BMO eclipse Visa Infinite* Card<a href="https://www.bmo.com/popups/main/personal/credit-cards/terms-and-conditions-en.html#footnote-66" target="_blank" rel="noopener" aria-label="Go to footnote 66 Terms and Conditions, opens in a new tab" class="superscript-link"><sup >66</sup></a>',
           description:
-            'Get 5 times the points on takeout, rideshare and more.67',
+            'Get 5 times the points on takeout, rideshare and more.<a href="https://www.bmo.com/popups/main/personal/credit-cards/terms-and-conditions-en.html#footnote-67" target="_blank" rel="noopener" class="superscript-link"><sup>67</sup></a>',
           src: 'https://www.bmo.com/main/personal/credit-cards/bmo-eclipse-visa-infinite/?icid=ba-FEAT2190CC4-EYBMO23',
           srcTitle: 'Learn more',
         },
@@ -189,7 +190,7 @@ export class ProductsTabsService {
           image: 'assets/images/personal-tile-mortgage.jpg',
           imageAlt: 'Eclipse credit card',
           title:
-            "Lock in BMO's 130-day mortgage rate guarantee – the longest of any major Canadian bankfootnote dagger dagger††",
+            "Lock in BMO's 130-day mortgage rate guarantee – the longest of any major Canadian bankfootnote dagger dagger<a href='https://www.bmo.com/main/personal/mortgages/' target='_blank' rel='noopener' class='superscript-link'><sup>††</sup></a>",
           description: '',
           src: 'https://www.bmo.com/main/personal/mortgages/special-offers/',
           srcTitle: 'More detail',

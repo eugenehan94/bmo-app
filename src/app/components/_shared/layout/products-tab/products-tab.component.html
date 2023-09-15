@@ -58,16 +58,14 @@
                     'text-white': i === 1 || i === 2 || i === 3 || i === 4
                   }"
                   [innerHTML]="card.title"
-                >
-                </h3>
+                ></h3>
                 <p
                   class="mat-card-content-desc"
                   [ngClass]="{
                     'text-white': i === 1 || i === 2 || i === 3 || i === 4
                   }"
-                >
-                  {{ card.description }}
-                </p>
+                  [innerHTML]="card.description"
+                ></p>
               </mat-card-content>
               <mat-card-actions>
                 <a

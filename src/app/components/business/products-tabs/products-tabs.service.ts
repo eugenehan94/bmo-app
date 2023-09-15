@@ -15,9 +15,9 @@ export class ProductsTabsService {
           image: 'assets/images/business-tile-quick-flexible-top.png',
           imageAlt: 'Special offers',
           title:
-            'Quick, flexible financing<a href="https://www.bmo.com/main/business/loans-mortgages/credit-line/" target="_blank" class="superscript" aria-label="footnote 1, opens an external page in a new tab"><sup>1</sup></a>',
+            'Quick, flexible financing<sup class="superscript"><a href="https://www.bmo.com/main/business/loans-mortgages/credit-line/" target="_blank" aria-label="footnote 1, opens an external page in a new tab" class="superscript-link">1</a></sup>',
           description:
-            'Enjoy rates as low as BMO Prime +2% with a Credit Line for Business.1 ',
+            'Enjoy rates as low as BMO Prime +2% with a Credit Line for Business.<sup class="superscript"><a href="https://www.bmo.com/main/business/loans-mortgages/credit-line/" target="_blank" aria-label="footnote 1, opens in a new tab">1</a></sup>',
           src: 'https://www.bmo.com/main/business/loans-mortgages/credit-line/',
           srcTitle: 'Learn More',
         },
@@ -76,7 +76,7 @@ export class ProductsTabsService {
           imageAlt: 'Person in E commerce',
           title: 'eBusiness Plan',
           description:
-            'Bank more easily with no monthly fees, no minimum balance, and unlimited Moneris and electronic transactions.* ',
+            'Bank more easily with no monthly fees, no minimum balance, and unlimited Moneris and electronic transactions.<a href="https://www.bmo.com/main/business/accounts/terms-and-conditions-en.html" target="_blank" aria-label="footnote *, opens in a new tab" class="superscript-link">*</a> ',
           src: 'https://www.bmo.com/main/business/accounts/ebusiness-plan/',
           srcTitle: 'Learn More',
         },
@@ -117,7 +117,7 @@ export class ProductsTabsService {
           imageAlt: 'Cards',
           title: 'BMO CashBack® Business Mastercard®*',
           description:
-            'Get 10% cash back on common business expenses for 3 months with no annual fee!1',
+            'Get 10% cash back on common business expenses for 3 months with no annual fee!<sup><a href="https://www.bmo.com/popups/main/business/credit-cards/bmo-cashback-no-fee-business-mastercard/terms-and-conditions-en.html#one" target="_blank" rel="noopener" aria-label="Footnote 1, B M O cashback business mastercard terms and conditions, opens in a new tab">1</a></sup>',
           src: 'https://www.bmo.com/main/business/credit-cards/bmo-cashback-no-fee-business-mastercard/',
           srcTitle: 'Learn More',
         },
@@ -153,7 +153,7 @@ export class ProductsTabsService {
           imageAlt: 'Person holding world elite credit card',
           title: 'BMO World Elite®* Business Mastercard®*',
           description:
-            'Earn up to 50,000 points when you spend $5,000 in the first three months.1',
+            'Earn up to 50,000 points when you spend $5,000 in the first three months.<sup class="superscript"><a href="https://www.bmo.com/popups/main/business/credit-cards/bmo-rewards-world-elite-business-mastercard/terms-and-conditions-en.html#one" target="_blank" rel="noopener" aria-label="Footnote 1, B M O word elite business mastercard terms and conditions, opens in a new tab">1</a></sup>',
           src: 'https://www.bmo.com/main/business/credit-cards/bmo-rewards-world-elite-business-mastercard/',
           srcTitle: 'Learn More',
         },
@@ -167,7 +167,7 @@ export class ProductsTabsService {
           imageAlt: 'Person looking into laptop screen',
           title: 'Credit Line for Business',
           description:
-            'Borrow on demand and enjoy rates as low as BMO Prime +2%.1',
+            'Borrow on demand and enjoy rates as low as BMO Prime +2%.',
           src: 'https://www.bmo.com/main/business/loans-mortgages/credit-line/',
           srcTitle: 'Learn More',
         },

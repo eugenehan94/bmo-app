@@ -39,12 +39,21 @@
   font-weight: 700;
   color: #001928;
 }
+
+/* NOTE: superscript is for the innerHTML - encapsulation.none so it becomes global*/
 .superscript {
+  line-height: 0;
+  font-size: smaller;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4rem;
+}
+.superscript a,
+.superscript-link {
   color: #0075be;
   text-decoration: none;
-  font-size: 1rem;
-  vertical-align: top;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .description {
