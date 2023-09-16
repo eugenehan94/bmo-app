@@ -1,0 +1,96 @@
+.get-in-touch-container {
+  padding-top: 2rem;
+  background-color: white;
+}
+.get-in-touch-wrapper {
+  background-color: #e6f9fe;
+  box-sizing: border-box;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.get-in-touch-intro-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+.get-in-touch-left-container {
+  display: block;
+}
+.get-in-touch-title-container {
+  text-align: left;
+}
+.get-in-touch-title-wrapper {
+  word-wrap: break-word;
+}
+.get-in-touch-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+.get-in-touch-description-container {
+  text-align: left;
+  color: #001928;
+  font-weight: 300;
+}
+.get-in-touch-description-wrapper {
+  word-wrap: break-word;
+}
+.get-in-touch-description {
+  margin: 0;
+}
+.get-in-touch-button-list {
+  text-align: left;
+  list-style: none;
+  position: relative;
+  padding: 2rem 0 0 0;
+}
+.get-in-touch-button.active {
+  background-color: #ffffff;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0;
+  width: 100%;
+  border: 0;
+  border-radius: 52px;
+  box-shadow: 0px 0px 1.25rem 5px rgba(19, 40, 71, 0.2);
+  position: relative;
+  font-size: 18px;
+}
+.get-in-touch-button-wrapper {
+  display: flex;
+  margin: 0;
+  justify-content: left;
+  font-size: 14px;
+  color: #0075be;
+  font-weight: 500;
+  text-decoration: none;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+}
+.get-in-touch-button-image-container {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+.get-in-touch-button-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.get-in-touch-button-description {
+  margin: 0;
+}
+.get-in-touch-button {
+  background-color: transparent;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0;
+  width: 100%;
+  border: 2px solid #73c3eb;
+  border-radius: 52px;
+  box-shadow: none;
+  position: relative;
+  font-size: 18px;
+}
