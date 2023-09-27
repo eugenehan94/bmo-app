@@ -1,16 +1,27 @@
-import { Component, Input, OnInit, ViewChildren } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  ViewChildren,
+  AfterViewInit,
+} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GetInTouchService } from './get-in-touch.service';
 @Component({
   selector: 'app-business-get-in-touch',
   templateUrl: './get-in-touch.component.html',
   styleUrls: ['./get-in-touch.component.css'],
 })
-export class BusinessGetInTouchComponent implements OnInit {
-  constructor(private getInTouchService: GetInTouchService) {}
+export class BusinessGetInTouchComponent implements OnInit, AfterViewInit {
+  constructor(
+    private getInTouchService: GetInTouchService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   buttonsData?: any;
   // @TODO: Set to zero for now - when query params ready - set it to applicable index;
-  selectedButton: number = 0;
+  selectedButton?: number;
   @ViewChildren('tabButton') buttonsList?: any;
   @Input() currentScreenSize?: string;
 
@@ -18,37 +29,58 @@ export class BusinessGetInTouchComponent implements OnInit {
     this.buttonsData = this.getInTouchService.buttonsData;
   }
 
-  handleButtonClick(i: number): void {
-    const button = this.buttonsList._results;
-    console.log('button: ', button);
-    button.forEach(() => {
-      if (i === this.selectedButton) {
-        document
-          .getElementById(`${'tabButton-' + i}`)
-          ?.classList.toggle('active');
+  ngAfterViewInit(): void {
+    this.getParamsOnLoad();
+  }
 
-        let tabindex = document
-          .getElementById(`${'tabButton-' + i}`)
-          ?.getAttribute('tabIndex');
-        if (tabindex === '-1') {
+  addParams(selectedTab: number) {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {
+        triageTab: selectedTab,
+      },
+    });
+  }
+
+  getParamsOnLoad() {
+    this.route.queryParams.subscribe((params) => {
+      const button = this.buttonsList._results;
+      if (params['triageTab'] == null) {
+        this.selectedButton = 0;
+        button.forEach(() => {
           document
-            .getElementById(`${'tabButton-' + i}`)
+            .getElementById(`${'tabButton-' + this.selectedButton}`)
+            ?.classList.toggle('active');
+          document
+            .getElementById(`${'tabButton-' + this.selectedButton}`)
             ?.setAttribute('tabIndex', '0');
-        } else {
           document
-            .getElementById(`${'tabButton-' + i}`)
-            ?.setAttribute('tabIndex', '-1');
-        }
-      } else if (i !== this.selectedButton) {
-        document
-          .getElementById(`${'tabButton-' + i}`)
-          ?.classList.toggle('active');
-        document
-          .getElementById(`${'tabButton-' + i}`)
-          ?.setAttribute('tabIndex', '0');
-        document
-          .getElementById(`${'tabButton-' + i}`)
-          ?.setAttribute('aria-selected', 'true');
+            .getElementById(`${'tabButton-' + this.selectedButton}`)
+            ?.setAttribute('aria-selected', 'true');
+        });
+      } else {
+        this.selectedButton = params['triageTab'];
+        button.forEach(() => {
+          document
+            .getElementById(`${'tabButton-' + this.selectedButton}`)
+            ?.classList.toggle('active');
+          document
+            .getElementById(`${'tabButton-' + this.selectedButton}`)
+            ?.setAttribute('tabIndex', '0');
+          document
+            .getElementById(`${'tabButton-' + this.selectedButton}`)
+            ?.setAttribute('aria-selected', 'true');
+        });
+      }
+    });
+  }
+
+  handleButtonClick(i: number): void {
+    console.log('handleButton i: ', i);
+    console.log('selectedButton: ', this.selectedButton);
+    const button = this.buttonsList._results;
+    button.forEach(() => {
+      if (i != this.selectedButton) {
         // Remove the active class from previously selected button
         document
           .getElementById(`${'tabButton-' + this.selectedButton}`)
@@ -59,7 +91,7 @@ export class BusinessGetInTouchComponent implements OnInit {
         document
           .getElementById(`${'tabButton-' + this.selectedButton}`)
           ?.setAttribute('aria-selected', 'false');
-        this.selectedButton = i;
+        this.addParams(i);
       }
     });
   }
