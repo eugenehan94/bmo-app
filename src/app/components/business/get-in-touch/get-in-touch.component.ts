@@ -76,8 +76,6 @@ export class BusinessGetInTouchComponent implements OnInit, AfterViewInit {
   }
 
   handleButtonClick(i: number): void {
-    console.log('handleButton i: ', i);
-    console.log('selectedButton: ', this.selectedButton);
     const button = this.buttonsList._results;
     button.forEach(() => {
       if (i != this.selectedButton) {

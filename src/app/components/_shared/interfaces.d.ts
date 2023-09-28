@@ -110,3 +110,11 @@ export interface CardContentType {
 export interface FooterCaptionsType {
   caption: string;
 }
+
+//Business - get-in-touch
+export interface ButtonsDataType {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  titleParagraph: string;
+}
