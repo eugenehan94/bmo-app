@@ -64,7 +64,7 @@ export class GetInTouchService {
       title: 'Find the right commercial banker for your business',
       description:
         'Our bankers provide tailored advice and partner with you to explore solutions that help your business thrive.',
-      contactBranch: 'Find a relationship manager',
+      contactBranch: 'Find a commercial banker',
       contactBranchHref: 'https://commercial.bmo.com/en/our-bankers/',
       contactBranchAriaLabel: 'Find a commercial banker, opens in a new tab',
     },

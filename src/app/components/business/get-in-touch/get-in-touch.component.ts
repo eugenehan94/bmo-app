@@ -20,13 +20,14 @@ export class BusinessGetInTouchComponent implements OnInit, AfterViewInit {
   ) {}
 
   buttonsData?: any;
-  // @TODO: Set to zero for now - when query params ready - set it to applicable index;
+  buttonsDisplayContents?: any;
   selectedButton?: number;
   @ViewChildren('tabButton') buttonsList?: any;
   @Input() currentScreenSize?: string;
 
   ngOnInit(): void {
     this.buttonsData = this.getInTouchService.buttonsData;
+    this.buttonsDisplayContents = this.getInTouchService.buttonsDisplayContents;
   }
 
   ngAfterViewInit(): void {

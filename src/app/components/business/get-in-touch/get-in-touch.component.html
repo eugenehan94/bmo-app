@@ -52,12 +52,101 @@
             </span>
           </span>
         </button>
-
       </div>
     </div>
-    <div>
+    <div
+      *ngFor="let buttonContent of buttonsDisplayContents; let i = index"
+      class="get-in-touch-second-container"
+    >
       <!-- Tabpanels -->
-      <div></div>
+      <!-- @TODO change ngIf to ngClass -->
+      <div
+        role="tabpanel"
+        *ngIf="i == selectedButton"
+        class="get-in-touch-tabpanel-container"
+      >
+        <div class="get-in-touch-tabpanel-wrapper">
+          <!-- Image -->
+          <div class="get-in-touch-tabpanel-image-container">
+            <div class="get-in-touch-tabpanel-image-inner-container">
+              <div class="get-in-touch-tabpanel-image-wrapper">
+                <img
+                  src="{{ buttonContent.imageSrc }}"
+                  alt="{{ buttonContent.imageAlt }}"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Content -->
+          <div class="get-in-touch-content-container">
+            <div class="get-in-touch-content-inner-container">
+              <div class="get-in-touch-content-wrapper">
+                <div class="get-in-touch-content-intro-container">
+                  <div class="get-in-touch-content-title-container">
+                    <span class="get-in-touch-content-title-wrapper"
+                      ><h3 class="get-in-touch-content-title">
+                        <span role="text">
+                          <span>{{ buttonContent.title }}</span>
+                        </span>
+                      </h3></span
+                    >
+                  </div>
+                  <div class="get-in-touch-content-description-container">
+                    <span>
+                      <p style="margin: 0; padding: 0">
+                        <span role="text">
+                          <span>{{ buttonContent.description }}</span>
+                        </span>
+                      </p>
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <a
+                    [attr.aria-label]="buttonContent.contactBranchAriaLabel"
+                    href="{{ buttonContent.contactBranchHref }}"
+                    target="_blank"
+                    style="
+                      font-size: 1rem;
+                      color: #0075be;
+                      font-weight: 700;
+                      text-transform: uppercase;
+                      text-decoration: none;
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 4px;
+                    "
+                  >
+                    <div>Book an appointment</div>
+                    <mat-icon aria-hidden="true">chevron_right</mat-icon>
+                  </a>
+                </div>
+                <div style="padding: 0; padding-top: 1rem">
+                  <a
+                    [attr.aria-label]="buttonContent.contactNumberAriaLabel"
+                    href="{{ buttonContent.contactNumberHref }}"
+                    target="_blank"
+                    style="
+                      font-size: 1rem;
+                      color: #0075be;
+                      font-weight: 700;
+                      text-transform: uppercase;
+                      text-decoration: none;
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 4px;
+                    "
+                  >
+                    <div style="display: flex; align-items: center">
+                      {{ buttonContent.contactNumber }}
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
