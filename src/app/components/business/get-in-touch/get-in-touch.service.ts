@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
-import { ButtonsDataType } from 'src/app/components/_shared/interfaces';
+import {
+  ButtonsDataType,
+  ButtonsDisplayContentsType,
+} from 'src/app/components/_shared/interfaces';
 @Injectable({
   providedIn: 'root',
 })
@@ -27,7 +30,7 @@ export class GetInTouchService {
     },
   ];
 
-  buttonsDisplayContents: any = [
+  buttonsDisplayContents: ButtonsDisplayContentsType[] = [
     {
       imageSrc: 'assets/svg/desktop-illustration.svg',
       imageAlt: 'Desktop screen with document open',

@@ -118,3 +118,16 @@ export interface ButtonsDataType {
   title: string;
   titleParagraph: string;
 }
+
+export interface ButtonsDisplayContentsType {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  description: string;
+  contactBranch: string;
+  contactBranchHref: string;
+  contactBranchAriaLabel: string;
+  contactNumber?: string;
+  contactNumberHref?: string;
+  contactNumberAriaLabel?: string;
+}

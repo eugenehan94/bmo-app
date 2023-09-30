@@ -1,6 +1,22 @@
-<section class="get-in-touch-container">
-  <div class="get-in-touch-wrapper">
-    <div class="get-in-touch-intro-container">
+<section
+  class="get-in-touch-container"
+  [ngClass]="{
+    medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+  }"
+>
+  <div
+    class="get-in-touch-wrapper"
+    [ngClass]="{
+      medium: currentScreenSize === 'Medium',
+      large: currentScreenSize === 'Large'
+    }"
+  >
+    <div
+      class="get-in-touch-intro-container"
+      [ngClass]="{
+        medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+      }"
+    >
       <div class="get-in-touch-left-container">
         <div>
           <div class="get-in-touch-title-container">
@@ -55,21 +71,31 @@
       </div>
     </div>
     <div
-      *ngFor="let buttonContent of buttonsDisplayContents; let i = index"
       class="get-in-touch-second-container"
+      [ngClass]="{
+        medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+      }"
     >
       <!-- Tabpanels -->
       <!-- @TODO change ngIf to ngClass -->
       <div
+        *ngFor="let buttonContent of buttonsDisplayContents; let i = index"
         role="tabpanel"
-        *ngIf="i == selectedButton"
+        [ngClass]="i == selectedButton ? 'active' : null"
         class="get-in-touch-tabpanel-container"
       >
         <div class="get-in-touch-tabpanel-wrapper">
           <!-- Image -->
           <div class="get-in-touch-tabpanel-image-container">
             <div class="get-in-touch-tabpanel-image-inner-container">
-              <div class="get-in-touch-tabpanel-image-wrapper">
+              <div
+                class="get-in-touch-tabpanel-image-wrapper"
+                [ngClass]="{
+                  medium:
+                    currentScreenSize === 'Medium' ||
+                    currentScreenSize === 'Large'
+                }"
+              >
                 <img
                   src="{{ buttonContent.imageSrc }}"
                   alt="{{ buttonContent.imageAlt }}"
@@ -106,38 +132,20 @@
                     [attr.aria-label]="buttonContent.contactBranchAriaLabel"
                     href="{{ buttonContent.contactBranchHref }}"
                     target="_blank"
-                    style="
-                      font-size: 1rem;
-                      color: #0075be;
-                      font-weight: 700;
-                      text-transform: uppercase;
-                      text-decoration: none;
-                      display: inline-flex;
-                      align-items: center;
-                      gap: 4px;
-                    "
+                    class="get-in-touch-branch-contact-link"
                   >
                     <div>Book an appointment</div>
                     <mat-icon aria-hidden="true">chevron_right</mat-icon>
                   </a>
                 </div>
-                <div style="padding: 0; padding-top: 1rem">
+                <div class="get-in-touch-contact-number-container">
                   <a
                     [attr.aria-label]="buttonContent.contactNumberAriaLabel"
                     href="{{ buttonContent.contactNumberHref }}"
                     target="_blank"
-                    style="
-                      font-size: 1rem;
-                      color: #0075be;
-                      font-weight: 700;
-                      text-transform: uppercase;
-                      text-decoration: none;
-                      display: inline-flex;
-                      align-items: center;
-                      gap: 4px;
-                    "
+                    class="get-in-touch-contact-number-link"
                   >
-                    <div style="display: flex; align-items: center">
+                    <div class="get-in-touch-contact-number-text-container">
                       {{ buttonContent.contactNumber }}
                     </div>
                   </a>

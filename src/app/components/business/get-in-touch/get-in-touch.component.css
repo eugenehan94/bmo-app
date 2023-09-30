@@ -2,11 +2,31 @@
   padding-top: 2rem;
   background-color: white;
 }
+.get-in-touch-container.medium {
+  padding-top: 3rem;
+}
 .get-in-touch-wrapper {
   background-color: #e6f9fe;
   box-sizing: border-box;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.get-in-touch-wrapper.medium {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.get-in-touch-wrapper.large {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 3rem 80px;
 }
 .get-in-touch-intro-container {
   margin: 0 auto;
@@ -14,6 +34,10 @@
   flex-direction: column;
   text-align: center;
   padding: 0 1.5rem;
+}
+.get-in-touch-intro-container.medium {
+  /* margin-right: 0.75rem; */
+  flex: 0 0 47%;
 }
 .get-in-touch-left-container {
   display: block;
@@ -99,13 +123,20 @@
   padding: 0 1.5rem;
   text-align: center;
 }
+.get-in-touch-second-container.medium {
+  margin-left: 0.75rem;
+  padding: 0;
+}
 .get-in-touch-tabpanel-container {
   text-align: left;
   margin: 0;
+  opacity: 0;
+  height: 0;
+  padding-top: 0;
+}
+.get-in-touch-tabpanel-container.active {
   opacity: 1;
   height: auto;
-  padding-top: 0;
-  transition: opacity 1000ms;
 }
 .get-in-touch-tabpanel-wrapper {
   display: flex;
@@ -125,6 +156,10 @@
 .get-in-touch-tabpanel-image-wrapper {
   text-align: center;
   margin-top: 3rem;
+}
+.get-in-touch-tabpanel-image-wrapper.medium {
+  text-align: left;
+  margin-top: 0;
 }
 .get-in-touch-content-container {
   height: 100%;
@@ -170,4 +205,32 @@
   font-weight: 300;
   line-height: 1.5rem;
   padding-bottom: 2rem;
+}
+.get-in-touch-branch-contact-link {
+  font-size: 1rem;
+  color: #0075be;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.get-in-touch-contact-number-container {
+  padding: 0;
+  padding-top: 1rem;
+}
+.get-in-touch-contact-number-link {
+  font-size: 1rem;
+  color: #0075be;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.get-in-touch-contact-number-text-container {
+  display: flex;
+  align-items: center;
 }
