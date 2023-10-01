@@ -59,6 +59,7 @@ export interface SiteOptionsType {
   title: string;
   linkHref?: string;
   ariaLabel?: string;
+  routerLink?: string;
 }
 export interface CountryOptionsType {
   country: string;

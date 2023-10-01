@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
   SiteOptionsType,
-  NavigationOptionsType,
   CountryOptionsType,
   SignInMenuOptionsType,
   MobileBottomNavOptionsType,
@@ -15,12 +14,12 @@ export class NavbarService {
   siteOptions: SiteOptionsType[] = [
     {
       title: 'Personal',
+      linkHref: "http://localhost:4200/personal"
     },
     {
       title: 'Business',
-      linkHref:
-        'https://www.bmo.com/en-ca/main/business/?icid=tl-FEAT2953BRND4-AJBMOH16',
       ariaLabel: 'Business',
+      routerLink: "/business"
     },
     {
       title: 'Private Wealth',

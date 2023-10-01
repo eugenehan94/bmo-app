@@ -39,6 +39,11 @@
   /* margin-right: 0.75rem; */
   flex: 0 0 47%;
 }
+.get-in-touch-intro-container.large {
+  margin-right: 3rem;
+  flex: 0 0 46%;
+
+}
 .get-in-touch-left-container {
   display: block;
 }
@@ -52,6 +57,11 @@
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 2rem;
+  margin-bottom: 1rem;
+}
+.get-in-touch-title.large {
+  font-size: 2rem;
+  line-height: 2.5rem;
   margin-bottom: 1rem;
 }
 .get-in-touch-description-container {
@@ -118,7 +128,9 @@
   position: relative;
   font-size: 18px;
 }
-
+.get-in-touch-button.large {
+  width: 86%;
+}
 .get-in-touch-second-container {
   padding: 0 1.5rem;
   text-align: center;

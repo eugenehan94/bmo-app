@@ -14,14 +14,18 @@
     <div
       class="get-in-touch-intro-container"
       [ngClass]="{
-        medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+        medium: currentScreenSize === 'Medium',
+        large: currentScreenSize === 'Large'
       }"
     >
       <div class="get-in-touch-left-container">
         <div>
           <div class="get-in-touch-title-container">
             <span class="get-in-touch-title-wrapper"
-              ><h2 class="get-in-touch-title">
+              ><h2
+                class="get-in-touch-title"
+                [ngClass]="{ large: currentScreenSize === 'Large' }"
+              >
                 <span role="text">Ready to get started? Get in touch</span>
               </h2></span
             >
@@ -50,6 +54,7 @@
           tabindex="-1"
           (click)="handleButtonClick(i)"
           class="get-in-touch-button"
+          [ngClass]="{ large: currentScreenSize === 'Large' }"
         >
           <span aria-current="false" class="get-in-touch-button-wrapper">
             <span class="get-in-touch-button-image-container">
@@ -127,23 +132,28 @@
                     </span>
                   </div>
                 </div>
-                <div>
+                <div *ngIf="buttonContent.contactBranch">
                   <a
                     [attr.aria-label]="buttonContent.contactBranchAriaLabel"
                     href="{{ buttonContent.contactBranchHref }}"
                     target="_blank"
                     class="get-in-touch-branch-contact-link"
+                    tabindex="{{ i == selectedButton ? 0 : -1 }}"
                   >
-                    <div>Book an appointment</div>
+                    <div>{{ buttonContent.contactBranch }}</div>
                     <mat-icon aria-hidden="true">chevron_right</mat-icon>
                   </a>
                 </div>
-                <div class="get-in-touch-contact-number-container">
+                <div
+                  class="get-in-touch-contact-number-container"
+                  *ngIf="buttonContent.contactNumber"
+                >
                   <a
                     [attr.aria-label]="buttonContent.contactNumberAriaLabel"
                     href="{{ buttonContent.contactNumberHref }}"
                     target="_blank"
                     class="get-in-touch-contact-number-link"
+                    tabindex="{{ i == selectedButton ? 0 : -1 }}"
                   >
                     <div class="get-in-touch-contact-number-text-container">
                       {{ buttonContent.contactNumber }}

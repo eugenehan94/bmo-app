@@ -30,7 +30,15 @@
     [ngClass]="isSiteSelectMenuOpen ? 'open' : null"
   >
     <li *ngFor="let option of siteOptions" role="listbox">
-      <a
+      <!-- @TODO: Once all angular pages are set up - we can remove the second a tag. -->
+      <a *ngIf="option.routerLink"
+        class="mobile-menu-site-selector-link"
+        routerLink="{{ option.routerLink }}"
+        target="_blank"
+        [attr.aria-label]="option.ariaLabel"
+        >{{ option.title }}</a
+      >
+      <a *ngIf="option.linkHref"
         class="mobile-menu-site-selector-link"
         href="{{ option.linkHref }}"
         target="_blank"

@@ -17,7 +17,16 @@
     </div>
     <ul class="site-select-list" *ngIf="isSelectedSiteOpen">
       <li *ngFor="let option of siteOptions">
+        <!-- @TODO: Once all angular pages are set up - we can remove the second a tag. -->
         <a
+          *ngIf="option.routerLink"
+          routerLink="{{ option.routerLink }}"
+          target="_blank"
+          [attr.aria-label]="option.ariaLabel"
+          >{{ option.title }}</a
+        >
+        <a
+          *ngIf="option.linkHref"
           href="{{ option.linkHref }}"
           target="_blank"
           [attr.aria-label]="option.ariaLabel"
