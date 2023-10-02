@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from 'src/app/app.service';
+
+import { Store } from '@ngrx/store';
 @Component({
   selector: 'app-mobile-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
-  constructor(private appService: AppService) {}
+  constructor(private store: Store<any>) {}
 
   isMobileMenuOpen?: boolean;
   ngOnInit(): void {
-    this.appService.isMobileMenuOpen.subscribe((isOpen: boolean) => {
-      this.isMobileMenuOpen = isOpen;
+    this.store.select('isMobileMenuOpen').subscribe((res) => {
+      this.isMobileMenuOpen = res;
     });
   }
 }

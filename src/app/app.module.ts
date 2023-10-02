@@ -10,6 +10,7 @@ import { NgOptimizedImage } from '@angular/common';
 // A service with all shared data - no need for prop drilling
 import { AppService } from './app.service';
 import { AppComponent } from './app.component';
+// @NOTE: Refer to 'declaration' folder for specific component imports
 // Page imports
 import { PagesComponents } from 'src/app/declarations/pagesComponents';
 // Layouts
@@ -21,6 +22,10 @@ import { PersonalComponents } from 'src/app/declarations/personalComponents';
 // Business
 import { BusinessComponents } from 'src/app/declarations/businessComponents';
 import { FooterComponent } from './components/_shared/footer/footer.component';
+
+// ngrx
+import { StoreModule } from '@ngrx/store';
+import { IsMobileMenuOpenReducer } from './store/app/reducers/app.reducer';
 
 @NgModule({
   declarations: [
@@ -38,6 +43,7 @@ import { FooterComponent } from './components/_shared/footer/footer.component';
     BrowserAnimationsModule,
     MaterialDesignModule,
     NgOptimizedImage,
+    StoreModule.forRoot({ isMobileMenuOpen: IsMobileMenuOpenReducer}),
   ],
   providers: [AppService],
   bootstrap: [AppComponent],

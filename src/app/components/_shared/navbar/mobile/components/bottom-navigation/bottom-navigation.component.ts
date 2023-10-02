@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/app.service';
 import { NavbarService } from '../../../navbar.service';
 import { MobileBottomNavOptionsType } from '../../../../interfaces';
+
+import {Store} from "@ngrx/store";
+
 @Component({
   selector: 'app-mobile-bottom-navigation',
   templateUrl: './bottom-navigation.component.html',
@@ -10,7 +13,8 @@ import { MobileBottomNavOptionsType } from '../../../../interfaces';
 export class BottomNavigationComponent implements OnInit {
   constructor(
     private navbarService: NavbarService,
-    private appService: AppService
+    private appService: AppService,
+    private store: Store<any>
   ) {}
   isMobileSignInMenuOpen?: boolean;
   isMobileMenuOpen?: boolean;
@@ -21,8 +25,8 @@ export class BottomNavigationComponent implements OnInit {
     this.appService.isMobileSignInMenuOpen.subscribe((isOpen: boolean) => {
       this.isMobileSignInMenuOpen = isOpen;
     });
-    this.appService.isMobileMenuOpen.subscribe((isOpen: boolean) => {
-      this.isMobileMenuOpen = isOpen;
-    });
+    this.store.select('isMobileMenuOpen').subscribe((res) => {
+      this.isMobileMenuOpen = res;
+    })
   }
 }

@@ -3,6 +3,9 @@ import { Component } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { AppService } from 'src/app/app.service';
 
+//ngrx
+import { Store } from '@ngrx/store';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,9 +16,11 @@ export class HomeComponent {
   currentScreenSize?: string;
   isMobileSignInMenuOpen?: boolean;
   isMobileMenuOpen?: boolean;
+
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private appService: AppService
+    private appService: AppService,
+    private store: Store<any>
   ) {}
 
   ngOnInit() {
@@ -43,8 +48,8 @@ export class HomeComponent {
     this.appService.isMobileSignInMenuOpen.subscribe((isOpen: any) => {
       this.isMobileSignInMenuOpen = isOpen;
     });
-    this.appService.isMobileMenuOpen.subscribe((isOpen: boolean) => {
-      this.isMobileMenuOpen = isOpen;
+    this.store.select('isMobileMenuOpen').subscribe((res) => {
+      this.isMobileMenuOpen = res;
     });
   }
 

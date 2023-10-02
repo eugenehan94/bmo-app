@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { FooterCaptionsType } from 'src/app/components/_shared/interfaces';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { AppService } from 'src/app/app.service';
+
+//ngrx
+import { Store } from '@ngrx/store';
+
 @Component({
   selector: 'app-business-home',
   templateUrl: './home.component.html',
@@ -10,7 +14,8 @@ import { AppService } from 'src/app/app.service';
 export class BusinessHomeComponent {
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private appService: AppService
+    private appService: AppService,
+    private store: Store<any>
   ) {}
 
   currentScreenSize?: string;
@@ -43,9 +48,10 @@ export class BusinessHomeComponent {
     this.appService.isMobileSignInMenuOpen.subscribe((isOpen: any) => {
       this.isMobileSignInMenuOpen = isOpen;
     });
-    this.appService.isMobileMenuOpen.subscribe((isOpen: boolean) => {
-      this.isMobileMenuOpen = isOpen;
-    });
+
+    this.store.select('isMobileMenuOpen').subscribe((res) => {
+      this.isMobileMenuOpen = res;
+    })
   }
 
   handleSkipNav(event: any, section: string): void {
