@@ -7,8 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialDesignModule } from './material-design/material-design.module';
 // https://angular.io/guide/image-directive
 import { NgOptimizedImage } from '@angular/common';
-// A service with all shared data - no need for prop drilling
-import { AppService } from './app.service';
+
 import { AppComponent } from './app.component';
 // @NOTE: Refer to 'declaration' folder for specific component imports
 // Page imports
@@ -26,6 +25,7 @@ import { FooterComponent } from './components/_shared/footer/footer.component';
 // ngrx
 import { StoreModule } from '@ngrx/store';
 import { IsMobileMenuOpenReducer } from './store/app/reducers/app.reducer';
+import { IsMobileSignInMenuOpenReducer } from './store/app/reducers/app.reducer';
 
 @NgModule({
   declarations: [
@@ -43,9 +43,12 @@ import { IsMobileMenuOpenReducer } from './store/app/reducers/app.reducer';
     BrowserAnimationsModule,
     MaterialDesignModule,
     NgOptimizedImage,
-    StoreModule.forRoot({ isMobileMenuOpen: IsMobileMenuOpenReducer}),
+    StoreModule.forRoot({
+      isMobileMenuOpen: IsMobileMenuOpenReducer,
+      isMobileSignInMenuOpen: IsMobileSignInMenuOpenReducer,
+    }),
   ],
-  providers: [AppService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

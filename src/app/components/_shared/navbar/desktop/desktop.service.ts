@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { AppService } from 'src/app/app.service';
+
+// ngrx
+import { Store } from '@ngrx/store';
+import { setIsMobileSignInMenuOpen } from 'src/app/store/app/actions/app.actions';
+
 @Injectable({
   providedIn: 'root',
 })
 export class DesktopService {
-  constructor(private appService: AppService) {}
+  constructor(private store: Store<any>) {}
 
   private desktopSiteSelectorSource = new BehaviorSubject<boolean>(false);
   private desktopCountrySelector = new BehaviorSubject<boolean>(false);
@@ -23,7 +27,7 @@ export class DesktopService {
   setIsSelectedSiteOpen(isOpen: boolean) {
     this.desktopCountrySelector.next(false);
     this.desktopLanguageSelectorSource.next(false);
-    this.appService.setIsMobileSignInMenuOpen(false);
+    this.store.dispatch(setIsMobileSignInMenuOpen({isOpen: false}))
     this.desktopSiteSelectorSource.next(isOpen);
   }
 
@@ -33,7 +37,7 @@ export class DesktopService {
   setIsCountrySelectMenuOpen(isOpen: boolean) {
     this.desktopSiteSelectorSource.next(false);
     this.desktopLanguageSelectorSource.next(false);
-    this.appService.setIsMobileSignInMenuOpen(false);
+    this.store.dispatch(setIsMobileSignInMenuOpen({isOpen: false}))
     this.desktopCountrySelector.next(isOpen);
   }
 
@@ -43,11 +47,11 @@ export class DesktopService {
   setIsLanguageSelectMenuOpen(isOpen: boolean) {
     this.desktopCountrySelector.next(false);
     this.desktopSiteSelectorSource.next(false);
-    this.appService.setIsMobileSignInMenuOpen(false);
+    this.store.dispatch(setIsMobileSignInMenuOpen({isOpen: false}))
     this.desktopLanguageSelectorSource.next(isOpen);
   }
 
-  // NOTE: Closes the three selectors on desktop - b/c 
+  // NOTE: Closes the three selectors on desktop - b/c
   // the sign in state is stored elsewhere and is shared with all screen sizes
   setCloseAll() {
     this.desktopCountrySelector.next(false);

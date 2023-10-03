@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from 'src/app/app.service';
 import { NavbarService } from 'src/app/components/_shared/navbar/navbar.service';
 import { DesktopService } from 'src/app/components/_shared/navbar/desktop/desktop.service';
 import { SignInMenuOptionsType } from 'src/app/components/_shared/interfaces';
+
+// ngrx
+import { Store } from '@ngrx/store';
+import { setIsMobileSignInMenuOpen } from 'src/app/store/app/actions/app.actions';
+
 @Component({
   selector: 'app-desktop-sign-in',
   templateUrl: './sign-in.component.html',
@@ -11,20 +15,22 @@ import { SignInMenuOptionsType } from 'src/app/components/_shared/interfaces';
 export class DesktopSignInComponent implements OnInit {
   constructor(
     private navbarService: NavbarService,
-    private appService: AppService,
-    private desktopService: DesktopService
+    private desktopService: DesktopService,
+    private store: Store<any>
   ) {}
   isSigninMenuOpen?: boolean;
   signInMenuOptions: SignInMenuOptionsType[] =
     this.navbarService.signInMenuOptions;
 
   ngOnInit(): void {
-    this.appService.isMobileSignInMenuOpen.subscribe((isOpen: boolean) => {
-      this.isSigninMenuOpen = isOpen;
+    this.store.select('isMobileSignInMenuOpen').subscribe((res) => {
+      this.isSigninMenuOpen = res;
     });
   }
   handleSigninMenuClick(): void {
     this.desktopService.setCloseAll();
-    this.appService.setIsMobileSignInMenuOpen(!this.isSigninMenuOpen);
+    this.store.dispatch(
+      setIsMobileSignInMenuOpen({ isOpen: !this.isSigninMenuOpen })
+    );
   }
 }

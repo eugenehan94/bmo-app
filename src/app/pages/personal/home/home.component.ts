@@ -1,7 +1,6 @@
 // Set own breakpoints: https://stackoverflow.com/questions/73561379/customize-angular-layout-breakpoints
 import { Component } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { AppService } from 'src/app/app.service';
 
 //ngrx
 import { Store } from '@ngrx/store';
@@ -19,7 +18,6 @@ export class HomeComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private appService: AppService,
     private store: Store<any>
   ) {}
 
@@ -45,8 +43,8 @@ export class HomeComponent {
         }
       });
 
-    this.appService.isMobileSignInMenuOpen.subscribe((isOpen: any) => {
-      this.isMobileSignInMenuOpen = isOpen;
+    this.store.select('isMobileSignInMenuOpen').subscribe((res) => {
+      this.isMobileSignInMenuOpen = res;
     });
     this.store.select('isMobileMenuOpen').subscribe((res) => {
       this.isMobileMenuOpen = res;
