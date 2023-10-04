@@ -20,8 +20,8 @@ export class SignInComponent implements OnInit {
     this.navbarService.signInMenuOptions;
 
   ngOnInit(): void {
-    this.store.select('isMobileSignInMenuOpen').subscribe((res) => {
-      this.isMobileSignInMenuOpen = res;
+    this.store.select('navbarReducer').subscribe((res) => {
+      this.isMobileSignInMenuOpen = res.isMobileSignInMenuOpen;
     })
   }
   handleSignInMenuClick(): void {

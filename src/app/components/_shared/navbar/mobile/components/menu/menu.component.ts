@@ -11,8 +11,8 @@ export class MenuComponent implements OnInit {
 
   isMobileMenuOpen?: boolean;
   ngOnInit(): void {
-    this.store.select('isMobileMenuOpen').subscribe((res) => {
-      this.isMobileMenuOpen = res;
+    this.store.select('navbarReducer').subscribe((res) => {
+      this.isMobileMenuOpen = res.isMobileMenuOpen;
     });
   }
 }

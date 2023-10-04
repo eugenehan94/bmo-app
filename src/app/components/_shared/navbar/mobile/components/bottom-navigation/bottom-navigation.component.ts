@@ -20,11 +20,9 @@ export class BottomNavigationComponent implements OnInit {
     this.navbarService.mobileBottomNavOptions;
 
   ngOnInit(): void {
-    this.store.select('isMobileSignInMenuOpen').subscribe((res) => {
-      this.isMobileSignInMenuOpen = res;
-    });
-    this.store.select('isMobileMenuOpen').subscribe((res) => {
-      this.isMobileMenuOpen = res;
+    this.store.select('navbarReducer').subscribe((res) => {
+      this.isMobileMenuOpen = res.isMobileMenuOpen;
+      this.isMobileSignInMenuOpen = res.isMobileSignInMenuOpen;
     });
   }
 }

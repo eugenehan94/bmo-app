@@ -17,9 +17,9 @@ export class MediumHamburgerMenuComponent implements OnInit {
   isMediumMenuOpen?: any;
 
   ngOnInit(): void {
-    this.store.select('isMobileMenuOpen').subscribe((res) => {
-      this.isMediumMenuOpen = res;
-    });
+    this.store.select('navbarReducer').subscribe((res)=> {
+      this.isMediumMenuOpen = res.isMobileMenuOpen;
+    })
   }
 
   handleMenuClick(): void {

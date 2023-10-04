@@ -24,9 +24,7 @@ import { FooterComponent } from './components/_shared/footer/footer.component';
 
 // ngrx
 import { StoreModule } from '@ngrx/store';
-import { IsMobileMenuOpenReducer } from './store/app/reducers/app.reducer';
-import { IsMobileSignInMenuOpenReducer } from './store/app/reducers/app.reducer';
-
+import { NavbarReducer } from './store/app/reducers/app.reducer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,8 +42,7 @@ import { IsMobileSignInMenuOpenReducer } from './store/app/reducers/app.reducer'
     MaterialDesignModule,
     NgOptimizedImage,
     StoreModule.forRoot({
-      isMobileMenuOpen: IsMobileMenuOpenReducer,
-      isMobileSignInMenuOpen: IsMobileSignInMenuOpenReducer,
+      navbarReducer: NavbarReducer,
     }),
   ],
   providers: [],
