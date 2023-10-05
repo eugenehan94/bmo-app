@@ -13,10 +13,7 @@
       ><span>Sign In</span></span
     >
   </button>
-  <div
-    class="mobile-signin-btn-menu-container"
-    [ngClass]="isMobileSignInMenuOpen ? ' open' : null"
-  >
+  <div #MobileSigninMenuContainer class="mobile-signin-btn-menu-container">
     <div class="mobile-signin-btn-menu-inner-container">
       <div class="mobile-online-banking-signin-container">
         <a

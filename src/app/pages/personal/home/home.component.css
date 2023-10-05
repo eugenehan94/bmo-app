@@ -36,7 +36,10 @@
   position: relative;
   height: 533px;
   overflow: hidden;
-  display: none;
+  /* @TODO: This display is causing a shaking motion when opening up menu,
+  add to not allow the menu to be tab into when closed
+  */
+  /* display: none; */
 }
 
 .home-page-content-wrapper.mobile-menu-open {

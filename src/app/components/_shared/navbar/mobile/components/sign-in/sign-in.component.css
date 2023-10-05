@@ -37,23 +37,40 @@
   height: auto;
   min-height: calc(100vh - 56.9886px);
   background-color: #f5f6f7;
-  transition: width 0.2s ease 0s;
   box-sizing: border-box;
   position: absolute;
-  display: flex;
-  flex-direction: column;
+  display: none;
   z-index: 801;
-  top: 57px;
+  top: 64px;
   right: 0px;
   height: 100vh;
   width: 0;
   overflow-x: hidden;
-  visibility: hidden;
 }
-
 .mobile-signin-btn-menu-container.open {
   width: 100%;
-  visibility: visible;
+  display: flex;
+  animation: slide-in-left 200ms;
+}
+.mobile-signin-btn-menu-container.closing {
+  animation: slide-out-left 200ms;
+  width: 0;
+}
+@keyframes slide-in-left {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
 }
 
 .mobile-signin-btn-menu-inner-container {
