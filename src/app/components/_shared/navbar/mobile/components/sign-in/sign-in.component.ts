@@ -30,8 +30,12 @@ export class SignInComponent implements OnInit {
   }
   handleSignInMenuClick(): void {
     // Closes the Menu option if it is open
+    const mobileMenu = document.querySelector(
+      '.mobile-menu-btn-menu-container.open'
+    );
+    mobileMenu?.classList.remove('open');
     this.store.dispatch(setIsMobileMenuOpen({ isOpen: false }));
-   
+
     const mobileSigninMenu = this.mobileSigninMenuContainer.nativeElement;
     mobileSigninMenu.classList.add('open');
     // https://codepen.io/kevinpowell/pen/QWaBeGm

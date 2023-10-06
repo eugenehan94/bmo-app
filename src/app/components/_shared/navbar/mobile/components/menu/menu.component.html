@@ -1,7 +1,4 @@
-<div
-  class="mobile-menu-btn-menu-container"
-  [ngClass]="isMobileMenuOpen ? 'open' : null"
->
+<div #MobileMenuContainer class="mobile-menu-btn-menu-container">
   <div class="mobile-menu-btn-menu-inner-container">
     <div class="mobile-menu-btn-menu-options-container">
       <app-mobile-menu-search-bar></app-mobile-menu-search-bar>
@@ -11,4 +8,5 @@
     </div>
     <app-mobile-menu-inner-menu></app-mobile-menu-inner-menu>
   </div>
+  <app-mobile-bottom-navigation></app-mobile-bottom-navigation>
 </div>

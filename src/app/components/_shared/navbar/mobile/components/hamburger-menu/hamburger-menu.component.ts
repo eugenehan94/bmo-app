@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MenuComponent } from '../menu/menu.component';
 import { Store } from '@ngrx/store';
 import {
   setIsMobileMenuOpen,
@@ -15,6 +15,7 @@ export class HamburgerMenuComponent implements OnInit {
   constructor(private store: Store<any>) {}
 
   isMobileMenuOpen?: any;
+  @ViewChild(MenuComponent) child: any;
 
   ngOnInit(): void {
     this.store.select('navbarReducer').subscribe((res) => {
@@ -24,9 +25,11 @@ export class HamburgerMenuComponent implements OnInit {
 
   handleClick(): void {
     // Close the Sign In menu if it is open
-    this.store.dispatch(setIsMobileSignInMenuOpen({ isOpen: false }));
-    this.store.dispatch(
-      setIsMobileMenuOpen({ isOpen: !this.isMobileMenuOpen })
-    );
+    // this.store.dispatch(setIsMobileSignInMenuOpen({ isOpen: false }));
+    // this.store.dispatch(
+    //   setIsMobileMenuOpen({ isOpen: !this.isMobileMenuOpen })
+    // );
+    console.log("Hamburger Menu CLICKED");
+    this.child.handleMenuClick();
   }
 }

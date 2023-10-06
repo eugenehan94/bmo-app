@@ -4,18 +4,40 @@
   transition: width 0.2s ease 0s;
   box-sizing: border-box;
   position: absolute;
-  display: flex;
+  display: none;
   z-index: 801;
   top: 55px;
   right: 0px;
   width: 0;
   overflow-x: hidden;
-  visibility: hidden;
 }
 .mobile-menu-btn-menu-container.open {
   width: 100%;
-  visibility: visible;
+  display: flex;
+  animation: slide-in-left 200ms;
 }
+
+.mobile-menu-btn-menu-container.closing {
+  animation: slide-out-left 200ms;
+  width: 0;
+}
+@keyframes slide-in-left {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
 .mobile-menu-btn-menu-inner-container {
   transition: width 0.2s ease 0s;
   border-top: 1px solid #d9dce1;
