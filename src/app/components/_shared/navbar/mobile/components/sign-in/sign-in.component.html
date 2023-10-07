@@ -4,6 +4,7 @@
     [attr.aria-expanded]="isMobileSignInMenuOpen"
     class="signin-btn"
     (click)="handleSignInMenuClick()"
+    id="signin-btn"
   >
     <span *ngIf="isMobileSignInMenuOpen">
       <mat-icon aria-hidden="true">close</mat-icon><span>Close</span></span
@@ -61,6 +62,11 @@
         </li>
       </ul>
       <app-mobile-bottom-navigation></app-mobile-bottom-navigation>
+      <button
+        (focus)="backToSignInBtn()"
+        aria-hidden="true"
+        class="mobile-signin-back-to-signin-btn"
+      ></button>
     </div>
   </div>
 </div>

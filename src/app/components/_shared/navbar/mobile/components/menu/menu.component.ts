@@ -27,7 +27,9 @@ export class MenuComponent implements OnInit {
   // @TODO: Have parent component access this method using ViewChild in parent
   handleMenuClick(): void {
     // Closes the mobile sign-in menu if it is open
-    const signInMenu = document.querySelector('.mobile-signin-btn-menu-container.open');
+    const signInMenu = document.querySelector(
+      '.mobile-signin-btn-menu-container.open'
+    );
     signInMenu?.classList.remove('open');
     this.store.dispatch(setIsMobileSignInMenuOpen({ isOpen: false }));
 
@@ -50,5 +52,8 @@ export class MenuComponent implements OnInit {
     } else {
       this.store.dispatch(setIsMobileMenuOpen({ isOpen: true }));
     }
+  }
+  backToMenuBtn(): void {
+    document.getElementById('mobile-menu-btn')?.focus();
   }
 }

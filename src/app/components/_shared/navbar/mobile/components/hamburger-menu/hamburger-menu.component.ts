@@ -1,10 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MenuComponent } from '../menu/menu.component';
+
+// ngrx
 import { Store } from '@ngrx/store';
-import {
-  setIsMobileMenuOpen,
-  setIsMobileSignInMenuOpen,
-} from 'src/app/store/app/actions/app.actions';
 
 @Component({
   selector: 'app-mobile-hamburger-menu',
@@ -24,12 +22,6 @@ export class HamburgerMenuComponent implements OnInit {
   }
 
   handleClick(): void {
-    // Close the Sign In menu if it is open
-    // this.store.dispatch(setIsMobileSignInMenuOpen({ isOpen: false }));
-    // this.store.dispatch(
-    //   setIsMobileMenuOpen({ isOpen: !this.isMobileMenuOpen })
-    // );
-    console.log("Hamburger Menu CLICKED");
     this.child.handleMenuClick();
   }
 }

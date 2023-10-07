@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavbarService } from 'src/app/components/_shared/navbar/navbar.service';
 import { SignInMenuOptionsType } from 'src/app/components/_shared/interfaces';
 
@@ -24,6 +24,9 @@ export class MediumSignInComponent implements OnInit {
   signInMenuOptions: SignInMenuOptionsType[] =
     this.navbarService.signInMenuOptions;
 
+  @ViewChild('MediumSigninMenuContainer') mediumSigninMenuContainer: any;
+  @ViewChild('MediumSigninMenuOverlay') mediumSigninMenuOverlay: any;
+
   ngOnInit(): void {
     this.store.select('navbarReducer').subscribe((res) => {
       this.isMediumSignInMenuOpen = res.isMobileSignInMenuOpen;
@@ -31,9 +34,39 @@ export class MediumSignInComponent implements OnInit {
   }
 
   handleSignInClick(): void {
-    this.store.dispatch(setIsMobileMenuOpen({ isOpen: false }));
-    this.store.dispatch(
-      setIsMobileSignInMenuOpen({ isOpen: !this.isMediumSignInMenuOpen })
+    // Closes the Menu option if it is open
+    const mobileMenu = document.querySelector(
+      '.mobile-menu-btn-menu-container.open'
     );
+    mobileMenu?.classList.remove('open');
+    this.store.dispatch(setIsMobileMenuOpen({ isOpen: false }));
+
+    const mediumSigninMenu = this.mediumSigninMenuContainer.nativeElement;
+    const mediumSigninMenuOverlay = this.mediumSigninMenuOverlay.nativeElement;
+    mediumSigninMenu.classList.add('open');
+    mediumSigninMenuOverlay.classList.add('open');
+    // https://codepen.io/kevinpowell/pen/QWaBeGm
+    if (this.isMediumSignInMenuOpen) {
+      mediumSigninMenuOverlay.classList.add('closing');
+      mediumSigninMenu.classList.add('closing');
+      // @NOTE: Waits for closing animation to finish - then component restarts
+      // to original CSS with display: none. Thus, animation and tab-able protected.
+      mediumSigninMenu.addEventListener(
+        'animationend',
+        () => {
+          mediumSigninMenu.classList.remove('closing');
+          mediumSigninMenu.classList.remove('open');
+          mediumSigninMenuOverlay.classList.remove('closing');
+          mediumSigninMenuOverlay.classList.remove('open');
+          this.store.dispatch(setIsMobileSignInMenuOpen({ isOpen: false }));
+        },
+        { once: true }
+      );
+    } else {
+      this.store.dispatch(setIsMobileSignInMenuOpen({ isOpen: true }));
+    }
+  }
+  backToSignInBtn(): void {
+    document.getElementById('signin-btn')?.focus();
   }
 }

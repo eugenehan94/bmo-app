@@ -56,4 +56,8 @@ export class SignInComponent implements OnInit {
       this.store.dispatch(setIsMobileSignInMenuOpen({ isOpen: true }));
     }
   }
+
+  backToSignInBtn(): void {
+    document.getElementById('signin-btn')?.focus();
+  }
 }

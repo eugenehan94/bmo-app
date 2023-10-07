@@ -6,7 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./menu.component.css'],
 })
 export class MediumMenuComponent {
-  constructor() {
-  }
+  constructor() {}
+  // @TODO: Get the mobile menu state from store and remove the parent-child input
   @Input() isMediumMenuOpen?: boolean;
+
+  backToMenuBtn(): void {
+    document.getElementById('medium-menu-btn')?.focus();
+  }
 }

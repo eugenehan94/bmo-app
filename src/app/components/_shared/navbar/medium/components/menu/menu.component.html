@@ -1,4 +1,5 @@
 <div class="medium-menu-container" [ngClass]="isMediumMenuOpen ? 'open' : null">
+  <div class="medium-menu-overlay"></div>
   <div
     class="medium-menu-content-container"
     [ngClass]="isMediumMenuOpen ? 'open' : null"
@@ -11,5 +12,9 @@
     </div>
     <app-mobile-menu-inner-menu></app-mobile-menu-inner-menu>
   </div>
-  <div class="medium-menu-overlay"></div>
+  <!-- <button
+    (focus)="backToMenuBtn()"
+    aria-hidden="true"
+    class="medium-menu-btn-back-to-menu-btn"
+  ></button> -->
 </div>

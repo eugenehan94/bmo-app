@@ -1,5 +1,5 @@
 <div class="medium-signin-container">
-  <button class="signin-btn" (click)="handleSignInClick()">
+  <button class="signin-btn" id="signin-btn" (click)="handleSignInClick()">
     <span *ngIf="isMediumSignInMenuOpen">
       <mat-icon>close</mat-icon><span>Close</span></span
     >
@@ -8,8 +8,8 @@
     >
   </button>
   <div
+    #MediumSigninMenuContainer
     class="medium-signin-menu-container"
-    [ngClass]="isMediumSignInMenuOpen ? 'open' : null"
   >
     <div
       class="medium-signin-menu-content-container"
@@ -62,6 +62,12 @@
         </li>
       </ul>
     </div>
-    <div class="medium-signin-menu-overlay"></div>
+    <div #MediumSigninMenuOverlay class="medium-signin-menu-overlay"></div>
+    <app-medium-bottom-navigation></app-medium-bottom-navigation>
+    <button
+      (focus)="backToSignInBtn()"
+      aria-hidden="true"
+      class="mobile-signin-back-to-signin-btn"
+    ></button>
   </div>
 </div>

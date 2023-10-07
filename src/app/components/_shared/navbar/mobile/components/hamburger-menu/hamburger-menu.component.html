@@ -3,6 +3,7 @@
     aria-label="Toggle menu navigation"
     [attr.aria-expanded]="isMobileMenuOpen"
     class="mobile-menu-btn"
+    id="mobile-menu-btn"
     (click)="handleClick()"
   >
     <span class="close-container" [ngClass]="isMobileMenuOpen ? 'open' : null">
