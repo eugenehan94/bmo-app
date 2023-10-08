@@ -10,6 +10,7 @@
   <div
     #MediumSigninMenuContainer
     class="medium-signin-menu-container"
+    [ngClass]="isMediumSignInMenuOpen ? 'open' : null"
   >
     <div
       class="medium-signin-menu-content-container"
@@ -62,7 +63,11 @@
         </li>
       </ul>
     </div>
-    <div #MediumSigninMenuOverlay class="medium-signin-menu-overlay"></div>
+    <div
+      #MediumSigninMenuOverlay
+      class="medium-signin-menu-overlay"
+      [ngClass]="isMediumSignInMenuOpen ? 'open' : null"
+    ></div>
     <app-medium-bottom-navigation></app-medium-bottom-navigation>
     <button
       (focus)="backToSignInBtn()"

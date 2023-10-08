@@ -1,11 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MediumMenuComponent } from '../menu/menu.component';
 
 //ngrx
 import { Store } from '@ngrx/store';
-import {
-  setIsMobileMenuOpen,
-  setIsMobileSignInMenuOpen,
-} from 'src/app/store/app/actions/app.actions';
 
 @Component({
   selector: 'app-medium-hamburger-menu',
@@ -15,17 +12,14 @@ import {
 export class MediumHamburgerMenuComponent implements OnInit {
   constructor(private store: Store<any>) {}
   isMediumMenuOpen?: any;
-
+  @ViewChild(MediumMenuComponent) child: any;
   ngOnInit(): void {
-    this.store.select('navbarReducer').subscribe((res)=> {
+    this.store.select('navbarReducer').subscribe((res) => {
       this.isMediumMenuOpen = res.isMobileMenuOpen;
-    })
+    });
   }
 
   handleMenuClick(): void {
-    this.store.dispatch(setIsMobileSignInMenuOpen({ isOpen: false }));
-    this.store.dispatch(
-      setIsMobileMenuOpen({ isOpen: !this.isMediumMenuOpen })
-    );
+    this.child.handleMenuClick();
   }
 }

@@ -1,5 +1,12 @@
-<div class="medium-menu-container" [ngClass]="isMediumMenuOpen ? 'open' : null">
-  <div class="medium-menu-overlay"></div>
+<div
+  #MediumMenuContainer
+  class="medium-menu-container"
+  [ngClass]="isMediumMenuOpen ? 'open' : null"
+>
+  <div
+    class="medium-menu-overlay"
+    [ngClass]="isMediumMenuOpen ? 'open' : null"
+  ></div>
   <div
     class="medium-menu-content-container"
     [ngClass]="isMediumMenuOpen ? 'open' : null"
@@ -12,9 +19,13 @@
     </div>
     <app-mobile-menu-inner-menu></app-mobile-menu-inner-menu>
   </div>
-  <!-- <button
+  <!-- @NOTE: Added directive here because two bottom-nav will show in signin menu -->
+  <app-medium-bottom-navigation
+    *ngIf="isMediumMenuOpen"
+  ></app-medium-bottom-navigation>
+  <button
     (focus)="backToMenuBtn()"
     aria-hidden="true"
     class="medium-menu-btn-back-to-menu-btn"
-  ></button> -->
+  ></button>
 </div>

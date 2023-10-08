@@ -1,4 +1,8 @@
-<div #MobileMenuContainer class="mobile-menu-btn-menu-container">
+<div
+  #MobileMenuContainer
+  class="mobile-menu-btn-menu-container"
+  [ngClass]="isMobileMenuOpen ? 'open' : null"
+>
   <div class="mobile-menu-btn-menu-inner-container">
     <div class="mobile-menu-btn-menu-options-container">
       <app-mobile-menu-search-bar></app-mobile-menu-search-bar>

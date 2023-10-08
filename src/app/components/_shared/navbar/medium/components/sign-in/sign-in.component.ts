@@ -34,11 +34,8 @@ export class MediumSignInComponent implements OnInit {
   }
 
   handleSignInClick(): void {
-    // Closes the Menu option if it is open
-    const mobileMenu = document.querySelector(
-      '.mobile-menu-btn-menu-container.open'
-    );
-    mobileMenu?.classList.remove('open');
+    const mediumMenu = document.querySelector('.medium-menu-container.open');
+    mediumMenu?.classList.remove('open');
     this.store.dispatch(setIsMobileMenuOpen({ isOpen: false }));
 
     const mediumSigninMenu = this.mediumSigninMenuContainer.nativeElement;

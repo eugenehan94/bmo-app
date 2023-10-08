@@ -11,9 +11,36 @@
   z-index: 801;
   width: 0;
 }
+
 .medium-menu-container.open {
   width: 100%;
+  display: flex;
+  animation: slide-in-left 200ms;
 }
+
+.medium-menu-container.closing {
+  animation: slide-out-left 30ms;
+  width: 0;
+}
+@keyframes slide-in-left {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+
+
 .medium-menu-content-container {
   width: 0%;
   transition: width 0.2s;

@@ -24,7 +24,7 @@ export class MenuComponent implements OnInit {
     });
   }
 
-  // @TODO: Have parent component access this method using ViewChild in parent
+  // @NOTE: Parent component access this method using ViewChild
   handleMenuClick(): void {
     // Closes the mobile sign-in menu if it is open
     const signInMenu = document.querySelector(
