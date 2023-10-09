@@ -1,13 +1,17 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeroService } from './hero.service';
 import { HeroBannerOptionsType } from 'src/app/components/_shared/interfaces';
+
+//ngrx
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-personal-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css'],
 })
-export class HeroComponent {
+export class HeroComponent implements OnInit {
+  constructor(private service: HeroService, private store: Store<any>) {}
   // Randomly select one of the objects from the array of objects heroBannerOptions
   heroBannerOptions: HeroBannerOptionsType[] = this.service.heroBannerOptions;
   randomIndex: number = Math.floor(
@@ -16,7 +20,11 @@ export class HeroComponent {
   selectedBanner: HeroBannerOptionsType =
     this.heroBannerOptions[this.randomIndex];
 
-  @Input() currentScreenSize?: string;
+  currentScreenSize?: string;
 
-  constructor(private service: HeroService) {}
+  ngOnInit(): void {
+      this.store.select('screenSizeReducer').subscribe((res) => {
+        this.currentScreenSize = res.currentScreenSize;
+      })
+  }
 }

@@ -5,6 +5,7 @@ import * as AppActions from '../actions/app.actions';
 export const InitialState = {
   isMobileMenuOpen: false,
   isMobileSignInMenuOpen: false,
+  currentScreenSize: '',
 };
 
 export const NavbarReducer = createReducer(
@@ -16,5 +17,13 @@ export const NavbarReducer = createReducer(
   on(AppActions.setIsMobileSignInMenuOpen, (state, props) => ({
     ...state,
     isMobileSignInMenuOpen: props.isOpen,
+  }))
+);
+
+export const ScreenSizeReducer = createReducer(
+  InitialState,
+  on(AppActions.setScreenSize, (state, props) => ({
+    ...state,
+    currentScreenSize: props.screenSize,
   }))
 );

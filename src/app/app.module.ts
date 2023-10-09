@@ -24,7 +24,10 @@ import { FooterComponent } from './components/_shared/footer/footer.component';
 
 // ngrx
 import { StoreModule } from '@ngrx/store';
-import { NavbarReducer } from './store/app/reducers/app.reducer';
+import {
+  NavbarReducer,
+  ScreenSizeReducer,
+} from './store/app/reducers/app.reducer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +46,7 @@ import { NavbarReducer } from './store/app/reducers/app.reducer';
     NgOptimizedImage,
     StoreModule.forRoot({
       navbarReducer: NavbarReducer,
+      screenSizeReducer: ScreenSizeReducer,
     }),
   ],
   providers: [],

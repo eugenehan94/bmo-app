@@ -26,18 +26,10 @@
     }"
     role="main"
   >
-    <app-personal-hero
-      [currentScreenSize]="currentScreenSize"
-    ></app-personal-hero>
-    <app-personal-products-tabs
-      [currentScreenSize]="currentScreenSize"
-    ></app-personal-products-tabs>
-    <app-person-download-banner
-      [currentScreenSize]="currentScreenSize"
-    ></app-person-download-banner>
-    <app-personal-where-to-begin
-      [currentScreenSize]="currentScreenSize"
-    ></app-personal-where-to-begin>
+    <app-personal-hero></app-personal-hero>
+    <app-personal-products-tabs></app-personal-products-tabs>
+    <app-person-download-banner></app-person-download-banner>
+    <app-personal-where-to-begin></app-personal-where-to-begin>
   </main>
   <footer
     role="contentinfo"
@@ -52,8 +44,6 @@
             this.currentScreenSize === 'Medium'))
     }"
   >
-    <app-personal-footer
-      [currentScreenSize]="currentScreenSize"
-    ></app-personal-footer>
+    <app-personal-footer></app-personal-footer>
   </footer>
 </div>

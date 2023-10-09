@@ -1,15 +1,25 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WhereToBeginService } from './where-to-begin.service';
 import { CardContentType } from 'src/app/components/_shared/interfaces';
+
+//ngrx
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-personal-where-to-begin',
   templateUrl: './where-to-begin.component.html',
   styleUrls: ['./where-to-begin.component.css'],
 })
-export class WhereToBeginComponent {
+export class WhereToBeginComponent implements OnInit {
+  constructor(private service: WhereToBeginService, private store: Store<any>) {}
   title: string = 'Not sure where to begin? We’ll help you choose';
   cardDatas: CardContentType[] = this.service.cardContent;
-  @Input() currentScreenSize?: string;
-  constructor(private service: WhereToBeginService) {}
+  currentScreenSize?: string;
+
+  ngOnInit(): void {
+    this.store.select('screenSizeReducer').subscribe((res) => {
+      this.currentScreenSize = res.currentScreenSize;
+    })
+  }
+
 }

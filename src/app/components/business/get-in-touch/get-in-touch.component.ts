@@ -1,12 +1,10 @@
-import {
-  Component,
-  Input,
-  OnInit,
-  ViewChildren,
-  AfterViewInit,
-} from '@angular/core';
+import { Component, OnInit, ViewChildren, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GetInTouchService } from './get-in-touch.service';
+
+// ngrx
+import { Store } from '@ngrx/store';
+
 @Component({
   selector: 'app-business-get-in-touch',
   templateUrl: './get-in-touch.component.html',
@@ -16,16 +14,20 @@ export class BusinessGetInTouchComponent implements OnInit, AfterViewInit {
   constructor(
     private getInTouchService: GetInTouchService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private store: Store<any>
   ) {}
 
   buttonsData?: any;
   buttonsDisplayContents?: any;
   selectedButton?: number;
   @ViewChildren('tabButton') buttonsList?: any;
-  @Input() currentScreenSize?: string;
+  currentScreenSize?: string;
 
   ngOnInit(): void {
+    this.store.select('screenSizeReducer').subscribe((res) => {
+      this.currentScreenSize = res.currentScreenSize;
+    });
     this.buttonsData = this.getInTouchService.buttonsData;
     this.buttonsDisplayContents = this.getInTouchService.buttonsDisplayContents;
   }

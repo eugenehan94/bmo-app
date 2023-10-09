@@ -14,18 +14,11 @@
     >
   </header>
   <main>
-    <app-business-hero
-      [currentScreenSize]="currentScreenSize"
-    ></app-business-hero>
-    <app-business-products-tabs
-      [currentScreenSize]="currentScreenSize"
-    ></app-business-products-tabs>
-    <app-business-get-in-touch [currentScreenSize]="currentScreenSize"></app-business-get-in-touch>
-    <app-business-download-banner [currentScreenSize]="currentScreenSize">
-    </app-business-download-banner>
-    <app-business-where-to-begin
-      [currentScreenSize]="currentScreenSize"
-    ></app-business-where-to-begin>
+    <app-business-hero></app-business-hero>
+    <app-business-products-tabs></app-business-products-tabs>
+    <app-business-get-in-touch></app-business-get-in-touch>
+    <app-business-download-banner> </app-business-download-banner>
+    <app-business-where-to-begin></app-business-where-to-begin>
   </main>
   <footer
     role="contentinfo"
@@ -40,8 +33,6 @@
             this.currentScreenSize === 'Medium'))
     }"
   >
-    <app-business-footer
-      [currentScreenSize]="currentScreenSize"
-    ></app-business-footer>
+    <app-business-footer></app-business-footer>
   </footer>
 </div>

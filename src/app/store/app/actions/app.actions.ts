@@ -9,3 +9,8 @@ export const setIsMobileSignInMenuOpen = createAction(
   '[App Component] setIsMobileSignInMenuOpen',
   props<{ isOpen: boolean }>()
 );
+
+export const setScreenSize = createAction(
+  '[App] setScreenSize',
+  props<{ screenSize: string }>()
+);
