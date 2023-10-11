@@ -2,8 +2,17 @@
   <div class="site-selector-wrapper">
     <label class="site-selector-label">Site Selector</label>
     <div
+      tabindex="0"
+      role="combobox"
+      aria-expanded="false"
+      aria-controls="site-selector-dropdown-list"
+      aria-haspopup="listbox"
+      aria-labelledby="site-selector-label"
+      aria-activedescendant
       class="site-select-wrapper open"
-      (click)="handleSelectedSiteMenuClick()"
+      (click)="handleSelectedSiteMenuClick($event)"
+      (keyup.enter)="handleSelectedSiteMenuClick($event)"
+      (keydown.Space)="handleSelectedSiteMenuClick($event)"
       [ngClass]="{ open: isSelectedSiteOpen }"
     >
       <span>{{ selectedSiteOption }}</span>
@@ -15,8 +24,20 @@
         >
       </div>
     </div>
-    <ul class="site-select-list" *ngIf="isSelectedSiteOpen">
-      <li *ngFor="let option of siteOptions">
+    <ul
+      role="listbox"
+      aria-labelledby="site-selector-label"
+      id="site-selector-dropdown-list"
+      class="site-select-list"
+      tabindex="-1"
+      *ngIf="isSelectedSiteOpen"
+    >
+      <li
+        role="option"
+        aria-disabled="false"
+        *ngFor="let option of siteOptions; let i = index"
+        id="{{ 'site-selector_' + i }}"
+      >
         <!-- @TODO: Once all angular pages are set up - we can remove the second a tag. -->
         <a
           *ngIf="option.routerLink"

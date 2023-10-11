@@ -13,5 +13,4 @@ export class SearchBarComponent {
     e.stopPropagation();
     this.isSearchBarOpen = input;
   }
-
 }

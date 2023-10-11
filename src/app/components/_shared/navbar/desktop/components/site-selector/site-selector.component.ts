@@ -23,7 +23,8 @@ export class SiteSelectorComponent implements OnInit {
     });
   }
 
-  handleSelectedSiteMenuClick(): void {
+  handleSelectedSiteMenuClick(event:any): void {
+    event.preventDefault();
     this.desktopService.setIsSelectedSiteOpen(!this.isSelectedSiteOpen);
   }
 }
