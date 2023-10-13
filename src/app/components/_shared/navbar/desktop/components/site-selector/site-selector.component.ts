@@ -13,9 +13,9 @@ export class SiteSelectorComponent implements OnInit {
     private desktopService: DesktopService
   ) {}
   isSelectedSiteOpen?: boolean;
-
   selectedSiteOption: string = 'Personal';
   siteOptions: SiteOptionsType[] = this.navbarService.siteOptions;
+  ariaActiveDescendent?: string;
 
   ngOnInit(): void {
     this.desktopService.isSelectedSiteOpen.subscribe((isOpen: boolean) => {
@@ -26,5 +26,9 @@ export class SiteSelectorComponent implements OnInit {
   handleSelectedSiteMenuClick(event:any): void {
     event.preventDefault();
     this.desktopService.setIsSelectedSiteOpen(!this.isSelectedSiteOpen);
+  }
+
+  optionOnFocus(i:number):void {
+    this.ariaActiveDescendent = 'site-selector_' + i;
   }
 }

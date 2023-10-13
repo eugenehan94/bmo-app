@@ -3,8 +3,11 @@
   [ngClass]="isLanguageSelectMenuOpen ? 'open' : null"
   (click)="handleLanguageSelectMenuClick()"
 >
+  <label class="language-selector-label" id="lang-selector-dropdown-label"
+    >Language Selector</label
+  >
   <div class="language-selector-container">
-    <mat-icon class="language-selector-icon">expand_more</mat-icon>
+    <mat-icon class="language-selector-icon" aria-hidden="true">expand_more</mat-icon>
     <span>EN</span>
   </div>
   <ul

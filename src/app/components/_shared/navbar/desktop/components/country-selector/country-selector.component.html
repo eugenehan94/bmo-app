@@ -4,15 +4,30 @@
       ? 'country-select-container open'
       : 'country-select-container'
   "
-  (click)="handleCountrySelectMenuClick()"
+  (click)="handleCountrySelectMenuClick($event)"
+  (keydown.Space)="handleCountrySelectMenuClick($event)"
+  (keydown.enter)="handleCountrySelectMenuClick($event)"
 >
-  <div class="country-select-inner-container">
+  <label class="country-select-label" id="country-selector-dropdown-label"
+    >Country Selector</label
+  >
+  <div
+    class="country-select-inner-container"
+    [attr.aria-expanded]="isCountrySelectMenuOpen"
+    aria-controls="country-selector-dropdown-list"
+    aria-haspopup="listbox"
+    aria-labelledby="country-selector-dropdown-label"
+    role="combobox"
+    aria-activedescendant
+    tabindex="0"
+  >
     <mat-icon
       [ngClass]="
         isCountrySelectMenuOpen
           ? 'country-select-icon open'
           : 'country-select-icon'
       "
+      aria-hidden="true"
       >expand_more</mat-icon
     >
     <div class="country-select-image-container">
@@ -34,14 +49,26 @@
     "
   >
     <div
-      *ngFor="let countryOption of countryOptions"
+      *ngFor="let countryOption of countryOptions; let i = index"
       class="country-select-option"
+      role="listbox"
+      id="country-selector-dropdown-list"
+      aria-labelledby="country-selector-dropdown-label"
+      tabindex="-1"
     >
-      <div class="country-select-option-wrapper">
-        <span class="country-select-icon-wrapper"
-          ><img src="{{ countryOption.icon }}" alt="" width="25" height="25"
-        /></span>
-        <span>{{ countryOption.country }}</span>
+      <div
+        role="option"
+        id="{{ 'country_selector_' + i }}"
+        aria-selected="true"
+        aria-disabled="true"
+        tabindex="0"
+      >
+        <div class="country-select-option-wrapper">
+          <span class="country-select-icon-wrapper"
+            ><img src="{{ countryOption.icon }}" alt="" width="25" height="25"
+          /></span>
+          <span>{{ countryOption.country }}</span>
+        </div>
       </div>
     </div>
   </div>

@@ -4,11 +4,11 @@
     <div
       tabindex="0"
       role="combobox"
-      aria-expanded="false"
+      [attr.aria-expanded]="isSelectedSiteOpen"
       aria-controls="site-selector-dropdown-list"
       aria-haspopup="listbox"
       aria-labelledby="site-selector-label"
-      aria-activedescendant
+      [attr.aria-activedescendant]="ariaActiveDescendent"
       class="site-select-wrapper open"
       (click)="handleSelectedSiteMenuClick($event)"
       (keyup.enter)="handleSelectedSiteMenuClick($event)"
@@ -32,10 +32,11 @@
       tabindex="-1"
       *ngIf="isSelectedSiteOpen"
     >
+      <!-- https://angular.io/api/common/NgForOf#local-variables -->
       <li
         role="option"
         aria-disabled="false"
-        *ngFor="let option of siteOptions; let i = index"
+        *ngFor="let option of siteOptions; let i = index; let last = last"
         id="{{ 'site-selector_' + i }}"
       >
         <!-- @TODO: Once all angular pages are set up - we can remove the second a tag. -->
@@ -44,6 +45,7 @@
           routerLink="{{ option.routerLink }}"
           target="_blank"
           [attr.aria-label]="option.ariaLabel"
+          (focus)="optionOnFocus(i)"
           >{{ option.title }}</a
         >
         <a
@@ -51,6 +53,7 @@
           href="{{ option.linkHref }}"
           target="_blank"
           [attr.aria-label]="option.ariaLabel"
+          (focus)="optionOnFocus(i)"
           >{{ option.title }}</a
         >
       </li>
