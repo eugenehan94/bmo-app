@@ -6,8 +6,19 @@
   <label class="language-selector-label" id="lang-selector-dropdown-label"
     >Language Selector</label
   >
-  <div class="language-selector-container">
-    <mat-icon class="language-selector-icon" aria-hidden="true">expand_more</mat-icon>
+  <div
+    aria-expanded="false"
+    aria-control="country-selector-dropdown-list"
+    aria-haspopup="listbox"
+    aria-labelledby="lang-selector-dropdown-label"
+    aria-activedescendant
+    role="combobox"
+    tabindex="0"
+    class="language-selector-container"
+  >
+    <mat-icon class="language-selector-icon" aria-hidden="true"
+      >expand_more</mat-icon
+    >
     <span>EN</span>
   </div>
   <ul
