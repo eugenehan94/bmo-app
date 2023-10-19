@@ -18,7 +18,7 @@
     aria-haspopup="listbox"
     aria-labelledby="country-selector-dropdown-label"
     role="combobox"
-    aria-activedescendant
+    [attr.aria-activedescendant]="ariaActiveDescendent"
     tabindex="0"
   >
     <mat-icon
@@ -62,6 +62,7 @@
         aria-selected="true"
         aria-disabled="true"
         tabindex="0"
+        (focus)="optionOnFocus(i)"
       >
         <div class="country-select-option-wrapper">
           <span class="country-select-icon-wrapper"

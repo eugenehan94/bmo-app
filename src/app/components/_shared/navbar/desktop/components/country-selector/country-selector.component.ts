@@ -14,6 +14,7 @@ export class CountrySelectorComponent implements OnInit {
   ) {}
   isCountrySelectMenuOpen?: boolean;
   countryOptions: CountryOptionsType[] = this.navbarService.countryOptions;
+  ariaActiveDescendent?: string = '';
 
   ngOnInit(): void {
     this.desktopService.isCountrySelectMenuOpen.subscribe((isOpen: boolean) => {
@@ -25,5 +26,8 @@ export class CountrySelectorComponent implements OnInit {
     this.desktopService.setIsCountrySelectMenuOpen(
       !this.isCountrySelectMenuOpen
     );
+  }
+  optionOnFocus(number: number): void {
+    this.ariaActiveDescendent = 'country_selector_' + number;
   }
 }

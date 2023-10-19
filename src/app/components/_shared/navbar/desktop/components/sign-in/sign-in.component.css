@@ -73,7 +73,8 @@
   flex-direction: column;
 }
 .signin-btn-online-banking-wrapper {
-  width: 100%;
+  /* width: 100%; */
+  /* padding: 1.5rem 1.25rem 0px; */
 }
 .signin-btn-online-banking-link {
   font-weight: 700;
@@ -87,6 +88,7 @@
   padding: 1.5rem 1.25rem 0px;
   cursor: pointer;
 }
+
 .signin-btn-register-container {
   letter-spacing: 0.25px;
   font-size: 14px;

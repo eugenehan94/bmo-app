@@ -1,17 +1,19 @@
 <div
   class="language-container"
   [ngClass]="isLanguageSelectMenuOpen ? 'open' : null"
-  (click)="handleLanguageSelectMenuClick()"
+  (click)="handleLanguageSelectMenuClick($event)"
+  (keydown.Space)="handleLanguageSelectMenuClick($event)"
+  (keydown.enter)="handleLanguageSelectMenuClick($event)"
 >
   <label class="language-selector-label" id="lang-selector-dropdown-label"
     >Language Selector</label
   >
   <div
-    aria-expanded="false"
+    [attr.aria-expanded]="isLanguageSelectMenuOpen"
     aria-control="country-selector-dropdown-list"
     aria-haspopup="listbox"
     aria-labelledby="lang-selector-dropdown-label"
-    aria-activedescendant
+    [attr.aria-activedescendant]="ariaActiveDescendent"
     role="combobox"
     tabindex="0"
     class="language-selector-container"
@@ -24,11 +26,29 @@
   <ul
     class="language-dropdown-list"
     [ngClass]="isLanguageSelectMenuOpen ? ' open' : null"
+    role="listbox"
+    aria-labelledby="lang-selector-dropdown-label"
   >
-    <li class="language-dropdown-list-option">
+    <li
+      class="language-dropdown-list-option"
+      id="lang-selector_0"
+      role="option"
+      aria-selected="true"
+      aria-disabled="true"
+      tabindex="0"
+      (focus)="optionOnFocus(0)"
+    >
       <div>English</div>
     </li>
-    <li class="language-dropdown-list-option">
+    <li
+      class="language-dropdown-list-option"
+      id="lang-selector_1"
+      role="option"
+      aria-selected="false"
+      aria-disabled="false"
+      tabindex="0"
+      (focus)="optionOnFocus(1)"
+    >
       <a>Français</a>
     </li>
   </ul>

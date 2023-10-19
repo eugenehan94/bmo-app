@@ -8,7 +8,7 @@ import { DesktopService } from 'src/app/components/_shared/navbar/desktop/deskto
 export class LanguageSelectorComponent implements OnInit {
   constructor(private desktopService: DesktopService) {}
   isLanguageSelectMenuOpen?: boolean;
-
+  ariaActiveDescendent?: string = '';
   ngOnInit(): void {
     this.desktopService.isLanguageSelectMenuOpen.subscribe(
       (isOpen: boolean) => {
@@ -17,9 +17,14 @@ export class LanguageSelectorComponent implements OnInit {
     );
   }
 
-  handleLanguageSelectMenuClick(): void {
+  handleLanguageSelectMenuClick(event: any): void {
+    event.preventDefault();
     this.desktopService.setIsLanguageSelectMenuOpen(
       !this.isLanguageSelectMenuOpen
     );
+  }
+
+  optionOnFocus(number: number): void {
+    this.ariaActiveDescendent = 'lang-selector_' + number;
   }
 }
