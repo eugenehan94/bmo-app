@@ -1,3 +1,10 @@
+.desktop-navigation-bar-container {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  padding-right: 2rem;
+}
 .logo-small {
   width: 116px;
   height: 40px;

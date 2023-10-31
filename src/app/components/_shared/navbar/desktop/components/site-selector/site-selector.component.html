@@ -56,6 +56,12 @@
           (focus)="optionOnFocus(i)"
           >{{ option.title }}</a
         >
+        <button
+          *ngIf="last"
+          (focus)="handleSelectedSiteMenuClick($event)"
+          class="site-select-list-last-option"
+        >
+        </button>
       </li>
     </ul>
   </div>

@@ -5,6 +5,7 @@
   >
     <button
       class="signin-btn"
+      id="signin-btn"
       (click)="handleSigninMenuClick()"
       aria-expanded="false"
       aria-label="Toggle sign in menu navigation"
@@ -61,8 +62,11 @@
             </p>
           </span>
         </div>
-        <ul class="signin-btn-dropdown-list">
-          <li *ngFor="let signInOption of signInMenuOptions">
+        <ul class="signin-btn-dropdown-list" role="list">
+          <li
+            *ngFor="let signInOption of signInMenuOptions; let last = last"
+            role="listitem"
+          >
             <a
               class="signin-btn-dropdown-option-link"
               [attr.aria-label]="signInOption.ariaLabel"
@@ -70,6 +74,7 @@
               target="_blank"
               ><div>{{ signInOption.title }}</div></a
             >
+            <button *ngIf="last" (focus)="backtoSignBtn()" class="desktop-back-to-signin-btn">Last</button>
           </li>
         </ul>
       </div>

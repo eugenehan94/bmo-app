@@ -49,7 +49,11 @@
     "
   >
     <div
-      *ngFor="let countryOption of countryOptions; let i = index"
+      *ngFor="
+        let countryOption of countryOptions;
+        let i = index;
+        let last = last
+      "
       class="country-select-option"
       role="listbox"
       id="country-selector-dropdown-list"
@@ -71,6 +75,11 @@
           <span>{{ countryOption.country }}</span>
         </div>
       </div>
+      <button
+        *ngIf="last"
+        (focus)="handleCountrySelectMenuClick($event)"
+        class="country-select-option-last-option"
+      ></button>
     </div>
   </div>
 </div>

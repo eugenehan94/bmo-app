@@ -33,4 +33,7 @@ export class DesktopSignInComponent implements OnInit {
       setIsMobileSignInMenuOpen({ isOpen: !this.isSigninMenuOpen })
     );
   }
+  backtoSignBtn(): void {
+    document.getElementById('signin-btn')?.focus();
+  }
 }
