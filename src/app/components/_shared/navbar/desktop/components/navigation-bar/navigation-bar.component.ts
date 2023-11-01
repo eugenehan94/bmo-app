@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
 import { NavbarService } from 'src/app/components/_shared/navbar/navbar.service';
 import {
-  SiteOptionsType,
   NavigationOptionsType,
-  CountryOptionsType,
-  SignInMenuOptionsType,
-} from '../../../../interfaces';
+} from 'src/app/components/_shared/interfaces';
 @Component({
   selector: 'app-desktop-navigation-bar',
   templateUrl: './navigation-bar.component.html',

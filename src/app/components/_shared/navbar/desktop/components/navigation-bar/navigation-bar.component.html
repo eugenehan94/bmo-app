@@ -1,9 +1,6 @@
 <div class="desktop-navigation-bar-container">
-  <div>
-    <a
-      aria-label="Bank of Montreal logo"
-      href="https://www.bmo.com/en-ca/main/personal/"
-    >
+  <div style="transform: translateY(16px)">
+    <a aria-label="Bank of Montreal logo" href="/">
       <div>
         <picture>
           <img
@@ -14,23 +11,29 @@
       </div>
     </a>
   </div>
-  <div>
-    <nav>
-      <ul style="display: flex; list-style-type: none">
-        <li *ngFor="let navOption of navbarOptions">
-          <button
-            style="
-              border: none;
-              background: transparent;
-              cursor: pointer;
-              font-size: 1rem;
-              padding: 0 12px;
-            "
+  <div class="desktop-inner-navigation-bar-container">
+    <div class="desktop-inner-navigation-bar-wrapper">
+      <nav>
+        <ul role="list" class="desktop-inner-navigation-ul">
+          <li
+            role="listitem"
+            *ngFor="let navOption of navbarOptions"
+            class="desktop-inner-navigation-ul-li"
           >
-            {{ navOption.title }}
-          </button>
-        </li>
-      </ul>
-    </nav>
+            <button
+              aria-haspopup="true"
+              aria-controls="header-menu-desktop-bank-accounts-item1"
+              aria-expanded="false"
+              class="desktop-inner-navigation-ul-li-button"
+            >
+              {{ navOption.title }}
+            </button>
+            <div id="header-menu-desktop-bank-accounts-item1">
+              <!-- @TODO: The popup content will be here -->
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </div>
