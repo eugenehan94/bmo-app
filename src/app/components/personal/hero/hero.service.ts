@@ -11,7 +11,7 @@ export class HeroService {
       src: 'assets/images/personal-hero-banner-one.jpg',
       alt: 'Hero banner',
       title:
-        "Get up to $1200<a href='https://www.bmo.com/pdf/edb-total-value/terms-and-conditions.pdf' target='_blank' class='superscript-link'><sup class='superscript'>§</sup></a> in value",
+        "Get up to $1200 in value",
       description:
         'Feel good about your savings progress. This includes a 5% promo interest rate** when you open a chequing and a Savings Amplifier Account.',
       linkHref:

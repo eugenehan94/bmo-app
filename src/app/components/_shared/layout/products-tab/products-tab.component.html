@@ -46,12 +46,17 @@
                 class="mat-card-image"
               />
               <mat-card-content>
-                <img
+                <div
                   *ngIf="card.svg"
-                  src="{{ card.svg }}"
-                  alt="{{ card.svgAlt }}"
-                  class="mat-card-svg"
-                />
+                  [ngClass]="(currentScreenSize==='Medium' || currentScreenSize==='Large')? 'mat-card-svg-wrapper': null "
+                  
+                >
+                  <img
+                    src="{{ card.svg }}"
+                    alt="{{ card.svgAlt }}"
+                    class="mat-card-svg"
+                  />
+                </div>
                 <h3
                   class="mat-card-content-title"
                   [ngClass]="{

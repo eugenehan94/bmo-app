@@ -4,6 +4,9 @@
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.desktop-navigation-bar-logo-container {
+  transform: translateY(16px);
+}
 .logo-small {
   width: 116px;
   height: 40px;
