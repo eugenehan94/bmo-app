@@ -32,96 +32,26 @@
             <div
               *ngIf="true && i === 0"
               id="header-menu-desktop-bank-accounts-item1"
-              style="
-                position: absolute;
-                top: 75px;
-                left: 2rem;
-                right: 2rem;
-                background-color: #fefefe;
-                box-sizing: border-box;
-                border-radius: 10px;
-                border: 1px solid rgb(217, 220, 225);
-                z-index: 101;
-                display: block;
-              "
+              class="desktop-inner-nav-menu-container"
             >
               <!-- @TODO: The popup content will be here -->
-              <div
-                style="
-                  width: 100%;
-                  height: 100%;
-                  background: #fff;
-                  position: absolute;
-                  border-radius: 10px;
-                  z-index: -1;
-                "
-              ></div>
-              <div
-                style="
-                  height: 350px;
-                  background: linear-gradient(-90deg, #d9dce1 1px, #fefefe 0);
-                  z-index: 0;
-
-                  margin: 0;
-                  padding: 0;
-                  position: relative;
-                  width: calc(100% + 1px);
-                  border-top-left-radius: 10px;
-                  border-top-right-radius: 10px;
-                  overflow: hidden;
-                "
-              >
-                <ul
-                  role="list"
-                  style="
-                    height: 350px;
-                    list-style: none;
-                    background: linear-gradient(-90deg, #d9dce1 1px, #fefefe 0);
-                    z-index: 0;
-                    margin: 0;
-                    padding: 1rem 0 0 0;
-                    width: 33.33%;
-                    background-position: 0 100%;
-                    background-size: 100%;
-                    box-sizing: border-box;
-                    position: relative;
-                  "
-                >
+              <div class="desktop-inner-nav-menu-container-object"></div>
+              <div class="desktop-inner-nav-menu-bank-accounts-container">
+                <ul role="list" class="desktop-inner-nav-menu-bank-accounts-ul">
                   <li
                     role="listitem"
                     *ngFor="
                       let categories of navOption.categories;
                       let j = index
                     "
-                    style="
-                      box-sizing: border-box;
-                      padding: 0 8px 0 18px;
-                      margin: 0 1rem 0 8px;
-                      width: calc(100% - 22px);
-                      display: flex;
-                      text-decoration: none;
-                    "
+                    class="desktop-inner-nav-menu-bank-accounts-ul-li"
                   >
                     <a
                       *ngIf="categories.link"
                       href="{{ categories.link }}"
                       [attr.aria-label]="categories.ariaLabel"
                       target="_blank"
-                      style="
-                        text-decoration: none;
-                        box-sizing: border-box;
-                        cursor: pointer;
-                        background-color: transparent;
-                        border: none;
-                        font-size: 1rem;
-                        font-weight: 400;
-                        line-height: 1.25;
-                        padding: 8px 0;
-                        width: 100%;
-                        margin: 0;
-                        text-align: left;
-                        height: auto;
-                      "
+                      class="desktop-inner-nav-menu-bank-accounts-links"
                       >{{ categories.title }}</a
                     >
                     <ng-container *ngIf="categories.children">
@@ -129,27 +59,56 @@
                         aria-haspopup="true"
                         aria-controls=""
                         aria-expanded="false"
-                        style="
-                          box-sizing: border-box;
-                          cursor: pointer;
-                          text-decoration: none;
-                          background-color: transparent;
-                          border-radius: 0;
-                          border: none;
-                          display: flex;
-                          flex-direction: row;
-                          align-items: stretch;
-                          font-size: 1rem;
-                          line-height: 1.25rem;
-                          padding: 8px 0;
-                          width: calc(100% - 10px);
-                          text-align: left;
-                          height: auto;
-                        "
+                        class="desktop-inner-nav-menu-bank-accounts-buttons"
                       >
-                        <span style="flex: 1">{{ categories.title }}</span>
-                        <mat-icon aria-hidden="true">chevron_right</mat-icon>
+                        <span
+                          class="desktop-inner-nav-menu-bank-accounts-buttons-title"
+                          >{{ categories.title }}</span
+                        >
+                        <mat-icon aria-hidden="true" class="chevron-icon"
+                          >chevron_right</mat-icon
+                        >
                       </button>
+                      <ul
+                        role="list"
+                        id="MATCH ARIA CONTROLS ABOVE"
+                        class="desktop-inner-nav-inner-ul"
+                      >
+                        <li
+                          role="listitem"
+                          *ngFor="let children of categories.children"
+                          class="desktop-inner-nav-inner-ul-li"
+                        >
+                          <a
+                            href="{{ children.link }}"
+                            [attr.aria-label]="children.ariaLabel"
+                            target="_blank"
+                            class="desktop-inner-nav-inner-ul-li-link"
+                          >
+                            <span
+                              class="desktop-inner-nav-inner-ul-li-link-image-wrapper"
+                            >
+                              <img
+                                alt="{{ children.alt }}"
+                                src="{{ children.icon }}"
+                              />
+                            </span>
+                            <span
+                              role="text"
+                              class="desktop-inner-nav-inner-ul-li-link-text-wrapper"
+                            >
+                              <span
+                                class="desktop-inner-nav-inner-ul-li-link-text-title"
+                                >{{ children.title }}</span
+                              >
+                              <span
+                                class="desktop-inner-nav-inner-ul-li-link-text-description"
+                                >{{ children.description }}</span
+                              >
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
                     </ng-container>
                   </li>
                 </ul>
