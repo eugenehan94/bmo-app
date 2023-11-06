@@ -25,12 +25,13 @@
               aria-controls="header-menu-desktop-bank-accounts-item1"
               aria-expanded="false"
               class="desktop-inner-navigation-ul-li-button"
+              (click)="handleMenuClick()"
             >
               {{ navOption.title }} {{ i }}
             </button>
             <!-- @TODO: Change the id to correspond to aria-controls -->
             <div
-              *ngIf="true && i === 0"
+              *ngIf="menuIsOpen && i === 0"
               id="header-menu-desktop-bank-accounts-item1"
               class="desktop-inner-nav-menu-container"
             >

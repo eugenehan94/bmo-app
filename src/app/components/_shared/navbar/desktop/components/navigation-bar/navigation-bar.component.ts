@@ -14,8 +14,8 @@ export class NavigationBarComponent implements OnInit {
   ) {}
   // @TODO: add typescript and see why it doesn't work when using nested ngFor loop
   navbarOptions?: any;
-
   originalPath?: string;
+  menuIsOpen?: boolean;
 
   ngOnInit(): void {
     this.navbarOptions = this.navbarService.navigationOptions;
@@ -25,5 +25,9 @@ export class NavigationBarComponent implements OnInit {
       const { path } = url;
       this.originalPath = path;
     });
+  }
+
+  handleMenuClick():void {
+    this.menuIsOpen = !this.menuIsOpen;
   }
 }
