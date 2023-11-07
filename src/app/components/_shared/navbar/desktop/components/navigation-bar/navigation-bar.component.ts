@@ -16,6 +16,7 @@ export class NavigationBarComponent implements OnInit {
   navbarOptions?: any;
   originalPath?: string;
   menuIsOpen?: boolean;
+  menuSelectedIndex?: number;
 
   ngOnInit(): void {
     this.navbarOptions = this.navbarService.navigationOptions;
@@ -27,7 +28,13 @@ export class NavigationBarComponent implements OnInit {
     });
   }
 
-  handleMenuClick():void {
-    this.menuIsOpen = !this.menuIsOpen;
+  handleMenuClick(i: number): void {
+    console.log('index selected: ', i);
+    console.log('selected index: ', this.menuSelectedIndex);
+
+    if (this.menuSelectedIndex === i || this.menuSelectedIndex === undefined) {
+      this.menuIsOpen = !this.menuIsOpen;
+    }
+    this.menuSelectedIndex = i;
   }
 }
