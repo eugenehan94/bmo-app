@@ -471,7 +471,7 @@ export class NavbarService {
               link: 'https://www.bmo.com/main/personal/credit-cards/credit-card-access-details/?icid=tl-FEAT2953BRND4-AJBMOH63',
               ariaLabel:
                 'B M O Powerswitch option, Transfer your pre-authorized payments',
-              icon: 'assets/svg/arrows-left-blue.svg',
+              icon: 'assets/svg/arrows-left-right-blue.svg',
               alt: 'Blue arrows pointing left and right',
               title: 'BMO PowerSwitch',
               description: 'Transfer your pre-authorized payments',
@@ -1557,7 +1557,7 @@ export class NavbarService {
               link: 'https://www.bmo.com/main/personal/credit-cards/affinity/cause-health/bmo-support-our-troops-mastercard/?icid=tl-FEAT2953BRND4-AJBMOH256',
               ariaLabel:
                 'Mastercard credit card for the Canadian defence community, Enjoy a no-fee card',
-              icon: 'assets/svg/credit-card-blue.svg',
+              icon: 'assets/svg/card-heart-blue.svg',
               alt: 'Blue credit card',
               title: 'Support Our Troops Mastercard',
               description: 'Enjoy a no-fee card',

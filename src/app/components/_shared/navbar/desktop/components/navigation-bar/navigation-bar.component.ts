@@ -17,6 +17,7 @@ export class NavigationBarComponent implements OnInit {
   originalPath?: string;
   menuIsOpen?: boolean;
   menuSelectedIndex?: number;
+  innerMenuSelectedIndex?: number;
 
   ngOnInit(): void {
     this.navbarOptions = this.navbarService.navigationOptions;
@@ -29,12 +30,40 @@ export class NavigationBarComponent implements OnInit {
   }
 
   handleMenuClick(i: number): void {
-    console.log('index selected: ', i);
-    console.log('selected index: ', this.menuSelectedIndex);
+    if (this.menuSelectedIndex === undefined) {
+      this.menuSelectedIndex = i;
+    }
 
-    if (this.menuSelectedIndex === i || this.menuSelectedIndex === undefined) {
+    if (
+      this.menuSelectedIndex === i ||
+      (this.menuSelectedIndex !== i && this.menuIsOpen === false)
+    ) {
       this.menuIsOpen = !this.menuIsOpen;
     }
+
+    if (this.menuIsOpen !== false) {
+      // @TODO: do not call function when closing menu
+      this.findFirstChildOccurrenceIndexOfInnerMenu(i);
+    }
+
     this.menuSelectedIndex = i;
+  }
+
+  handleInnerMenuClick(j: number): void {
+    if (this.innerMenuSelectedIndex === undefined) {
+      this.innerMenuSelectedIndex = j;
+    }
+    this.innerMenuSelectedIndex = j;
+  }
+
+  // NOTE: Inner menu shows options from the first occurence of the children array
+  findFirstChildOccurrenceIndexOfInnerMenu(i: number): void {
+    let stop = false;
+    this.navbarOptions[i].categories.find((x: any, index: number) => {
+      if (x.children !== undefined && stop === false) {
+        this.innerMenuSelectedIndex = index;
+        stop = true;
+      }
+    });
   }
 }

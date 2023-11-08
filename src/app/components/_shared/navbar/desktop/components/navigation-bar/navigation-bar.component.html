@@ -31,7 +31,7 @@
             </button>
             <!-- @TODO: Change the id to correspond to aria-controls -->
             <div
-              *ngIf="menuIsOpen"
+              *ngIf="menuIsOpen && menuSelectedIndex === i"
               id="header-menu-desktop-bank-accounts-item1"
               class="desktop-inner-nav-menu-container"
             >
@@ -57,6 +57,7 @@
                     >
                     <ng-container *ngIf="categories.children">
                       <button
+                        (click)="handleInnerMenuClick(j)"
                         aria-haspopup="true"
                         aria-controls=""
                         aria-expanded="false"
@@ -68,9 +69,10 @@
                         >
                         <mat-icon aria-hidden="true" class="chevron-icon"
                           >chevron_right</mat-icon
-                        >
+                        > {{j}}
                       </button>
                       <ul
+                        *ngIf="innerMenuSelectedIndex === j"
                         role="list"
                         id="MATCH ARIA CONTROLS ABOVE"
                         class="desktop-inner-nav-inner-ul"
