@@ -22,7 +22,9 @@
           >
             <button
               aria-haspopup="true"
-              aria-controls="header-menu-desktop-bank-accounts-item1"
+              [attr.aria-controls]="
+                'header-menu-desktop-bank-accounts-item' + (i + 1)
+              "
               aria-expanded="false"
               class="desktop-inner-navigation-ul-li-button"
               (click)="handleMenuClick(i)"
@@ -32,10 +34,9 @@
             <!-- @TODO: Change the id to correspond to aria-controls -->
             <div
               *ngIf="menuIsOpen && menuSelectedIndex === i"
-              id="header-menu-desktop-bank-accounts-item1"
+              id="{{ 'header-menu-desktop-bank-accounts-item' + (i + 1) }}"
               class="desktop-inner-nav-menu-container"
             >
-              <!-- @TODO: The popup content will be here -->
               <div class="desktop-inner-nav-menu-container-object"></div>
               <div class="desktop-inner-nav-menu-bank-accounts-container">
                 <ul role="list" class="desktop-inner-nav-menu-bank-accounts-ul">
@@ -59,7 +60,12 @@
                       <button
                         (click)="handleInnerMenuClick(j)"
                         aria-haspopup="true"
-                        aria-controls=""
+                        [attr.aria-controls]="
+                          'header-megamenu-desktop-' +
+                          categories.title +
+                          '-item' +
+                          j
+                        "
                         aria-expanded="false"
                         class="desktop-inner-nav-menu-bank-accounts-buttons"
                       >
@@ -69,12 +75,17 @@
                         >
                         <mat-icon aria-hidden="true" class="chevron-icon"
                           >chevron_right</mat-icon
-                        > {{j}}
+                        >
                       </button>
                       <ul
                         *ngIf="innerMenuSelectedIndex === j"
                         role="list"
-                        id="MATCH ARIA CONTROLS ABOVE"
+                        id="{{
+                          'header-megamenu-desktop-' +
+                            categories.title +
+                            '-item' +
+                            j
+                        }}"
                         class="desktop-inner-nav-inner-ul"
                       >
                         <li
@@ -117,7 +128,61 @@
                 </ul>
               </div>
               <!-- Resources -->
-              <div></div>
+              <div class="desktop-inner-nav-resources-container">
+                <div class="desktop-inner-nav-resources-title">Resources</div>
+                <ul role="list" class="desktop-inner-nav-resources-list">
+                  <li
+                    role="listitem"
+                    *ngFor="let resource of navOption.resources; let k = index"
+                    class="desktop-inner-nav-resources-list-item"
+                  >
+                    <a
+                      href="{{ resource.link }}"
+                      [attr.aria-label]="resource.ariaLabel"
+                      target="_blank"
+                      class="desktop-inner-nav-resources-list-item-content"
+                    >
+                      <div
+                        class="desktop-inner-nav-resources-list-item-content-wrapper"
+                      >
+                        <div
+                          class="desktop-inner-nav-resources-list-item-image-wrapper"
+                        >
+                          <img
+                            src="{{ resource.icon }}"
+                            alt="{{ resource.alt }}"
+                            class="desktop-inner-nav-resources-list-item-image"
+                          />
+                        </div>
+                        <div
+                          role="text"
+                          style="
+                            flex-grow: 1;
+                            display: flex;
+                            flex-direction: column;
+                            font-size: 0.875rem;
+                            font-weight: 400;
+                          "
+                        >
+                          <span style="font-weight: 500; line-height: 1.15">{{
+                            resource.title
+                          }}</span>
+                          <div
+                            style="
+                              padding-top: 0.5rem;
+                              font-size: 14px;
+                              white-space: normal;
+                              color: #646c76;
+                            "
+                          >
+                            {{ resource.description }}
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
         </ul>

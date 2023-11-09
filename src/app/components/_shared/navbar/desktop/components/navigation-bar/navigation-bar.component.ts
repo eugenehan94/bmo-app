@@ -42,7 +42,6 @@ export class NavigationBarComponent implements OnInit {
     }
 
     if (this.menuIsOpen !== false) {
-      // @TODO: do not call function when closing menu
       this.findFirstChildOccurrenceIndexOfInnerMenu(i);
     }
 

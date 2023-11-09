@@ -409,7 +409,7 @@ export class NavbarService {
             {
               link: 'https://www.bmo.com/main/personal/credit-cards/all-cards/?icid=tl-FEAT2953BRND4-AJBMOH61',
               ariaLabel: 'All credit cards, Explore your options',
-              icon: 'assets/svg/credit-card-blue-icon.svg',
+              icon: 'assets/svg/credit-card.svg',
               alt: 'Blue card with crossed out dollar sign',
               title: 'No Fee',
               description: 'Keep your costs low',
@@ -1315,7 +1315,7 @@ export class NavbarService {
             {
               link: 'https://www.bmo.com/main/personal/credit-cards/credit-card-balance-protection-enhanced/?icid=tl-FEAT2953BRND4-AJBMOH217',
               ariaLabel: 'Credit card balance protection',
-              icon: 'assets/svg/credit-card-blue-icon.svg',
+              icon: 'assets/svg/credit-card.svg',
               alt: 'Blue credit card',
               title: 'Credit Card Balance Protection Enhanced',
               description: 'Make payments in difficult times',
@@ -1434,7 +1434,7 @@ export class NavbarService {
               link: 'https://www.bmo.com/main/personal/credit-cards/newcomers-to-canada/?icid=tl-FEAT2953BRND4-AJBMOH243',
               ariaLabel:
                 'Credit cards for newcomers to Canada, No credit history required',
-              icon: 'assets/svg/credit-card-blue-icon.svg',
+              icon: 'assets/svg/credit-card.svg',
               alt: 'Blue world with four surrounding circles',
               title: 'Credit Cards',
               description: 'No credit history required',
@@ -1499,7 +1499,7 @@ export class NavbarService {
             {
               link: 'https://www.bmo.com/main/personal/credit-cards/students/?icid=tl-FEAT2953BRND4-AJBMOH249',
               ariaLabel: 'Student credit cards, Enjoy no annual fee',
-              icon: 'assets/svg/credit-card-blue-icon.svg',
+              icon: 'assets/svg/credit-card.svg',
               alt: 'Blue credit card',
               title: 'Credit Cards',
               description: 'Enjoy no annual fee',
