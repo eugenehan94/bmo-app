@@ -6,6 +6,7 @@ export const InitialState = {
   isMobileMenuOpen: false,
   isMobileSignInMenuOpen: false,
   currentScreenSize: '',
+  menuIsOpen: false,
 };
 
 export const NavbarReducer = createReducer(
@@ -25,5 +26,14 @@ export const ScreenSizeReducer = createReducer(
   on(AppActions.setScreenSize, (state, props) => ({
     ...state,
     currentScreenSize: props.screenSize,
+  }))
+);
+
+// For the Personal and Business pages the navigation on desktop view
+export const DesktopInnerNavigationReducer = createReducer(
+  InitialState,
+  on(AppActions.setDesktopInnerNavIsOpen, (state, props) => ({
+    ...state,
+    menuIsOpen: props.menuIsOpen,
   }))
 );

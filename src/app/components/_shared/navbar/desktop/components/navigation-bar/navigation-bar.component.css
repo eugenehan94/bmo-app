@@ -41,6 +41,10 @@
   border-bottom: 3px solid #0075be;
   border-top: 3px solid transparent;
 }
+.desktop-inner-navigation-ul-li-button.active {
+  border-bottom: 3px solid #0075be;
+  border-top: 3px solid transparent;
+}
 .desktop-inner-nav-menu-container {
   position: absolute;
   top: 120px;
@@ -254,4 +258,21 @@
 }
 .desktop-inner-nav-resources-list-item-image {
   max-width: 30px;
+}
+.desktop-inner-nav-resources-list-item-text-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.desktop-inner-nav-resources-list-item-title {
+  font-weight: 500;
+  line-height: 1.15;
+}
+.desktop-inner-nav-resources-list-item-description {
+  padding-top: 0.5rem;
+  font-size: 14px;
+  white-space: normal;
+  color: #646c76;
 }

@@ -27,6 +27,7 @@ import { StoreModule } from '@ngrx/store';
 import {
   NavbarReducer,
   ScreenSizeReducer,
+  DesktopInnerNavigationReducer,
 } from './store/app/reducers/app.reducer';
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import {
     StoreModule.forRoot({
       navbarReducer: NavbarReducer,
       screenSizeReducer: ScreenSizeReducer,
+      desktopInnerNavigationReducer: DesktopInnerNavigationReducer,
     }),
   ],
   providers: [],
