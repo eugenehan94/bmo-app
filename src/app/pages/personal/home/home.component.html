@@ -22,10 +22,17 @@
       'mobile-menu-open':
         isMobileMenuOpen &&
         (this.currentScreenSize === 'Small' ||
-          this.currentScreenSize === 'Medium')
+          this.currentScreenSize === 'Medium'),
+      overlayActive:
+        isDesktopInnerMenuOpen === true && this.currentScreenSize === 'Large'
     }"
     role="main"
   >
+    <div
+      class="main-overlay"
+      *ngIf="isDesktopInnerMenuOpen"
+      (click)="handleOverlayClick()"
+    ></div>
     <app-personal-hero></app-personal-hero>
     <app-personal-products-tabs></app-personal-products-tabs>
     <app-person-download-banner></app-person-download-banner>
@@ -44,6 +51,11 @@
             this.currentScreenSize === 'Medium'))
     }"
   >
+    <div
+      class="footer-overlay"
+      *ngIf="isDesktopInnerMenuOpen"
+      (click)="handleOverlayClick()"
+    ></div>
     <app-personal-footer></app-personal-footer>
   </footer>
 </div>

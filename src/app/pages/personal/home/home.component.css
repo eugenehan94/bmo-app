@@ -43,9 +43,28 @@
   height: 735px;
   overflow: hidden;
 }
-
+.home-page-content-wrapper.overlayActive {
+  position: relative;
+  height: auto;
+  overflow: initial;
+}
+.main-overlay,
+.footer-overlay {
+  position: absolute;
+  top: 19px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+  z-index: 100;
+  cursor: context-menu;
+}
 .footer {
   display: block;
+  position: relative;
 }
 .footer.hidden {
   display: none;

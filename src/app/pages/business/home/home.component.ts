@@ -22,6 +22,8 @@ export class BusinessHomeComponent {
   isMobileMenuOpen?: boolean;
   footerCaptions?: FooterCaptionsType[];
 
+
+
   ngOnInit(): void {
     this.breakpointObserver
       .observe([
@@ -52,6 +54,8 @@ export class BusinessHomeComponent {
       this.isMobileMenuOpen = res.isMobileMenuOpen;
       this.isMobileSignInMenuOpen = res.isMobileSignInMenuOpen;
     });
+
+
   }
 
   handleSkipNav(event: any, section: string): void {
