@@ -5,7 +5,10 @@ import { SignInMenuOptionsType } from 'src/app/components/_shared/interfaces';
 
 // ngrx
 import { Store } from '@ngrx/store';
-import { setIsMobileSignInMenuOpen } from 'src/app/store/app/actions/app.actions';
+import {
+  setIsMobileSignInMenuOpen,
+  setDesktopInnerNavIsOpen,
+} from 'src/app/store/app/actions/app.actions';
 
 @Component({
   selector: 'app-desktop-sign-in',
@@ -35,5 +38,8 @@ export class DesktopSignInComponent implements OnInit {
   }
   backtoSignBtn(): void {
     document.getElementById('signin-btn')?.focus();
+  }
+  handleFocu(): void {
+    this.store.dispatch(setDesktopInnerNavIsOpen({ menuIsOpen: false }));
   }
 }

@@ -37,6 +37,15 @@ export class NavigationBarComponent implements OnInit {
     });
   }
 
+  handleContainerClick(event: any): void {
+    const containsClass = event.target.classList.contains(
+      'desktop-navigation-bar-container'
+    );
+    if (this.menuIsOpen === true && containsClass) {
+      this.store.dispatch(setDesktopInnerNavIsOpen({ menuIsOpen: false }));
+    }
+  }
+
   handleMenuClick(i: number): void {
     if (this.menuSelectedIndex === undefined) {
       this.menuSelectedIndex = i;

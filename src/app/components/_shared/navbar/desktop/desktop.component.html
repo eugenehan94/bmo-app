@@ -2,7 +2,7 @@
   <!-- @TODO: Close inner navbar menu when clicked inside this component 
   and when focused on (tab)
   -->
-  <mat-toolbar class="navbar-mat-toolbar">
+  <mat-toolbar class="navbar-mat-toolbar" (click)="handleClick()">
     <app-desktop-site-selector></app-desktop-site-selector>
     <app-desktop-search-bar style="flex: 1"></app-desktop-search-bar>
 
