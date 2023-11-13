@@ -10,7 +10,9 @@
       <app-mobile-menu-site-selector></app-mobile-menu-site-selector>
       <app-mobile-menu-language-selector></app-mobile-menu-language-selector>
     </div>
-    <app-mobile-menu-inner-menu></app-mobile-menu-inner-menu>
+    <app-mobile-menu-inner-menu
+      [navigationOptions]="innerNavbarOptions"
+    ></app-mobile-menu-inner-menu>
   </div>
   <app-mobile-bottom-navigation></app-mobile-bottom-navigation>
   <button

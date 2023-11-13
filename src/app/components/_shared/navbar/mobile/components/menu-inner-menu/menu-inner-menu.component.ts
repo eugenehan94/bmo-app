@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ViewChildren } from '@angular/core';
+import { Component, AfterViewInit, ViewChildren, Input } from '@angular/core';
 import { NavbarService } from '../../../navbar.service';
 @Component({
   selector: 'app-mobile-menu-inner-menu',
@@ -7,7 +7,7 @@ import { NavbarService } from '../../../navbar.service';
 })
 export class MenuInnerMenuComponent implements AfterViewInit {
   constructor(private navbarService: NavbarService) {}
-  navigationOptions: any = this.navbarService.navigationOptions;
+  @Input() navigationOptions?: any;
   selectedParentIndex?: number;
   selectedChildIndex?: number;
   @ViewChildren('innerMenuParent') menuParentContainer?: any;

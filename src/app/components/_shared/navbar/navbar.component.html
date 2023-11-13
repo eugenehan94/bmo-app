@@ -1,9 +1,18 @@
 <div *ngIf="currentScreenSize === 'Small'">
-  <app-mobile [currentScreenSize]="currentScreenSize"></app-mobile>
+  <app-mobile
+    [currentScreenSize]="currentScreenSize"
+    [innerNavbarOptions]="innerNavbarOptions"
+  ></app-mobile>
 </div>
 <div *ngIf="currentScreenSize === 'Medium'">
-  <app-medium [currentScreenSize]="currentScreenSize"></app-medium>
+  <app-medium
+    [currentScreenSize]="currentScreenSize"
+    [innerNavbarOptions]="innerNavbarOptions"
+  ></app-medium>
 </div>
 <div *ngIf="currentScreenSize === 'Large'">
-  <app-desktop [currentScreenSize]="currentScreenSize"></app-desktop>
+  <app-desktop
+    [currentScreenSize]="currentScreenSize"
+    [innerNavbarOptions]="innerNavbarOptions"
+  ></app-desktop>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavbarService } from 'src/app/components/_shared/navbar/navbar.service';
 import { NavigationOptionsType } from 'src/app/components/_shared/interfaces';
@@ -19,14 +19,14 @@ export class NavigationBarComponent implements OnInit {
     private store: Store<any>
   ) {}
   // @TODO: add typescript and see why it doesn't work when using nested ngFor loop
-  navbarOptions?: any;
+  @Input() navbarOptions?: any;
   originalPath?: string;
   menuIsOpen?: boolean;
   menuSelectedIndex?: number;
   innerMenuSelectedIndex?: number;
 
   ngOnInit(): void {
-    this.navbarOptions = this.navbarService.navigationOptions;
+    // this.navbarOptions = this.navbarService.navigationOptions;
     this.store.select('desktopInnerNavigationReducer').subscribe((res) => {
       this.menuIsOpen = res.menuIsOpen;
     });

@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class MediumComponent {
   @Input() currentScreenSize?: string;
+  @Input() innerNavbarOptions?: any;
 }

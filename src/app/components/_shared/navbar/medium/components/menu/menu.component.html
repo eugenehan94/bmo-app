@@ -17,7 +17,9 @@
       <app-mobile-menu-site-selector></app-mobile-menu-site-selector>
       <app-mobile-menu-language-selector></app-mobile-menu-language-selector>
     </div>
-    <app-mobile-menu-inner-menu></app-mobile-menu-inner-menu>
+    <app-mobile-menu-inner-menu
+      [navigationOptions]="innerNavbarOptions"
+    ></app-mobile-menu-inner-menu>
   </div>
   <!-- @NOTE: Added directive here because two bottom-nav will show in signin menu -->
   <app-medium-bottom-navigation

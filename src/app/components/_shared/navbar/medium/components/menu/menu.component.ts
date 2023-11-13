@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 
 //ngrx
 import { Store } from '@ngrx/store';
@@ -14,6 +14,7 @@ import {
 })
 export class MediumMenuComponent implements OnInit {
   constructor(private store: Store<any>) {}
+  @Input() innerNavbarOptions?: any;
   isMediumMenuOpen?: boolean;
   @ViewChild('MediumMenuContainer') mediumMenuContainer: any;
   ngOnInit(): void {

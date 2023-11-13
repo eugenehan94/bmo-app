@@ -1,11 +1,21 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+//ngrx
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent {
-  @Input() currentScreenSize?: string;
+export class NavbarComponent implements OnInit {
+  constructor(private store: Store<any>) {}
+  @Input() innerNavbarOptions?: any;
+  currentScreenSize?: string;
 
+  ngOnInit(): void {
+    this.store.select('screenSizeReducer').subscribe((res) => {
+      this.currentScreenSize = res.currentScreenSize;
+    });
+  }
 }

@@ -17,7 +17,8 @@ export class DesktopComponent implements OnInit {
   ) {}
 
   @Input() currentScreenSize?: string;
-
+  @Input() innerNavbarOptions?: any;
+  
   isSelectedSiteOpen?: boolean;
   isCountrySelectMenuOpen: boolean = false;
   isLanguageSelectMenuOpen: boolean = false;
