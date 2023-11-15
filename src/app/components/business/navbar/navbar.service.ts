@@ -221,6 +221,189 @@ export class NavbarService {
           title: 'Help me choose a card',
           description: 'Let us recommend the best card ',
         },
+        {
+          link: 'https://www.bmo.com/main/business/small-business-resource-hub/',
+          ariaLabel: 'Small business resource hub',
+          icon: 'assets/svg/book-blue.svg',
+          alt: 'Blue book icon',
+          title: 'Business resource hub',
+          description: 'Access the latest articles and tools ',
+        },
+      ],
+    },
+    {
+      title: 'Lending',
+      categories: [
+        {
+          title: 'Lending Overview',
+          link: 'https://www.bmo.com/main/business/loans-mortgages/overview',
+          ariaLabel: 'Lending overview',
+        },
+        {
+          title: 'Lending',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/business/loans-mortgages/credit-line/',
+              ariaLabel: 'Credit line for business',
+              icon: 'assets/svg/briefcase-blue.svg',
+              alt: 'Blue briefcase icon',
+              title: 'Credit Line for Business',
+              description: 'Quick, flexible financing',
+            },
+            {
+              link: 'https://www.bmo.com/main/business/loans-mortgages/overview#smallbiz',
+              ariaLabel: 'All loans and mortgages',
+              icon: 'assets/svg/mortgages-48x48-blue.svg',
+              alt: 'Blue house with dollar sign',
+              title: 'All loans and mortgages',
+              description: 'Explore your options',
+            },
+            {
+              link: 'https://www.bmo.com/main/business/loans-mortgages/commercial-loan-insurance/',
+              ariaLabel: 'Loan insurance plan',
+              icon: 'assets/svg/document-shield-blue.svg',
+              alt: 'Blue document with shield icon',
+              title: 'BMO CashBack Business Mastercard',
+              description: 'Money back on all business expenses',
+            },
+          ],
+        },
+        {
+          title: 'Programs',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/business/loans-mortgages/trade-expansion-lending-program/',
+              ariaLabel: 'Trade Expansion Lending Program (TELP)',
+              icon: 'assets/svg/rif-payout-calculator-blue.svg',
+              alt: 'Blue hand with floating dollar sign',
+              title: 'Trade Expansion Lending Program (TELP)',
+              description: 'Expand beyond Canada',
+            },
+            {
+              link: 'https://www.bmo.com/main/business/loans-mortgages/overview/financing-loan/',
+              ariaLabel: 'Canada small business financing program',
+              icon: 'assets/svg/finance-icon-48x48-blue.svg',
+              alt: 'Blue plant with dollar sign',
+              title: 'Canada Small Business Financing Program',
+              description: 'Financing to grow your business',
+            },
+          ],
+        },
+      ],
+      resources: [
+        {
+          link: 'https://www.bmo.com/main/business/loans-mortgages/business-loan-calculator/',
+          ariaLabel:
+            'Business loan calculator',
+          icon: 'assets/svg/calculator-2-blue.svg',
+          alt: 'Blue calculator',
+          title: 'Business loan calculator',
+          description: 'Find your estimated monthly loan amount',
+        },
+        {
+          link: 'https://www.bmo.com/oab/start',
+          ariaLabel: 'Making appointment for lending',
+          icon: 'assets/svg/make-appointment-blue.svg',
+          alt: 'Blue calendar icon',
+          title: 'Make an appointment',
+          description: "Let's meet to review your options",
+        },
+        {
+          link: 'https://www.bmo.com/main/business/small-business-resource-hub/',
+          ariaLabel: 'Business resource hub for lending',
+          icon: 'assets/svg/book-blue.svg',
+          alt: 'Blue book icon',
+          title: 'Business resource hub',
+          description: 'Access the latest articles and tools ',
+        },
+      ],
+    },
+
+    {
+      title: 'Managing Cash Flow',
+      categories: [
+        {
+          title: 'Cash Management Overview',
+          link: 'https://www.bmo.com/main/business/cash-management/',
+          ariaLabel: 'Cash Management Overview',
+        },
+        {
+          title: 'Lending',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/business/loans-mortgages/credit-line/',
+              ariaLabel: 'Credit line for business',
+              icon: 'assets/svg/briefcase-blue.svg',
+              alt: 'Blue briefcase icon',
+              title: 'Credit Line for Business',
+              description: 'Quick, flexible financing',
+            },
+            {
+              link: 'https://www.bmo.com/main/business/loans-mortgages/overview#smallbiz',
+              ariaLabel: 'All loans and mortgages',
+              icon: 'assets/svg/mortgages-48x48-blue.svg',
+              alt: 'Blue house with dollar sign',
+              title: 'All loans and mortgages',
+              description: 'Explore your options',
+            },
+            {
+              link: 'https://www.bmo.com/main/business/loans-mortgages/commercial-loan-insurance/',
+              ariaLabel: 'Loan insurance plan',
+              icon: 'assets/svg/document-shield-blue.svg',
+              alt: 'Blue document with shield icon',
+              title: 'BMO CashBack Business Mastercard',
+              description: 'Money back on all business expenses',
+            },
+          ],
+        },
+        {
+          title: 'Programs',
+          children: [
+            {
+              link: 'https://www.bmo.com/main/business/loans-mortgages/trade-expansion-lending-program/',
+              ariaLabel: 'Trade Expansion Lending Program (TELP)',
+              icon: 'assets/svg/rif-payout-calculator-blue.svg',
+              alt: 'Blue hand with floating dollar sign',
+              title: 'Trade Expansion Lending Program (TELP)',
+              description: 'Expand beyond Canada',
+            },
+            {
+              link: 'https://www.bmo.com/main/business/loans-mortgages/overview/financing-loan/',
+              ariaLabel: 'Canada small business financing program',
+              icon: 'assets/svg/finance-icon-48x48-blue.svg',
+              alt: 'Blue plant with dollar sign',
+              title: 'Canada Small Business Financing Program',
+              description: 'Financing to grow your business',
+            },
+          ],
+        },
+      ],
+      resources: [
+        {
+          link: 'https://www.bmo.com/main/business/loans-mortgages/business-loan-calculator/',
+          ariaLabel:
+            'Business loan calculator',
+          icon: 'assets/svg/calculator-2-blue.svg',
+          alt: 'Blue calculator',
+          title: 'Business loan calculator',
+          description: 'Find your estimated monthly loan amount',
+        },
+        {
+          link: 'https://www.bmo.com/oab/start',
+          ariaLabel: 'Making appointment for lending',
+          icon: 'assets/svg/make-appointment-blue.svg',
+          alt: 'Blue calendar icon',
+          title: 'Make an appointment',
+          description: "Let's meet to review your options",
+        },
+        {
+          link: 'https://www.bmo.com/main/business/small-business-resource-hub/',
+          ariaLabel: 'Business resource hub for lending',
+          icon: 'assets/svg/book-blue.svg',
+          alt: 'Blue book icon',
+          title: 'Business resource hub',
+          description: 'Access the latest articles and tools ',
+        },
       ],
     },
   ];
