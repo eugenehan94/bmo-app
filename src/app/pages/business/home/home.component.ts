@@ -4,7 +4,10 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 
 //ngrx
 import { Store } from '@ngrx/store';
-import { setScreenSize } from 'src/app/store/app/actions/app.actions';
+import {
+  setScreenSize,
+  setDesktopInnerNavIsOpen,
+} from 'src/app/store/app/actions/app.actions';
 
 @Component({
   selector: 'app-business-home',
@@ -21,8 +24,7 @@ export class BusinessHomeComponent {
   isMobileSignInMenuOpen?: boolean;
   isMobileMenuOpen?: boolean;
   footerCaptions?: FooterCaptionsType[];
-
-
+  isDesktopInnerMenuOpen?: boolean;
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -54,13 +56,18 @@ export class BusinessHomeComponent {
       this.isMobileMenuOpen = res.isMobileMenuOpen;
       this.isMobileSignInMenuOpen = res.isMobileSignInMenuOpen;
     });
-
-
+    this.store.select('desktopInnerNavigationReducer').subscribe((res) => {
+      this.isDesktopInnerMenuOpen = res.menuIsOpen;
+    });
   }
 
   handleSkipNav(event: any, section: string): void {
     event.preventDefault();
     window.location.hash = '';
     window.location.hash = section;
+  }
+
+  handleOverlayClick(): void {
+    this.store.dispatch(setDesktopInnerNavIsOpen({ menuIsOpen: false }));
   }
 }

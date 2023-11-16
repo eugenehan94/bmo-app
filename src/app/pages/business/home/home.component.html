@@ -12,7 +12,27 @@
       >Navigation skipped</span
     >
   </header>
-  <main>
+  <main
+    class="home-page-content-wrapper"
+    [ngClass]="{
+      'mobile-signin-menu-open':
+        isMobileSignInMenuOpen &&
+        (this.currentScreenSize === 'Small' ||
+          this.currentScreenSize === 'Medium'),
+      'mobile-menu-open':
+        isMobileMenuOpen &&
+        (this.currentScreenSize === 'Small' ||
+          this.currentScreenSize === 'Medium'),
+      overlayActive:
+        isDesktopInnerMenuOpen === true && this.currentScreenSize === 'Large'
+    }"
+    role="main"
+  >
+    <div
+      class="main-overlay"
+      *ngIf="isDesktopInnerMenuOpen"
+      (click)="handleOverlayClick()"
+    ></div>
     <app-business-hero></app-business-hero>
     <app-business-products-tabs></app-business-products-tabs>
     <app-business-get-in-touch></app-business-get-in-touch>
@@ -32,6 +52,11 @@
             this.currentScreenSize === 'Medium'))
     }"
   >
+    <div
+      class="footer-overlay"
+      *ngIf="isDesktopInnerMenuOpen"
+      (click)="handleOverlayClick()"
+    ></div>
     <app-business-footer></app-business-footer>
   </footer>
 </div>
