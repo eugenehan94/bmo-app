@@ -1,0 +1,59 @@
+<!-- This is the page for the routing of personal bank-accounts -->
+<div>
+  <header role="banner">
+    <a
+      class="home-skip-navigation"
+      tabindex="0"
+      (click)="handleSkipNav($event, 'nav-skip')"
+      (keydown.enter)="handleSkipNav($event, 'nav-skip')"
+      >Skip navigation</a
+    >
+    <app-personal-navbar></app-personal-navbar>
+    <span id="nav-skip" tabindex="-1" class="home-skip-navigation-end"
+      >Navigation skipped</span
+    >
+  </header>
+  <main
+    class="home-page-content-wrapper"
+    [ngClass]="{
+      'mobile-signin-menu-open':
+        isMobileSignInMenuOpen &&
+        (this.currentScreenSize === 'Small' ||
+          this.currentScreenSize === 'Medium'),
+      'mobile-menu-open':
+        isMobileMenuOpen &&
+        (this.currentScreenSize === 'Small' ||
+          this.currentScreenSize === 'Medium'),
+      overlayActive:
+        isDesktopInnerMenuOpen === true && this.currentScreenSize === 'Large'
+    }"
+    role="main"
+  >
+    <div
+      class="main-overlay"
+      *ngIf="isDesktopInnerMenuOpen"
+      (click)="handleOverlayClick()"
+    ></div>
+    <router-outlet></router-outlet>
+  </main>
+  <footer
+    role="contentinfo"
+    class="footer"
+    [ngClass]="{
+      hidden:
+        (isMobileSignInMenuOpen &&
+          (this.currentScreenSize === 'Small' ||
+            this.currentScreenSize === 'Medium')) ||
+        (isMobileMenuOpen &&
+          (this.currentScreenSize === 'Small' ||
+            this.currentScreenSize === 'Medium'))
+    }"
+  >
+    <div
+      class="footer-overlay"
+      *ngIf="isDesktopInnerMenuOpen"
+      (click)="handleOverlayClick()"
+    ></div>
+    <app-personal-footer></app-personal-footer>
+  </footer>
+</div>

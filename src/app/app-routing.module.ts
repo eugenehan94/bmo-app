@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { HomeComponent } from './pages/personal/home/home.component';
-import { BusinessHomeComponent } from './pages/business/home/home.component';
+// Personal
+import { HomeComponent } from 'src/app/pages/personal/home/home.component';
+import { PersonalBankAccountsMainComponent } from 'src/app/pages/personal/bank-accounts/main/main.component';
+import { PersonalBankAccountsOverviewComponent } from 'src/app/pages/personal/bank-accounts/overview/overview.component';
+// Business
+import { BusinessHomeComponent } from 'src/app/pages/business/home/home.component';
 const routes: Routes = [
   {
     path: '',
@@ -12,6 +15,11 @@ const routes: Routes = [
   {
     path: 'personal',
     component: HomeComponent,
+  },
+  {
+    path: 'personal/bank-accounts',
+    component: PersonalBankAccountsMainComponent,
+    children: [{ path: '', component: PersonalBankAccountsOverviewComponent }],
   },
   {
     path: 'business',
