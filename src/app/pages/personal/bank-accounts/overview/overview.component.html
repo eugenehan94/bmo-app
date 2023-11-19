@@ -2,69 +2,20 @@
   <div>
     <!-- Loading animation -->
     <div></div>
-    <div
-      style="
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        flex-flow: row wrap;
-      "
-    >
-      <div style="flex: 0 0 100%; max-width: 100%; box-sizing: inherit">
-        <div
-          style="
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            flex-flow: row wrap;
-            box-sizing: inherit;
-          "
-        >
-          <div
-            style="
-              margin-bottom: 1.5rem;
-              margin-top: 1.5rem;
-              flex: 0 0 100%;
-              max-width: 100%;
-              min-width: initial;
-              box-sizing: inherit;
-            "
-          >
-            <nav
-              style="
-                width: max-content;
-                padding-left: 1rem;
-                display: flex;
-                box-sizing: inherit;
-              "
-            >
-              <li style="display: inline-flex; list-style-type: none">
+    <div class="intro-container">
+      <div class="intro-content-wrapper">
+        <div class="intro-back-to-personal-container">
+          <div class="intro-back-to-personal-nav-wrapper">
+            <nav class="intro-back-to-personal-nav">
+              <li class="intro-back-to-personal-nav-li">
                 <a
+                  class="intro-back-to-personal-link"
                   routerLink="/personal"
                   aria-label="learn about personal banking"
-                  style="
-                    display: flex;
-                    align-items: center;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    margin-right: 0.5rem;
-                    font-weight: 700;
-                    font-size: 0.875rem;
-                    line-height: 1.25rem;
-                    color: #0075be;
-                    text-decoration: none;
-                    cursor: pointer;
-                  "
                 >
                   <mat-icon
                     aria-hidden="true"
-                    style="
-                      display: block;
-                      width: 24px;
-                      height: 24px;
-                      color: #0075be;
-                    "
+                    class="intro-back-to-personal-link-icon"
                     >arrow_back</mat-icon
                   >Personal</a
                 >
@@ -72,58 +23,142 @@
             </nav>
           </div>
         </div>
-        <div
-          style="padding-left: 1rem; margin-right: 0.5rem; padding-top: 1rem"
-        >
-          <h1
-            style="
-              margin-bottom: 1rem;
-              line-height: 2rem;
-              font-weight: 700;
-              font-size: 1.75rem;
-              margin-top: 0;
-            "
-          >
-            Bank Accounts
-          </h1>
-          <div
-            style="
-              line-height: 1.5rem;
-              display: inline;
-              font-weight: 700;
-              font-size: 1rem;
-            "
-          >
+        <div class="intro-hero-container">
+          <h1 class="intro-hero-title">Bank Accounts</h1>
+          <div class="intro-hero-description">
             Whatever your goals, we've got an account to help you make real
             financial progress
           </div>
           <div>
-            <ul
-              style="
-                padding-top: 1rem;
-                padding-left: 0rem;
-                margin-left: 0;
-                margin-top: 0;
-                list-style: none;
-                margin-bottom: 0;
-              "
-            >
-              <!-- @TODO: li comes from API - create service when you figure out other pages setup -->
-              <li style="margin-bottom: 1rem; display: flex">
-                <div style="display: flex">
-                  <div style="padding-right: 1rem">
-                    <mat-icon aria-hidden="true" style="color: #0075be"
+            <ul class="intro-hero-ul">
+              <!-- @TODO: li will come from serice - create service when you figure out other pages setup -->
+              <li class="intro-hero-ul-li">
+                <div class="intro-hero-ul-li-content-wrapper">
+                  <div class="intro-hero-ul-li-icon-wrapper">
+                    <mat-icon aria-hidden="true" class="intro-hero-ul-li-icon"
                       >check</mat-icon
                     >
                   </div>
-                  <div></div>
+                  <div class="intro-hero-ul-li-text">
+                    Get limited-time cash bonuses when you open a Performance or
+                    Premium Chequing Account online.
+                  </div>
                 </div>
               </li>
             </ul>
           </div>
         </div>
         <!-- Limited time offer -->
-        <div></div>
+        <div class="intro-limited-time-container">
+          <div class="intro-limited-time-content-wrapper">
+            <div class="intro-limited-time-content">
+              <div class="intro-limited-time-icon-container">
+                <span class="intro-limited-time-icon-wrapper">
+                  <img src="/assets/svg/lightbulb-blue.svg" alt="lightbulb" />
+                </span>
+              </div>
+              <div class="intro-limited-time-inner-content-container">
+                <div class="intro-limited-time-inner-title-wrapper">
+                  <span class="intro-limited-time-inner-title"
+                    >Limited time offer!</span
+                  >
+                </div>
+                <div class="intro-limited-time-inner-text-container">
+                  <span class="intro-limited-time-inner-font-weight"
+                    >Get up to $1200</span
+                  >
+                  <sup class="intro-limited-time-inner-superscript">
+                    <a
+                      aria-label="section, campaign terms and conditions pdf, opens in a new tab"
+                      href="/pdf/edb-total-value/terms-and-conditions.pdf"
+                      rel="noopener"
+                      class="intro-limited-time-inner-superscript-lg"
+                      >§</a
+                    >
+                  </sup>
+                  <span class="intro-limited-time-inner-font-weight">
+                    in value with us. <br
+                  /></span>
+                  <span class="intro-limited-time-inner-font-weight">
+                    This includes up to a $450<sup>
+                      <a
+                        href="https://www.bmo.com/assets/pdfs/edb-chequing-terms-and-conditions-en.pdf"
+                        target="_blank"
+                        aria-label="star campaign terms and conditions pdf, opens in a new tab"
+                        class="intro-limited-time-inner-superscript-normal"
+                        >*</a
+                      >
+                    </sup>
+                    cash bonus and
+                  </span>
+                  <span class="intro-limited-time-inner-font-weight-sm"
+                    >5.50%</span
+                  >
+                  <span class="intro-limited-time-inner-font-weight-sm">
+                    promo interest rate</span
+                  >
+                  <sup
+                    style="
+                      top: -0.5em;
+                      font-size: 75%;
+                      line-height: 0;
+                      position: relative;
+                      vertical-align: baseline;
+                    "
+                  >
+                    <a
+                      target="_blank"
+                      aria-label="star star amplifier promotional interest rate offer pdf, opens in a new tab"
+                      href="https://www.bmo.com/pdf/savings-amplifier-promotional-interest-rate-offer-en.pdf"
+                      style="
+                        font-weight: 700;
+                        color: #0075be;
+                        text-decoration: none;
+                        cursor: pointer;
+                        background-color: transparent;
+                      "
+                      >**</a
+                    >
+                  </sup>
+                  <span style="font-weight: 300">
+                    when you open a chequing and a Savings Amplifier
+                    Account.</span
+                  >
+                </div>
+                <div>
+                  <a
+                    aria-label="Learn more details about this limited time offer."
+                    href="/main/personal/bank-accounts/new-bank-account-offers-and-promotions/"
+                    style="
+                      color: #0075be;
+                      text-decoration: none;
+                      cursor: pointer;
+                    "
+                  >
+                    <span
+                      style="
+                        font-weight: 700;
+                        font-size: 0.875rem;
+                        line-height: 1.25rem;
+                      "
+                      >Find out how</span
+                    >
+                    <span
+                      style="
+                        margin-left: 0.5rem;
+                        display: inline-block;
+                        vertical-align: middle;
+                      "
+                      ><mat-icon aria-hidden="true"
+                        >chevron_right</mat-icon
+                      ></span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
