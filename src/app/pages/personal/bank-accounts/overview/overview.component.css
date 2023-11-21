@@ -62,6 +62,9 @@
   display: flex;
   box-sizing: inherit;
 }
+.intro-back-to-personal-nav.large {
+  padding-left: 2rem;
+}
 .intro-back-to-personal-nav.medium {
   padding-left: 3rem;
 }
@@ -102,6 +105,11 @@
 .intro-hero-container.medium {
   padding-left: 3rem;
   padding-right: 2rem;
+  padding-top: 1rem;
+}
+.intro-hero-container.large {
+  padding-right: 2rem;
+  padding-left: 2rem;
   padding-top: 1rem;
 }
 .intro-hero-title {

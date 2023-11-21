@@ -6,7 +6,6 @@
       large: currentScreenSize === 'Large'
     }"
   >
-    <!-- Loading animation -->
     <div *ngIf="currentScreenSize === 'Large'" class="intro-image"></div>
     <div class="intro-container">
       <div
@@ -21,7 +20,10 @@
           <div class="intro-back-to-personal-nav-wrapper">
             <nav
               class="intro-back-to-personal-nav"
-              [ngClass]="{ medium: currentScreenSize === 'Medium' }"
+              [ngClass]="{
+                medium: currentScreenSize === 'Medium',
+                large: currentScreenSize === 'Large'
+              }"
             >
               <ul class="intro-back-to-personal-nav-ul">
                 <li class="intro-back-to-personal-nav-li">
@@ -44,7 +46,8 @@
         <div
           class="intro-hero-container"
           [ngClass]="{
-            medium: currentScreenSize === 'Medium'
+            medium: currentScreenSize === 'Medium',
+            large: currentScreenSize === 'Large'
           }"
         >
           <h1
