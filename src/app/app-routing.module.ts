@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 // Personal
 import { HomeComponent } from 'src/app/pages/personal/home/home.component';
 import { PersonalBankAccountsMainComponent } from 'src/app/pages/personal/bank-accounts/main/main.component';
-import { PersonalBankAccountsOverviewComponent } from 'src/app/pages/personal/bank-accounts/overview/overview.component';
+import { PersonalBankAccountsOverviewPage } from 'src/app/pages/personal/bank-accounts/overview/overview.component';
 // Business
 import { BusinessHomeComponent } from 'src/app/pages/business/home/home.component';
 const routes: Routes = [
@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     path: 'personal/bank-accounts',
     component: PersonalBankAccountsMainComponent,
-    children: [{ path: '', component: PersonalBankAccountsOverviewComponent }],
+    children: [{ path: '', component: PersonalBankAccountsOverviewPage }],
   },
   {
     path: 'business',

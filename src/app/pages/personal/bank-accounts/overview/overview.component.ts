@@ -1,27 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { BankAccountDataType } from 'src/app/components/_shared/interfaces';
 import { OverviewService } from './overview.service';
-//ngrx
-import { Store } from '@ngrx/store';
 
 @Component({
-  selector: 'app-personal-bank-accounts-overview',
+  selector: 'app-personal-bank-accounts-overview-page',
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.css'],
 })
-export class PersonalBankAccountsOverviewComponent implements OnInit {
-  constructor(
-    private overviewService: OverviewService,
-    private store: Store<any>
-  ) {}
+export class PersonalBankAccountsOverviewPage implements OnInit {
+  constructor(private overviewService: OverviewService) {}
 
-  bankAccountsData?: any;
-  currentScreenSize?: any;
+  bankAccountsData?: BankAccountDataType[];
 
   ngOnInit(): void {
     this.bankAccountsData = this.overviewService.bankAccountData;
-
-    this.store.select('screenSizeReducer').subscribe((res) => {
-      this.currentScreenSize = res.currentScreenSize;
-    });
   }
 }

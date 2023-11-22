@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-
+import { BankAccountDataType } from 'src/app/components/_shared/interfaces';
 @Injectable({
   providedIn: 'root',
 })
 export class OverviewService {
   constructor() {}
 
-  bankAccountData: any = [
+  bankAccountData: BankAccountDataType[] = [
     {
       text: 'Get limited-time cash bonuses when you open a Performance or Premium Chequing Account online.',
     },

@@ -107,6 +107,11 @@ export interface CardContentType {
   linkAriaLabel: string;
 }
 
+//Personal - bank-accounts - overview
+export interface BankAccountDataType {
+  text: string;
+}
+
 //Business - home page
 export interface FooterCaptionsType {
   caption: string;

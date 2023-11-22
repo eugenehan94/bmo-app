@@ -6,7 +6,9 @@ import { WhereToBeginComponent } from 'src/app/components/personal/where-to-begi
 import { PersonalFooterComponent } from 'src/app/components/personal/footer/footer.component';
 // Bank accounts
 import { PersonalBankAccountsMainComponent } from 'src/app/pages/personal/bank-accounts/main/main.component';
-import { PersonalBankAccountsOverviewComponent } from 'src/app/pages/personal/bank-accounts/overview/overview.component';
+import { PersonalBankAccountsOverviewPage } from 'src/app/pages/personal/bank-accounts/overview/overview.component';
+import { PersonalBankAccountsOverviewComponent } from 'src/app/components/personal/bank-accounts/overview/overview.component';
+import { PersonalBankAccountsFeaturedProductsComponent } from 'src/app/components/personal/bank-accounts/featured-products/featured-products.component';
 
 export const PersonalComponents = [
   NavbarComponent,
@@ -15,6 +17,8 @@ export const PersonalComponents = [
   DownloadBannerComponent,
   WhereToBeginComponent,
   PersonalFooterComponent,
-  PersonalBankAccountsOverviewComponent,
+  PersonalBankAccountsOverviewPage,
   PersonalBankAccountsMainComponent,
+  PersonalBankAccountsOverviewComponent,
+  PersonalBankAccountsFeaturedProductsComponent,
 ];

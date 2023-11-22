@@ -1,0 +1,203 @@
+<section>
+    <div
+      class="intro-outer-container"
+      [ngClass]="{
+        medium: currentScreenSize === 'Medium',
+        large: currentScreenSize === 'Large'
+      }"
+    >
+      <div *ngIf="currentScreenSize === 'Large'" class="intro-image"></div>
+      <div class="intro-container">
+        <div
+          class="intro-content-wrapper"
+          [ngClass]="{
+            medium:
+              currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+          }"
+        >
+          <!-- Back to personal banking page -->
+          <div class="intro-back-to-personal-container">
+            <div class="intro-back-to-personal-nav-wrapper">
+              <nav
+                class="intro-back-to-personal-nav"
+                [ngClass]="{
+                  medium: currentScreenSize === 'Medium',
+                  large: currentScreenSize === 'Large'
+                }"
+              >
+                <ul class="intro-back-to-personal-nav-ul">
+                  <li class="intro-back-to-personal-nav-li">
+                    <a
+                      class="intro-back-to-personal-link"
+                      routerLink="/personal"
+                      aria-label="learn about personal banking"
+                    >
+                      <mat-icon
+                        aria-hidden="true"
+                        class="intro-back-to-personal-link-icon"
+                        >arrow_back</mat-icon
+                      >Personal</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div
+            class="intro-hero-container"
+            [ngClass]="{
+              medium: currentScreenSize === 'Medium',
+              large: currentScreenSize === 'Large'
+            }"
+          >
+            <h1
+              class="intro-hero-title"
+              [ngClass]="{
+                medium: currentScreenSize === 'Medium',
+                large: currentScreenSize === 'Large'
+              }"
+            >
+              Bank Accounts
+            </h1>
+            <div
+              class="intro-hero-description"
+              [ngClass]="{
+                medium:
+                  currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+              }"
+            >
+              Whatever your goals, we've got an account to help you make real
+              financial progress
+            </div>
+            <div>
+              <ul class="intro-hero-ul" *ngFor="let data of bankAccountsData">
+                <!-- @TODO: li will come from serice - create service when you figure out other pages setup -->
+                <li class="intro-hero-ul-li">
+                  <div class="intro-hero-ul-li-content-wrapper">
+                    <div class="intro-hero-ul-li-icon-wrapper">
+                      <mat-icon aria-hidden="true" class="intro-hero-ul-li-icon"
+                        >check</mat-icon
+                      >
+                    </div>
+                    <div class="intro-hero-ul-li-text">
+                      {{ data.text }}
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Limited time offer -->
+          <div
+            class="intro-limited-time-container"
+            [ngClass]="{
+              medium: currentScreenSize === 'Medium',
+              large: currentScreenSize === 'Large'
+            }"
+          >
+            <div
+              class="intro-limited-time-content-wrapper"
+              [ngClass]="{
+                medium:
+                  currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+              }"
+            >
+              <div class="intro-limited-time-content">
+                <div
+                  class="intro-limited-time-icon-container"
+                  [ngClass]="{
+                    medium:
+                      currentScreenSize === 'Medium' ||
+                      currentScreenSize === 'Large'
+                  }"
+                >
+                  <span class="intro-limited-time-icon-wrapper">
+                    <img src="/assets/svg/lightbulb-blue.svg" alt="lightbulb" />
+                  </span>
+                </div>
+                <div class="intro-limited-time-inner-content-container">
+                  <div class="intro-limited-time-inner-title-wrapper">
+                    <span class="intro-limited-time-inner-title"
+                      >Limited time offer!</span
+                    >
+                  </div>
+                  <div
+                    class="intro-limited-time-inner-text-container"
+                    [ngClass]="{
+                      medium:
+                        currentScreenSize === 'Medium' ||
+                        currentScreenSize === 'Large'
+                    }"
+                  >
+                    <span class="intro-limited-time-inner-font-weight"
+                      >Get up to $1200</span
+                    >
+                    <sup class="intro-limited-time-inner-superscript">
+                      <a
+                        aria-label="section, campaign terms and conditions pdf, opens in a new tab"
+                        href="/pdf/edb-total-value/terms-and-conditions.pdf"
+                        rel="noopener"
+                        class="intro-limited-time-inner-superscript-lg"
+                        >§</a
+                      >
+                    </sup>
+                    <span class="intro-limited-time-inner-font-weight">
+                      in value with us. <br
+                    /></span>
+                    <span class="intro-limited-time-inner-font-weight-sm">
+                      This includes up to a $450<sup>
+                        <a
+                          href="https://www.bmo.com/assets/pdfs/edb-chequing-terms-and-conditions-en.pdf"
+                          target="_blank"
+                          aria-label="star campaign terms and conditions pdf, opens in a new tab"
+                          class="intro-limited-time-inner-superscript-normal"
+                          >*</a
+                        >
+                      </sup>
+                      cash bonus and
+                    </span>
+                    <span class="intro-limited-time-inner-font-weight-sm"
+                      >5.50%</span
+                    >
+                    <span class="intro-limited-time-inner-font-weight-sm">
+                      promo interest rate</span
+                    >
+                    <sup class="intro-limited-time-inner-superscript-sup">
+                      <a
+                        target="_blank"
+                        aria-label="star star amplifier promotional interest rate offer pdf, opens in a new tab"
+                        href="https://www.bmo.com/pdf/savings-amplifier-promotional-interest-rate-offer-en.pdf"
+                        class="intro-limited-time-inner-superscript-lg"
+                        >**</a
+                      >
+                    </sup>
+                    <span class="intro-limited-time-inner-font-weight-sm">
+                      when you open a chequing and a Savings Amplifier
+                      Account.</span
+                    >
+                  </div>
+                  <div>
+                    <a
+                      aria-label="Learn more details about this limited time offer."
+                      href="/main/personal/bank-accounts/new-bank-account-offers-and-promotions/"
+                      class="intro-limited-time-inner-superscript-normal"
+                    >
+                      <span class="intro-limited-time-inner-text-desc"
+                        >Find out how</span
+                      >
+                      <span class="intro-limited-time-inner-icon-wrapper"
+                        ><mat-icon aria-hidden="true"
+                          >chevron_right</mat-icon
+                        ></span
+                      >
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
