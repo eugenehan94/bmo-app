@@ -218,3 +218,23 @@
   font-weight: 300;
   font-size: 1rem;
 }
+.featured-products-first-card-learn-more-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+.featured-products-first-card-learn-more-link {
+  display: inline-flex;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #0075be;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.featured-products-first-card-explore-container {
+  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
