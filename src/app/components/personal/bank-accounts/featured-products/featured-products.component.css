@@ -264,3 +264,10 @@
   justify-content: center;
   display: flex;
 }
+.featured-products-second-card-content-link {
+  font-weight: 700;
+  color: #0075be;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+}
