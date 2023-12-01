@@ -40,21 +40,21 @@
   flex-flow: row wrap;
   max-width: 75rem;
 }
-.featured-products-first-card-container {
+.featured-products-card-container {
   padding-left: 1rem;
   padding-right: 1rem;
   padding: 0rem;
   flex: 0 0 100%;
   max-width: 100%;
 }
-.featured-products-first-card-content-container {
+.featured-products-card-content-container {
   background-color: #ffffff;
   box-shadow: 0 0 0.125rem 0 rgba(0, 25, 40, 0.12),
     0 0.125rem 0.125rem 0 rgba(0, 25, 40, 0.07);
   border-radius: 0.25rem;
   overflow: hidden;
 }
-.featured-products-first-card-top-banner-container {
+.featured-products-card-top-banner-container {
   margin: 5px;
   height: 60px;
   background-color: #e6f9fe;
@@ -67,7 +67,7 @@
   display: flex;
   text-align: center;
 }
-.featured-products-first-card-top-banner-title {
+.featured-products-card-top-banner-title {
   color: #005587;
   margin-right: 0.25rem;
   line-height: 2rem;
@@ -77,7 +77,7 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-.featured-products-first-card-content-wrapper {
+.featured-products-card-content-wrapper {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-left: 1.5rem;
@@ -106,12 +106,12 @@
   font-weight: 700;
   font-size: 1.125rem;
 }
-.featured-products-first-card-content-button-container {
+.featured-products-card-content-button-container {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.featured-products-first-card-content-button {
+.featured-products-card-content-button {
   letter-spacing: 0.01562rem;
   line-height: 3.25rem;
   cursor: pointer;
@@ -173,7 +173,7 @@
   cursor: pointer;
   background-color: transparent;
 }
-.featured-products-first-card-content-button-two-sup {
+.featured-products-card-content-button-two-sup {
   top: -0.5em;
   font-size: 75%;
   line-height: 0;
@@ -181,7 +181,7 @@
   vertical-align: baseline;
   font-weight: 700;
 }
-.featured-products-first-card-line {
+.featured-products-card-line {
   background-color: #e6f9fe;
   border-top-right-radius: 0.25rem;
   border-top-left-radius: 0.25rem;
@@ -264,10 +264,98 @@
   justify-content: center;
   display: flex;
 }
+
+.featured-products-card-top-banner-new {
+  background-color: #0075be;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.625rem;
+}
+
 .featured-products-second-card-content-link {
   font-weight: 700;
   color: #0075be;
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
+}
+.featured-products-second-card-content-title-one {
+  margin-right: 0.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.featured-products-second-card-content-title-two-wrapper {
+  white-space: nowrap;
+  align-items: center;
+  display: inline-flex;
+}
+.featured-products-second-card-content-title-two {
+  margin-right: 0.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.featured-products-first-card-content-button {
+  display: inline-flex;
+  vertical-align: middle;
+}
+.featured-products-second-card-content-button-text {
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.01562rem;
+  font-size: 0.875rem;
+  text-align: center;
+  cursor: pointer;
+}
+.featured-products-second-card-button-caption-container {
+  font-weight: 700;
+  text-align: center;
+}
+.featured-products-second-card-button-caption {
+  line-height: 1.5rem;
+}
+.featured-products-second-card-button-caption-link {
+  color: #0075be;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.featured-products-second-card-list-container {
+  padding-left: 0rem;
+  margin-left: 0rem;
+  margin-top: 0rem;
+  list-style: none;
+  margin-bottom: 0;
+}
+.featured-products-second-card-list-li {
+  margin-bottom: 1rem;
+  display: flex;
+}
+.featured-products-second-card-list-li-content-container {
+  display: flex;
+}
+.featured-products-second-card-list-li-content-icon-wrapper {
+  padding-right: 1rem;
+}
+.featured-products-second-card-list-li-content {
+  text-align: left;
+}
+.featured-products-second-card-list-li-content-text {
+  line-height: 1.5rem;
+  display: inline;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: left;
+}
+.featured-products-second-card-list-li-content-abbr {
+  border-bottom: none;
+  cursor: default;
+  text-decoration: none;
 }
