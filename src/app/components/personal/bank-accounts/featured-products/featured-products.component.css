@@ -222,7 +222,7 @@
   margin-top: 2rem;
   text-align: center;
 }
-.featured-products-first-card-learn-more-link {
+.featured-products-card-learn-more-link {
   display: inline-flex;
   text-transform: uppercase;
   font-weight: 700;
@@ -238,7 +238,7 @@
   padding-top: 1.5rem;
   text-align: center;
 }
-.featured-products-first-card-explore-link {
+.featured-products-card-explore-link {
   letter-spacing: 0.01562rem;
   line-height: 3.25rem;
   width: auto;
@@ -259,7 +259,7 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-.featured-products-first-card-explore-link-text {
+.featured-products-card-explore-link-text {
   align-items: center;
   justify-content: center;
   display: flex;
@@ -358,4 +358,9 @@
   border-bottom: none;
   cursor: default;
   text-decoration: none;
+}
+.featured-products-second-card-content-button-wrapper {
+  text-decoration: none;
+  display: inline-flex;
+  vertical-align: middle;
 }
