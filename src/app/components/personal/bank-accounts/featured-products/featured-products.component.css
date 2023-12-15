@@ -144,6 +144,176 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
 }
+
+.featured-products-first-card-content-overlay-container {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1005;
+  display: none;
+  overflow-y: scroll;
+}
+.featured-products-first-card-content-overlay-container.show {
+  display: block;
+}
+
+.featured-products-first-card-content-overlay-inner-container {
+  background-color: #f5f6f7;
+  padding: 1.5rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  height: 100vh;
+  min-height: 100vh;
+  margin-left: 0;
+  border: 0;
+  border-radius: 0;
+}
+.featured-products-first-card-content-overlay-inner-container.show {
+  display: block;
+}
+
+.featured-products-first-card-content-overlay-close-btn {
+  position: absolute;
+  border-radius: 0;
+  font-size: 36px;
+  text-align: center;
+  line-height: 21px;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  top: 16px;
+  right: 20px;
+}
+.featured-products-first-card-content-overlay-content-container {
+  text-align: center;
+  padding: 16px 16px 0;
+}
+.featured-products-first-card-content-overlay-content-title-container {
+  padding-bottom: 1rem;
+}
+.featured-products-first-card-content-overlay-content-title-wrapper {
+  line-height: 2rem;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.featured-products-first-card-content-overlay-content-title-superscript-link {
+  display: inline;
+  color: #0075be;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.superscript-no-font-weight {
+  top: -0.5em;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.featured-products-first-card-content-overlay-content-description {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+}
+
+.featured-products-first-card-content-overlay-content-product-container {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.125rem 0 rgba(0, 25, 40, 0.12),
+    0 0.125rem 0.125rem 0 rgba(0, 25, 40, 0.07);
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+}
+.featured-products-first-card-content-overlay-content-product-title-container {
+  padding-bottom: 1.5rem;
+}
+.featured-products-first-card-content-overlay-content-product-title {
+  border-bottom-width: 0.0625rem;
+  border-bottom-color: #d9dce1;
+  border-bottom-style: solid;
+  padding-bottom: 0.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-size: 1.375rem;
+  letter-spacing: 0;
+}
+.featured-products-first-card-content-overlay-content-promo-title {
+  font-weight: 300;
+}
+.featured-products-first-card-content-overlay-content-promo-rate-container {
+  margin-top: 0.5rem;
+}
+.featured-products-first-card-content-overlay-content-promo-rate {
+  line-height: 2rem;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+.featured-products-first-card-content-overlay-content-promo-rate-link {
+  line-height: 2rem;
+  display: inline;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #0075be;
+  text-decoration: none;
+  cursor: pointer;
+}
+.featured-products-first-card-content-overlay-content-promo-rate-superscript {
+  top: -0.5em;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.featured-products-first-card-content-overlay-content-form-container {
+  float: none;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featured-products-first-card-content-overlay-content-form-terms-container {
+  margin-top: 1.5rem;
+  justify-content: center;
+  display: flex;
+}
+.featured-products-first-card-content-overlay-content-form-terms-label-wrapper {
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  left: 12px;
+  color: #001928;
+  letter-spacing: 0.15px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.featured-products-first-card-content-overlay-content-form-terms-wrapper {
+  align-items: center;
+  padding-left: 32px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.featured-products-first-card-content-overlay-content-reject-container {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.featured-products-first-card-content-overlay-content-reject-link {
+  font-weight: 700;
+  color: #0075be;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
 .featured-products-first-card-content-button-caption-container {
   margin-bottom: 1.5rem;
   margin-left: auto;
