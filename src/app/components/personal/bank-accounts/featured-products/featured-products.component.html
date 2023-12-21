@@ -78,9 +78,12 @@
                     class="featured-products-first-card-content-overlay-container"
                   >
                     <div
+                      role="dialog"
+                      aria-modal="true"
                       class="featured-products-first-card-content-overlay-inner-container"
                     >
                       <button
+                        aria-label="Close Accessible Modal"
                         class="featured-products-first-card-content-overlay-close-btn"
                       >
                         <span aria-hidden="true">x</span>
@@ -171,14 +174,53 @@
                               <fieldset
                                 class="featured-products-first-card-content-overlay-content-form-terms-wrapper"
                               >
-                                <input type="checkbox" />
+                                <input
+                                  type="checkbox"
+                                  class="featured-products-first-card-content-overlay-content-form-terms-input"
+                                />
                                 <label
                                   class="featured-products-first-card-content-overlay-content-form-terms-label-wrapper"
-                                ></label>
-                                <span></span>
+                                >
+                                  <div>
+                                    <span
+                                      class="featured-products-first-card-content-overlay-content-form-terms-label-text"
+                                    >
+                                      I’ve read and agree to the
+                                      <a
+                                        href="https://www.bmo.com/pdf/savings-amplifier-promotional-interest-rate-offer-en.pdf"
+                                        target="_blank"
+                                        class="featured-products-first-card-content-overlay-content-form-terms-label-text-link"
+                                        >Terms and Conditions</a
+                                      >
+                                    </span>
+                                  </div>
+                                </label>
+                                <!-- @TODO: use css to show message, set false for now -->
+                                <span
+                                  *ngIf="false"
+                                  aria-live="assertive"
+                                  class="featured-products-first-card-content-overlay-content-form-terms-error-message"
+                                  >Please accept the Terms and Conditions to
+                                  proceed with your application.</span
+                                >
                               </fieldset>
                             </div>
-                            <div></div>
+                            <div
+                              class="featured-products-first-card-content-overlay-content-form-terms-button-container"
+                            >
+                              <div
+                                class="featured-products-first-card-content-overlay-content-form-terms-button-wrapper"
+                              >
+                                <button
+                                  role="button"
+                                  type="submit"
+                                  aria-haspopup="false"
+                                  class="featured-products-first-card-content-overlay-content-form-terms-button"
+                                >
+                                  yes add and continue
+                                </button>
+                              </div>
+                            </div>
                           </form>
                         </div>
                         <div
