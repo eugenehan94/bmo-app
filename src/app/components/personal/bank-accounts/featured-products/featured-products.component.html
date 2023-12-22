@@ -1,16 +1,35 @@
-<!-- @TODO: Check when complete rename/reuse CSS class name if similar -->
 <section class="featured-products-section">
   <!-- Title -->
-  <div class="featured-products-title-container">
+  <div
+    class="featured-products-title-container"
+    [ngClass]="{
+      medium: currentScreenSize === 'Medium',
+      large: currentScreenSize === 'Large'
+    }"
+  >
     <div class="featured-products-title-wrapper">
-      <h2 class="featured-products-title">Banking that's made for you</h2>
+      <h2
+        class="featured-products-title"
+        [ngClass]="{
+          medium: currentScreenSize === 'Medium',
+          large: currentScreenSize === 'Large'
+        }"
+      >
+        Banking that's made for you
+      </h2>
     </div>
   </div>
   <!-- Content -->
   <div class="featured-products-cards-container">
     <div class="featured-products-cards-wrapper">
       <!-- First card -->
-      <div class="featured-products-card-container">
+      <div
+        class="featured-products-card-container"
+        [ngClass]="{
+          'medium-left': currentScreenSize === 'Medium',
+          'large-left': currentScreenSize === 'Large'
+        }"
+      >
         <!-- First card content -->
         <div class="featured-products-card-content-container">
           <!-- First card top banner -->
@@ -19,9 +38,21 @@
               Most Popular
             </h3>
           </div>
-          <div class="featured-products-card-content-wrapper">
-            <div>
-              <div class="featured-products-first-card-content-title-container">
+          <div
+            class="featured-products-card-content-wrapper"
+            [ngClass]="{
+              large: currentScreenSize === 'Large'
+            }"
+          >
+            <div class="featured-products-card-content-wrapper-inner">
+              <div
+                class="featured-products-first-card-content-title-container"
+                [ngClass]="{
+                  medium:
+                    currentScreenSize === 'Medium' ||
+                    currentScreenSize === 'Large'
+                }"
+              >
                 <a
                   aria-label="learn more about B M O Performance Chequing Account, opens in new tab"
                   href="https://www.bmo.com/en-ca/main/personal/bank-accounts/chequing-accounts/performance/"
@@ -45,13 +76,21 @@
                   </span>
                 </a>
               </div>
-              <div class="featured-products-card-content-button-container">
+              <div
+                class="featured-products-card-content-button-container"
+                [ngClass]="{
+                  medium:
+                    currentScreenSize === 'Medium' ||
+                    currentScreenSize === 'Large'
+                }"
+              >
                 <div>
                   <div>
                     <div>
                       <button
                         aria-label="open a performance plan account now, opens in new pop up"
                         aria-haspopup="false"
+                        (click)="setOverlay(true)"
                         class="featured-products-card-content-button"
                       >
                         <span
@@ -62,9 +101,17 @@
                             style="margin-right: 0.5rem"
                             >lock_open</mat-icon
                           >
-                          <!-- <span>Open now</span> -->
+                          <span
+                            *ngIf="
+                              currentScreenSize === 'Medium' ||
+                              currentScreenSize === 'Large'
+                            "
+                            >Open now</span
+                          >
                           <!-- Show only when small screen -->
-                          <span>open in 7 minutes</span>
+                          <span *ngIf="currentScreenSize === 'Small'"
+                            >open in 7 minutes</span
+                          >
                         </span>
                         <!-- Only for screen readers -->
                         <span class="screen-reader-only"
@@ -74,16 +121,27 @@
                     </div>
                   </div>
                   <!-- Overlay -->
+                  <!-- https://stackoverflow.com/questions/44059714/close-modal-when-clicking-on-overlay-and-not-the-modal-it-self -->
                   <div
+                    #cardOneOverlay
                     class="featured-products-first-card-content-overlay-container"
+                    [ngClass]="showOverlay === true ? 'show' : null"
+                    (click)="clickedOverlay($event)"
                   >
                     <div
                       role="dialog"
                       aria-modal="true"
                       class="featured-products-first-card-content-overlay-inner-container"
+                      [ngClass]="{
+                        show: showOverlay === true,
+                        medium:
+                          currentScreenSize === 'Medium' ||
+                          currentScreenSize === 'Large'
+                      }"
                     >
                       <button
                         aria-label="Close Accessible Modal"
+                        (click)="setOverlay(false)"
                         class="featured-products-first-card-content-overlay-close-btn"
                       >
                         <span aria-hidden="true">x</span>
@@ -243,6 +301,11 @@
               </div>
               <div
                 class="featured-products-first-card-content-button-caption-container"
+                [ngClass]="{
+                  medium:
+                    currentScreenSize === 'Medium' ||
+                    currentScreenSize === 'Large'
+                }"
               >
                 <div
                   class="featured-products-first-card-content-button-first-caption-container"
@@ -274,7 +337,13 @@
                 </div>
               </div>
               <div class="featured-products-card-line"></div>
-              <ul class="featured-products-first-card-list-container">
+              <ul
+                class="featured-products-first-card-list-container"
+                [ngClass]="{
+                  medium: currentScreenSize === 'Medium',
+                  large: currentScreenSize === 'Large'
+                }"
+              >
                 <li class="featured-products-first-card-list-li">
                   <div
                     class="featured-products-first-card-list-content-wrapper"
@@ -282,7 +351,9 @@
                     <div
                       class="featured-products-first-card-list-content-icon-wrapper"
                     >
-                      <mat-icon aria-hidden="true">check</mat-icon>
+                      <mat-icon aria-hidden="true" style="color: #0075be"
+                        >check</mat-icon
+                      >
                     </div>
                     <div class="featured-products-first-card-list-content">
                       <div>
@@ -312,8 +383,137 @@
                     </div>
                   </div>
                 </li>
+                <li class="featured-products-first-card-list-li">
+                  <div
+                    class="featured-products-first-card-list-content-wrapper"
+                  >
+                    <div
+                      class="featured-products-first-card-list-content-icon-wrapper"
+                    >
+                      <mat-icon aria-hidden="true" style="color: #0075be"
+                        >check</mat-icon
+                      >
+                    </div>
+                    <div class="featured-products-first-card-list-content">
+                      <div>
+                        <div>
+                          <span
+                            class="featured-products-first-card-list-content-text-wrapper"
+                          >
+                            <abbr>BMO </abbr>
+                            Family Bundle -
+                            <strong class="featured-products-font-weight-large"
+                              >no-fee daily banking</strong
+                            >
+                            <a
+                              href="https://www.bmo.com/popups/main/personal/bank-accounts/global-terms-and-conditions-en.html#ninety"
+                              target="_blank"
+                              aria-label="star 90 learn more about B M O Family bundle, opens in new tab"
+                              class="featured-products-first-card-content-button-two-caption-link"
+                            >
+                              <span class="screen-reader-only">footnote</span>
+                              <sup
+                                class="featured-products-card-content-button-two-sup"
+                              >
+                                *90</sup
+                              >
+                            </a>
+                            for your family
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="featured-products-first-card-list-li">
+                  <div
+                    class="featured-products-first-card-list-content-wrapper"
+                  >
+                    <div
+                      class="featured-products-first-card-list-content-icon-wrapper"
+                    >
+                      <mat-icon aria-hidden="true" style="color: #0075be"
+                        >check</mat-icon
+                      >
+                    </div>
+                    <div class="featured-products-first-card-list-content">
+                      <div>
+                        <div>
+                          <span
+                            class="featured-products-first-card-list-content-text-wrapper"
+                          >
+                            <strong class="featured-products-font-weight-large"
+                              >Up to $40 rebate</strong
+                            >
+                            on annual fee for eligible credit cards
+                            <a
+                              href="https://www.bmo.com/popups/main/personal/bank-accounts/global-terms-and-conditions-en.html#fifteen"
+                              target="_blank"
+                              aria-label="star 15 learn more about credit card fees, opens in new tab"
+                              class="featured-products-first-card-content-button-two-caption-link"
+                            >
+                              <span class="screen-reader-only">footnote</span>
+                              <sup
+                                class="featured-products-card-content-button-two-sup"
+                              >
+                                *15</sup
+                              >
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="featured-products-first-card-list-li">
+                  <div
+                    class="featured-products-first-card-list-content-wrapper"
+                  >
+                    <div
+                      class="featured-products-first-card-list-content-icon-wrapper"
+                    >
+                      <mat-icon aria-hidden="true" style="color: #0075be"
+                        >check</mat-icon
+                      >
+                    </div>
+                    <div class="featured-products-first-card-list-content">
+                      <div>
+                        <div>
+                          <span
+                            class="featured-products-first-card-list-content-text-wrapper"
+                          >
+                            <strong class="featured-products-font-weight-large"
+                              >OnGuard<sup>®</sup> Identity Theft Protection at
+                              no cost</strong
+                            >
+                            <a
+                              href="https://www.bmo.com/popups/main/personal/bank-accounts/global-terms-and-conditions-en.html#seventyfour"
+                              target="_blank"
+                              aria-label="star 74 learn more about On Guard Identify theft protection"
+                              class="featured-products-first-card-content-button-two-caption-link"
+                            >
+                              <span class="screen-reader-only">footnote</span>
+                              <sup
+                                class="featured-products-card-content-button-two-sup"
+                              >
+                                *74</sup
+                              >
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
-              <div class="featured-products-first-card-learn-more-container">
+              <div
+                class="featured-products-first-card-learn-more-container"
+                [ngClass]="{
+                  medium:
+                    currentScreenSize === 'Medium' ||
+                    currentScreenSize === 'Large'
+                }"
+              >
                 <a
                   href="https://www.bmo.com/en-ca/main/personal/bank-accounts/chequing-accounts/performance/"
                   aria-label="learn more about B M O Performance Chequing account, opens in new tab"
@@ -327,7 +527,12 @@
           </div>
         </div>
         <!-- First card bottom button -->
-        <div class="featured-products-first-card-explore-container">
+        <div
+          class="featured-products-first-card-explore-container"
+          [ngClass]="{
+            medium: currentScreenSize === 'Medium'
+          }"
+        >
           <a
             href="https://www.bmo.com/main/personal/bank-accounts/chequing-accounts/"
             aria-label="learn more about B M O chequing accounts, opens in new tab"
@@ -341,8 +546,13 @@
         </div>
       </div>
       <!-- Second card -->
-      <!-- @TODO: rename classes with 'first' - because of reusing -->
-      <div class="featured-products-card-container">
+      <div
+        class="featured-products-card-container"
+        [ngClass]="{
+          'medium-right': currentScreenSize === 'Medium',
+          'large-right': currentScreenSize === 'Large'
+        }"
+      >
         <!-- Second card content -->
         <div class="featured-products-card-content-container">
           <div class="featured-products-card-top-banner-container">
@@ -351,9 +561,19 @@
             </h3>
             <span class="featured-products-card-top-banner-new">New</span>
           </div>
-          <div class="featured-products-card-content-wrapper">
+          <div
+            class="featured-products-card-content-wrapper"
+            [ngClass]="{ large: currentScreenSize === 'Large' }"
+          >
             <div style="text-align: center">
-              <div style="white-space: nowrap; display: inline-flex">
+              <div
+                class="featured-products-second-card-title-container"
+                [ngClass]="{
+                  medium:
+                    currentScreenSize === 'Medium' ||
+                    currentScreenSize === 'Large'
+                }"
+              >
                 <a
                   href="https://www.bmo.com/main/personal/bank-accounts/savings-accounts/savings-amplifier/"
                   aria-label="star 26 learn more about B M O Savings Amplifier account, opens in new tab"
@@ -387,7 +607,14 @@
                   >
                 </a>
               </div>
-              <div class="featured-products-card-content-button-container">
+              <div
+                class="featured-products-card-content-button-container"
+                [ngClass]="{
+                  medium:
+                    currentScreenSize === 'Medium' ||
+                    currentScreenSize === 'Large'
+                }"
+              >
                 <div>
                   <a
                     href="https://www.bmo.com/main/personal/bank-accounts/getting-started/?rg=BMO&spc=7880184&ofid=SAASTAND001&lang=en"
@@ -409,6 +636,11 @@
               </div>
               <div
                 class="featured-products-second-card-button-caption-container"
+                [ngClass]="{
+                  medium:
+                    currentScreenSize === 'Medium' ||
+                    currentScreenSize === 'Large'
+                }"
               >
                 <span class="featured-products-second-card-button-caption"
                   >1.900% interest rate</span
@@ -426,7 +658,13 @@
                 </a>
               </div>
               <div class="featured-products-card-line"></div>
-              <ul class="featured-products-second-card-list-container">
+              <ul
+                class="featured-products-second-card-list-container"
+                [ngClass]="{
+                  medium: currentScreenSize === 'Medium',
+                  large: currentScreenSize === 'Large'
+                }"
+              >
                 <li class="featured-products-second-card-list-li">
                   <div
                     class="featured-products-second-card-list-li-content-container"
@@ -434,7 +672,9 @@
                     <div
                       class="featured-products-second-card-list-li-content-icon-wrapper"
                     >
-                      <mat-icon aria-hidden="true">check</mat-icon>
+                      <mat-icon aria-hidden="true" style="color: #0075be"
+                        >check</mat-icon
+                      >
                     </div>
                     <div class="featured-products-second-card-list-li-content">
                       <span
@@ -468,8 +708,56 @@
                     </div>
                   </div>
                 </li>
+                <li class="featured-products-second-card-list-li">
+                  <div
+                    class="featured-products-second-card-list-li-content-container"
+                  >
+                    <div
+                      class="featured-products-second-card-list-li-content-icon-wrapper"
+                    >
+                      <mat-icon aria-hidden="true" style="color: #0075be"
+                        >check</mat-icon
+                      >
+                    </div>
+                    <div class="featured-products-second-card-list-li-content">
+                      <span
+                        class="featured-products-second-card-list-li-content-text"
+                        ><strong>No monthly fee</strong>
+                        or
+                        <strong> minimum balance</strong>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="featured-products-second-card-list-li">
+                  <div
+                    class="featured-products-second-card-list-li-content-container"
+                  >
+                    <div
+                      class="featured-products-second-card-list-li-content-icon-wrapper"
+                    >
+                      <mat-icon aria-hidden="true" style="color: #0075be"
+                        >check</mat-icon
+                      >
+                    </div>
+                    <div class="featured-products-second-card-list-li-content">
+                      <span
+                        class="featured-products-second-card-list-li-content-text"
+                      >
+                        Benefit from a competitive interest rate and
+                        <strong>earn money back when you save</strong>
+                      </span>
+                    </div>
+                  </div>
+                </li>
               </ul>
-              <div style="margin-top: 2rem; text-align: center">
+              <div
+                class="featured-products-second-card-learn-more-container"
+                [ngClass]="{
+                  medium: currentScreenSize === 'Medium',
+                  large: currentScreenSize === 'Large'
+                }"
+              >
                 <a
                   href="https://www.bmo.com/main/personal/bank-accounts/savings-accounts/savings-amplifier/"
                   aria-label="learn more about B M O Savings Amplifier account, opens in the same window"
