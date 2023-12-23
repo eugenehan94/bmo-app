@@ -1,0 +1,187 @@
+.multiple-accounts-container {
+  background-color: #f5f6f7;
+  position: relative;
+  max-width: 120rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.multiple-accounts-container.medium {
+  max-width: 100%;
+}
+.multiple-accounts-inner-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 75rem;
+  box-sizing: border-box;
+}
+.multiple-accounts-inner-container.medium {
+  justify-content: center;
+}
+.multiple-accounts-image-container {
+  justify-content: center;
+  display: flex;
+  flex: 0 0 25%;
+  max-width: 25%;
+  min-width: initial;
+  box-sizing: border-box;
+}
+.multiple-accounts-image-container.medium {
+  padding-top: 2.5rem;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+.multiple-accounts-image-container.large {
+  padding-left: 0rem;
+  padding-top: 2.5rem;
+  flex: 0 0 25%;
+  max-width: 25%;
+  min-width: initial;
+}
+.multiple-accounts-content-container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.multiple-accounts-content-container.medium {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+}
+.multiple-accounts-content-container.large {
+  padding-left: 3rem;
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+}
+.multiple-accounts-content-inner-container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+}
+.multiple-accounts-content-inner-container.medium {
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+.multiple-accounts-content-title-container {
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex: 1 1 0;
+  min-width: initial;
+  font-weight: 700;
+  font-size: 1.375rem;
+  letter-spacing: 0;
+  box-sizing: border-box;
+}
+.multiple-accounts-content-title-container.medium {
+  margin-top: 2rem;
+  font-size: 1.75rem;
+}
+.multiple-accounts-content-title-header {
+  line-height: 2rem;
+  font-weight: 700;
+  font-size: 1.375rem;
+  letter-spacing: 0;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+.multiple-accounts-content-title-header.medium {
+  text-align: left;
+}
+.show-for-screen-reader {
+  text-indent: -9999px;
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+.multiple-accounts-content-title-a-tag {
+  line-height: 1.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #0075be;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.multiple-accounts-title-superscript {
+  top: -0.5em;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+.multiple-accounts-content-description-container {
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+}
+.multiple-accounts-content-description-container.medium {
+  text-align: left;
+}
+.multiple-accounts-content-description-text {
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.multiple-accounts-content-learn-more-btn-container {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.multiple-accounts-content-learn-more-btn-container.medium {
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+.multiple-accounts-content-learn-more-btn-inner-container {
+  text-align: center;
+  box-sizing: border-box;
+}
+.multiple-accounts-content-learn-more-btn-inner-container.medium {
+  text-align: left;
+}
+.multiple-accounts-content-learn-more-btn {
+  letter-spacing: 0.01562rem;
+  line-height: 3.25rem;
+  width: auto;
+  text-transform: uppercase;
+  border: 0.125rem solid #0075be;
+  background-color: transparent;
+  color: #0075be;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 700;
+  padding: 0 2rem;
+  overflow: hidden;
+  height: 3.5rem;
+  transition: all 0.2s ease;
+  border-radius: 1.75rem;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.multiple-accounts-content-learn-more-btn-text {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  box-sizing: border-box;
+}

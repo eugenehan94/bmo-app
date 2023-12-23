@@ -1,0 +1,116 @@
+<section>
+  <div
+    class="multiple-accounts-container"
+    [ngClass]="{
+      medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+    }"
+  >
+    <div
+      class="multiple-accounts-inner-container"
+      [ngClass]="{
+        medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+      }"
+    >
+      <!-- Image -->
+      <div
+        *ngIf="currentScreenSize !== 'Small'"
+        class="multiple-accounts-image-container"
+        [ngClass]="{
+          medium: currentScreenSize === 'Medium',
+          large: currentScreenSize === 'Large'
+        }"
+      >
+        <div>
+          <div>
+            <img
+              src="/assets/svg/bird-nest-blue.svg"
+              alt="birds standing around bird house"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Content -->
+      <div
+        class="multiple-accounts-content-container"
+        [ngClass]="{
+          medium: currentScreenSize === 'Medium',
+          large: currentScreenSize === 'Large'
+        }"
+      >
+        <div
+          class="multiple-accounts-content-inner-container"
+          [ngClass]="{
+            medium:
+              currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+          }"
+        >
+          <!-- Content title -->
+          <div
+            class="multiple-accounts-content-title-container"
+            [ngClass]="{
+              medium:
+                currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+            }"
+          >
+            <h2
+              class="multiple-accounts-content-title-header"
+              [ngClass]="{
+                medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+              }"
+            >
+              Get multiple accounts for one monthly fee with the
+              <span aria-hidden="true">BMO</span>
+              <span class="show-for-screen-reader">B M O</span>
+              Family Bundle<a
+                href="https://www.bmo.com/popups/main/personal/bank-accounts/global-terms-and-conditions-en.html#eightysix"
+                target="_blank"
+                aria-label="footnote *86, opens in a new tab"
+                class="multiple-accounts-content-title-a-tag"
+              >
+                <span class="show-for-screen-reader">footnote</span>
+                <sup class="multiple-accounts-title-superscript">*86</sup>
+              </a>
+            </h2>
+          </div>
+          <!-- Content description -->
+          <div
+            class="multiple-accounts-content-description-container"
+            [ngClass]="{
+              medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+            }"
+          >
+            <span class="multiple-accounts-content-description-text"
+              >Open a chequing account and save on fees with each family member
+              you add.</span
+            >
+          </div>
+          <!-- Content button -->
+          <div
+            class="multiple-accounts-content-learn-more-btn-container"
+            [ngClass]="{
+              medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+            }"
+          >
+            <div
+              class="multiple-accounts-content-learn-more-btn-inner-container"
+              [ngClass]="{
+                medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+              }"
+            >
+              <a
+                href="https://www.bmo.com/main/personal/bank-accounts/family-bundle/"
+                aria-label="Learn more about B M O Family Bundle."
+                target="_blank"
+                class="multiple-accounts-content-learn-more-btn"
+              >
+                <span class="multiple-accounts-content-learn-more-btn-text"
+                  >Learn more</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
