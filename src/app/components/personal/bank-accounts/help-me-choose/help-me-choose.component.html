@@ -1,0 +1,124 @@
+<section
+  class="help-me-choose-section"
+  [ngClass]="{
+    medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+  }"
+>
+  <!-- Top portion -->
+  <div
+    class="help-me-choose-top-container"
+    [ngClass]="{
+      medium: currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+    }"
+  >
+    <div class="help-me-choose-top-inner-container">
+      <div
+        class="help-me-choose-top-content-container"
+        [ngClass]="{
+          medium:
+            currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+        }"
+      >
+        <h2
+          class="help-me-choose-top-content-title"
+          [ngClass]="{
+            medium: currentScreenSize === 'Medium',
+            large: currentScreenSize === 'Large'
+          }"
+        >
+          Help Me Choose
+        </h2>
+        <p
+          class="help-me-choose-top-content-description"
+          [ngClass]="{
+            medium:
+              currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+          }"
+        >
+          Let's find the bank account that's right for you. Just answer a few
+          short questions.
+        </p>
+      </div>
+      <!-- Picture for small breakpoint -->
+      <div
+        *ngIf="currentScreenSize === 'Small'"
+        class="help-me-choose-top-image-container"
+      >
+        <img
+          src="/assets/svg/magnifying-glass-icon-blue.svg"
+          alt="magnifying glass"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- Bottom portion -->
+  <div class="help-me-choose-bottom-container">
+    <!-- Image for screens medium and above -->
+    <div
+      *ngIf="currentScreenSize !== 'Small'"
+      class="help-me-choose-bottom-image-container"
+      [ngClass]="{
+        large: currentScreenSize === 'Large'
+      }"
+    >
+      <img
+        src="/assets/svg/bird-looks-through-telescope.svg"
+        alt="bird looks through telescope"
+        class="help-me-choose-bottom-image"
+      />
+    </div>
+    <section class="help-me-choose-bottom-questions-list-container">
+      <ul role="presentation" class="help-me-choose-bottom-ul-container">
+        <li
+          role="presentation"
+          class="help-me-choose-bottom-ul-li"
+          [ngClass]="{
+            medium: currentScreenSize === 'Medium'
+          }"
+        >
+          <div>
+            <fieldset
+              aria-labelledby=""
+              class="help-me-choose-bottom-ul-li-fieldset"
+              [ngClass]="{
+                medium: currentScreenSize === 'Medium',
+                large: currentScreenSize === 'Large'
+              }"
+            >
+              <p class="help-me-choose-bottom-list-title">
+                <span class="help-me-choose-bottom-list-title-text"
+                  >How often do you typically use your chequing account per
+                  month?</span
+                >
+              </p>
+              <div>
+                <div>
+                  <!-- @TODO: -->
+                  <div
+                    *ngFor="let firstOption of firstOptionsList"
+                    class="help-me-choose-bottom-list-options-content-wrapper"
+                  >
+                    <input
+                      type="radio"
+                      name=""
+                      class="help-me-choose-bottom-list-options-content-input"
+                    />
+                    <label
+                      class="help-me-choose-bottom-list-options-content-label"
+                    >
+                      <span>{{ firstOption.choice }}</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <span class="show-for-screen-reader"
+                >use the enter key to make your selection</span
+              >
+            </fieldset>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <div></div>
+  </div>
+</section>
