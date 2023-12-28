@@ -1,0 +1,75 @@
+<section class="check-out-others-section">
+  <div
+    class="check-out-others-top-container"
+    [ngClass]="{
+      medium: currentScreenSize === 'Medium',
+      large: currentScreenSize === 'Large'
+    }"
+  >
+    <div class="check-out-others-top-inner-container">
+      <!-- Title -->
+      <div
+        class="check-out-others-title-container"
+        [ngClass]="{
+          medium: currentScreenSize === 'Medium',
+          large: currentScreenSize === 'Large'
+        }"
+      >
+        <h2
+          class="check-out-others-title-text"
+          [ngClass]="{
+            medium:
+              currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+          }"
+        >
+          Check out our special rates for students, seniors and more
+        </h2>
+      </div>
+      <!-- List content -->
+      <ul class="check-out-others-ul">
+        <li
+          *ngFor="let services of checkOutOtherServices"
+          class="check-out-others-li"
+          [ngClass]="{
+            medium: currentScreenSize === 'Medium',
+            large: currentScreenSize === 'Large'
+          }"
+        >
+          <div
+            class="check-out-others-list-content-container"
+            [ngClass]="{
+              medium:
+                currentScreenSize === 'Medium' || currentScreenSize === 'Large'
+            }"
+          >
+            <div class="check-out-others-list-content-image-container">
+              <img src="{{ services.icon }}" />
+            </div>
+            <div class="check-out-others-content-text-wrapper">
+              <a
+                href="{{ services.titleLink }}"
+                [attr.aria-label]="services.titleAriaLabel"
+                class="check-out-other-content-text-title-link"
+                target="_blank"
+              >
+                <span class="check-out-other-content-text-title-container">
+                  <span class="check-out-other-content-text-title-text">{{
+                    services.title
+                  }}</span>
+                  <span
+                    class="check-out-other-content-text-title-chevron-container"
+                  >
+                    <mat-icon aria-hidden="true">chevron_right</mat-icon>
+                  </span>
+                </span>
+              </a>
+              <div class="check-out-others-content-description-container">
+                {{ services.description }}
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
