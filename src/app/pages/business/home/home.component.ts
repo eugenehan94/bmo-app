@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FooterCaptionsType } from 'src/app/components/_shared/interfaces';
+import { FooterCaptionsType } from 'src/app/interfaces/interfaces';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
 //ngrx

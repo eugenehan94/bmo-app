@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 // Personal
-import { HomeComponent } from 'src/app/pages/personal/home/home.component';
 import { PersonalBankAccountsMainComponent } from 'src/app/pages/personal/bank-accounts/main/main.component';
 import { PersonalBankAccountsOverviewPage } from 'src/app/pages/personal/bank-accounts/overview/overview.component';
 // Business
@@ -14,16 +13,23 @@ const routes: Routes = [
   },
   {
     path: 'personal',
-    component: HomeComponent,
+    loadChildren: () =>
+      import('./pages/personal/home/home.module').then(
+        (m) => m.PersonalHomeModule
+      ),
   },
   {
+    // @TODO: move to personal as child route. Do it after module setup complete or code will break
     path: 'personal/bank-accounts',
     component: PersonalBankAccountsMainComponent,
     children: [{ path: '', component: PersonalBankAccountsOverviewPage }],
   },
   {
     path: 'business',
-    component: BusinessHomeComponent,
+    loadChildren: () =>
+      import('./pages/business/home/home.module').then(
+        (m) => m.BusinessHomeModule
+      ),
   },
 ];
 
