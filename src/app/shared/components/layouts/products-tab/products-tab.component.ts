@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TabsType } from 'src/app/interfaces/interfaces';
+import { TabsType } from 'src/app/interfaces';
 @Component({
   selector: 'app-products-tab-layout',
   templateUrl: './products-tab.component.html',

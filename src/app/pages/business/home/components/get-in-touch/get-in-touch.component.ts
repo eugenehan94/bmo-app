@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChildren, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GetInTouchService } from './get-in-touch.service';
-
+import {ButtonsDataType, ButtonsDisplayContentsType, } from "src/app/interfaces"
 // ngrx
 import { Store } from '@ngrx/store';
 
@@ -18,8 +18,8 @@ export class BusinessGetInTouchComponent implements OnInit, AfterViewInit {
     private store: Store<any>
   ) {}
 
-  buttonsData?: any;
-  buttonsDisplayContents?: any;
+  buttonsData?: ButtonsDataType[];
+  buttonsDisplayContents?: ButtonsDisplayContentsType[];
   selectedButton?: number;
   @ViewChildren('tabButton') buttonsList?: any;
   currentScreenSize?: string;

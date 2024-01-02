@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { BankAccountDataType } from 'src/app/interfaces/interfaces';
+import { BankAccountDataType } from 'src/app/interfaces';
 //ngrx
 import { Store } from '@ngrx/store';
 @Component({

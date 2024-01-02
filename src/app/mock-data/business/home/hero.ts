@@ -1,4 +1,4 @@
-import { HeroBannerOptionsType } from 'src/app/interfaces/interfaces';
+import { HeroBannerOptionsType } from 'src/app/interfaces';
 const heroBannerOptions: HeroBannerOptionsType[] = [
   {
     src: 'assets/images/business-hero-banner-one.jpg',

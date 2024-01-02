@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BankAccountDataType } from 'src/app/interfaces/interfaces';
+import { BankAccountDataType } from 'src/app/interfaces';
 import { OverviewService } from './overview.service';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CardContentType } from 'src/app/interfaces/interfaces';
+import { CardContentType } from 'src/app/interfaces';
 import { HttpClient } from '@angular/common/http';
 import cardContent from 'src/app/mock-data/personal/home/where-to-being';
 @Injectable({

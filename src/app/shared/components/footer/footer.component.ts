@@ -7,8 +7,9 @@ import {
   SocialMediaDataType,
   AboutBmoDataType,
   DownloadAppDataType,
-  FooterCaptionsType,
-} from 'src/app/interfaces/interfaces';
+  
+} from 'src/app/interfaces';
+import {FooterCaptionsType } from "src/app/interfaces"
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',

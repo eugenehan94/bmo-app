@@ -43,7 +43,6 @@ export interface DownloadAppDataType {
   imageAlt: string;
 }
 
-//personal hero
 export interface HeroBannerOptionsType {
   src: string;
   alt: string;
@@ -54,7 +53,7 @@ export interface HeroBannerOptionsType {
   linkName: string;
 }
 
-//personal navbar
+// navbar
 export interface SiteOptionsType {
   title: string;
   linkHref?: string;
@@ -106,7 +105,7 @@ export interface MobileBottomNavOptionsType {
   image: string;
   imageAlt: string;
 }
-//personal products-tabs
+
 export interface TabsType {
   label: string;
   cardData: CardDataType[];
@@ -122,7 +121,7 @@ interface CardDataType {
   srcTitle: string;
 }
 
-//personal where-to-begin
+
 export interface CardContentType {
   icon: string;
   iconAlt: string;
@@ -133,33 +132,5 @@ export interface CardContentType {
   linkAriaLabel: string;
 }
 
-//Personal - bank-accounts - overview
-export interface BankAccountDataType {
-  text: string;
-}
 
-//Business - home page
-export interface FooterCaptionsType {
-  caption: string;
-}
 
-//Business - get-in-touch
-export interface ButtonsDataType {
-  imageSrc: string;
-  imageAlt: string;
-  title: string;
-  titleParagraph: string;
-}
-
-export interface ButtonsDisplayContentsType {
-  imageSrc: string;
-  imageAlt: string;
-  title: string;
-  description: string;
-  contactBranch: string;
-  contactBranchHref: string;
-  contactBranchAriaLabel: string;
-  contactNumber?: string;
-  contactNumberHref?: string;
-  contactNumberAriaLabel?: string;
-}

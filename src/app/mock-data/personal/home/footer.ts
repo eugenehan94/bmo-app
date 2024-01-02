@@ -1,7 +1,7 @@
 import {
   FooterCategoryLinksType,
   AboutBmoDataType,
-} from 'src/app/interfaces/interfaces';
+} from 'src/app/interfaces';
 const footerCategoryLinks: FooterCategoryLinksType[] = [
   {
     title: 'Explore our services',

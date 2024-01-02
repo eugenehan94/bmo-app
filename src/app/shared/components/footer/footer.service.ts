@@ -6,7 +6,7 @@ import {
   SocialMediaDataType,
   AboutBmoDataType,
   DownloadAppDataType,
-} from '../../../interfaces/interfaces';
+} from '../../../interfaces';
 @Injectable({
   providedIn: 'root',
 })

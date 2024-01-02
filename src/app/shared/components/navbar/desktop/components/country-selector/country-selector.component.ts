@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarService } from 'src/app/shared/components/navbar/navbar.service';
-import { CountryOptionsType } from 'src/app/interfaces/interfaces';
+import { CountryOptionsType } from 'src/app/interfaces';
 import { DesktopService } from 'src/app/shared/components/navbar/desktop/desktop.service';
 @Component({
   selector: 'app-desktop-country-selector',

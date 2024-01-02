@@ -1,4 +1,4 @@
-import { TabsType } from 'src/app/interfaces/interfaces';
+import { TabsType } from 'src/app/interfaces';
 const tabs: TabsType[] = [
   {
     label: 'Featured',

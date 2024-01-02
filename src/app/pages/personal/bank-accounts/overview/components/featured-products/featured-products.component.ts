@@ -11,7 +11,7 @@ import { Store } from '@ngrx/store';
 export class PersonalBankAccountsFeaturedProductsComponent implements OnInit {
   constructor(private store: Store<any>) {}
   showOverlay?: boolean;
-  currentScreenSize?: any;
+  currentScreenSize?: string;
   @ViewChild('cardOneOverlay') cardOneOverlay: any;
   ngOnInit(): void {
     this.store.select('screenSizeReducer').subscribe((res) => {

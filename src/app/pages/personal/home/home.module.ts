@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PersonalRoutingModule } from './home-routing.module';
 import { SharedLayoutsModule } from 'src/app/shared/components/layouts/layouts.module';
+import { SharedFooterModule } from 'src/app/shared/components/footer/footer.module';
+import { SharedNavbarModule } from 'src/app/shared/components/navbar/navbar.module';
 // Components
 import { HomeComponent } from 'src/app/pages/personal/home/home.component';
 import { NavbarComponent } from 'src/app/pages/personal/home/components/navbar/navbar.component';
@@ -13,17 +15,29 @@ import { PersonalFooterComponent } from 'src/app/pages/personal/home/components/
 
 @NgModule({
   declarations: [
+    HomeComponent,
     HeroComponent,
     ProductsTabsComponent,
     DownloadBannerComponent,
     WhereToBeginComponent,
+    PersonalFooterComponent,
+    NavbarComponent,
   ],
-  imports: [CommonModule, PersonalRoutingModule, SharedLayoutsModule],
+  imports: [
+    CommonModule,
+    PersonalRoutingModule,
+    SharedLayoutsModule,
+    SharedFooterModule,
+    SharedNavbarModule,
+  ],
   exports: [
+    HomeComponent,
     HeroComponent,
     ProductsTabsComponent,
     DownloadBannerComponent,
     WhereToBeginComponent,
+    PersonalFooterComponent,
+    NavbarComponent,
   ],
 })
 export class PersonalHomeModule {}

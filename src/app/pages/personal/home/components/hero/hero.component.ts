@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroService } from './hero.service';
-import { HeroBannerOptionsType } from 'src/app/interfaces/interfaces';
+import { HeroBannerOptionsType } from 'src/app/interfaces';
 //ngrx
 import { Store } from '@ngrx/store';
 

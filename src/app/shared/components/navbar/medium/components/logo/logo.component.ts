@@ -11,9 +11,10 @@ export class MediumLogoComponent implements OnInit {
   originalPath?: string;
 
   ngOnInit(): void {
-    this.activatedRoute.url.subscribe(([url]) => {
-      const { path } = url;
-      this.originalPath = path;
-    });
+    // Path was determined by comparing existing pages and finding
+    // this chain will give us our desired path. Didn't use subscribe to
+    // ActivateRoute because lazy loading page will not get the url
+    let path = this.activatedRoute.snapshot.pathFromRoot[1].routeConfig?.path;
+    this.originalPath = path;
   }
 }

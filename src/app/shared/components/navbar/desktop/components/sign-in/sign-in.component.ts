@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarService } from 'src/app/shared/components/navbar/navbar.service';
 import { DesktopService } from 'src/app/shared/components/navbar/desktop/desktop.service';
-import { SignInMenuOptionsType } from 'src/app/interfaces/interfaces';
+import { SignInMenuOptionsType } from 'src/app/interfaces';
 
 // ngrx
 import { Store } from '@ngrx/store';

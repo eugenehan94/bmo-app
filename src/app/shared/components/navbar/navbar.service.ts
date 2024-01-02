@@ -4,7 +4,7 @@ import {
   CountryOptionsType,
   SignInMenuOptionsType,
   MobileBottomNavOptionsType,
-} from '../../../interfaces/interfaces';
+} from '../../../interfaces';
 @Injectable({
   providedIn: 'root',
 })

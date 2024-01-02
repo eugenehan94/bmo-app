@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarService } from 'src/app/shared/components/navbar/navbar.service';
-import { CountryOptionsType } from 'src/app/interfaces/interfaces';
+import { CountryOptionsType } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-mobile-menu-country-select',

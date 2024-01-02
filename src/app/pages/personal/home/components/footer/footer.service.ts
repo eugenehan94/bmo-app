@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {
   FooterCategoryLinksType,
   AboutBmoDataType,
-} from 'src/app/interfaces/interfaces';
+} from 'src/app/interfaces';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

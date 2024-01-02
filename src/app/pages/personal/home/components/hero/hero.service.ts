@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { HeroBannerOptionsType } from 'src/app/interfaces/interfaces';
+import { HeroBannerOptionsType } from 'src/app/interfaces';
 import heroBannerOptions from 'src/app/mock-data/personal/home/hero';
 
 @Injectable({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarService } from './navbar.service';
-import { NavigationOptionsType } from 'src/app/interfaces/interfaces';
+import { NavigationOptionsType } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-personal-navbar',

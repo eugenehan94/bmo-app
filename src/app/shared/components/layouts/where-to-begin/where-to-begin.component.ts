@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CardContentType } from 'src/app/interfaces/interfaces';
+import { CardContentType } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-where-to-begin-layout',

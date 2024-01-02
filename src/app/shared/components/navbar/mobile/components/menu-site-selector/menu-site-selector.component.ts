@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SiteOptionsType } from 'src/app/interfaces/interfaces';
+import { SiteOptionsType } from 'src/app/interfaces';
 import { NavbarService } from 'src/app/shared/components/navbar/navbar.service';
 
 @Component({

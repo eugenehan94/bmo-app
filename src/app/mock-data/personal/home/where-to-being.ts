@@ -1,4 +1,4 @@
-import { CardContentType } from 'src/app/interfaces/interfaces';
+import { CardContentType } from 'src/app/interfaces';
 
 const cardContent: CardContentType[] = [
   {

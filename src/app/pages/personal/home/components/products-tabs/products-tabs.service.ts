@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TabsType } from 'src/app/interfaces/interfaces';
+import { TabsType } from 'src/app/interfaces';
 import { HttpClient } from '@angular/common/http';
 import tabs from 'src/app/mock-data/personal/home/products-tabs';
 
