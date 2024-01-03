@@ -3,13 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-// This import houses all our Angular Material imports
-import { MaterialDesignModule } from './material-design/material-design.module';
 // https://angular.io/guide/image-directive
 import { NgOptimizedImage } from '@angular/common';
-
 import { AppComponent } from './app.component';
-
 // ngrx
 import { StoreModule } from '@ngrx/store';
 import {
@@ -18,14 +14,15 @@ import {
   DesktopInnerNavigationReducer,
 } from './store/app/reducers/app.reducer';
 // Modules
+// This import houses all our Angular Material imports
+import { MaterialDesignModule } from './material-design/material-design.module';
 import { PersonalHomeModule } from './pages/personal/home/home.module';
 import { PersonalBankAccountsMainModule } from './pages/personal/bank-accounts/main/main.module';
 import { BusinessHomeModule } from './pages/business/home/home.module';
 
+
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

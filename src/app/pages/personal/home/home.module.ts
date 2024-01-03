@@ -32,10 +32,6 @@ import { PersonalFooterComponent } from 'src/app/pages/personal/home/components/
   ],
   exports: [
     HomeComponent,
-    HeroComponent,
-    ProductsTabsComponent,
-    DownloadBannerComponent,
-    WhereToBeginComponent,
     PersonalFooterComponent,
     NavbarComponent,
   ],

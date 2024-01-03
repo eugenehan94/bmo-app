@@ -24,7 +24,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BusinessGetInTouchComponent,
     BusinessFooterComponent,
     NavbarComponent,
-    BusinessHomeComponent
+    BusinessHomeComponent,
   ],
   imports: [
     CommonModule,
@@ -32,17 +32,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     SharedLayoutsModule,
     MaterialDesignModule,
     SharedFooterModule,
-    SharedNavbarModule
+    SharedNavbarModule,
   ],
-  exports: [
-    BusinessHeroComponent,
-    BusinessProductsTabsComponent,
-    BusinessDownloadBannerComponent,
-    BusinessWhereToBeginComponent,
-    BusinessGetInTouchComponent,
-    BusinessFooterComponent,
-    NavbarComponent,
-    BusinessHomeComponent
-  ],
+  exports: [BusinessHeroComponent],
 })
 export class BusinessHomeModule {}

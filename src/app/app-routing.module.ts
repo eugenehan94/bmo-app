@@ -17,6 +17,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'login',
+    loadChildren: () =>
+      import('./pages/sign-in/online-banking/online-banking.module').then(
+        (m) => m.OnlineBankingModule
+      ),
+  },
+  {
     path: '',
     redirectTo: '/personal',
     pathMatch: 'full',
