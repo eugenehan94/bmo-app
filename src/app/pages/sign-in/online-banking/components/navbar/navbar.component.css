@@ -1,9 +1,13 @@
 .navbar-container {
   box-sizing: border-box;
   background-color: #0075be;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 .navbar-inner-container {
-  /* display: flex; */
   height: 100%;
   margin: 0 4px;
 }
@@ -52,12 +56,13 @@
   border-radius: 0.4rem;
   font-size: 1rem;
   color: white;
-  font-weight: 500;      
+  font-weight: 500;
   text-align: center;
-  padding: 6px;
-  margin: 6px;
+  padding: 5px;
+  margin: 10px;
 }
 .navbar-options-icon-container:hover {
-    cursor: pointer;
-    background-color: #005587;
+  cursor: pointer;
+  background-color: #005587;
 }
+

@@ -1,4 +1,22 @@
-<div class="sign-in-container">
+<!-- Title for medium and large screen sizes -->
+<div
+  *ngIf="currentScreenSize === 'Medium' || currentScreenSize === 'Large'"
+  class="sign-in-md-screen-title-container"
+>
+  <div class="sign-in-md-screen-icon-container">
+    <span>
+      <mat-icon aria-hidden="true" class="sign-in-md-screen-icon"
+        >lock</mat-icon
+      >
+    </span>
+  </div>
+  <h1 class="sign-in-md-screen-title-text">Sign in to Online Banking</h1>
+</div>
+<!-- Sign in content -->
+<div
+  class="sign-in-container"
+  [ngClass]="{ medium: currentScreenSize === 'Medium' }"
+>
   <div class="sign-in-inner-container">
     <div class="sign-in-inner-wrapper">
       <div>
@@ -16,44 +34,110 @@
                   >Card number</label
                 >
                 <div class="sign-in-card-number-content-input-container">
-                  <input 
-                  class="sign-in-card-number-content-input-box"
-                  id="username" aria-labelledby="username-text" />
+                  <input
+                    class="sign-in-card-number-content-input-box"
+                    id="username"
+                    aria-labelledby="username-text"
+                  />
                 </div>
-                <span>Error message</span>
-                <span class="sign-in-card-number-input-caption">Enter your 16-digit card number</span>
+                <span
+                  *ngIf="false"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                  class="sign-in-error-message-text"
+                  ><mat-icon class="sign-in-error-message-text-icon"
+                    >error</mat-icon
+                  >You'll need to enter a card number.</span
+                >
+                <span class="sign-in-card-number-input-caption"
+                  >Enter your 16-digit card number</span
+                >
               </div>
             </div>
             <!-- Remember card -->
-            <div>
-              <div>
-                <div>
-                  <label>
-                    <input type="checkbox" />
-                    <span>Remember card</span>
+            <div class="sign-in-remember-card-container">
+              <div class="sign-in-remember-card-inner-container">
+                <div class="sign-in-remember-card-content-wrapper">
+                  <label class="sign-in-remember-card-label-container">
+                    <input
+                      type="checkbox"
+                      aria-checked="false"
+                      class="sign-in-remember-card-checkbox checked"
+                    />
+                    <span class="sign-in-remember-card-checkbox-title"
+                      >Remember card</span
+                    >
                   </label>
                 </div>
               </div>
+              <!-- <button>Icon</button> -->
             </div>
             <!-- Password -->
-            <div>
-              <div>
-                <label>Password</label>
-                <span></span>
+            <div class="sign-in-password-container">
+              <div class="sign-in-password-inner-container">
+                <label
+                  aria-hidden="false"
+                  for="password-input"
+                  class="sign-in-password-label-text"
+                  >Password</label
+                >
+                <div class="sign-in-password-input-container">
+                  <input
+                    type="password"
+                    aria-describedby="password-input"
+                    maxlength="32"
+                    id="password-input"
+                    autocomplete="off"
+                    class="sign-in-password-input-box"
+                  />
+                  <span
+                    aria-hidden="false"
+                    role="switch"
+                    aria-label="Show password. Note toggling display will read value audibly"
+                    tabindex="0"
+                    class="sign-in-password-input-eye-container"
+                  >
+                    <mat-icon
+                      aria-hidden="true"
+                      class="sign-in-password-input-eye-icon"
+                      >visibility</mat-icon
+                    >
+                  </span>
+                </div>
+                <span
+                  *ngIf="false"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                  class="sign-in-error-message-text"
+                  ><mat-icon class="sign-in-error-message-text-icon"
+                    >error</mat-icon
+                  >You'll need to enter a password.</span
+                >
               </div>
+              <!-- For screen reader only -->
+              <div></div>
             </div>
             <!-- Forgot your password -->
-            <div>
-              <div>
-                <a>
-                  <span>
+            <div class="sign-in-forgot-password-container">
+              <div class="sign-in-forgot-password-inner-container">
+                <a
+                  draggable="false"
+                  class="sign-in-forgot-password-link-wrapper"
+                >
+                  <span role="text">
                     <span>Forgot your password?</span>
                   </span>
                 </a>
               </div>
             </div>
             <!-- Sign in -->
-            <div></div>
+            <div class="sign-in-login-button-container">
+              <button type="submit" class="sign-in-login-button-wrapper">
+                <span>
+                  <span>Sign in</span>
+                </span>
+              </button>
+            </div>
           </div>
         </form>
       </div>
