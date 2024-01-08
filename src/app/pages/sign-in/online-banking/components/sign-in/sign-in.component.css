@@ -10,12 +10,32 @@
 }
 .sign-in-md-screen-icon {
   color: #0075be;
-  font-size: 1.5rem;;
+  font-size: 1.5rem;
 }
 .sign-in-md-screen-title-text {
   font-size: 1.725rem;
   margin: 0;
 }
+
+.sign-in-outer-container.medium {
+  margin-top: 0;
+  transition: 0.3s all ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sign-in-left-border {
+  display: none;
+}
+.sign-in-left-border.medium {
+  display: flex;
+  flex: 0 0 16.666%;
+  max-width: 16.666%;
+  padding: 0;
+  margin: 0;
+}
+
 .sign-in-container {
   flex: 0 0 100%;
   max-width: 100%;
@@ -25,6 +45,9 @@
 }
 .sign-in-container.medium {
   margin-top: 0;
+  flex: 0 0 66.6666%;
+  max-width: 66.6666%;
+  padding: 0;
 }
 .sign-in-inner-container {
   min-height: 0px;
@@ -65,6 +88,10 @@
 .sign-in-form-wrapper {
   padding: 0 16px 32px;
   margin: 0;
+  box-sizing: border-box;
+}
+.sign-in-form-wrapper.medium {
+  padding: 32px;
 }
 .sign-in-card-number-container {
   margin-bottom: 8px;
@@ -271,4 +298,112 @@
   cursor: pointer;
   background-color: #005587;
   border: 2px solid #005587;
+}
+.sign-in-right-border {
+  display: none;
+}
+.sign-in-right-border.medium {
+  display: flex;
+  flex: 0 0 16.6666%;
+  max-width: 16.666%;
+  padding: 0;
+  margin: 0;
+}
+.register-and-security-container {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 16px;
+  margin: 0;
+}
+.register-container {
+  min-height: 0px;
+  margin: 0;
+  transition: 0.3s box-shadow ease, 1s all ease;
+  padding: 0;
+  border: 1px solid none;
+  box-shadow: 0 0 2px 0 rgba(0, 25, 40, 0.12), 0 2px 2px 0 rgba(0, 25, 40, 0.07);
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+}
+.register-inner-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.register-content-wrapper {
+  padding: 0 16px;
+  margin: 0;
+}
+.register-title-text {
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  letter-spacing: 0.15px;
+  color: #001928;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+.register-p-container {
+  padding: 0;
+  margin: 0;
+  color: #001928;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+.register-p-a-wrapper {
+  max-height: 3.2rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-transform: none;
+  display: inline-flex;
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  line-height: 3.2rem;
+  margin-right: 0 24px 0 0;
+  border-radius: 4px;
+  color: #0075be;
+  align-items: center;
+  text-decoration: none;
+}
+.register-or-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  letter-spacing: 0.15px;
+  margin-right: 5px;
+  padding: 0;
+}
+.security-container {
+  min-height: 0px;
+  margin: 0;
+  transition: 0.3s box-shadow ease, 1s all ease;
+  box-shadow: unset;
+  border: 0px solid #fff;
+  padding: 0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+}
+.security-title-text {
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  letter-spacing: 0.15px;
+  color: #001928;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-decoration: none;
+  margin-bottom: 0;
 }
