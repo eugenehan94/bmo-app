@@ -407,3 +407,13 @@
   text-decoration: none;
   margin-bottom: 0;
 }
+.security-description-text {
+  line-height: 2.4rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.25px;
+  color: #001928;
+  padding-top:0;
+  padding-bottom: 0;
+  text-decoration: none;
+  margin: 0;
+}
