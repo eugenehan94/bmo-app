@@ -207,11 +207,13 @@
     </div>
     <!-- Security -->
     <div class="security-container">
-      <div>
+      <div class="security-inner-container">
         <div>
-          <div>
+          <div class="security-content-container">
             <div>
-              <h2 class="security-title-text">Your security always comes first.</h2>
+              <h2 class="security-title-text">
+                Your security always comes first.
+              </h2>
             </div>
             <p class="security-description-text">
               We’ve made Online Banking more convenient, while still using
@@ -227,9 +229,12 @@
               <span role="text"
                 ><span> Learn more about how we protect you. </span>
                 <!-- Screen reader only -->
-                <span></span>
+                <span class="screen-reader-only"> Opens in a new tab </span>
               </span>
-              <span></span>
+              <!-- Icon -->
+              <span class="security-link-icon-wrapper"
+                ><mat-icon>open_in_new</mat-icon></span
+              >
             </a>
           </div>
         </div>
