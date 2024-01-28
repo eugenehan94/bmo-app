@@ -1,0 +1,66 @@
+<footer class="footer-container">
+  <div class="footer-content-container">
+    <div class="footer-nav-wrapper">
+      <nav aria-label="Footer" class="footer-nav-container">
+        <div class="footer-nav-content-container">
+          <ul class="footer-nav-list-container">
+            <li
+              *ngFor="let footerContent of footerContentOne"
+              class="footer-nav-list-item-container"
+            >
+              <a
+                href="{{ footerContent.href }}"
+                target="_blank"
+                draggable="false"
+                class="footer-nav-list-item-link"
+              >
+                <span role="text" class="footer-nav-list-item-text-container">
+                  {{ footerContent.text }}
+                  <!-- Screen reader only -->
+                  <span aria-hidden="true" class="screen-reader-only">
+                    Opens in a new tab
+                  </span>
+                </span>
+                <!-- Icon -->
+                <span *ngIf="!footerContent.imageExist">
+                  <mat-icon aria-hidden="true">open_in_new</mat-icon>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <ul class="footer-nav-list-container">
+            <li
+              *ngFor="let footerContentTwo of footerContentTwo"
+              class="footer-nav-list-item-container"
+            >
+              <a
+                href="{{ footerContentTwo.href }}"
+                target="_blank"
+                draggable="false"
+                class="footer-nav-list-item-link"
+              >
+                <span role="text" class="footer-nav-list-item-text-container">
+                  {{ footerContentTwo.text }}
+                  <img
+                    *ngIf="footerContentTwo.imageExist"
+                    src="{{ footerContentTwo.imageSrc }}"
+                    alt="{{ footerContentTwo.imageAlt }}"
+                    class="footer-nav-list-item-image"
+                  />
+                  <!-- Screen reader only -->
+                  <span aria-hidden="true" class="screen-reader-only">
+                    Opens in a new tab
+                  </span>
+                </span>
+                <!-- Icon -->
+                <span *ngIf="!footerContentTwo.imageExist">
+                  <mat-icon aria-hidden="true">open_in_new</mat-icon>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</footer>

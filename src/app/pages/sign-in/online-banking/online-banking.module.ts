@@ -6,9 +6,15 @@ import { MaterialDesignModule } from 'src/app/material-design/material-design.mo
 import { OnlineBankingComponent } from './online-banking.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [OnlineBankingComponent, NavbarComponent, SignInComponent],
+  declarations: [
+    OnlineBankingComponent,
+    NavbarComponent,
+    SignInComponent,
+    FooterComponent,
+  ],
   imports: [CommonModule, OnlineBankingRoutingModule, MaterialDesignModule],
   exports: [OnlineBankingComponent],
 })

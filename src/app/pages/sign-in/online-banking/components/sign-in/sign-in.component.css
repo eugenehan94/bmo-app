@@ -1,3 +1,40 @@
+.sign-in-large-container {
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sign-in-large-inner-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.sign-in-large-wrapper-container {
+  margin-left: 152px;
+  margin-right: 152px;
+  padding: 0 32px;
+  flex: 1;
+  /* margin: 0 auto; */
+  display: flex;
+  flex-flow: column;
+}
+.sign-in-large-content-container {
+  transition: 0.3s all ease;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+.sign-in-large-main-wrapper {
+  flex: 1;
+  max-width: 100%;
+}
 .sign-in-md-screen-title-container {
   display: flex;
   justify-content: center;
@@ -27,6 +64,7 @@
 .sign-in-outer-container.large {
   display: flex;
   box-sizing: border-box;
+  margin-top: 16px;
 }
 .sign-in-left-border {
   display: none;
@@ -57,6 +95,7 @@
 .sign-in-container.large {
   flex: 1;
   max-width: 50%;
+  margin: 0;
 }
 .sign-in-inner-container {
   min-height: 0px;
@@ -71,6 +110,9 @@
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
+}
+.sign-in-inner-container.large {
+  margin: 0;
 }
 .sign-in-inner-wrapper {
   position: relative;
@@ -100,6 +142,9 @@
   box-sizing: border-box;
 }
 .sign-in-form-wrapper.medium {
+  padding: 32px;
+}
+.sign-in-form-wrapper.large {
   padding: 32px;
 }
 .sign-in-card-number-container {
@@ -332,7 +377,7 @@
   max-width: 66.6666%;
   padding: 0;
 }
-.register-and-security-container.large{
+.register-and-security-container.large {
   flex: 1;
   max-width: 50%;
 }
@@ -405,7 +450,7 @@
 }
 .security-container {
   min-height: 0px;
-  margin: 16px 0 0 0;
+  margin: 16px 0 16px 0;
   transition: 0.3s box-shadow ease, 1s all ease;
   box-shadow: unset;
   border: 0px solid #fff;

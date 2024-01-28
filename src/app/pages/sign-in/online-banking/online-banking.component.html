@@ -1,7 +1,13 @@
-<header>
-  <app-navbar></app-navbar>
-</header>
-<main class="online-banking-main">
-  <app-sign-in></app-sign-in>
-</main>
-<footer></footer>
+<div
+  [ngClass]="{
+    'online-banking-container large': currentScreenSize === 'Large'
+  }"
+>
+  <header>
+    <app-navbar></app-navbar>
+  </header>
+  <main class="online-banking-main">
+    <app-sign-in></app-sign-in>
+    <app-footer></app-footer>
+  </main>
+</div>
