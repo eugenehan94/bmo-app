@@ -178,6 +178,13 @@
   font-weight: 400;
   box-sizing: border-box;
 }
+.sign-in-card-number-content-input-box:focus {
+  outline-offset: 3.5px;
+  outline-color: #0075be;
+}
+.sign-in-card-number-content-input-box.invalid {
+  border: 1px solid #c81414;
+}
 .sign-in-error-message-text {
   font-weight: 400;
   color: #c81414;
@@ -279,6 +286,13 @@
   box-sizing: border-box;
   font-weight: 400;
 }
+.sign-in-password-input-box:focus {
+  outline-offset: 3.5px;
+  outline-color: #0075be;
+}
+.sign-in-password-input-box.invalid {
+  border: 1px solid #c81414;
+}
 .sign-in-password-input-eye-container {
   position: absolute;
   top: 0rem;
@@ -288,6 +302,7 @@
   background-color: transparent;
   padding: 0;
   font-size: 0;
+  cursor: pointer;
 }
 .sign-in-password-input-eye-icon {
   width: 100%;
@@ -366,10 +381,10 @@
 .sign-in-right-border.large {
   display: none;
 }
+
 .register-and-security-container {
   flex: 0 0 100%;
   max-width: 100%;
-  padding: 0 16px;
   margin: 0;
 }
 .register-and-security-container.medium {
@@ -380,159 +395,4 @@
 .register-and-security-container.large {
   flex: 1;
   max-width: 50%;
-}
-.register-container {
-  min-height: 0px;
-  margin: 0;
-  transition: 0.3s box-shadow ease, 1s all ease;
-  padding: 0;
-  border: 1px solid none;
-  box-shadow: 0 0 2px 0 rgba(0, 25, 40, 0.12), 0 2px 2px 0 rgba(0, 25, 40, 0.07);
-  border-radius: 4px;
-  background-color: #ffffff;
-  box-sizing: border-box;
-  display: inline-block;
-  width: 100%;
-}
-.register-inner-container {
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-.register-content-wrapper {
-  padding: 0 16px;
-  margin: 0;
-}
-.register-title-text {
-  margin-top: 16px;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 2rem;
-  letter-spacing: 0.15px;
-  color: #001928;
-  padding-top: 0;
-  padding-bottom: 0;
-  text-decoration: none;
-  margin-bottom: 0;
-}
-.register-p-container {
-  padding: 0;
-  margin: 0;
-  color: #001928;
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  letter-spacing: 0;
-  text-decoration: none;
-}
-.register-p-a-wrapper {
-  max-height: 3.2rem;
-  font-size: 0.9rem;
-  cursor: pointer;
-  text-transform: none;
-  display: inline-flex;
-  position: relative;
-  font-weight: 700;
-  letter-spacing: 0.25px;
-  line-height: 3.2rem;
-  margin-right: 0 24px 0 0;
-  border-radius: 4px;
-  color: #0075be;
-  align-items: center;
-  text-decoration: none;
-}
-.register-or-text {
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 2.4rem;
-  letter-spacing: 0.15px;
-  margin-right: 5px;
-  padding: 0;
-}
-.security-container {
-  min-height: 0px;
-  margin: 16px 0 16px 0;
-  transition: 0.3s box-shadow ease, 1s all ease;
-  box-shadow: unset;
-  border: 0px solid #fff;
-  padding: 0;
-  border-radius: 4px;
-  background-color: #ffffff;
-  box-sizing: border-box;
-  display: inline-block;
-  width: 100%;
-}
-.security-inner-container {
-  position: relative;
-}
-.security-content-container {
-  padding: 16px 24px;
-}
-.security-title-container {
-  display: flex;
-  align-items: center;
-  padding-bottom: 4px;
-}
-.security-title-icon-wrapper {
-  display: inline-block;
-}
-.security-title-text {
-  /* margin-top: 16px; */
-  margin-top: 0;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 2rem;
-  letter-spacing: 0.15px;
-  color: #001928;
-  padding-top: 0;
-  padding-bottom: 0;
-  text-decoration: none;
-  margin-bottom: 0;
-  padding-left: 8px;
-}
-.security-description-text {
-  line-height: 1.4rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.25px;
-  color: #001928;
-  padding-top: 0;
-  padding-bottom: 0;
-  text-decoration: none;
-  margin: 0;
-}
-.security-link-wrapper {
-  text-decoration: underline;
-  line-height: 2.4rem;
-  font-size: 0.9rem;
-  cursor: pointer;
-  text-transform: none;
-  position: relative;
-  font-weight: 700;
-  letter-spacing: 0.25px;
-  margin-right: 0 24px 0 0;
-  border-radius: 4px;
-  color: #0075be;
-}
-.screen-reader-only {
-  position: absolute;
-  transition: none;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  margin: -1px;
-  clip-path: inset(0 0 0 0);
-  white-space: nowrap;
-  clip: rect(0 0 0 0);
-  border: 0;
-  outline: 0;
-  appearance: none;
-}
-.security-link-icon-wrapper {
-  position: absolute;
-  top: -5px;
-  margin-left: 0;
-  font-size: 1.2rem;
-  width: 1.6rem;
-  height: 1.6rem;
-  display: inline-block;
 }

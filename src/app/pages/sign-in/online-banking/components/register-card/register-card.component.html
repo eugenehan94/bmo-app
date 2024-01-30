@@ -1,0 +1,37 @@
+<div [ngClass]="{ register: currentScreenSize === 'Small' }">
+  <!-- Online banking register -->
+  <div class="register-container">
+    <div class="register-inner-container">
+      <div>
+        <div class="register-content-wrapper">
+          <h2 class="register-title-text">
+            Register a new card for online banking
+          </h2>
+          <p class="register-p-container">
+            <a
+              href="https://www.bmo.com/online/debitcards/registration/#/terms"
+              aria-label="REGISTER WITH A DEBIT CARD"
+              draggable="false"
+              class="register-p-a-wrapper"
+            >
+              <span role="text"><span>DEBIT CARD</span></span>
+            </a>
+            <span class="register-or-text"> or</span>
+            <a
+              href="https://www.bmo.com/online/creditcards/registration?lang=enundefined"
+              aria-label="REGISTER WITH A CREDIT CARD"
+              draggable="false"
+              class="register-p-a-wrapper"
+            >
+              <span role="text">
+                <span>CREDIT CARD</span>
+              </span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Security -->
+  <app-security-notice></app-security-notice>
+</div>

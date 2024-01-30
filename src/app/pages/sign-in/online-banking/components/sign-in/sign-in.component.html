@@ -82,7 +82,7 @@
                         >
                           Sign in to Online Banking
                         </h1>
-                        <form class="sign-in-form">
+                        <form class="sign-in-form" [formGroup]="signInForm">
                           <div
                             class="sign-in-form-wrapper"
                             [ngClass]="{
@@ -107,10 +107,22 @@
                                     class="sign-in-card-number-content-input-box"
                                     id="username"
                                     aria-labelledby="username-text"
+                                    type="number"
+                                    formControlName="cardNumber"
+                                    [ngClass]="{
+                                      invalid:
+                                        cardNumber?.invalid &&
+                                        (cardNumber?.dirty ||
+                                          cardNumber?.touched)
+                                    }"
                                   />
                                 </div>
+
                                 <span
-                                  *ngIf="false"
+                                  *ngIf="
+                                    cardNumber?.invalid &&
+                                    (cardNumber?.dirty || cardNumber?.touched)
+                                  "
                                   aria-live="assertive"
                                   aria-atomic="true"
                                   class="sign-in-error-message-text"
@@ -160,12 +172,22 @@
                                 >
                                 <div class="sign-in-password-input-container">
                                   <input
-                                    type="password"
+                                    type="{{
+                                      isPasswordVisible === true
+                                        ? 'text'
+                                        : 'password'
+                                    }}"
                                     aria-describedby="password-input"
                                     maxlength="32"
                                     id="password-input"
                                     autocomplete="off"
                                     class="sign-in-password-input-box"
+                                    formControlName="password"
+                                    [ngClass]="{
+                                      invalid:
+                                        password?.invalid &&
+                                        (password?.dirty || password?.touched)
+                                    }"
                                   />
                                   <span
                                     aria-hidden="false"
@@ -173,6 +195,13 @@
                                     aria-label="Show password. Note toggling display will read value audibly"
                                     tabindex="0"
                                     class="sign-in-password-input-eye-container"
+                                    (click)="togglePasswordVisibility($event)"
+                                    (keydown.Space)="
+                                      togglePasswordVisibility($event)
+                                    "
+                                    (keydown.enter)="
+                                      togglePasswordVisibility($event)
+                                    "
                                   >
                                     <mat-icon
                                       aria-hidden="true"
@@ -182,7 +211,10 @@
                                   </span>
                                 </div>
                                 <span
-                                  *ngIf="false"
+                                  *ngIf="
+                                    password?.invalid &&
+                                    (password?.dirty || password?.touched)
+                                  "
                                   aria-live="assertive"
                                   aria-atomic="true"
                                   class="sign-in-error-message-text"
@@ -244,93 +276,14 @@
                   }"
                 ></div>
                 <!-- Register for online banking and security  -->
-                <div
+
+                <app-register-card
                   class="register-and-security-container"
                   [ngClass]="{
                     medium: currentScreenSize === 'Medium',
                     large: currentScreenSize === 'Large'
                   }"
-                >
-                  <!-- Online banking register -->
-                  <div class="register-container">
-                    <div class="register-inner-container">
-                      <div>
-                        <div class="register-content-wrapper">
-                          <h2 class="register-title-text">
-                            Register a new card for online banking
-                          </h2>
-                          <p class="register-p-container">
-                            <a
-                              href="https://www.bmo.com/online/debitcards/registration/#/terms"
-                              aria-label="REGISTER WITH A DEBIT CARD"
-                              draggable="false"
-                              class="register-p-a-wrapper"
-                            >
-                              <span role="text"><span>DEBIT CARD</span></span>
-                            </a>
-                            <span class="register-or-text"> or</span>
-                            <a
-                              href="https://www.bmo.com/online/creditcards/registration?lang=enundefined"
-                              aria-label="REGISTER WITH A CREDIT CARD"
-                              draggable="false"
-                              class="register-p-a-wrapper"
-                            >
-                              <span role="text">
-                                <span>CREDIT CARD</span>
-                              </span>
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Security -->
-                  <div class="security-container">
-                    <div class="security-inner-container">
-                      <div>
-                        <div class="security-content-container">
-                          <div class="security-title-container">
-                            <span class="security-title-icon-wrapper">
-                              <mat-icon aria-hidden="true">lock</mat-icon>
-                            </span>
-                            <h2 class="security-title-text">
-                              Your security always comes first.
-                            </h2>
-                          </div>
-                          <p class="security-description-text">
-                            We’ve made Online Banking more convenient, while
-                            still using advanced security technologies that keep
-                            your money and information safe.
-                          </p>
-                          <a
-                            href="https://www.bmo.com/main/personal/ways-to-bank/security-centre/#tabs-3"
-                            target="_blank"
-                            draggable="false"
-                            class="security-link-wrapper"
-                          >
-                            <span role="text"
-                              ><span>
-                                Learn more about how we protect you.
-                              </span>
-                              <!-- Screen reader only -->
-                              <span class="screen-reader-only">
-                                Opens in a new tab
-                              </span>
-                            </span>
-                            <!-- Icon -->
-                            <span
-                              class="security-link-icon-wrapper"
-                              aria-hidden="true"
-                              ><mat-icon aria-hidden="true"
-                                >open_in_new</mat-icon
-                              ></span
-                            >
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                ></app-register-card>
               </div>
             </main>
           </div>
