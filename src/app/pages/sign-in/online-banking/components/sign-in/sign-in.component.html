@@ -82,7 +82,7 @@
                         >
                           Sign in to Online Banking
                         </h1>
-                        <form class="sign-in-form" [formGroup]="signInForm">
+                        <form class="sign-in-form" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
                           <div
                             class="sign-in-form-wrapper"
                             [ngClass]="{

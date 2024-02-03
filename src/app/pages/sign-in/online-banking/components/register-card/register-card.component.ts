@@ -16,7 +16,6 @@ export class RegisterCardComponent implements OnInit {
   ngOnInit(): void {
     this.store.select('screenSizeReducer').subscribe((res) => {
       this.currentScreenSize = res.currentScreenSize;
-      console.log(this.currentScreenSize)
     });
   }
 }
