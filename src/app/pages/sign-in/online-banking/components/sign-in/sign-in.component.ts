@@ -14,6 +14,7 @@ export class SignInComponent implements OnInit {
 
   currentScreenSize?: string;
   isPasswordVisible: boolean = false;
+  isRememberCardSelected: boolean = false;
 
   ngOnInit(): void {
     this.store.select('screenSizeReducer').subscribe((res) => {
@@ -31,6 +32,10 @@ export class SignInComponent implements OnInit {
   }
   get password() {
     return this.signInForm.get('password');
+  }
+
+  toggleRememberCard(): void {
+    this.isRememberCardSelected = !this.isRememberCardSelected;
   }
 
   togglePasswordVisibility(event: any): void {
@@ -52,7 +57,7 @@ export class SignInComponent implements OnInit {
         headers: { 'content-type': 'application/json' },
       })
       .subscribe((res) => {
-        console.log("Backend response: ", res)
+        console.log('Backend response: ', res);
       });
   }
 }

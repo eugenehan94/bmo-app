@@ -243,6 +243,7 @@
   border-radius: 0.4rem;
   border: 2px solid #646c76;
   display: block;
+  cursor: pointer;
 }
 .sign-in-remember-card-checkbox.checked {
   background-color: #0075be;

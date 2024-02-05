@@ -82,7 +82,11 @@
                         >
                           Sign in to Online Banking
                         </h1>
-                        <form class="sign-in-form" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+                        <form
+                          class="sign-in-form"
+                          [formGroup]="signInForm"
+                          (ngSubmit)="onSubmit()"
+                        >
                           <div
                             class="sign-in-form-wrapper"
                             [ngClass]="{
@@ -148,9 +152,13 @@
                                     class="sign-in-remember-card-label-container"
                                   >
                                     <input
+                                      (click)="toggleRememberCard()"
                                       type="checkbox"
                                       aria-checked="false"
-                                      class="sign-in-remember-card-checkbox checked"
+                                      class="sign-in-remember-card-checkbox"
+                                      [ngClass]="{
+                                        checked: isRememberCardSelected === true
+                                      }"
                                     />
                                     <span
                                       class="sign-in-remember-card-checkbox-title"
@@ -233,6 +241,10 @@
                                 class="sign-in-forgot-password-inner-container"
                               >
                                 <a
+                                  href="https://www.bmo.com/online/pwdreset/#/check-card"
+                                  target="_blank"
+                                  tabindex="0"
+                                  rel="noopener"
                                   draggable="false"
                                   class="sign-in-forgot-password-link-wrapper"
                                 >
