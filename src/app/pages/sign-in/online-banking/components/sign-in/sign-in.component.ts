@@ -15,6 +15,7 @@ export class SignInComponent implements OnInit {
   currentScreenSize?: string;
   isPasswordVisible: boolean = false;
   isRememberCardSelected: boolean = false;
+  isSigningIn: boolean = false;
 
   ngOnInit(): void {
     this.store.select('screenSizeReducer').subscribe((res) => {
@@ -47,17 +48,28 @@ export class SignInComponent implements OnInit {
     this.signInForm.controls['password'].markAsTouched();
 
     if (this.password?.valid && this.cardNumber?.valid) {
+      this.isSigningIn = true;
       this.submitUserSignIn(this.signInForm.value);
     }
   }
 
+  // @TODO: Move to individual service 
   submitUserSignIn(input: any) {
-    this.http
+    return this.http
       .post('http://localhost:5000/api/v1/sign-in', input, {
         headers: { 'content-type': 'application/json' },
       })
-      .subscribe((res) => {
-        console.log('Backend response: ', res);
+      .subscribe({
+        next: (res) => {
+          console.log('Backend response: ', res);
+        },
+        error: (error) => {
+          this.isSigningIn = false;
+        },
+        // complete gets executed after next completes, not when an Error occurs
+        complete: () => {
+          this.isSigningIn = false;
+        },
       });
   }
 }

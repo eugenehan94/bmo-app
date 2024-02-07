@@ -10,6 +10,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 @NgModule({
   declarations: [],
   imports: [CommonModule],
@@ -22,7 +24,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatCardModule,
     MatGridListModule,
     MatListModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatProgressSpinnerModule,
   ],
 })
 export class MaterialDesignModule {}

@@ -260,8 +260,15 @@
                                 type="submit"
                                 class="sign-in-login-button-wrapper"
                               >
-                                <span>
-                                  <span>Sign in</span>
+                                <span
+                                  class="sign-in-login-button-text-container"
+                                >
+                                  <mat-spinner
+                                    *ngIf="isSigningIn"
+                                    class="sign-in-mat-spinner"
+                                  ></mat-spinner>
+                                  <span *ngIf="!isSigningIn">Sign in</span>
+                                  <span *ngIf="isSigningIn">Signing in</span>
                                 </span>
                               </button>
                             </div>
