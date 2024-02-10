@@ -1,0 +1,42 @@
+.credit-cards-title-text {
+  letter-spacing: 1px;
+}
+.credit-cards-individual-account-container {
+  display: flex;
+  justify-content: space-between;
+  border-left: 5px solid #0075be;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+.credit-cards-individual-account-info-name {
+  margin: 0.5rem 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.credit-cards-individual-account-info-account-number {
+  margin: 0.5rem 0;
+  font-size: 16px;
+  color: #8d9091;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+.credit-cards-individual-account-amount-container {
+  display: flex;
+  align-items: center;
+}
+
+.credit-cards-individual-account-amount-text {
+  margin: 0;
+  letter-spacing: 1px;
+}
+.credit-cards-individual-account-icon {
+  color: #0075be;
+}
+
+.credit-cards-open-account-text {
+  color: #0075be;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

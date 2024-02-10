@@ -1,0 +1,13 @@
+.mobile-footer-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+.mobile-footer-inner-container {
+  display: flex;
+  justify-content: center;
+  gap: 0 10px;
+}
