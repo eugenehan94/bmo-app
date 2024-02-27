@@ -1,24 +1,16 @@
-<div class="mobile-footer-container">
+<div *ngIf="currentScreenSize !== 'Large'" class="mobile-footer-container">
   <div class="mobile-footer-inner-container">
-    <div
-    class="mobile-footer-options-container"
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0.5rem;
-      "
-    >
+    <div class="mobile-footer-options-container">
       <mat-icon>credit_card</mat-icon>
-      <p style="margin: 0">Accounts</p>
+      <p class="mobile-footer-options-title-text">Accounts</p>
     </div>
-    <div>
+    <div class="mobile-footer-options-container">
       <mat-icon>attach_money</mat-icon>
-      <p>Pay & Transfer</p>
+      <p class="mobile-footer-options-title-text">Pay & Transfer</p>
     </div>
-    <div>
+    <div class="mobile-footer-options-container">
       <mat-icon>account_balance</mat-icon>
-      <p>Bank Services</p>
+      <p class="mobile-footer-options-title-text">Bank Services</p>
     </div>
   </div>
 </div>

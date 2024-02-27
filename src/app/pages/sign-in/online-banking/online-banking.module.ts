@@ -11,7 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SecurityNoticeComponent } from './components/security-notice/security-notice.component';
 import { RegisterCardComponent } from './components/register-card/register-card.component';
 // Modules
-import { OnlineBankingAuthorizedModule } from '../../authorized/online-banking/online-banking.module';
+// import { OnlineBankingAuthorizedModule } from '../../authorized/online-banking/online-banking.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { OnlineBankingAuthorizedModule } from '../../authorized/online-banking/o
     OnlineBankingRoutingModule,
     MaterialDesignModule,
     ReactiveFormsModule,
-    OnlineBankingAuthorizedModule,
+    // OnlineBankingAuthorizedModule,
   ],
   exports: [OnlineBankingComponent],
 })

@@ -9,6 +9,12 @@
   background-color: #ffffff;
   box-sizing: border-box;
 }
+.bank-accounts-individual-account-info-container.large {
+  display: flex;
+  gap: 0 5px;
+  align-items: center;
+}
+
 .bank-accounts-individual-account-info-name {
   margin: 0.5rem 0;
   font-size: 16px;

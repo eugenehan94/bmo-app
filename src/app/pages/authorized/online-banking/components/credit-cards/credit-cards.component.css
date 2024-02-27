@@ -9,6 +9,11 @@
   background-color: #ffffff;
   box-sizing: border-box;
 }
+.credit-cards-individual-account-info-container.large {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+}
 .credit-cards-individual-account-info-name {
   margin: 0.5rem 0;
   font-size: 16px;

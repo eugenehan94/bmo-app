@@ -1,5 +1,19 @@
 .user-greeting-text {
-    font-size: 24px;
-    font-weight: 300;
-    letter-spacing: 1px;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.user-greeting-content-container.large {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-greeting-print-text {
+  display: flex;
+  align-items: center;
+  color: #0075be;
+}
+.user-greeting-print-icon {
+  margin-right: 5px;
+  color: #0075be;
 }

@@ -1,7 +1,12 @@
 .loans-and-mortgages-title-text {
   letter-spacing: 1px;
+  margin-bottom: 0;
 }
-
+.loans-and-mortgages-open-account-container.large {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+}
 .loans-and-mortgages-open-account-text {
   color: #0075be;
   text-transform: uppercase;

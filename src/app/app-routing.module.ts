@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AuthorizedOnlineBankingGuard } from './guards/authorized-online-banking.guard';
+
 const routes: Routes = [
   {
     path: 'personal',
@@ -22,6 +24,15 @@ const routes: Routes = [
       import('./pages/sign-in/online-banking/online-banking.module').then(
         (m) => m.OnlineBankingModule
       ),
+  },
+  {
+    // Path for when user signs in for online banking
+    path: 'banking/digital/accounts',
+    loadChildren: () =>
+      import('./pages/authorized/online-banking/online-banking.module').then(
+        (m) => m.OnlineBankingAuthorizedModule
+      ),
+    canActivate: [AuthorizedOnlineBankingGuard],
   },
   {
     path: '',

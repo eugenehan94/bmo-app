@@ -1,5 +1,13 @@
-<div>
-  <h1 class="user-greeting-text">
-    Good evening, Tester
-  </h1>
+<div class="user-greeting-container">
+  <div
+    class="user-greeting-content-container"
+    [ngClass]="{ large: currentScreenSize === 'Large' }"
+  >
+    <h1 class="user-greeting-text">Good evening, Tester</h1>
+    <div *ngIf="currentScreenSize === 'Large'">
+      <p class="user-greeting-print-text">
+        <mat-icon class="user-greeting-print-icon">print</mat-icon>PRINT
+      </p>
+    </div>
+  </div>
 </div>

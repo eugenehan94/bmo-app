@@ -2,7 +2,12 @@
   <div>
     <h3 class="loans-and-mortgages-title-text">Investments</h3>
   </div>
-  <div>
+  <div
+    class="loans-and-mortgages-open-account-container"
+    [ngClass]="{
+      large: currentScreenSize === 'Large'
+    }"
+  >
     <p class="loans-and-mortgages-open-account-text">Invest Online</p>
     <p class="loans-and-mortgages-open-account-text">Invest in a TFSA</p>
     <p class="loans-and-mortgages-open-account-text">Get an RRSP</p>

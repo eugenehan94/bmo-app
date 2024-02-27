@@ -9,6 +9,12 @@
   background-color: #ffffff;
   box-sizing: border-box;
 }
+.loans-and-mortgages-individual-account-info-container.large {
+  display: flex;
+  gap: 0 5px;
+  align-items: center;
+}
+
 .loans-and-mortgages-individual-account-info-name {
   margin: 0.5rem 0;
   font-size: 16px;
@@ -33,6 +39,11 @@
 }
 .loans-and-mortgages-individual-account-icon {
   color: #0075be;
+}
+
+.loans-and-mortgages-open-account-container.large {
+  display: flex;
+  gap: 0 20px;
 }
 
 .loans-and-mortgages-open-account-text {

@@ -4,7 +4,12 @@
   </div>
   <div>
     <div class="loans-and-mortgages-individual-account-container">
-      <div>
+      <div
+        class="loans-and-mortgages-individual-account-info-container"
+        [ngClass]="{
+          large: currentScreenSize === 'Large'
+        }"
+      >
         <h5 class="loans-and-mortgages-individual-account-info-name">
           Mortgage
         </h5>
@@ -22,8 +27,15 @@
       </div>
     </div>
   </div>
-  <div>
+  <div
+    class="loans-and-mortgages-open-account-container"
+    [ngClass]="{
+      large: currentScreenSize === 'Large'
+    }"
+  >
     <p class="loans-and-mortgages-open-account-text">Apply for a credit card</p>
-    <p class="loans-and-mortgages-open-account-text">Get pre-approved for a mortgage</p>
+    <p class="loans-and-mortgages-open-account-text">
+      Get pre-approved for a mortgage
+    </p>
   </div>
 </div>

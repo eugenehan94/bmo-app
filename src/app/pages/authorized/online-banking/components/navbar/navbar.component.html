@@ -58,10 +58,50 @@
                   >
                 </a>
               </li>
+              <li
+                class="navbar-options-li"
+                *ngIf="currentScreenSize === 'Large'"
+              >
+                <button
+                  class="navbar-options-sign-out-btn"
+                  aria-label="sign out of online banking"
+                >
+                  Sign out
+                </button>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
     </div>
+  </div>
+  <!-- Navbar for Desktop -->
+  <div
+    *ngIf="currentScreenSize === 'Large'"
+    class="navbar-second-portion-container"
+  >
+    <ul class="navbar-second-portion-ul-container">
+      <li class="navbar-second-portion-ul-li-container">
+        <button
+          class="navbar-second-portion-ul-li-button-container"
+          [routerLink]="['/']"
+        >
+          Accounts
+        </button>
+      </li>
+      <li class="navbar-second-portion-ul-li-container">
+        <button class="navbar-second-portion-ul-li-button-container">
+          Pay & Transfer
+        </button>
+      </li>
+      <li class="navbar-second-portion-ul-li-container">
+        <button
+          routerLink="/"
+          class="navbar-second-portion-ul-li-button-container"
+        >
+          Bank Services
+        </button>
+      </li>
+    </ul>
   </div>
 </div>
