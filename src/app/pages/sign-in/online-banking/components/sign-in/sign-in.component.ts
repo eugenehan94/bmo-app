@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 //ngrx
 import { Store } from '@ngrx/store';
+
+import { StorageService } from 'src/app/_services/storage.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -10,7 +13,12 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./sign-in.component.css'],
 })
 export class SignInComponent implements OnInit {
-  constructor(private store: Store<any>, private http: HttpClient) {}
+  constructor(
+    private store: Store<any>,
+    private http: HttpClient,
+    private router: Router,
+    private storageService: StorageService
+  ) {}
 
   currentScreenSize?: string;
   isPasswordVisible: boolean = false;
@@ -53,15 +61,17 @@ export class SignInComponent implements OnInit {
     }
   }
 
-  // @TODO: Move to individual service 
+  // @TODO: Move to individual service
   submitUserSignIn(input: any) {
     return this.http
       .post('http://localhost:5000/api/v1/sign-in', input, {
         headers: { 'content-type': 'application/json' },
+        withCredentials: true,
       })
       .subscribe({
         next: (res) => {
-          console.log('Backend response: ', res);
+          this.storageService.saveUser(res);
+          this.router.navigate(['banking/digital/accounts']);
         },
         error: (error) => {
           this.isSigningIn = false;

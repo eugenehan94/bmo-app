@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
+  padding-bottom: 3rem;
 }
 .sign-in-large-wrapper-container {
   margin-left: 152px;
