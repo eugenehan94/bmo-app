@@ -20,7 +20,6 @@ import { PersonalHomeModule } from './pages/personal/home/home.module';
 import { PersonalBankAccountsMainModule } from './pages/personal/bank-accounts/main/main.module';
 import { BusinessHomeModule } from './pages/business/home/home.module';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [

@@ -75,6 +75,7 @@ export class SignInComponent implements OnInit {
         },
         error: (error) => {
           this.isSigningIn = false;
+          this.router.navigate(['login/error']);
         },
         // complete gets executed after next completes, not when an Error occurs
         complete: () => {

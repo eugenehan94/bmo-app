@@ -42,4 +42,10 @@ export class OnlineBankingComponent implements OnInit {
       this.currentScreenSize = res.currentScreenSize;
     });
   }
+
+  handleSkipNav(event: any, section: string): void {
+    event.preventDefault();
+    window.location.hash = '';
+    window.location.hash = section;
+  }
 }

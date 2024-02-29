@@ -1,6 +1,27 @@
 .online-banking-container.large {
   /* height: 100%; */
 }
+
+.skip-navigation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  opacity: -10;
+  background-color: #ffffff;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 2px -2px #0019281f;
+  height: 67px;
+  color: #0075be;
+}
+.skip-navigation-container:focus-within {
+  z-index: 999;
+  opacity: 1;
+  cursor: pointer;
+}
 .online-banking-main {
   margin-top: 67px;
   background-color: #f5f6f7;

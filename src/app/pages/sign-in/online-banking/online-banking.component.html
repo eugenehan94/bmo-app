@@ -4,9 +4,17 @@
   }"
 >
   <header>
+    <div class="skip-navigation-container">
+      <a
+        tabindex="0"
+        (click)="handleSkipNav($event, 'online-banking-main')"
+        (keydown.enter)="handleSkipNav($event, 'online-banking-main')"
+        >Skip to main content</a
+      >
+    </div>
     <app-navbar></app-navbar>
   </header>
-  <main class="online-banking-main">
+  <main class="online-banking-main" id="online-banking-main">
     <app-sign-in></app-sign-in>
     <app-footer></app-footer>
   </main>
