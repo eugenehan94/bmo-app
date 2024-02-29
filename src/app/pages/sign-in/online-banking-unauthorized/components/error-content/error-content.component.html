@@ -1,0 +1,65 @@
+<div class="error-content-container">
+  <div
+    class="error-content-inner-container"
+    [ngClass]="{
+      medium: currentScreenSize === 'Medium',
+      large: currentScreenSize === 'Large'
+    }"
+  >
+    <div
+      class="error-content-content-container"
+      [ngClass]="{
+        medium: currentScreenSize === 'Medium',
+        large: currentScreenSize === 'Large'
+      }"
+    >
+      <h2
+        class="error-content-title-text"
+        [ngClass]="{
+          medium: currentScreenSize === 'Medium',
+          large: currentScreenSize === 'Large'
+        }"
+      >
+        Something's up on our end.
+      </h2>
+      <p
+        class="error-content-description-text"
+        [ngClass]="{
+          medium: currentScreenSize === 'Medium',
+          large: currentScreenSize === 'Large'
+        }"
+      >
+        We're working hard to fix it, so please try again soon.
+      </p>
+      <p
+        class="error-content-caption-text"
+        [ngClass]="{
+          medium: currentScreenSize === 'Medium',
+          large: currentScreenSize === 'Large'
+        }"
+      >
+        SI/BOS/credential/length
+      </p>
+      <div
+        class="error-content-link-container"
+        [ngClass]="{
+          medium: currentScreenSize === 'Medium',
+          large: currentScreenSize === 'Large'
+        }"
+      >
+        <a
+          [routerLink]="['/login']"
+          draggable="false"
+          class="error-content-link"
+        >
+          <span role="text">
+            <span>Sign in again</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div *ngIf="currentScreenSize !== 'Small'">
+      <img src="/assets/svg/system-error.svg" alt="car with no front tire" />
+    </div>
+  </div>
+</div>
