@@ -35,6 +35,11 @@ const routes: Routes = [
     canActivate: [AuthorizedOnlineBankingGuard],
   },
   {
+    path: '**',
+    loadChildren: () =>
+      import('./pages/not-found/main/main.module').then((m) => m.MainModule),
+  },
+  {
     path: '',
     redirectTo: '/personal',
     pathMatch: 'full',

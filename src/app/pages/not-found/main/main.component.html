@@ -1,0 +1,59 @@
+<div>
+  <!-- screen-reader-only -->
+  <h1 class="screen-reader-only">404 Error</h1>
+  <main>
+    <section
+      class="not-found-section"
+      [ngClass]="{
+        medium: currentScreenSize === 'Medium'
+      }"
+    >
+      <a routerLink="/personal" title="B M O">
+        <img src="/assets/svg/bmo-original-orig.svg" alt="Bank of Montreal" />
+      </a>
+      <article class="not-found-article">
+        <h2 class="not-found-title">
+          Sorry, but we can't find the page that you're looking for
+          <span>(404 Error).</span>
+        </h2>
+        <p class="not-found-description-text">
+          It may no longer exist, changed location or is temporarily
+          unavailable.
+        </p>
+        <p class="not-found-description-text">
+          Please consider using one of the links below to help you find the
+          information you need or other products.
+        </p>
+        <div class="not-found-button-container">
+          <a routerLink="/personal" class="not-found-button-primary">Home</a>
+          <!-- <a>Contact Us</a>
+          <a>Book an appointment</a> -->
+        </div>
+      </article>
+      <ul
+        class="not-found-ul-container"
+        [ngClass]="{
+          medium: currentScreenSize === 'Medium'
+        }"
+      >
+        <li class="not-found-li-container">
+          <a
+            routerLink="/personal"
+            title="Personal Banking"
+            class="not-found-li-link"
+            ><strong>Personal Banking</strong></a
+          >
+        </li>
+        <li class="not-found-li-container">
+          <a
+            routerLink="/business"
+            title="Business Banking"
+            class="not-found-li-link"
+            ><strong>Business Banking</strong></a
+          >
+        </li>
+      </ul>
+      <section></section>
+    </section>
+  </main>
+</div>
