@@ -1,0 +1,100 @@
+.get-started-section {
+  background-color: #f5f6f7;
+}
+.get-started-container {
+  padding: 1.5rem;
+}
+.get-started-title-text {
+  margin: 0;
+  font-size: 28px;
+}
+.get-started-title-description-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+.get-started-required-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.get-started-required-list-item {
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+}
+.get-started-checkmark-icon {
+  color: #0075be;
+}
+.get-started-required-list-content-container {
+  display: flex;
+  gap: 0 1rem;
+}
+.get-started-required-item-title-text {
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+.get-started-credit-bureau-btn {
+  font-size: 16px;
+  color: #0075be;
+  font-weight: 700;
+  line-height: 1.5rem;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  padding: 1px 0;
+}
+.get-started-credit-bureau-btn:hover {
+  text-decoration: underline;
+}
+
+.get-started-caption-container {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.get-started-caption-text {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5rem;
+}
+.get-started-privacy-link {
+  cursor: pointer;
+  color: #0075be;
+  text-decoration: none;
+  font-weight: 600;
+}
+.get-started-privacy-link:hover {
+  text-decoration: underline;
+}
+.get-started-customer-title-container {
+  display: flex;
+  justify-content: center;
+}
+.get-started-customer-title-text {
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+  line-height: 1rem;
+}
+.get-started-customer-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.get-started-customer-sign-in-btn {
+  letter-spacing: 0.01562rem;
+  line-height: 3.25rem;
+  text-transform: uppercase;
+  border: 0.125rem solid #0075be;
+  background-color: transparent;
+  color: #0075be;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  padding: 0 2rem;
+  font-size: 0.875rem;
+  overflow: hidden;
+  height: 3.5rem;
+  transition: all 0.2s ease;
+  border-radius: 1.75rem;
+  box-sizing: border-box;
+}
