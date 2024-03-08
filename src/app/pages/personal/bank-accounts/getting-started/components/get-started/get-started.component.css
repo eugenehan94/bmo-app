@@ -1,12 +1,24 @@
 .get-started-section {
   background-color: #f5f6f7;
 }
+.get-started-section.large {
+  padding-top: 1.5rem;
+}
 .get-started-container {
   padding: 1.5rem;
+}
+.get-started-title-required-container.large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .get-started-title-text {
   margin: 0;
   font-size: 28px;
+}
+.get-started-title-text.large {
+  font-size: 38px;
 }
 .get-started-title-description-text {
   font-size: 16px;
@@ -29,10 +41,14 @@
   display: flex;
   gap: 0 1rem;
 }
+.get-started-required-item-title-container.large {
+  text-align: start;
+}
 .get-started-required-item-title-text {
   font-weight: 700;
   line-height: 1.5rem;
 }
+
 .get-started-credit-bureau-btn {
   font-size: 16px;
   color: #0075be;
@@ -51,6 +67,9 @@
   display: flex;
   margin-bottom: 1.5rem;
 }
+.get-started-caption-container.large {
+  max-width: 600px;
+}
 .get-started-caption-text {
   font-size: 14px;
   text-align: center;
@@ -65,6 +84,7 @@
 .get-started-privacy-link:hover {
   text-decoration: underline;
 }
+
 .get-started-customer-title-container {
   display: flex;
   justify-content: center;
@@ -97,4 +117,51 @@
   transition: all 0.2s ease;
   border-radius: 1.75rem;
   box-sizing: border-box;
+}
+
+.get-started-apply-now-link {
+  letter-spacing: 0.01562rem;
+  line-height: 3.25rem;
+  text-transform: uppercase;
+  border: 0.125rem solid #0075be;
+  background-color: #0075be;
+  color: #ffffff;
+  box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 25, 40, 0.04),
+    0 0.25rem 1.5rem 0 rgba(0, 25, 40, 0);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 700;
+  padding: 0 2rem;
+  overflow: hidden;
+  height: 3.5rem;
+  transition: all 0.2s ease;
+  border-radius: 1.75rem;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.get-started-apply-now-link:hover {
+  text-decoration: underline;
+}
+.get-start-bottom-container {
+  margin-top: 3rem;
+}
+.get-start-bottom-captions-text {
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-size: 0.875rem;
+  box-sizing: inherit;
+}
+.get-start-bottom-caption-link {
+  font-weight: 700;
+  color: #0075be;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-sizing: inherit;
+  font-size: 0.875rem;
+}
+.get-start-bottom-caption-link:hover {
+  text-decoration: underline;
 }

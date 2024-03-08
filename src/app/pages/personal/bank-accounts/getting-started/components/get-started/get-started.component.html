@@ -1,14 +1,34 @@
-<section class="get-started-section">
+<section
+  class="get-started-section"
+  [ngClass]="{ large: currentScreenSize === 'Large' }"
+>
   <div class="get-started-container">
-    <div>
+    <div
+      class="get-started-title-required-container"
+      [ngClass]="{
+        large: currentScreenSize === 'Large'
+      }"
+    >
       <div>
-        <h1 class="get-started-title-text">Let's get started!</h1>
+        <h1
+          class="get-started-title-text"
+          [ngClass]="{
+            large: currentScreenSize === 'Large'
+          }"
+        >
+          Let's get started!
+        </h1>
         <p class="get-started-title-description-text">
           Easily open a BMO account online in about 7 minutes. Here’s what
           you’ll need to speed up your application:
         </p>
       </div>
-      <div>
+      <div
+        class="get-started-title-required-container"
+        [ngClass]="{
+          large: currentScreenSize === 'Large'
+        }"
+      >
         <div>
           <ul class="get-started-required-ul">
             <li class="get-started-required-list-item">
@@ -21,7 +41,12 @@
                   >
                 </div>
                 <div>
-                  <div>
+                  <div
+                    class="get-started-required-item-title-container"
+                    [ngClass]="{
+                      large: currentScreenSize === 'Large'
+                    }"
+                  >
                     <span class="get-started-required-item-title-text"
                       >Social Insurance Number (SIN)</span
                     >
@@ -56,7 +81,12 @@
             </li>
           </ul>
         </div>
-        <div class="get-started-caption-container">
+        <div
+          class="get-started-caption-container"
+          [ngClass]="{
+            large: currentScreenSize === 'Large'
+          }"
+        >
           <span class="get-started-caption-text"
             >Your privacy is important to us. To learn more about how we
             collect, use and safeguard your personal information, your choices,
@@ -97,6 +127,7 @@
               <a
                 target="_blank"
                 aria-label="apply online to open an account now"
+                class="get-started-apply-now-link"
               >
                 Apply Now
               </a>
@@ -105,10 +136,10 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="get-start-bottom-container">
       <div>
         <div>
-          <span
+          <span class="get-start-bottom-captions-text"
             >By continuing with your application, you’ve considered the features
             of the account and/or plan selected and it is appropriate for your
             everyday banking needs. Our Everyday Banking Plans, Discounted
@@ -119,9 +150,10 @@
             aria-label="Access the B M O Banking webpage, opens in a new tab"
             href="https://www.bmo.com/main/personal/bank-accounts/"
             rel="noopener"
+            class="get-start-bottom-caption-link"
             >bmo.com/banking</a
           >
-          <span
+          <span class="get-start-bottom-captions-text"
             >. If you need help finding an appropriate plan, check out our
           </span>
           <a
@@ -129,9 +161,10 @@
             aria-label="Access the Help Me Choose tool, opens in a new tab."
             href="https://www.bmo.com/main/personal/bank-accounts/#help-me-choose"
             rel="noopener"
+            class="get-start-bottom-caption-link"
             >Help Me Choose</a
           >
-          <span> tool.</span>
+          <span class="get-start-bottom-captions-text"> tool.</span>
         </div>
       </div>
     </div>
