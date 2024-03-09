@@ -12,6 +12,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'open-account',
+    loadChildren: () =>
+      import(
+        './pages/open-account/personal/personal-info/personal-info.module'
+      ).then((m) => m.PersonalInfoModule),
+  },
+  {
     path: 'business',
     loadChildren: () =>
       import('./pages/business/home/home.module').then(

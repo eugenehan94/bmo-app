@@ -100,6 +100,12 @@
   align-items: center;
   text-align: center;
 }
+.get-started-customer-btn-container.large {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0 15px;
+}
 .get-started-customer-sign-in-btn {
   letter-spacing: 0.01562rem;
   line-height: 3.25rem;
@@ -146,6 +152,14 @@
 }
 .get-start-bottom-container {
   margin-top: 3rem;
+}
+.get-start-bottom-container.large {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.get-start-inner-bottom-container.large {
+  max-width: 600px;
 }
 .get-start-bottom-captions-text {
   line-height: 1.5rem;
