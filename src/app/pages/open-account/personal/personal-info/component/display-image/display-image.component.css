@@ -1,0 +1,9 @@
+.display-image-container {
+  display: flex;
+  justify-content: center;
+}
+.display-image-img-container {
+  max-width: 225px;
+  margin: 24px auto 48px;
+  display: inherit;
+}
