@@ -1,5 +1,25 @@
-<div>
-  <div>
-    <img src="assets/svg/bmo-logo.svg" alt="B M O logo" aria-hidden="true" />
+<div class="navbar-container">
+  <div
+    class="navbar-inner-container"
+    [ngClass]="{
+      medium: currentScreenSize === 'Medium',
+      large: currentScreenSize === 'Large'
+    }"
+  >
+    <div
+      class="navbar-content-container"
+      [ngClass]="{
+        large: currentScreenSize === 'Large'
+      }"
+    >
+      <div>
+        <img
+          src="assets/svg/bmo-logo.svg"
+          alt="B M O logo"
+          aria-hidden="true"
+          class="navbar-icon"
+        />
+      </div>
+    </div>
   </div>
 </div>
