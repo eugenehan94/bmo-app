@@ -1,3 +1,6 @@
 .personal-info-container {
   background-color: #f5f6f7;
 }
+.personal-info-content-containter {
+  margin: 0 16px;
+}

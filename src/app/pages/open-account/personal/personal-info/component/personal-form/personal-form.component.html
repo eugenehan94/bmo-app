@@ -1,23 +1,110 @@
-<div>
-  <span>Chequing Account with Performance Plan</span>
+<div class="personal-form-container">
+  <span class="personal-form-title"
+    >Chequing Account with Performance Plan</span
+  >
   <!-- Form -->
   <div>
     <div>
       <h1>Let's get started</h1>
       <p>Please enter your full legal name</p>
       <div>
-        <div>
-          <label
-            for="name-block-first-name-element"
-            id="name-block-first-name-label"
-            >First name/Given name</label
-          >
-          <input id="name-block-first-name-element" />
+        <div class="personal-first-name-container">
+          <div>
+            <label
+              for="name-block-first-name-element"
+              id="name-block-first-name-label"
+              class="personal-first-name-label"
+              >First name/Given name</label
+            >
+            <div class="personal-first-name-input-container">
+              <input
+                id="name-block-first-name-element"
+                aria-labelledby="name-block-first-name-label"
+                aria-invalid="false"
+                class="personal-first-name-input-field"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="personal-middle-name-container">
+          <div>
+            <label
+              for="name-block-middle-name-element"
+              id="name-block-middle-name-label"
+              class="personal-middle-name-label"
+              >Middle name (optional)</label
+            >
+            <div class="personal-middle-name-input-container">
+              <input
+                id="name-block-middle-name-element"
+                aria-labelledby="name-block-middle-name-label"
+                class="personal-middle-name-input-field"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="personal-last-name-container">
+          <div>
+            <label
+              for="name-block-last-name-element"
+              id="name-block-last-name-label"
+              class="personal-last-name-label"
+              >Last name/Family name</label
+            >
+            <div class="personal-last-name-input-container">
+              <input
+                aria-labelledby="name-block-last-name-label"
+                id="name-block-last-name-element"
+                aria-invalid="false"
+                class="personal-last-name-input-field"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div></div>
+    <div>
+      <!-- <div>
+        <h2>When's your birth date?</h2>
+        <div>
+          <div>
+            <div></div>
+          </div>
+          <p>
+            To learn more about how we collect, use, disclose and safeguard your
+            Personal Information, your choices, and the rights you have, please
+            see our
+            <a
+              href="https://www.bmo.com/main/about-bmo/privacy-security/our-privacy-code/"
+              target="_blank"
+              >Privacy Code</a
+            >
+          </p>
+        </div>
+      </div> -->
+    </div>
   </div>
   <!-- Form button -->
-  <div></div>
+  <div>
+    <div class="personal-form-button-inner-container">
+      <div class="personal-form-next-button-container">
+        <button
+          type="button"
+          aria-disabled="false"
+          class="personal-form-next-button-btn"
+        >
+          Next
+        </button>
+      </div>
+      <div class="personal-form-back-button-container">
+        <button
+          type="button"
+          aria-disabled="false"
+          class="personal-form-back-button-btn"
+        >
+          Back
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
