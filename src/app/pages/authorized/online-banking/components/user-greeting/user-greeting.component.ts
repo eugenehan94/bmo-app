@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { StorageService } from 'src/app/_services/storage.service';
 //ngrx
 import { Store } from '@ngrx/store';
 
@@ -9,12 +9,16 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./user-greeting.component.css'],
 })
 export class UserGreetingComponent implements OnInit {
-  constructor(private store: Store<any>) {}
+  constructor(
+    private store: Store<any>,
+    private storageService: StorageService
+  ) {}
   currentScreenSize?: string;
 
   ngOnInit(): void {
     this.store.select('screenSizeReducer').subscribe((res) => {
       this.currentScreenSize = res.currentScreenSize;
+      console.log('storage service: ', this.storageService.getUser());
     });
   }
 }
