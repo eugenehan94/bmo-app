@@ -14,11 +14,11 @@ export class UserGreetingComponent implements OnInit {
     private storageService: StorageService
   ) {}
   currentScreenSize?: string;
-
+  user?: any;
   ngOnInit(): void {
     this.store.select('screenSizeReducer').subscribe((res) => {
       this.currentScreenSize = res.currentScreenSize;
-      console.log('storage service: ', this.storageService.getUser());
+      this.user = this.storageService.getUser().user;
     });
   }
 }

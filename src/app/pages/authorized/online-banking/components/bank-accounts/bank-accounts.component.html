@@ -3,18 +3,27 @@
     <h3 class="bank-accounts-title-text">Bank accounts</h3>
   </div>
   <div>
-    <div class="bank-accounts-individual-account-container">
+    <div
+      class="bank-accounts-individual-account-container"
+      *ngFor="let userAccount of userAccounts"
+    >
       <div
         class="bank-accounts-individual-account-info-container"
         [ngClass]="{
           large: currentScreenSize === 'Large'
         }"
       >
-        <h5 class="bank-accounts-individual-account-info-name">Chequing</h5>
-        <p class="bank-accounts-individual-account-info-account-number">7232</p>
+        <h5 class="bank-accounts-individual-account-info-name">
+          {{ userAccount.AccountType }}
+        </h5>
+        <p class="bank-accounts-individual-account-info-account-number">
+          {{ userAccount.AccountNumber }}
+        </p>
       </div>
       <div class="bank-accounts-individual-account-amount-container">
-        <p class="bank-accounts-individual-account-amount-text">$111,271.48</p>
+        <p class="bank-accounts-individual-account-amount-text">
+          {{ userAccount.Amount | currency }}
+        </p>
         <mat-icon class="bank-accounts-individual-account-icon"
           >chevron_right</mat-icon
         >

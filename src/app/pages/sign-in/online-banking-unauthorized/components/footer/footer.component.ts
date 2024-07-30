@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FooterService } from '../../../online-banking/components/footer/footer.service';
 import { FooterContentOneType, FooterContentTwoType } from 'src/app/interfaces';
 @Component({
-  selector: 'app-footer',
+  selector: 'app-footer2',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css'],
 })
