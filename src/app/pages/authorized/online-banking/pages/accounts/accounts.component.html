@@ -1,0 +1,44 @@
+<main
+  class="online-banking-main"
+  [ngClass]="{ large: currentScreenSize === 'Large' }"
+>
+  <div
+    class="content-wrapper"
+    [ngClass]="{
+      large: currentScreenSize === 'Large'
+    }"
+  >
+    <div>
+      <app-user-greeting></app-user-greeting>
+    </div>
+    <div
+      class="daily-accounts-container"
+      [ngClass]="{
+        large: currentScreenSize === 'Large'
+      }"
+    >
+      <div
+        class="daily-accounts-wrapper"
+        [ngClass]="{
+          large: currentScreenSize === 'Large'
+        }"
+      >
+        <app-bank-accounts></app-bank-accounts>
+        <app-credit-cards></app-credit-cards>
+      </div>
+      <div
+        *ngIf="currentScreenSize === 'Large'"
+        class="daily-accounts-quick-link-wrapper"
+      >
+        <app-quick-links></app-quick-links>
+      </div>
+    </div>
+    <div>
+      <app-loans-and-mortgages></app-loans-and-mortgages>
+    </div>
+    <div style="padding-bottom: 5rem">
+      <app-investments></app-investments>
+    </div>
+  </div>
+  <app-mobile-footer></app-mobile-footer>
+</main>

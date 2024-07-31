@@ -12,6 +12,8 @@ import { CreditCardsComponent } from './components/credit-cards/credit-cards.com
 import { LoansAndMortgagesComponent } from './components/loans-and-mortgages/loans-and-mortgages.component';
 import { InvestmentsComponent } from './components/investments/investments.component';
 import { QuickLinksComponent } from './components/quick-links/quick-links.component';
+// Pages
+import { AccountsComponent } from './pages/accounts/accounts.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { QuickLinksComponent } from './components/quick-links/quick-links.compon
     LoansAndMortgagesComponent,
     InvestmentsComponent,
     QuickLinksComponent,
+    AccountsComponent,
   ],
   imports: [
     CommonModule,

@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 99999;
 }
 .navbar-inner-container {
   height: 100%;
@@ -103,4 +103,8 @@
   border: 1px solid transparent;
   background-color: transparent;
   font-size: 18px;
+}
+.navbar-second-portion-ul-li-button-container-underline {
+  border-bottom: 3px solid #005587;
+  font-weight: 700;
 }

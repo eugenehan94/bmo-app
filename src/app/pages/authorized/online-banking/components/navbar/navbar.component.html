@@ -85,13 +85,22 @@
       <li class="navbar-second-portion-ul-li-container">
         <button
           class="navbar-second-portion-ul-li-button-container"
-          [routerLink]="['/']"
+          [routerLink]="['/banking/digital/accounts']"
+          [routerLinkActive]="[
+            'navbar-second-portion-ul-li-button-container-underline'
+          ]"
         >
           Accounts
         </button>
       </li>
       <li class="navbar-second-portion-ul-li-container">
-        <button class="navbar-second-portion-ul-li-button-container">
+        <button
+          class="navbar-second-portion-ul-li-button-container"
+          [routerLink]="['/banking/digital/accounts/account-transfer']"
+          [routerLinkActive]="[
+            'navbar-second-portion-ul-li-button-container-underline'
+          ]"
+        >
           Pay & Transfer
         </button>
       </li>

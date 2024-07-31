@@ -1,0 +1,24 @@
+.online-banking-main {
+  margin-top: 67px;
+  background-color: #f5f6f7;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.online-banking-main.large {
+  margin-top: 115px;
+}
+.content-wrapper.large {
+  padding: 0 5rem;
+}
+
+.daily-accounts-container.large {
+  display: flex;
+  gap: 1rem;
+}
+.daily-accounts-wrapper.large {
+  flex: 70%;
+}
+.daily-accounts-quick-link-wrapper {
+  flex: 30%;
+}
