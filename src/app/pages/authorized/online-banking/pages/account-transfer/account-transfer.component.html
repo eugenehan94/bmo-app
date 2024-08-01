@@ -1,0 +1,58 @@
+<main
+  class="online-banking-main"
+  [ngClass]="{ large: currentScreenSize === 'Large' }"
+>
+  <div
+    class="content-wrapper"
+    [ngClass]="{
+      large: currentScreenSize === 'Large'
+    }"
+  >
+    <mat-drawer-container class="mat-drawer-container">
+      <mat-drawer mode="side" opened class="mat-side-drawer"
+        >Account transfers</mat-drawer
+      >
+      <mat-drawer-content>
+        <div><h1>Account transfers</h1></div>
+        <div>
+          <h3>Your transfer details</h3>
+          <p>All fields are required unless we've marked them (optional)</p>
+          <div>
+            <div>
+              <mat-form-field>
+                <mat-label>Choose an account</mat-label>
+                <mat-select>
+                  <mat-option>First option</mat-option>
+                  <mat-option>Second option</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field>
+                <mat-label>Choose an account</mat-label>
+                <mat-select>
+                  <mat-option>First option</mat-option>
+                  <mat-option>Second option</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field>
+                <mat-label>Amount</mat-label>
+                <input matInput />
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                <mat-button-toggle value="one-time">One-time</mat-button-toggle>
+              </mat-button-toggle-group>
+            </div>
+          </div>
+          <div>
+            <button mat-flat-button>Continue</button>
+          </div>
+        </div>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
+</main>
