@@ -9,16 +9,32 @@
   margin-top: 115px;
 }
 .content-wrapper.large {
-  /* padding: 0 5rem; */
+  height: 100%;
+}
+.content-container {
+  margin-left: 300px;
+  padding: 0.5rem 1.5rem;
+}
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border-color: #005587;
 }
 
-.mat-drawer-container {
-  background-color: #f5f6f7;
-  padding: 1rem 0;
+.inner-content-container {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
 }
 
-.mat-side-drawer {
-  background-color: #f5f6f7;
-  width: 275px;
-  padding: 1rem 1rem;
+.inner-content-paragraph {
+  color: rgb(128, 128, 128);
+  margin: 2rem 0;
+}
+.select-account-container {
+  padding: 0.4rem 0;
+}
+.select-account-form-field {
+  width: 70%;
+}
+.amount-input-container {
+  padding: 0.5rem 0;
 }

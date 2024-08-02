@@ -8,51 +8,73 @@
       large: currentScreenSize === 'Large'
     }"
   >
-    <mat-drawer-container class="mat-drawer-container">
-      <mat-drawer mode="side" opened class="mat-side-drawer"
-        >Account transfers</mat-drawer
-      >
-      <mat-drawer-content>
-        <div><h1>Account transfers</h1></div>
+    <app-side-nav></app-side-nav>
+    <div class="content-container">
+      <h1>Account transfers</h1>
+      <div>
+        <mat-tab-group
+          animationDuration="0ms"
+          mat-stretch-tabs="false"
+          mat-align-tabs="start"
+        >
+          <mat-tab label="Make a transfer"></mat-tab>
+          <mat-tab label="Transfer Activity"></mat-tab>
+        </mat-tab-group>
+      </div>
+      <div class="inner-content-container">
         <div>
           <h3>Your transfer details</h3>
-          <p>All fields are required unless we've marked them (optional)</p>
-          <div>
-            <div>
-              <mat-form-field>
-                <mat-label>Choose an account</mat-label>
-                <mat-select>
-                  <mat-option>First option</mat-option>
-                  <mat-option>Second option</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <div>
-              <mat-form-field>
-                <mat-label>Choose an account</mat-label>
-                <mat-select>
-                  <mat-option>First option</mat-option>
-                  <mat-option>Second option</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <div>
-              <mat-form-field>
-                <mat-label>Amount</mat-label>
-                <input matInput />
-              </mat-form-field>
-            </div>
-            <div>
-              <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-                <mat-button-toggle value="one-time">One-time</mat-button-toggle>
-              </mat-button-toggle-group>
-            </div>
+        </div>
+        <div>
+          <p class="inner-content-paragraph">
+            All fields are required unless we've marked them (optional)
+          </p>
+        </div>
+        <div>
+          <div class="select-account-container">
+            <mat-form-field
+              class="select-account-form-field"
+              aria-label="Choose which account funds would be taken out of"
+            >
+              <mat-label>From: Choose an account</mat-label>
+              <mat-select>
+                <mat-option>First option</mat-option>
+                <mat-option>Second option</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="select-account-container">
+            <mat-form-field
+              class="select-account-form-field"
+              aria-label="Choose which account funds will deposited into"
+            >
+              <mat-label>To: Choose an account</mat-label>
+              <mat-select>
+                <mat-option>First option</mat-option>
+                <mat-option>Second option</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="amount-input-container">
+            <mat-form-field>
+              <mat-label>Amount</mat-label>
+              <input matInput />
+              <mat-hint>Format: 0.00</mat-hint>
+            </mat-form-field>
           </div>
           <div>
-            <button mat-flat-button>Continue</button>
+            <h5>Choose a transfer type</h5>
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+              <mat-button-toggle value="one-time">One-time</mat-button-toggle>
+              <mat-button-toggle value="one-time">Recurring</mat-button-toggle>
+              <mat-button-toggle value="one-time">Custom</mat-button-toggle>
+            </mat-button-toggle-group>
           </div>
         </div>
-      </mat-drawer-content>
-    </mat-drawer-container>
+        <div>
+          <button mat-flat-button>Continue</button>
+        </div>
+      </div>
+    </div>
   </div>
 </main>

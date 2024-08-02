@@ -15,6 +15,7 @@ import { QuickLinksComponent } from './components/quick-links/quick-links.compon
 // Pages
 import { AccountsComponent } from './pages/accounts/accounts.component';
 import { AccountTransferComponent } from './pages/account-transfer/account-transfer.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AccountTransferComponent } from './pages/account-transfer/account-trans
     QuickLinksComponent,
     AccountsComponent,
     AccountTransferComponent,
+    SideNavComponent,
   ],
   imports: [
     CommonModule,

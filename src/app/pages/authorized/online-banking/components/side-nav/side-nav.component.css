@@ -1,0 +1,39 @@
+.side-nav-container {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 9000;
+  top: 0;
+  left: 0;
+  background-color: #f5f6f7;
+  overflow-x: hidden;
+  padding-top: 100px;
+  border-right: 1px solid rgb(223, 222, 222);
+}
+
+.side-list-container {
+  padding: 1rem 2rem;
+}
+.side-list-link {
+  width: 100%;
+  text-align: left;
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.active-link {
+  border-left: 3px solid #005587;
+  font-weight: 700;
+}
+
+.side-list-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-list-ul li:first-child {
+  margin-top: 1rem;
+}
