@@ -8,9 +8,16 @@
       large: currentScreenSize === 'Large'
     }"
   >
-    <app-side-nav></app-side-nav>
-    <div class="content-container">
-      <h1>Account transfers</h1>
+    <div *ngIf="currentScreenSize === 'Large'">
+      <app-side-nav></app-side-nav>
+    </div>
+    <div
+      class="content-container"
+      [ngClass]="{
+        large: currentScreenSize === 'Large'
+      }"
+    >
+      <h1 class="main-title">Account transfers</h1>
       <div>
         <mat-tab-group
           animationDuration="0ms"
@@ -34,6 +41,9 @@
           <div class="select-account-container">
             <mat-form-field
               class="select-account-form-field"
+              [ngClass]="{
+                large: currentScreenSize === 'Large'
+              }"
               aria-label="Choose which account funds would be taken out of"
             >
               <mat-label>From: Choose an account</mat-label>
@@ -46,6 +56,9 @@
           <div class="select-account-container">
             <mat-form-field
               class="select-account-form-field"
+              [ngClass]="{
+                large: currentScreenSize === 'Large'
+              }"
               aria-label="Choose which account funds will deposited into"
             >
               <mat-label>To: Choose an account</mat-label>
@@ -63,16 +76,32 @@
             </mat-form-field>
           </div>
           <div>
-            <h5>Choose a transfer type</h5>
-            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <h5 class="transfer-type-title">Choose a transfer type</h5>
+            <mat-button-toggle-group
+              name="transferType"
+              aria-label="Choose a transfer type"
+            >
               <mat-button-toggle value="one-time">One-time</mat-button-toggle>
-              <mat-button-toggle value="one-time">Recurring</mat-button-toggle>
-              <mat-button-toggle value="one-time">Custom</mat-button-toggle>
+              <mat-button-toggle value="recurring">Recurring</mat-button-toggle>
+              <mat-button-toggle value="custom">Custom</mat-button-toggle>
             </mat-button-toggle-group>
           </div>
         </div>
         <div>
-          <button mat-flat-button>Continue</button>
+          <h5 class="date-picker-title">Date</h5>
+          <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="continue-btn-container">
+          <button mat-flat-button class="continue-btn">Continue</button>
         </div>
       </div>
     </div>

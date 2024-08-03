@@ -12,13 +12,21 @@
   height: 100%;
 }
 .content-container {
+  margin-left: 0;
+  padding: 0.5rem 0.5rem;
+}
+.content-container.large {
   margin-left: 300px;
   padding: 0.5rem 1.5rem;
 }
+
+.main-title {
+  font-size: 1.2rem;
+}
+
 .mat-mdc-tab .mdc-tab-indicator__content--underline {
   border-color: #005587;
 }
-
 .inner-content-container {
   background-color: white;
   padding: 0.5rem 1rem;
@@ -33,8 +41,30 @@
   padding: 0.4rem 0;
 }
 .select-account-form-field {
+  width: 100%;
+}
+.select-account-form-field.large {
   width: 70%;
 }
 .amount-input-container {
   padding: 0.5rem 0;
+}
+.transfer-type-title {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.date-picker-title {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.continue-btn-container {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.mat-mdc-unelevated-button:not(:disabled) {
+  background-color: #005587;
+}
+.mat-mdc-unelevated-button:not(:disabled) {
+  color: white;
 }

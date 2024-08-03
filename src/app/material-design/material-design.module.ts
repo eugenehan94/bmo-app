@@ -15,10 +15,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { NativeDateAdapter } from '@angular/material/core';
+import { MatNativeDateModule } from '@angular/material/core';
 @NgModule({
   declarations: [],
-  imports: [CommonModule],
+  imports: [CommonModule, MatNativeDateModule],
   exports: [
     MatIconModule,
     LayoutModule,
@@ -34,6 +37,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatSelectModule,
     MatInputModule,
     MatButtonToggleModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
   ],
+  providers: [NativeDateAdapter],
 })
 export class MaterialDesignModule {}
