@@ -17,7 +17,7 @@ import { AccountsComponent } from './pages/accounts/accounts.component';
 import { AccountTransferComponent } from './pages/account-transfer/account-transfer.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 
-import { TwoDigitDecimalNumberDirective } from '../../../directives/two-digit-decimal-number.directive';
+import { DirectivesModule } from 'src/app/directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -33,12 +33,12 @@ import { TwoDigitDecimalNumberDirective } from '../../../directives/two-digit-de
     AccountsComponent,
     AccountTransferComponent,
     SideNavComponent,
-    TwoDigitDecimalNumberDirective,
   ],
   imports: [
     CommonModule,
     MaterialDesignModule,
     AuthorizedOnlineBankingRoutingModule,
+    DirectivesModule,
   ],
   exports: [OnlineBankingAuthorizedComponent],
 })

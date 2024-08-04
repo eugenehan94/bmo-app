@@ -19,10 +19,11 @@ import { MaterialDesignModule } from './material-design/material-design.module';
 import { PersonalHomeModule } from './pages/personal/home/home.module';
 import { PersonalBankAccountsMainModule } from './pages/personal/bank-accounts/main/main.module';
 import { BusinessHomeModule } from './pages/business/home/home.module';
-import { TwoDigitDecimalNumberDirective } from './directives/two-digit-decimal-number.directive';
+
+import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
-  declarations: [AppComponent, TwoDigitDecimalNumberDirective],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,6 +40,7 @@ import { TwoDigitDecimalNumberDirective } from './directives/two-digit-decimal-n
     PersonalHomeModule,
     PersonalBankAccountsMainModule,
     BusinessHomeModule,
+    DirectivesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

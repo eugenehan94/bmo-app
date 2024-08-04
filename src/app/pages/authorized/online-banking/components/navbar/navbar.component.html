@@ -106,13 +106,46 @@
         </button>
       </li>
       <li class="navbar-second-portion-ul-li-container">
-        <button
-          routerLink="/"
-          class="navbar-second-portion-ul-li-button-container"
-        >
+        <button class="navbar-second-portion-ul-li-button-container">
           Bank Services
         </button>
       </li>
     </ul>
+  </div>
+  <!-- Mobile navbar -->
+  <div
+    *ngIf="currentScreenSize === 'Small'"
+    class="mobile-bottom-nav-container"
+  >
+    <div>
+      <ul class="mobile-bottom-nav-ul">
+        <li>
+          <button
+            class="mobile-bottom-btn"
+            [routerLink]="['/banking/digital/accounts']"
+            [routerLinkActive]="['active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <mat-icon>credit_card</mat-icon>
+            Accounts
+          </button>
+        </li>
+        <li>
+          <button
+            class="mobile-bottom-btn"
+            [routerLink]="['/banking/digital/accounts/account-transfers']"
+            [routerLinkActive]="['active']"
+          >
+            <mat-icon>monetization_on</mat-icon>
+            Pay & Transfer
+          </button>
+        </li>
+        <li>
+          <button class="mobile-bottom-btn" [routerLinkActive]="['active']">
+            <mat-icon>warehouse</mat-icon>Bank Services
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
