@@ -47,11 +47,17 @@
               aria-label="Choose which account funds would be taken out of"
             >
               <mat-label>From: Choose an account</mat-label>
-              <mat-select>
-                <mat-option>First option</mat-option>
-                <mat-option>Second option</mat-option>
+              <mat-select [(value)]="fromAccount">
+                <mat-option
+                  *ngFor="let userAccount of userAccounts"
+                  [value]="userAccount.AccountNumber"
+                >
+                  {{ userAccount.AccountType }}({{ userAccount.AccountNumber }})
+                  {{ userAccount.Amount | currency }}
+                </mat-option>
               </mat-select>
             </mat-form-field>
+            Selected option: {{ fromAccount }}
           </div>
           <div class="select-account-container">
             <mat-form-field
@@ -62,16 +68,27 @@
               aria-label="Choose which account funds will deposited into"
             >
               <mat-label>To: Choose an account</mat-label>
-              <mat-select>
-                <mat-option>First option</mat-option>
-                <mat-option>Second option</mat-option>
+              <mat-select [(value)]="toAccount">
+                <mat-option
+                  *ngFor="let userAccount of userAccounts"
+                  [value]="userAccount.AccountNumber"
+                >
+                  {{ userAccount.AccountType }}({{ userAccount.AccountNumber }})
+                  {{ userAccount.Amount | currency }}
+                </mat-option>
               </mat-select>
             </mat-form-field>
+            Selected option: {{ toAccount }}
           </div>
           <div class="amount-input-container">
             <mat-form-field>
               <mat-label>Amount</mat-label>
-              <input matInput />
+              <input
+                matInput
+                type="textbox"
+                appTwoDigitDecimalNumber
+                placeholder="XX.XX"
+              />
               <mat-hint>Format: 0.00</mat-hint>
             </mat-form-field>
           </div>
@@ -89,7 +106,12 @@
         </div>
         <div>
           <h5 class="date-picker-title">Date</h5>
-          <mat-form-field>
+          <mat-form-field
+            class="date-picker"
+            [ngClass]="{
+              large: currentScreenSize === 'Large'
+            }"
+          >
             <mat-label>Choose a date</mat-label>
             <input matInput [matDatepicker]="picker" />
             <mat-hint>MM/DD/YYYY</mat-hint>
@@ -100,7 +122,12 @@
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
         </div>
-        <div class="continue-btn-container">
+        <div
+          class="continue-btn-container"
+          [ngClass]="{
+            large: currentScreenSize === 'Large'
+          }"
+        >
           <button mat-flat-button class="continue-btn">Continue</button>
         </div>
       </div>

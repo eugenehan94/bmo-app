@@ -5,6 +5,8 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { Store } from '@ngrx/store';
 import { setScreenSize } from 'src/app/store/app/actions/app.actions';
 
+import { StorageService } from 'src/app/_services/storage.service';
+
 @Component({
   selector: 'app-account-transfer',
   templateUrl: './account-transfer.component.html',
@@ -13,11 +15,14 @@ import { setScreenSize } from 'src/app/store/app/actions/app.actions';
 export class AccountTransferComponent {
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private store: Store<any>
+    private store: Store<any>,
+    private storageService: StorageService
   ) {}
 
   currentScreenSize?: string;
-
+  userAccounts?: any;
+  fromAccount?: any;
+  toAccount?: any;
   ngOnInit(): void {
     this.breakpointObserver
       .observe([
@@ -43,5 +48,8 @@ export class AccountTransferComponent {
     this.store.select('screenSizeReducer').subscribe((res) => {
       this.currentScreenSize = res.currentScreenSize;
     });
+
+    this.userAccounts = this.storageService.getUser().userAccounts;
+    console.log('userAccounts: ', this.userAccounts);
   }
 }
