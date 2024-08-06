@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialDesignModule } from 'src/app/material-design/material-design.module';
 import { AuthorizedOnlineBankingRoutingModule } from './online-banking-routing.module';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 // Components
 import { OnlineBankingAuthorizedComponent } from './online-banking.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -39,6 +41,8 @@ import { DirectivesModule } from 'src/app/directives/directives.module';
     MaterialDesignModule,
     AuthorizedOnlineBankingRoutingModule,
     DirectivesModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [OnlineBankingAuthorizedComponent],
 })

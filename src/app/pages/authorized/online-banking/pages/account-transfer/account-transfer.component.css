@@ -40,12 +40,21 @@
 }
 .select-account-container {
   padding: 0.4rem 0;
+  margin-bottom: 1rem;
 }
 .select-account-form-field {
   width: 100%;
 }
 .select-account-form-field.large {
   width: 70%;
+}
+.matching-account-warning {
+  color: red;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
 }
 .amount-input-container {
   padding: 0.5rem 0;
@@ -68,10 +77,12 @@
   margin: 1rem 0;
   display: flex;
   justify-content: center;
+  border-radius: 50%;
 }
 .continue-btn-container.large {
   justify-content: flex-end;
 }
+
 .mat-mdc-unelevated-button:not(:disabled) {
   background-color: #005587;
 }

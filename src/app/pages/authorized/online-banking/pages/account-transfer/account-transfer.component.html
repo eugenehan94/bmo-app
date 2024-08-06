@@ -28,7 +28,7 @@
           <mat-tab label="Transfer Activity"></mat-tab>
         </mat-tab-group>
       </div>
-      <div class="inner-content-container">
+      <form class="inner-content-container" (ngSubmit)="onSubmit($event)">
         <div>
           <h3>Your transfer details</h3>
         </div>
@@ -47,17 +47,30 @@
               aria-label="Choose which account funds would be taken out of"
             >
               <mat-label>From: Choose an account</mat-label>
-              <mat-select [(value)]="fromAccount">
+              <mat-select
+                [formControl]="fromAccount"
+                required
+                (selectionChange)="accountMatching()"
+              >
                 <mat-option
                   *ngFor="let userAccount of userAccounts"
                   [value]="userAccount.AccountNumber"
                 >
-                  {{ userAccount.AccountType }}({{ userAccount.AccountNumber }})
+                  {{ userAccount.AccountType }} ({{
+                    userAccount.AccountNumber
+                  }})
                   {{ userAccount.Amount | currency }}
                 </mat-option>
               </mat-select>
+              <mat-error>Please choose an account</mat-error>
             </mat-form-field>
-            Selected option: {{ fromAccount }}
+            <p
+              *ngIf="matchingAccountChoice === true"
+              class="matching-account-warning"
+            >
+              <mat-icon>info_outline</mat-icon>Sorry, your 'from' and 'to'
+              accounts can't be the same
+            </p>
           </div>
           <div class="select-account-container">
             <mat-form-field
@@ -68,7 +81,11 @@
               aria-label="Choose which account funds will deposited into"
             >
               <mat-label>To: Choose an account</mat-label>
-              <mat-select [(value)]="toAccount">
+              <mat-select
+                [formControl]="toAccount"
+                required
+                (selectionChange)="accountMatching()"
+              >
                 <mat-option
                   *ngFor="let userAccount of userAccounts"
                   [value]="userAccount.AccountNumber"
@@ -77,13 +94,19 @@
                   {{ userAccount.Amount | currency }}
                 </mat-option>
               </mat-select>
+              <mat-error>Please choose an account</mat-error>
             </mat-form-field>
-            Selected option: {{ toAccount }}
           </div>
           <div class="amount-input-container">
             <mat-form-field>
               <mat-label>Amount</mat-label>
-              <input matInput type="textbox" appTwoDigitDecimalNumber />
+              <input
+                matInput
+                type="textbox"
+                appTwoDigitDecimalNumber
+                [formControl]="amount"
+                required
+              />
               <mat-hint>Format: 0.00</mat-hint>
             </mat-form-field>
           </div>
@@ -123,9 +146,11 @@
             large: currentScreenSize === 'Large'
           }"
         >
-          <button mat-flat-button class="continue-btn">Continue</button>
+          <button mat-flat-button class="continue-btn" type="submit">
+            Continue
+          </button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </main>

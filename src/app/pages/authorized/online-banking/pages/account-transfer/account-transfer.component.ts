@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
-
+import { FormControl, Validators } from '@angular/forms';
 //ngrx
 import { Store } from '@ngrx/store';
 import { setScreenSize } from 'src/app/store/app/actions/app.actions';
 
 import { StorageService } from 'src/app/_services/storage.service';
-
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-account-transfer',
   templateUrl: './account-transfer.component.html',
@@ -16,13 +16,16 @@ export class AccountTransferComponent {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private store: Store<any>,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private dialog: MatDialog
   ) {}
 
   currentScreenSize?: string;
   userAccounts?: any;
-  fromAccount?: any;
-  toAccount?: any;
+  fromAccount = new FormControl(null);
+  toAccount = new FormControl(null);
+  matchingAccountChoice: boolean = false;
+  amount = new FormControl('', []);
   ngOnInit(): void {
     this.breakpointObserver
       .observe([
@@ -51,5 +54,32 @@ export class AccountTransferComponent {
 
     this.userAccounts = this.storageService.getUser().userAccounts;
     console.log('userAccounts: ', this.userAccounts);
+  }
+
+  accountMatching() {
+    this.matchingAccountChoice = false;
+    if (this.fromAccount.value === this.toAccount.value) {
+      this.matchingAccountChoice = true;
+    }
+    console.log('Matching: ', this.matchingAccountChoice);
+  }
+
+  onSubmit(e: any) {
+    // e.preventDefault();
+    if (
+      this.matchingAccountChoice === true ||
+      this.amount.errors ||
+      this.fromAccount.errors ||
+      this.toAccount.errors
+    ) {
+      return;
+    }
+    // const dialogRef = this.dialog.open( , {
+    //   height: '100%',
+    //   width: '100%'
+    // });
+    console.log('fromAccount: ', this.fromAccount);
+    console.log('toAccount: ', this.toAccount);
+    console.log('Amount: ', this.amount);
   }
 }

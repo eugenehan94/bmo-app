@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 // https://angular.io/guide/image-directive
 import { NgOptimizedImage } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 // ngrx
 import { StoreModule } from '@ngrx/store';
@@ -41,6 +43,8 @@ import { DirectivesModule } from './directives/directives.module';
     PersonalBankAccountsMainModule,
     BusinessHomeModule,
     DirectivesModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
