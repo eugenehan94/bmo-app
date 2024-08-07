@@ -20,6 +20,7 @@ import { AccountTransferComponent } from './pages/account-transfer/account-trans
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 import { DirectivesModule } from 'src/app/directives/directives.module';
+import { TransferConfirmationDialogComponent } from './components/transfer-confirmation-dialog/transfer-confirmation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { DirectivesModule } from 'src/app/directives/directives.module';
     AccountsComponent,
     AccountTransferComponent,
     SideNavComponent,
+    TransferConfirmationDialogComponent,
   ],
   imports: [
     CommonModule,

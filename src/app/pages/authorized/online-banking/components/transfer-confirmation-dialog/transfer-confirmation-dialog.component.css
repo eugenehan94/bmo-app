@@ -1,0 +1,11 @@
+.transfer-confirmation-dialog-container {
+  padding: 0 0.5rem;
+}
+.dialog-topmost-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dialog-title {
+  font-size: 1.5rem;
+}

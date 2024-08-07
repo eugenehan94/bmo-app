@@ -1,0 +1,44 @@
+<div class="transfer-confirmation-dialog-container">
+  <div class="dialog-topmost-container">
+    <h1 class="dialog-title">Make a transfer</h1>
+    <mat-icon (click)="closeDialog()">close</mat-icon>
+  </div>
+  <mat-divider></mat-divider>
+  <div>
+    <h3>You're transferring</h3>
+    <p>{{ amount.value | currency }}</p>
+  </div>
+  <div>
+    <h3>From</h3>
+    <p>{{ fromAccountName | async }} {{ fromAccount.value }}</p>
+  </div>
+  <div>
+    <h3>To</h3>
+    <p>Mastercard 3913</p>
+  </div>
+  <div>
+    <h3>Date:</h3>
+    <p>Aug 04, 2024</p>
+  </div>
+  <div>
+    <h3>Heads up:</h3>
+    <p>
+      Please ensure funds for account transfer are in your account at least one
+      business day in advance to avoid processing delays or a non-sufficient
+      funds charge.
+    </p>
+  </div>
+  <div>
+    <h3>Seeing isn't always believing!</h3>
+    <p>
+      The money you're transferring will be available to use instantly, but it
+      might take a business day or two for your balances to update
+    </p>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-dialog-actions>
+    <button>Edit</button>
+    <button>Confirm Transfer</button>
+    <button>Cancel</button>
+  </mat-dialog-actions>
+</div>

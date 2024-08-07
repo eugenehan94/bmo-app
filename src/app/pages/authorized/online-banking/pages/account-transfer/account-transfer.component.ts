@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { FormControl, Validators } from '@angular/forms';
+// Components
+import { TransferConfirmationDialogComponent } from '../../components/transfer-confirmation-dialog/transfer-confirmation-dialog.component';
 //ngrx
 import { Store } from '@ngrx/store';
 import { setScreenSize } from 'src/app/store/app/actions/app.actions';
@@ -74,12 +76,25 @@ export class AccountTransferComponent {
     ) {
       return;
     }
-    // const dialogRef = this.dialog.open( , {
-    //   height: '100%',
-    //   width: '100%'
-    // });
+
     console.log('fromAccount: ', this.fromAccount);
     console.log('toAccount: ', this.toAccount);
     console.log('Amount: ', this.amount);
+    const dialogRef = this.dialog.open(TransferConfirmationDialogComponent, {
+      height: '100%',
+      width: '100%',
+      maxWidth: '100%',
+      maxHeight: '100%',
+      data: {
+        userAccounts: this.userAccounts,
+        fromAccount: this.fromAccount,
+        toAccount: this.toAccount,
+        amount: this.amount,
+      },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('Dialog closed: ', result);
+    });
   }
 }

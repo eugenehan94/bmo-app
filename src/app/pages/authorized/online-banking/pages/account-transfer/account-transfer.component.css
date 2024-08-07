@@ -89,3 +89,7 @@
 .mat-mdc-unelevated-button:not(:disabled) {
   color: white;
 }
+
+::ng-deep .cdk-overlay-container {
+  z-index: 99999999 !important;
+}

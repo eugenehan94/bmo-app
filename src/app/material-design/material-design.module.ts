@@ -20,6 +20,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { NativeDateAdapter } from '@angular/material/core';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
 @NgModule({
   declarations: [],
   imports: [CommonModule, MatNativeDateModule],
@@ -41,6 +42,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDatepickerModule,
     MatFormFieldModule,
     MatDialogModule,
+    MatDividerModule,
   ],
   providers: [NativeDateAdapter],
 })
