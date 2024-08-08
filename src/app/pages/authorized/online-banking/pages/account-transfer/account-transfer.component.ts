@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 // Components
 import { TransferConfirmationDialogComponent } from '../../components/transfer-confirmation-dialog/transfer-confirmation-dialog.component';
 //ngrx
@@ -24,10 +24,13 @@ export class AccountTransferComponent {
 
   currentScreenSize?: string;
   userAccounts?: any;
-  fromAccount = new FormControl(null);
-  toAccount = new FormControl(null);
   matchingAccountChoice: boolean = false;
-  amount = new FormControl('', []);
+  transferForm = new FormGroup({
+    fromAccount: new FormControl(null),
+    toAccount: new FormControl(null),
+    amount: new FormControl('', []),
+  });
+
   ngOnInit(): void {
     this.breakpointObserver
       .observe([
@@ -60,26 +63,27 @@ export class AccountTransferComponent {
 
   accountMatching() {
     this.matchingAccountChoice = false;
-    if (this.fromAccount.value === this.toAccount.value) {
+    console.log('formGroup: ', this.transferForm);
+    console.log('formGroup: from', this.transferForm.value.fromAccount);
+    console.log('formGroup: to ', this.transferForm.value.toAccount);
+    console.log('formGroup: amount ', this.transferForm.value.amount);
+
+    if (
+      this.transferForm.value.fromAccount === this.transferForm.value.toAccount
+    ) {
       this.matchingAccountChoice = true;
     }
-    console.log('Matching: ', this.matchingAccountChoice);
   }
 
   onSubmit(e: any) {
     // e.preventDefault();
     if (
       this.matchingAccountChoice === true ||
-      this.amount.errors ||
-      this.fromAccount.errors ||
-      this.toAccount.errors
+      this.transferForm.status === 'INVALID'
     ) {
       return;
     }
 
-    console.log('fromAccount: ', this.fromAccount);
-    console.log('toAccount: ', this.toAccount);
-    console.log('Amount: ', this.amount);
     const dialogRef = this.dialog.open(TransferConfirmationDialogComponent, {
       height: '100%',
       width: '100%',
@@ -87,14 +91,17 @@ export class AccountTransferComponent {
       maxHeight: '100%',
       data: {
         userAccounts: this.userAccounts,
-        fromAccount: this.fromAccount,
-        toAccount: this.toAccount,
-        amount: this.amount,
+        // fromAccount: this.fromAccount,
+        // toAccount: this.toAccount,
+        // amount: this.amount,
       },
     });
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Dialog closed: ', result);
+      if (result === 'Clear') {
+        // this.fromAccount.reset();
+      }
     });
   }
 }

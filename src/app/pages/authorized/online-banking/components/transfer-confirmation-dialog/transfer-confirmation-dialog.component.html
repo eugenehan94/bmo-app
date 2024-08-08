@@ -1,44 +1,63 @@
 <div class="transfer-confirmation-dialog-container">
   <div class="dialog-topmost-container">
     <h1 class="dialog-title">Make a transfer</h1>
-    <mat-icon (click)="closeDialog()">close</mat-icon>
+    <mat-icon
+      (click)="closeDialog()"
+      tabindex="0"
+      class="close-icon"
+      aria-hidden="false"
+      >close</mat-icon
+    >
   </div>
-  <mat-divider></mat-divider>
+  <mat-divider class="dialog-divider"></mat-divider>
   <div>
-    <h3>You're transferring</h3>
-    <p>{{ amount.value | currency }}</p>
+    <h3 class="your-transfering-title">You're transferring</h3>
+    <p class="amount-text">{{ amount.value | currency }}</p>
+  </div>
+  <div class="from-container">
+    <h3 class="from-title">From</h3>
+    <p class="from-account-text">
+      {{ fromAccountName.AccountType }} {{ fromAccount.value }}
+    </p>
+  </div>
+  <div class="to-container">
+    <h3 class="to-title">To</h3>
+    <p class="to-account-text">
+      {{ toAccountName.AccountType }} {{ toAccount.value }}
+    </p>
   </div>
   <div>
-    <h3>From</h3>
-    <p>{{ fromAccountName | async }} {{ fromAccount.value }}</p>
+    <h3 class="date-title">Date</h3>
+    <p class="date-text">Aug 04, 2024</p>
   </div>
-  <div>
-    <h3>To</h3>
-    <p>Mastercard 3913</p>
-  </div>
-  <div>
-    <h3>Date:</h3>
-    <p>Aug 04, 2024</p>
-  </div>
-  <div>
-    <h3>Heads up:</h3>
-    <p>
+  <div class="notice-container">
+    <h3 class="notice-title">Heads up:</h3>
+    <p class="notice-text">
       Please ensure funds for account transfer are in your account at least one
       business day in advance to avoid processing delays or a non-sufficient
       funds charge.
     </p>
   </div>
-  <div>
-    <h3>Seeing isn't always believing!</h3>
-    <p>
+  <div class="notice-container">
+    <h3 class="notice-title">Seeing isn't always believing!</h3>
+    <p class="notice-text">
       The money you're transferring will be available to use instantly, but it
       might take a business day or two for your balances to update
     </p>
   </div>
-  <mat-divider></mat-divider>
-  <mat-dialog-actions>
-    <button>Edit</button>
-    <button>Confirm Transfer</button>
-    <button>Cancel</button>
+  <mat-divider class="dialog-divider"></mat-divider>
+  <mat-dialog-actions class="mat-dialog-actions-container">
+    <button mat-button class="mat-button-class-1" (click)="closeDialog()">
+      <mat-icon>edit</mat-icon>Edit
+    </button>
+    <button mat-flat-button class="mat-button-class-2">Confirm Transfer</button>
+    <button
+      mat-button
+      class="mat-button-class-1"
+      [routerLink]="['/banking/digital/accounts/account-transfers']"
+      (click)="closeDialogAndClearData()"
+    >
+      Cancel
+    </button>
   </mat-dialog-actions>
 </div>

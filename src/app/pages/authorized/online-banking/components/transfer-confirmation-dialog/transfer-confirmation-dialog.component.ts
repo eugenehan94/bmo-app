@@ -23,13 +23,23 @@ export class TransferConfirmationDialogComponent {
 
   test? = this.dialogData;
   fromAccount? = this.dialogData.fromAccount;
-  fromAccountName = this.dialogData.userAccounts.filter(
-    (account: { AccountNumber: any }) => {}
+  fromAccountName = this.dialogData.userAccounts.find(
+    (account: { AccountNumber: any }) => {
+      return account.AccountNumber === this.fromAccount.value;
+    }
   );
 
   toAccount? = this.dialogData.toAccount;
+  toAccountName = this.dialogData.userAccounts.find(
+    (account: { AccountNumber: any }) => {
+      return account.AccountNumber === this.toAccount.value;
+    }
+  );
   amount? = this.dialogData.amount;
   closeDialog() {
     this.dialogRef.close();
+  }
+  closeDialogAndClearData() {
+    this.dialogRef.close('Clear');
   }
 }

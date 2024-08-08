@@ -28,7 +28,11 @@
           <mat-tab label="Transfer Activity"></mat-tab>
         </mat-tab-group>
       </div>
-      <form class="inner-content-container" (ngSubmit)="onSubmit($event)">
+      <form
+        [formGroup]="transferForm"
+        class="inner-content-container"
+        (ngSubmit)="onSubmit($event)"
+      >
         <div>
           <h3>Your transfer details</h3>
         </div>
@@ -48,7 +52,7 @@
             >
               <mat-label>From: Choose an account</mat-label>
               <mat-select
-                [formControl]="fromAccount"
+                formControlName="fromAccount"
                 required
                 (selectionChange)="accountMatching()"
               >
@@ -82,7 +86,7 @@
             >
               <mat-label>To: Choose an account</mat-label>
               <mat-select
-                [formControl]="toAccount"
+                formControlName="toAccount"
                 required
                 (selectionChange)="accountMatching()"
               >
@@ -104,7 +108,7 @@
                 matInput
                 type="textbox"
                 appTwoDigitDecimalNumber
-                [formControl]="amount"
+                formControlName="amount"
                 required
               />
               <mat-hint>Format: 0.00</mat-hint>
