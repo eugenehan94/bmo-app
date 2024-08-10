@@ -12,19 +12,15 @@
   <mat-divider class="dialog-divider"></mat-divider>
   <div>
     <h3 class="your-transfering-title">You're transferring</h3>
-    <p class="amount-text">{{ amount.value | currency }}</p>
+    <p class="amount-text">{{ amount | currency }}</p>
   </div>
   <div class="from-container">
     <h3 class="from-title">From</h3>
-    <p class="from-account-text">
-      {{ fromAccountName.AccountType }} {{ fromAccount.value }}
-    </p>
+    <p class="from-account-text">{{ fromAccountName }} {{ fromAccount }}</p>
   </div>
   <div class="to-container">
     <h3 class="to-title">To</h3>
-    <p class="to-account-text">
-      {{ toAccountName.AccountType }} {{ toAccount.value }}
-    </p>
+    <p class="to-account-text">{{ toAccountName }} {{ toAccount }}</p>
   </div>
   <div>
     <h3 class="date-title">Date</h3>
@@ -50,7 +46,13 @@
     <button mat-button class="mat-button-class-1" (click)="closeDialog()">
       <mat-icon>edit</mat-icon>Edit
     </button>
-    <button mat-flat-button class="mat-button-class-2">Confirm Transfer</button>
+    <button
+      mat-flat-button
+      class="mat-button-class-2"
+      (click)="confirmTransfer()"
+    >
+      Confirm Transfer
+    </button>
     <button
       mat-button
       class="mat-button-class-1"

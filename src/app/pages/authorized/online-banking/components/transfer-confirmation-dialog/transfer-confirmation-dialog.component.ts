@@ -16,28 +16,35 @@ export class TransferConfirmationDialogComponent {
       fromAccount: any;
       toAccount: any;
       amount: any;
+      fromAccountType: any;
+      toAccountType: any;
     }
   ) {
     console.log('Dialog content: ', this.dialogData);
   }
 
-  test? = this.dialogData;
   fromAccount? = this.dialogData.fromAccount;
-  fromAccountName = this.dialogData.userAccounts.find(
-    (account: { AccountNumber: any }) => {
-      return account.AccountNumber === this.fromAccount.value;
-    }
-  );
-
+  fromAccountName? = this.dialogData.fromAccountType.AccountType;
   toAccount? = this.dialogData.toAccount;
-  toAccountName = this.dialogData.userAccounts.find(
-    (account: { AccountNumber: any }) => {
-      return account.AccountNumber === this.toAccount.value;
-    }
-  );
+  toAccountName = this.dialogData.toAccountType.AccountType;
   amount? = this.dialogData.amount;
+
+  fromAccountAmount? =
+    this.dialogData.fromAccountType.Amount - this.dialogData.amount;
+  toAccountAmount? =
+    this.dialogData.toAccountType.Amount - this.dialogData.amount;
+
   closeDialog() {
     this.dialogRef.close();
+  }
+  confirmTransfer() {
+    console.log(
+      'Confirm Selected: ',
+      this.fromAccountAmount,
+      this.fromAccount,
+      this.toAccountAmount,
+      this.toAccount
+    );
   }
   closeDialogAndClearData() {
     this.dialogRef.close('Clear');

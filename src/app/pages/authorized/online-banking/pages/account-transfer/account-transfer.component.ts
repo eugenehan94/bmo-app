@@ -30,7 +30,8 @@ export class AccountTransferComponent {
     toAccount: new FormControl(null),
     amount: new FormControl('', []),
   });
-
+  fromAccountType?: string;
+  toAccountType?: string;
   ngOnInit(): void {
     this.breakpointObserver
       .observe([
@@ -63,11 +64,6 @@ export class AccountTransferComponent {
 
   accountMatching() {
     this.matchingAccountChoice = false;
-    console.log('formGroup: ', this.transferForm);
-    console.log('formGroup: from', this.transferForm.value.fromAccount);
-    console.log('formGroup: to ', this.transferForm.value.toAccount);
-    console.log('formGroup: amount ', this.transferForm.value.amount);
-
     if (
       this.transferForm.value.fromAccount === this.transferForm.value.toAccount
     ) {
@@ -76,13 +72,19 @@ export class AccountTransferComponent {
   }
 
   onSubmit(e: any) {
-    // e.preventDefault();
     if (
       this.matchingAccountChoice === true ||
       this.transferForm.status === 'INVALID'
     ) {
       return;
     }
+
+    this.fromAccountType = this.userAccounts.find((account: any) => {
+      return account.AccountNumber === this.transferForm.value.fromAccount;
+    });
+    this.toAccountType = this.userAccounts.find((account: any) => {
+      return account.AccountNumber === this.transferForm.value.toAccount;
+    });
 
     const dialogRef = this.dialog.open(TransferConfirmationDialogComponent, {
       height: '100%',
@@ -91,16 +93,20 @@ export class AccountTransferComponent {
       maxHeight: '100%',
       data: {
         userAccounts: this.userAccounts,
-        // fromAccount: this.fromAccount,
-        // toAccount: this.toAccount,
-        // amount: this.amount,
+        fromAccount: this.transferForm.value.fromAccount,
+        toAccount: this.transferForm.value.toAccount,
+        amount: this.transferForm.value.amount,
+        toAccountType: this.toAccountType,
+        fromAccountType: this.fromAccountType,
       },
     });
 
     dialogRef.afterClosed().subscribe((result) => {
+      window.scrollTo(0, 0);
       console.log('Dialog closed: ', result);
       if (result === 'Clear') {
         // this.fromAccount.reset();
+        this.transferForm.reset();
       }
     });
   }
