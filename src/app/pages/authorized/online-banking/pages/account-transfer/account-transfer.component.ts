@@ -25,6 +25,7 @@ export class AccountTransferComponent {
   currentScreenSize?: string;
   userAccounts?: any;
   matchingAccountChoice: boolean = false;
+  insufficientFunds: boolean = false;
   transferForm = new FormGroup({
     fromAccount: new FormControl(null),
     toAccount: new FormControl(null),
@@ -32,6 +33,8 @@ export class AccountTransferComponent {
   });
   fromAccountType?: string;
   toAccountType?: string;
+  fromAccountAmountInInt?: number;
+
   ngOnInit(): void {
     this.breakpointObserver
       .observe([
@@ -79,13 +82,25 @@ export class AccountTransferComponent {
       return;
     }
 
+    console.log('transferForm: ', this.transferForm);
     this.fromAccountType = this.userAccounts.find((account: any) => {
       return account.AccountNumber === this.transferForm.value.fromAccount;
     });
     this.toAccountType = this.userAccounts.find((account: any) => {
       return account.AccountNumber === this.transferForm.value.toAccount;
     });
-
+    this.fromAccountAmountInInt = this.userAccounts.find((account: any) => {
+      return account.AccountNumber === this.transferForm.value.fromAccount;
+    }).Amount;
+    // Makes sure the entered amount is not greater then amount in selected from account
+    if (
+      parseFloat(this.transferForm.value.amount!) > this.fromAccountAmountInInt!
+    ) {
+      console.log('Entered amount not sufficient');
+      this.insufficientFunds = true;
+      return;
+    }
+    this.insufficientFunds = false;
     const dialogRef = this.dialog.open(TransferConfirmationDialogComponent, {
       height: '100%',
       width: '100%',

@@ -7,6 +7,8 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { Store } from '@ngrx/store';
 import { setScreenSize } from 'src/app/store/app/actions/app.actions';
 
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-transfer-confirmation-dialog',
   templateUrl: './transfer-confirmation-dialog.component.html',
@@ -25,7 +27,8 @@ export class TransferConfirmationDialogComponent {
       toAccountType: any;
     },
     private breakpointObserver: BreakpointObserver,
-    private store: Store<any>
+    private store: Store<any>,
+    private http: HttpClient
   ) {
     console.log('Dialog content: ', this.dialogData);
   }
@@ -36,10 +39,12 @@ export class TransferConfirmationDialogComponent {
   toAccountName = this.dialogData.toAccountType.AccountType;
   amount? = this.dialogData.amount;
 
+  customerId? = this.dialogData.fromAccountType.CustomerID;
+
   fromAccountAmount? =
     this.dialogData.fromAccountType.Amount - this.dialogData.amount;
   toAccountAmount? =
-    this.dialogData.toAccountType.Amount - this.dialogData.amount;
+    this.dialogData.toAccountType.Amount + parseFloat(this.dialogData.amount);
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -79,6 +84,28 @@ export class TransferConfirmationDialogComponent {
       this.toAccountAmount,
       this.toAccount
     );
+    let roundedFromAccountAmount =
+      Math.round(this.fromAccountAmount! * 100) / 100;
+    let roundedToAccountAmount = Math.round(this.toAccountAmount! * 100) / 100;
+    console.log('customer ID: ', this.customerId);
+    return this.http
+      .post(
+        'http://localhost:5000/api/v1/sign-in/transferFunds',
+        {
+          fromAccountAmount: roundedFromAccountAmount,
+          fromAccount: this.fromAccount,
+          toAccountAmount: roundedToAccountAmount,
+          toAccount: this.toAccount,
+          customerId: this.customerId,
+        },
+        {
+          headers: { 'content-type': 'application/json' },
+          withCredentials: true,
+        }
+      )
+      .subscribe((result) => {
+        console.log('return result: ', result);
+      });
   }
   closeDialogAndClearData() {
     this.dialogRef.close('Clear');
