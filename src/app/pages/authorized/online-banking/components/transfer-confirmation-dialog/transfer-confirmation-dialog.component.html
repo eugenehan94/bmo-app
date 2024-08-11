@@ -1,65 +1,108 @@
 <div class="transfer-confirmation-dialog-container">
-  <div class="dialog-topmost-container">
-    <h1 class="dialog-title">Make a transfer</h1>
-    <mat-icon
-      (click)="closeDialog()"
-      tabindex="0"
-      class="close-icon"
-      aria-hidden="false"
-      >close</mat-icon
+  <div [ngClass]="{ 'content-wrapper-large': currentScreenSize === 'Large' }">
+    <div class="dialog-topmost-container">
+      <h1 class="dialog-title">Make a transfer</h1>
+      <mat-icon
+        (click)="closeDialog()"
+        tabindex="0"
+        class="close-icon"
+        aria-hidden="false"
+        >close</mat-icon
+      >
+    </div>
+    <mat-divider class="dialog-divider"></mat-divider>
+    <div>
+      <h3 class="your-transfering-title">You're transferring</h3>
+      <p class="amount-text">{{ amount | currency }}</p>
+    </div>
+    <div
+      class="from-container"
+      [ngClass]="{ large: currentScreenSize === 'Large' }"
     >
-  </div>
-  <mat-divider class="dialog-divider"></mat-divider>
-  <div>
-    <h3 class="your-transfering-title">You're transferring</h3>
-    <p class="amount-text">{{ amount | currency }}</p>
-  </div>
-  <div class="from-container">
-    <h3 class="from-title">From</h3>
-    <p class="from-account-text">{{ fromAccountName }} {{ fromAccount }}</p>
-  </div>
-  <div class="to-container">
-    <h3 class="to-title">To</h3>
-    <p class="to-account-text">{{ toAccountName }} {{ toAccount }}</p>
-  </div>
-  <div>
-    <h3 class="date-title">Date</h3>
-    <p class="date-text">Aug 04, 2024</p>
-  </div>
-  <div class="notice-container">
-    <h3 class="notice-title">Heads up:</h3>
-    <p class="notice-text">
-      Please ensure funds for account transfer are in your account at least one
-      business day in advance to avoid processing delays or a non-sufficient
-      funds charge.
-    </p>
-  </div>
-  <div class="notice-container">
-    <h3 class="notice-title">Seeing isn't always believing!</h3>
-    <p class="notice-text">
-      The money you're transferring will be available to use instantly, but it
-      might take a business day or two for your balances to update
-    </p>
-  </div>
-  <mat-divider class="dialog-divider"></mat-divider>
-  <mat-dialog-actions class="mat-dialog-actions-container">
-    <button mat-button class="mat-button-class-1" (click)="closeDialog()">
-      <mat-icon>edit</mat-icon>Edit
-    </button>
-    <button
-      mat-flat-button
-      class="mat-button-class-2"
-      (click)="confirmTransfer()"
+      <h3
+        class="from-title"
+        [ngClass]="{ large: currentScreenSize === 'Large' }"
+      >
+        From
+      </h3>
+      <p
+        class="from-account-text"
+        [ngClass]="{ large: currentScreenSize === 'Large' }"
+      >
+        {{ fromAccountName }} {{ fromAccount }}
+      </p>
+    </div>
+    <div
+      class="to-container"
+      [ngClass]="{ large: currentScreenSize === 'Large' }"
     >
-      Confirm Transfer
-    </button>
-    <button
-      mat-button
-      class="mat-button-class-1"
-      [routerLink]="['/banking/digital/accounts/account-transfers']"
-      (click)="closeDialogAndClearData()"
+      <h3 class="to-title" [ngClass]="{ large: currentScreenSize === 'Large' }">
+        To
+      </h3>
+      <p
+        class="to-account-text"
+        [ngClass]="{ large: currentScreenSize === 'Large' }"
+      >
+        {{ toAccountName }} {{ toAccount }}
+      </p>
+    </div>
+    <div
+      class="date-container"
+      [ngClass]="{ large: currentScreenSize === 'Large' }"
     >
-      Cancel
-    </button>
-  </mat-dialog-actions>
+      <h3
+        class="date-title"
+        [ngClass]="{ large: currentScreenSize === 'Large' }"
+      >
+        Date
+      </h3>
+      <p class="date-text" [ngClass]="{ large: currentScreenSize === 'Large' }">
+        Aug 04, 2024
+      </p>
+    </div>
+    <div class="notice-container">
+      <h3 class="notice-title">Heads up:</h3>
+      <p class="notice-text">
+        Please ensure funds for account transfer are in your account at least
+        one business day in advance to avoid processing delays or a
+        non-sufficient funds charge.
+      </p>
+    </div>
+    <div class="notice-container">
+      <h3 class="notice-title">Seeing isn't always believing!</h3>
+      <p class="notice-text">
+        The money you're transferring will be available to use instantly, but it
+        might take a business day or two for your balances to update
+      </p>
+    </div>
+    <mat-divider class="dialog-divider"></mat-divider>
+    <mat-dialog-actions
+      class="mat-dialog-actions-container"
+      [ngClass]="{ large: currentScreenSize === 'Large' }"
+    >
+      <button mat-button class="mat-button-class-1" (click)="closeDialog()">
+        <mat-icon>edit</mat-icon>Edit
+      </button>
+      <div
+        class="confirm-and-cancel-container"
+        [ngClass]="{ large: currentScreenSize === 'Large' }"
+      >
+        <button
+          mat-flat-button
+          class="mat-button-class-2"
+          (click)="confirmTransfer()"
+        >
+          Confirm Transfer
+        </button>
+        <button
+          mat-button
+          class="mat-button-class-1"
+          [routerLink]="['/banking/digital/accounts/account-transfers']"
+          (click)="closeDialogAndClearData()"
+        >
+          Cancel
+        </button>
+      </div>
+    </mat-dialog-actions>
+  </div>
 </div>

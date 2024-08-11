@@ -1,6 +1,9 @@
 .transfer-confirmation-dialog-container {
   padding: 0 0.5rem;
 }
+.content-wrapper-large {
+  padding: 0 8rem;
+}
 .dialog-topmost-container {
   display: flex;
   justify-content: space-between;
@@ -25,15 +28,34 @@
   font-size: 1.5rem;
   margin-top: 1rem;
 }
-
+.from-container.large {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  margin-bottom: 1rem;
+}
 .from-title {
   font-weight: 400;
   font-size: 1rem;
   margin-bottom: 0.4rem;
   color: rgb(128, 128, 128);
 }
+.from-title.large {
+  margin: 0;
+}
 .from-account-text {
   margin-top: 0;
+}
+.from-account-text.large {
+  margin: 0;
+}
+.to-container.large {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  margin-bottom: 1rem;
 }
 .to-title {
   font-weight: 400;
@@ -41,8 +63,22 @@
   margin-bottom: 0.4rem;
   color: rgb(128, 128, 128);
 }
+.to-title.large {
+  margin: 0;
+}
 .to-account-text {
   margin-top: 0;
+}
+.to-account-text.large {
+  margin: 0;
+}
+
+.date-container.large {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  margin-bottom: 1rem;
 }
 .date-title {
   font-weight: 400;
@@ -50,8 +86,14 @@
   margin-bottom: 0.4rem;
   color: rgb(128, 128, 128);
 }
+.date-title.large {
+  margin: 0;
+}
 .date-text {
   margin-top: 0;
+}
+.date-text.large {
+  margin: 0;
 }
 .notice-container {
   border-left: 5px solid peachpuff;
@@ -74,10 +116,29 @@
   align-items: center;
   gap: 1rem 0;
 }
+.mat-dialog-actions-container.large {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .mat-button-class-1 {
   color: #005587;
 }
 .mat-button-class-2 {
   background-color: #005587;
   color: rgb(255, 255, 255);
+}
+.confirm-and-cancel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 0;
+}
+.confirm-and-cancel-container.large {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0 1rem;
 }
