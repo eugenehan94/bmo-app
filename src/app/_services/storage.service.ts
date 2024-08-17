@@ -32,4 +32,12 @@ export class StorageService {
     }
     return false;
   }
+
+  public update(value: any, sessionName: any) {
+    let prevData = JSON.parse(sessionStorage.getItem(sessionName)!);
+    Object.keys(value).forEach(function (val, key) {
+      prevData[val] = value[val];
+    });
+    sessionStorage.setItem(sessionName, JSON.stringify(prevData));
+  }
 }

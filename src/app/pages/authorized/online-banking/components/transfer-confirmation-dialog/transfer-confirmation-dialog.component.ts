@@ -8,6 +8,7 @@ import { Store } from '@ngrx/store';
 import { setScreenSize } from 'src/app/store/app/actions/app.actions';
 
 import { HttpClient } from '@angular/common/http';
+import { StorageService } from 'src/app/_services/storage.service';
 
 @Component({
   selector: 'app-transfer-confirmation-dialog',
@@ -28,7 +29,8 @@ export class TransferConfirmationDialogComponent {
     },
     private breakpointObserver: BreakpointObserver,
     private store: Store<any>,
-    private http: HttpClient
+    private http: HttpClient,
+    private storageService: StorageService
   ) {
     console.log('Dialog content: ', this.dialogData);
   }
@@ -45,6 +47,8 @@ export class TransferConfirmationDialogComponent {
     this.dialogData.fromAccountType.Amount - this.dialogData.amount;
   toAccountAmount? =
     this.dialogData.toAccountType.Amount + parseFloat(this.dialogData.amount);
+
+  userAccounts?: any;
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -105,6 +109,10 @@ export class TransferConfirmationDialogComponent {
       )
       .subscribe((result) => {
         console.log('return result: ', result);
+        this.storageService.update(result, 'auth-user');
+        this.userAccounts = this.storageService.getUser().userAccounts;
+        console.log('userAccounts in transfer funds: ', this.userAccounts);
+        this.dialogRef.close({ newUserAccountData: this.userAccounts });
       });
   }
   closeDialogAndClearData() {

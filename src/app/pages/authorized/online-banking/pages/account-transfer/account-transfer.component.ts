@@ -120,8 +120,10 @@ export class AccountTransferComponent {
       window.scrollTo(0, 0);
       console.log('Dialog closed: ', result);
       if (result === 'Clear') {
-        // this.fromAccount.reset();
         this.transferForm.reset();
+      }
+      if (result.newUserAccountData) {
+        this.userAccounts = result.newUserAccountData;
       }
     });
   }
