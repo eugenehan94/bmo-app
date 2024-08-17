@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 const USER_KEY = 'auth-user';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StorageService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   clean(): void {
     window.sessionStorage.clear();
@@ -17,8 +17,19 @@ export class StorageService {
     window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
   }
 
+  public checkHttpOnlyCookieExist() {
+    return this.http.get(
+      'http://localhost:5000/api/v1/sign-in/verifyCookieExistV2',
+      {
+        observe: 'response',
+        withCredentials: true,
+      }
+    );
+  }
+
   public getUser(): any {
     const user = window.sessionStorage.getItem(USER_KEY);
+    this.checkHttpOnlyCookieExist().subscribe();
     if (user) {
       return JSON.parse(user);
     }
