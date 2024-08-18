@@ -3,7 +3,7 @@ import { FooterService } from './footer.service';
 import {
   FooterCategoryLinksType,
   AboutBmoDataType,
-} from 'src/app/interfaces';
+} from 'src/app/core/interfaces';
 
 //ngrx
 import { Store } from '@ngrx/store';

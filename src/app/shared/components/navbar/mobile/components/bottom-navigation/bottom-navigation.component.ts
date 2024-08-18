@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarService } from '../../../navbar.service';
-import { MobileBottomNavOptionsType } from '../../../../../../interfaces';
+import { MobileBottomNavOptionsType } from '../../../../../../core/interfaces';
 
 import { Store } from '@ngrx/store';
 

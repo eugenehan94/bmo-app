@@ -1,4 +1,4 @@
-import { HeroBannerOptionsType } from 'src/app/interfaces';
+import { HeroBannerOptionsType } from 'src/app/core/interfaces';
 
 const heroBannerOptions: HeroBannerOptionsType[] = [
   {

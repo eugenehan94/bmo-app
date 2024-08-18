@@ -1,4 +1,4 @@
-import { TabsType } from 'src/app/interfaces';
+import { TabsType } from 'src/app/core/interfaces';
 const tabs: TabsType[] = [
   {
     label: 'Featured',
@@ -354,6 +354,5 @@ const tabs: TabsType[] = [
     ],
   },
 ];
-
 
 export default tabs;

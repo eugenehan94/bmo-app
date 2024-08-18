@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroService } from './hero.service';
-import { HeroBannerOptionsType } from 'src/app/interfaces';
+import { HeroBannerOptionsType } from 'src/app/core/interfaces';
 
 // ngrx
 import { Store } from '@ngrx/store';
@@ -11,7 +11,7 @@ import { Store } from '@ngrx/store';
 })
 export class BusinessHeroComponent implements OnInit {
   constructor(private service: HeroService, private store: Store<any>) {}
-  
+
   selectedBanner?: HeroBannerOptionsType;
   currentScreenSize?: string;
 

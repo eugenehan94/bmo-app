@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { NavigationOptionsType } from 'src/app/interfaces';
+import { NavigationOptionsType } from 'src/app/core/interfaces';
 
 @Injectable({
   providedIn: 'root',

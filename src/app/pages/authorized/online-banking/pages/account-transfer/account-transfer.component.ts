@@ -7,7 +7,7 @@ import { TransferConfirmationDialogComponent } from '../../components/transfer-c
 import { Store } from '@ngrx/store';
 import { setScreenSize } from 'src/app/store/app/actions/app.actions';
 
-import { StorageService } from 'src/app/_services/storage.service';
+import { StorageService } from 'src/app/core/_services/storage.service';
 import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-account-transfer',

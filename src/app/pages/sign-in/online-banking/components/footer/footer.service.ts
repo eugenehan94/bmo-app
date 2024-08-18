@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FooterContentOneType, FooterContentTwoType } from 'src/app/interfaces';
+import {
+  FooterContentOneType,
+  FooterContentTwoType,
+} from 'src/app/core/interfaces';
 @Injectable({
   providedIn: 'root',
 })

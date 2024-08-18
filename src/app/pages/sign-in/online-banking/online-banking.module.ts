@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OnlineBankingRoutingModule } from './online-banking-routing.module';
-import { MaterialDesignModule } from 'src/app/material-design/material-design.module';
+import { MaterialDesignModule } from 'src/app/shared/material-design/material-design.module';
 import { ReactiveFormsModule } from '@angular/forms';
 // Components
 import { OnlineBankingComponent } from './online-banking.component';

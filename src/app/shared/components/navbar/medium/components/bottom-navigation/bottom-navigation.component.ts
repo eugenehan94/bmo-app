@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarService } from '../../../navbar.service';
-import { MobileBottomNavOptionsType } from '../../../../../../interfaces';
+import { MobileBottomNavOptionsType } from '../../../../../../core/interfaces';
 
 //ngrx
 import { Store } from '@ngrx/store';
@@ -24,6 +24,6 @@ export class MediumBottomNavigationComponent implements OnInit {
     this.store.select('navbarReducer').subscribe((res) => {
       this.isMobileMenuOpen = res.isMobileMenuOpen;
       this.isMobileSignInMenuOpen = res.isMobileSignInMenuOpen;
-    })
+    });
   }
 }

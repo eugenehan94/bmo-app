@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialDesignModule } from 'src/app/material-design/material-design.module';
+import { MaterialDesignModule } from 'src/app/shared/material-design/material-design.module';
 import { GettingStartedRoutingModule } from './getting-started-routing.module';
 import { GettingStartedComponent } from './getting-started.component';
 import { NavbarComponent } from './components/navbar/navbar.component';

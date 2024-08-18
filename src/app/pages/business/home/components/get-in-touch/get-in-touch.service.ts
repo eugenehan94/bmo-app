@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { ButtonsDisplayContentsType } from 'src/app/interfaces';
+import { ButtonsDisplayContentsType } from 'src/app/core/interfaces';
 
-import { ButtonsDataType } from 'src/app/interfaces';
+import { ButtonsDataType } from 'src/app/core/interfaces';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

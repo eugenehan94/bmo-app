@@ -8,7 +8,7 @@ import { Store } from '@ngrx/store';
 import { setScreenSize } from 'src/app/store/app/actions/app.actions';
 
 import { HttpClient } from '@angular/common/http';
-import { StorageService } from 'src/app/_services/storage.service';
+import { StorageService } from 'src/app/core/_services/storage.service';
 
 @Component({
   selector: 'app-transfer-confirmation-dialog',

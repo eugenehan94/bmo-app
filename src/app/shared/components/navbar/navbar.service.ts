@@ -4,7 +4,7 @@ import {
   CountryOptionsType,
   SignInMenuOptionsType,
   MobileBottomNavOptionsType,
-} from '../../../interfaces';
+} from '../../../core/interfaces';
 @Injectable({
   providedIn: 'root',
 })
@@ -14,12 +14,12 @@ export class NavbarService {
   siteOptions: SiteOptionsType[] = [
     {
       title: 'Personal',
-      linkHref: "http://localhost:4200/personal"
+      linkHref: 'http://localhost:4200/personal',
     },
     {
       title: 'Business',
       ariaLabel: 'Business',
-      routerLink: "/business"
+      routerLink: '/business',
     },
     {
       title: 'Private Wealth',
@@ -122,5 +122,4 @@ export class NavbarService {
       imageAlt: 'Calendar icon',
     },
   ];
-
 }

@@ -1,4 +1,7 @@
-import { ButtonsDataType, ButtonsDisplayContentsType } from 'src/app/interfaces';
+import {
+  ButtonsDataType,
+  ButtonsDisplayContentsType,
+} from 'src/app/core/interfaces';
 const buttonsData: ButtonsDataType[] = [
   {
     imageSrc: 'assets/svg/dollar-1-illustration.svg',

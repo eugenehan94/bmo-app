@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { DownloadAppDataType } from 'src/app/interfaces';
+import { DownloadAppDataType } from 'src/app/core/interfaces';
 
 @Injectable({
   providedIn: 'root',

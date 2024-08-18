@@ -17,23 +17,11 @@ export class StorageService {
     window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
   }
 
-  public checkHttpOnlyCookieExist() {
-    return this.http.get(
-      'http://localhost:5000/api/v1/sign-in/verifyCookieExistV2',
-      {
-        observe: 'response',
-        withCredentials: true,
-      }
-    );
-  }
-
   public getUser(): any {
     const user = window.sessionStorage.getItem(USER_KEY);
-    this.checkHttpOnlyCookieExist().subscribe();
     if (user) {
       return JSON.parse(user);
     }
-    return {};
   }
 
   public isLoggedIn(): boolean {

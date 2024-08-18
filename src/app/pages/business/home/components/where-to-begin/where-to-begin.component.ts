@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { WhereToBeginService } from './where-to-begin.service';
-import { CardContentType } from 'src/app/interfaces';
+import { CardContentType } from 'src/app/core/interfaces';
 
 //ngrx
 import { Store } from '@ngrx/store';

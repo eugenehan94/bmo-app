@@ -1,4 +1,7 @@
-import { FooterContentOneType, FooterContentTwoType } from 'src/app/interfaces';
+import {
+  FooterContentOneType,
+  FooterContentTwoType,
+} from 'src/app/core/interfaces';
 
 const footerContentOne: FooterContentOneType[] = [
   {

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialDesignModule } from 'src/app/material-design/material-design.module';
+import { MaterialDesignModule } from 'src/app/shared/material-design/material-design.module';
 import { OnlineBankingUnauthorizedRoutingModule } from './online-banking-unauthorized-routing.module';
 import { OnlineBankingUnauthorizedComponent } from './online-banking-unauthorized.component';
 import { NavbarComponent } from './components/navbar/navbar.component';

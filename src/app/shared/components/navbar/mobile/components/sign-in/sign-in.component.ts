@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavbarService } from 'src/app/shared/components/navbar/navbar.service';
-import { SignInMenuOptionsType } from 'src/app/interfaces';
+import { SignInMenuOptionsType } from 'src/app/core/interfaces';
 
 // ngrx
 import { Store } from '@ngrx/store';

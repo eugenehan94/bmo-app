@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 //ngrx
 import { Store } from '@ngrx/store';
 // Services
-import { StorageService } from 'src/app/_services/storage.service';
+import { StorageService } from 'src/app/core/_services/storage.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

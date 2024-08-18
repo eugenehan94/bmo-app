@@ -1,7 +1,10 @@
 import { Component, OnInit, ViewChildren, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GetInTouchService } from './get-in-touch.service';
-import {ButtonsDataType, ButtonsDisplayContentsType, } from "src/app/interfaces"
+import {
+  ButtonsDataType,
+  ButtonsDisplayContentsType,
+} from 'src/app/core/interfaces';
 // ngrx
 import { Store } from '@ngrx/store';
 

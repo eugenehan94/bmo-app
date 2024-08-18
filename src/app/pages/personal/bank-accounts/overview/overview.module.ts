@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialDesignModule } from 'src/app/material-design/material-design.module';
+import { MaterialDesignModule } from 'src/app/shared/material-design/material-design.module';
 import { OverviewRoutingModule } from './overview-routing.module';
 import { GettingStartedModule } from '../getting-started/getting-started.module';
 

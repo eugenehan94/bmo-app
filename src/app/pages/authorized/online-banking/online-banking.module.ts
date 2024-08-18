@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialDesignModule } from 'src/app/material-design/material-design.module';
+import { MaterialDesignModule } from 'src/app/shared/material-design/material-design.module';
 import { AuthorizedOnlineBankingRoutingModule } from './online-banking-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -19,7 +19,7 @@ import { AccountsComponent } from './pages/accounts/accounts.component';
 import { AccountTransferComponent } from './pages/account-transfer/account-transfer.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 
-import { DirectivesModule } from 'src/app/directives/directives.module';
+import { DirectivesModule } from 'src/app/core/directives/directives.module';
 import { TransferConfirmationDialogComponent } from './components/transfer-confirmation-dialog/transfer-confirmation-dialog.component';
 
 @NgModule({

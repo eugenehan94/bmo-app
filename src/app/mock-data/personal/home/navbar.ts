@@ -1,4 +1,4 @@
-import { NavigationOptionsType } from 'src/app/interfaces';
+import { NavigationOptionsType } from 'src/app/core/interfaces';
 const navigationOptions: NavigationOptionsType[] = [
   {
     title: 'Bank Accounts',

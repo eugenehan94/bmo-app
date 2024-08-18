@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroService } from './hero.service';
-import { HeroBannerOptionsType } from 'src/app/interfaces';
+import { HeroBannerOptionsType } from 'src/app/core/interfaces';
 //ngrx
 import { Store } from '@ngrx/store';
 
@@ -20,9 +20,7 @@ export class HeroComponent implements OnInit {
     });
     this.service.getHeroBannerOptions().subscribe((res) => {
       // Randomly select one of the objects from the array of objects
-      let randomIndex: number = Math.floor(
-        Math.random() * res.length
-      );
+      let randomIndex: number = Math.floor(Math.random() * res.length);
       this.selectedBanner = res[randomIndex];
     });
   }

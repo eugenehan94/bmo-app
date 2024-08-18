@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsTabsService } from './products-tabs.service';
-import { TabsType } from 'src/app/interfaces';
+import { TabsType } from 'src/app/core/interfaces';
 
 // ngrx
 import { Store } from '@ngrx/store';

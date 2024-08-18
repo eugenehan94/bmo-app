@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import {
   FooterCategoryLinksType,
   AboutBmoDataType,
-  
-} from 'src/app/interfaces';
-import {FooterCaptionsType,} from "src/app/interfaces"
+} from 'src/app/core/interfaces';
+import { FooterCaptionsType } from 'src/app/core/interfaces';
 import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AuthorizedOnlineBankingGuard } from './guards/authorized-online-banking.guard';
+import { AuthorizedOnlineBankingGuard } from './core/guards/authorized-online-banking.guard';
 
 const routes: Routes = [
   {

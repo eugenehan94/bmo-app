@@ -6,7 +6,7 @@ import {
   SocialMediaDataType,
   AboutBmoDataType,
   DownloadAppDataType,
-} from '../../../interfaces';
+} from '../../../core/interfaces';
 @Injectable({
   providedIn: 'root',
 })
@@ -29,8 +29,6 @@ export class FooterService {
       alt: 'CDIC online badge',
     },
   ];
-
-
 
   footerSupportLinks: FooterSupportLinksType[] = [
     {
@@ -89,7 +87,6 @@ export class FooterService {
       alt: 'Instagram',
     },
   ];
-
 
   downloadAppData: DownloadAppDataType[] = [
     {

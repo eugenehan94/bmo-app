@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FooterService } from './footer.service';
-import { FooterContentOneType, FooterContentTwoType } from 'src/app/interfaces';
+import {
+  FooterContentOneType,
+  FooterContentTwoType,
+} from 'src/app/core/interfaces';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',

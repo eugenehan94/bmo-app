@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavbarService } from 'src/app/shared/components/navbar/navbar.service';
-import { NavigationOptionsType } from 'src/app/interfaces';
+import { NavigationOptionsType } from 'src/app/core/interfaces';
 
 //ngrx
 import { Store } from '@ngrx/store';
@@ -18,7 +18,7 @@ export class NavigationBarComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private store: Store<any>
   ) {}
-  // @TODO: add typescript and see why it doesn't work when using nested ngFor loop
+
   @Input() navbarOptions?: any;
   originalPath?: string;
   menuIsOpen?: boolean;
@@ -30,14 +30,13 @@ export class NavigationBarComponent implements OnInit {
     this.store.select('desktopInnerNavigationReducer').subscribe((res) => {
       this.menuIsOpen = res.menuIsOpen;
     });
-    // Get the original url of the specific page we are on without parameter - 
+    // Get the original url of the specific page we are on without parameter -
     // so we can reload
     // Path was determined by comparing existing pages and finding
     // this chain will give us our desired path. Didn't use subscribe to
     // ActivateRoute because lazy loading page will not get the url
     let path = this.activatedRoute.snapshot.pathFromRoot[1].routeConfig?.path;
     this.originalPath = path;
-    
   }
 
   handleContainerClick(event: any): void {

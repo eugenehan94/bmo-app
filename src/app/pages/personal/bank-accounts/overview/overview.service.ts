@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BankAccountDataType } from 'src/app/interfaces';
+import { BankAccountDataType } from 'src/app/core/interfaces';
 @Injectable({
   providedIn: 'root',
 })

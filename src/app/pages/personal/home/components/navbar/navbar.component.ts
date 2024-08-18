@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarService } from './navbar.service';
-import { NavigationOptionsType } from 'src/app/interfaces';
+import { NavigationOptionsType } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-personal-navbar',
@@ -13,8 +13,8 @@ export class NavbarComponent implements OnInit {
   innerNavbarOptions?: NavigationOptionsType[];
 
   ngOnInit(): void {
-    this.navbarService.getNavigationOptions().subscribe((res)=> {
+    this.navbarService.getNavigationOptions().subscribe((res) => {
       this.innerNavbarOptions = res;
-    })
+    });
   }
 }

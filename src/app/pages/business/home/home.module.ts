@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BusinessRoutingModule } from './home-routing.module';
 import { SharedLayoutsModule } from 'src/app/shared/components/layouts/layouts.module';
-import { MaterialDesignModule } from 'src/app/material-design/material-design.module';
+import { MaterialDesignModule } from 'src/app/shared/material-design/material-design.module';
 import { SharedFooterModule } from 'src/app/shared/components/footer/footer.module';
 import { SharedNavbarModule } from 'src/app/shared/components/navbar/navbar.module';
 // Components

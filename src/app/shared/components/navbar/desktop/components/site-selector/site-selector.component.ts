@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavbarService } from 'src/app/shared/components/navbar/navbar.service';
-import { SiteOptionsType } from 'src/app/interfaces';
+import { SiteOptionsType } from 'src/app/core/interfaces';
 import { DesktopService } from 'src/app/shared/components/navbar/desktop/desktop.service';
 @Component({
   selector: 'app-desktop-site-selector',
@@ -36,5 +36,8 @@ export class SiteSelectorComponent implements OnInit {
 
   optionOnFocus(i: number): void {
     this.ariaActiveDescendent = 'site-selector_' + i;
+  }
+  toggleSiteSelector(): any {
+    this.desktopService.setIsSelectedSiteOpen(!this.isSelectedSiteOpen);
   }
 }

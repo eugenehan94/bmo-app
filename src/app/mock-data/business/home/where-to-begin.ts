@@ -1,4 +1,4 @@
-import { CardContentType } from 'src/app/interfaces';
+import { CardContentType } from 'src/app/core/interfaces';
 const cardContent: CardContentType[] = [
   {
     icon: 'assets/svg/bank-blue-icon.svg',
@@ -23,6 +23,5 @@ const cardContent: CardContentType[] = [
     linkAriaLabel: 'Open the B M O help me choose a credit card tool',
   },
 ];
-
 
 export default cardContent;

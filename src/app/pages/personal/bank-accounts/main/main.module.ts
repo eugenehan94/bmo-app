@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PersonalBankAccountRoutingModule } from './main-routing.module';
 import { PersonalBankAccountsMainComponent } from './main.component';
-import { MaterialDesignModule } from 'src/app/material-design/material-design.module';
+import { MaterialDesignModule } from 'src/app/shared/material-design/material-design.module';
 import { PersonalHomeModule } from '../../home/home.module';
 // Overview
 

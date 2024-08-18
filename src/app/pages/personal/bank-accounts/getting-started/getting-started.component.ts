@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { GettingStartedService } from './getting-started.service';
-import { FooterCategoryLinksType, AboutBmoDataType } from 'src/app/interfaces';
+import {
+  FooterCategoryLinksType,
+  AboutBmoDataType,
+} from 'src/app/core/interfaces';
 //ngrx
 import { Store } from '@ngrx/store';
 import { setScreenSize } from 'src/app/store/app/actions/app.actions';

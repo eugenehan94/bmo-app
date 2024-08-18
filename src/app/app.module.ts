@@ -17,12 +17,12 @@ import {
 } from './store/app/reducers/app.reducer';
 // Modules
 // This import houses all our Angular Material imports
-import { MaterialDesignModule } from './material-design/material-design.module';
+import { MaterialDesignModule } from './shared/material-design/material-design.module';
 import { PersonalHomeModule } from './pages/personal/home/home.module';
 import { PersonalBankAccountsMainModule } from './pages/personal/bank-accounts/main/main.module';
 import { BusinessHomeModule } from './pages/business/home/home.module';
 
-import { DirectivesModule } from './directives/directives.module';
+import { DirectivesModule } from './core/directives/directives.module';
 
 @NgModule({
   declarations: [AppComponent],

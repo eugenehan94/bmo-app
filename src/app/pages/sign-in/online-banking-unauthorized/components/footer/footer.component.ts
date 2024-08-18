@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 // @TODO: This service is shared -
 import { FooterService } from '../../../online-banking/components/footer/footer.service';
-import { FooterContentOneType, FooterContentTwoType } from 'src/app/interfaces';
+import {
+  FooterContentOneType,
+  FooterContentTwoType,
+} from 'src/app/core/interfaces';
 @Component({
   selector: 'app-footer2',
   templateUrl: './footer.component.html',

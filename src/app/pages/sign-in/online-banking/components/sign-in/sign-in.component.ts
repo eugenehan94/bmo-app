@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 //ngrx
 import { Store } from '@ngrx/store';
 
-import { StorageService } from 'src/app/_services/storage.service';
+import { StorageService } from 'src/app/core/_services/storage.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -61,7 +61,6 @@ export class SignInComponent implements OnInit {
     }
   }
 
-  // @TODO: Move to individual service
   submitUserSignIn(input: any) {
     return this.http
       .post('http://localhost:5000/api/v1/sign-in', input, {

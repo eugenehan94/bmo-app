@@ -42,9 +42,9 @@
         <a
           *ngIf="option.routerLink"
           routerLink="{{ option.routerLink }}"
-          target="_blank"
           [attr.aria-label]="option.ariaLabel"
           (focus)="optionOnFocus(i)"
+          (click)="toggleSiteSelector()"
           >{{ option.title }}</a
         >
         <a
@@ -59,8 +59,7 @@
           *ngIf="last"
           (focus)="handleSelectedSiteMenuClick($event)"
           class="site-select-list-last-option"
-        >
-        </button>
+        ></button>
       </li>
     </ul>
   </div>
