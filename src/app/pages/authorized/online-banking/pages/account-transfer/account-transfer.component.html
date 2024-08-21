@@ -32,6 +32,7 @@
         [formGroup]="transferForm"
         class="inner-content-container"
         (ngSubmit)="onSubmit($event)"
+        #formDirective="ngForm"
       >
         <div>
           <h3>Your transfer details</h3>

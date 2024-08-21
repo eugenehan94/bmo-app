@@ -14,6 +14,7 @@ import { CreditCardsComponent } from './components/credit-cards/credit-cards.com
 import { LoansAndMortgagesComponent } from './components/loans-and-mortgages/loans-and-mortgages.component';
 import { InvestmentsComponent } from './components/investments/investments.component';
 import { QuickLinksComponent } from './components/quick-links/quick-links.component';
+import { TransferDoneDialogComponent } from './components/transfer-done-dialog/transfer-done-dialog.component';
 // Pages
 import { AccountsComponent } from './pages/accounts/accounts.component';
 import { AccountTransferComponent } from './pages/account-transfer/account-transfer.component';
@@ -37,6 +38,7 @@ import { TransferConfirmationDialogComponent } from './components/transfer-confi
     AccountTransferComponent,
     SideNavComponent,
     TransferConfirmationDialogComponent,
+    TransferDoneDialogComponent,
   ],
   imports: [
     CommonModule,

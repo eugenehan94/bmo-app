@@ -1,0 +1,29 @@
+<div>
+  <div>
+    <h1>Make a transfer</h1>
+  </div>
+  <mat-divider></mat-divider>
+  <div>
+    <h3>Done! You're all set.</h3>
+  </div>
+  <div>
+    <p>
+      You've transferred ${{ amount }} from your Account to your FromAccount
+    </p>
+  </div>
+  <div>
+    <caption>
+      Your reference number: RANDOM NUMBER
+    </caption>
+  </div>
+  <div class="notice-container">
+    <h3 class="notice-title">Your money is ready to use.</h3>
+    <p class="notice-text">
+      But just remember that it might take a business day or two for your
+      balance to update
+    </p>
+  </div>
+  <div>
+    <button mat-flat-button (click)="closeDialog()">All Done</button>
+  </div>
+</div>

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 // Components
 import { TransferConfirmationDialogComponent } from '../../components/transfer-confirmation-dialog/transfer-confirmation-dialog.component';
 //ngrx
@@ -34,7 +34,8 @@ export class AccountTransferComponent {
   fromAccountType?: string;
   toAccountType?: string;
   fromAccountAmountInInt?: number;
-
+  // Used to clear error styles from the Angular Material inputs
+  @ViewChild('formDirective') formDirective!: NgForm;
   ngOnInit(): void {
     this.breakpointObserver
       .observe([
@@ -121,9 +122,12 @@ export class AccountTransferComponent {
       console.log('Dialog closed: ', result);
       if (result === 'Clear') {
         this.transferForm.reset();
+        this.formDirective.resetForm();
       }
-      if (result.newUserAccountData) {
-        this.userAccounts = result.newUserAccountData;
+      if (result) {
+        if (result.newUserAccountData) {
+          this.userAccounts = result.newUserAccountData;
+        }
       }
     });
   }

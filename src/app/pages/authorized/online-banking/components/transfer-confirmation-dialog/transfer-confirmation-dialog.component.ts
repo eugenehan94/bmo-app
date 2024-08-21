@@ -2,13 +2,15 @@ import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { AccountTransferComponent } from '../../pages/account-transfer/account-transfer.component';
 import { BreakpointObserver } from '@angular/cdk/layout';
-
+import { MatDialog } from '@angular/material/dialog';
 //ngrx
 import { Store } from '@ngrx/store';
 import { setScreenSize } from 'src/app/store/app/actions/app.actions';
 
 import { HttpClient } from '@angular/common/http';
 import { StorageService } from 'src/app/core/_services/storage.service';
+
+import { TransferDoneDialogComponent } from '../transfer-done-dialog/transfer-done-dialog.component';
 
 @Component({
   selector: 'app-transfer-confirmation-dialog',
@@ -30,7 +32,8 @@ export class TransferConfirmationDialogComponent {
     private breakpointObserver: BreakpointObserver,
     private store: Store<any>,
     private http: HttpClient,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private secondDialog: MatDialog
   ) {
     console.log('Dialog content: ', this.dialogData);
   }
@@ -112,6 +115,26 @@ export class TransferConfirmationDialogComponent {
         this.storageService.update(result, 'auth-user');
         this.userAccounts = this.storageService.getUser().userAccounts;
         console.log('userAccounts in transfer funds: ', this.userAccounts);
+        const dialogRefTwo = this.secondDialog.open(
+          TransferDoneDialogComponent,
+          {
+            height: '100%',
+            width: '100%',
+            maxWidth: '100%',
+            maxHeight: '100%',
+            data: {
+              amount: this.dialogData.amount,
+              fromAccount: this.dialogData.fromAccount,
+              fromAccountType: this.dialogData.fromAccountType,
+              toAccount: this.dialogData.toAccount,
+              toAccountType: this.dialogData.toAccountType,
+            },
+          }
+        );
+
+        dialogRefTwo.afterClosed().subscribe((result) => {
+          console.log('second dialog closed');
+        });
         this.dialogRef.close({ newUserAccountData: this.userAccounts });
       });
   }
