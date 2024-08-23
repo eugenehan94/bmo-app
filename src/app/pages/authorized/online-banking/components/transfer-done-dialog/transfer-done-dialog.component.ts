@@ -1,4 +1,4 @@
-import { Component, inject, model } from '@angular/core';
+import { Component, inject, model, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TransferConfirmationDialogComponent } from '../transfer-confirmation-dialog/transfer-confirmation-dialog.component';
 @Component({
@@ -7,10 +7,17 @@ import { TransferConfirmationDialogComponent } from '../transfer-confirmation-di
   styleUrl: './transfer-done-dialog.component.css',
 })
 //@NOTE: Trying inject() instead of constructor()
-export class TransferDoneDialogComponent {
+export class TransferDoneDialogComponent implements OnInit {
   private dialogRef = inject(MatDialogRef<TransferConfirmationDialogComponent>);
   private data = inject(MAT_DIALOG_DATA);
   amount = this.data.amount;
+  fromAccount = this.data.fromAccount;
+  fromAccountType = this.data.fromAccountType.AccountType;
+  toAccount = this.data.toAccount;
+  toAccountType = this.data.toAccountType.AccountType;
+  ngOnInit(): void {
+    console.log('this.data: ', this.data);
+  }
   // @Inject(MAT_DIALOG_DATA)
   // public dialogData: {
   //     fromAccount: any;

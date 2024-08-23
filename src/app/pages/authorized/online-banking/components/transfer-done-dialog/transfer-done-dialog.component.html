@@ -1,20 +1,20 @@
-<div>
+<div class="dialog-container">
   <div>
-    <h1>Make a transfer</h1>
+    <h1 class="dialog-title">Make a transfer</h1>
   </div>
   <mat-divider></mat-divider>
   <div>
-    <h3>Done! You're all set.</h3>
+    <h3 class="done-title">Done! You're all set.</h3>
   </div>
   <div>
     <p>
-      You've transferred ${{ amount }} from your Account to your FromAccount
+      You've transferred ${{ amount }} from your {{ fromAccountType }}
+      {{ fromAccount }} to your {{ toAccountType }}
+      {{ toAccount }}
     </p>
   </div>
   <div>
-    <caption>
-      Your reference number: RANDOM NUMBER
-    </caption>
+    <p class="reference-text">Your reference number: RANDOM NUMBER</p>
   </div>
   <div class="notice-container">
     <h3 class="notice-title">Your money is ready to use.</h3>
@@ -23,7 +23,9 @@
       balance to update
     </p>
   </div>
-  <div>
-    <button mat-flat-button (click)="closeDialog()">All Done</button>
+  <div class="button-container">
+    <button mat-flat-button (click)="closeDialog()" class="mat-button-class">
+      All Done
+    </button>
   </div>
 </div>

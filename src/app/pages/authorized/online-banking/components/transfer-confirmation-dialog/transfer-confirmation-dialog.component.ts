@@ -134,8 +134,8 @@ export class TransferConfirmationDialogComponent {
 
         dialogRefTwo.afterClosed().subscribe((result) => {
           console.log('second dialog closed');
+          this.dialogRef.close({ newUserAccountData: this.userAccounts });
         });
-        this.dialogRef.close({ newUserAccountData: this.userAccounts });
       });
   }
   closeDialogAndClearData() {
