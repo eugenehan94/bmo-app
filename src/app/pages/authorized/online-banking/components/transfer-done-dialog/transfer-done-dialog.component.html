@@ -33,10 +33,8 @@
     <div></div>
   </div>
 
-  <mat-divider
-    *ngIf="currentScreenSize === 'Large'"
-    class="bottom-divider-class"
-  ></mat-divider>
+  @if(currentScreenSize === 'Large'){
+  <mat-divider class="bottom-divider-class"></mat-divider> }
   <div
     class="button-container"
     [ngClass]="{ large: currentScreenSize === 'Large' }"

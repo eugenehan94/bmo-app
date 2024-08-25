@@ -1,21 +1,36 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { PersonalBankAccountsMainComponent } from './main.component';
+import { PersonalBankAccountsMainModule } from './main.module';
+//ngrx
+import { StoreModule } from '@ngrx/store';
+import { ScreenSizeReducer } from '../../../../store/app/reducers/app.reducer';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { MainComponent } from './main.component';
+describe('Banking-accounts main component', () => {
+  let component: PersonalBankAccountsMainComponent;
+  let fixture: ComponentFixture<PersonalBankAccountsMainComponent>;
 
-describe('MainComponent', () => {
-  let component: MainComponent;
-  let fixture: ComponentFixture<MainComponent>;
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        PersonalBankAccountsMainModule,
+        StoreModule.forRoot(ScreenSizeReducer),
+        HttpClientTestingModule,
+      ],
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [MainComponent]
-    });
-    fixture = TestBed.createComponent(MainComponent);
+    fixture = TestBed.createComponent(PersonalBankAccountsMainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create main component', () => {
+    expect(component).toBeDefined();
+  });
+  it('should have a navbar', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('app-personal-navbar')).not.toBeNull();
   });
 });
