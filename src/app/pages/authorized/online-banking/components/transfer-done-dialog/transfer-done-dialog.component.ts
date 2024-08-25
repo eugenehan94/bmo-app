@@ -18,6 +18,7 @@ export class TransferDoneDialogComponent implements OnInit {
   private data = inject(MAT_DIALOG_DATA);
   private breakpointObserver = inject(BreakpointObserver);
   private store = inject(Store);
+  currentScreenSize?: string;
   amount = this.data.amount;
   fromAccount = this.data.fromAccount;
   fromAccountType = this.data.fromAccountType.AccountType;
@@ -45,6 +46,9 @@ export class TransferDoneDialogComponent implements OnInit {
           this.store.dispatch(setScreenSize({ screenSize: 'Large' }));
         }
       });
+    this.store.select('screenSizeReducer').subscribe((res) => {
+      this.currentScreenSize = res.currentScreenSize;
+    });
   }
   // @Inject(MAT_DIALOG_DATA)
   // public dialogData: {

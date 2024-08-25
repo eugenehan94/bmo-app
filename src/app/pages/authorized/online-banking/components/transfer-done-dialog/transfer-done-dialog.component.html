@@ -1,29 +1,46 @@
-<div class="dialog-container">
+<div
+  class="dialog-container"
+  [ngClass]="{ large: currentScreenSize === 'Large' }"
+>
   <div>
     <h1 class="dialog-title">Make a transfer</h1>
   </div>
   <mat-divider></mat-divider>
   <div>
-    <h3 class="done-title">Done! You're all set.</h3>
+    <div>
+      <div>
+        <h3 class="done-title">Done! You're all set.</h3>
+      </div>
+      <div>
+        <p>
+          You've transferred ${{ amount }} from your {{ fromAccountType }}
+          {{ fromAccount }} to your {{ toAccountType }}
+          {{ toAccount }}
+        </p>
+      </div>
+      <div>
+        <p class="reference-text">Your reference number: RANDOM NUMBER</p>
+      </div>
+      <div class="notice-container">
+        <h3 class="notice-title">Your money is ready to use.</h3>
+        <p class="notice-text">
+          But just remember that it might take a business day or two for your
+          balance to update
+        </p>
+      </div>
+    </div>
+    <!-- The image for large screens -->
+    <div></div>
   </div>
-  <div>
-    <p>
-      You've transferred ${{ amount }} from your {{ fromAccountType }}
-      {{ fromAccount }} to your {{ toAccountType }}
-      {{ toAccount }}
-    </p>
-  </div>
-  <div>
-    <p class="reference-text">Your reference number: RANDOM NUMBER</p>
-  </div>
-  <div class="notice-container">
-    <h3 class="notice-title">Your money is ready to use.</h3>
-    <p class="notice-text">
-      But just remember that it might take a business day or two for your
-      balance to update
-    </p>
-  </div>
-  <div class="button-container">
+
+  <mat-divider
+    *ngIf="currentScreenSize === 'Large'"
+    class="bottom-divider-class"
+  ></mat-divider>
+  <div
+    class="button-container"
+    [ngClass]="{ large: currentScreenSize === 'Large' }"
+  >
     <button mat-flat-button (click)="closeDialog()" class="mat-button-class">
       All Done
     </button>
