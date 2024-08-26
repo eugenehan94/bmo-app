@@ -33,4 +33,12 @@ describe('Banking-accounts main component', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('app-personal-navbar')).not.toBeNull();
   });
+  it('should have a router-outlet', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('router-outlet')).toBeTruthy();
+  });
+  it('should have a footer', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('app-personal-footer')).not.toBeNull();
+  });
 });
