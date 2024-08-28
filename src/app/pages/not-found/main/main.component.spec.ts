@@ -1,4 +1,10 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+  waitForAsync,
+  tick,
+  fakeAsync,
+} from '@angular/core/testing';
 import { MainComponent } from './main.component';
 import { MainModule } from './main.module';
 //ngrx
@@ -6,6 +12,7 @@ import { StoreModule } from '@ngrx/store';
 import { ScreenSizeReducer } from '../../../store/app/reducers/app.reducer';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 describe('Main not found page', () => {
   let component: MainComponent;
   let fixture: ComponentFixture<MainComponent>;
@@ -16,7 +23,15 @@ describe('Main not found page', () => {
       imports: [
         MainModule,
         StoreModule.forRoot(ScreenSizeReducer),
-        RouterTestingModule,
+        RouterTestingModule.withRoutes([
+          {
+            path: 'personal',
+            loadChildren: () =>
+              import('../../../pages/personal/home/home.module').then(
+                (m) => m.PersonalHomeModule
+              ),
+          },
+        ]),
       ],
     }).compileComponents();
   }));
@@ -57,4 +72,21 @@ describe('Main not found page', () => {
       .nativeElement.getAttribute('href');
     expect(href).toEqual('/personal');
   });
+  // it('should navigate when clicked', fakeAsync(() => {
+  //   const router = TestBed.inject(Router);
+  //   const spy = spyOn(router, 'navigateByUrl');
+  //   fixture = TestBed.createComponent(MainComponent);
+  //   fixture.detectChanges();
+  //   const debugEl = fixture.debugElement.query(By.css('#home-link'));
+  //   debugEl.nativeElement.click();
+  //   tick();
+  //   fixture.detectChanges();
+  //   expect(spy).toHaveBeenCalledWith(
+  //     '/personal',
+  //     jasmine.objectContaining({
+  //       skipLocationChange: false,
+  //       replaceUrl: false,
+  //     })
+  //   );
+  // }));
 });

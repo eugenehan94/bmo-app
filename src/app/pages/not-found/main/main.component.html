@@ -25,7 +25,12 @@
           information you need or other products.
         </p>
         <div class="not-found-button-container">
-          <a routerLink="/personal" class="not-found-button-primary">Home</a>
+          <a
+            [routerLink]="['/personal']"
+            class="not-found-button-primary"
+            id="home-link"
+            >Home</a
+          >
           <!-- <a>Contact Us</a>
           <a>Book an appointment</a> -->
         </div>
