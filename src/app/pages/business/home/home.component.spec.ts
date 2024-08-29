@@ -34,4 +34,32 @@ describe('Business home page test', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('app-business-navbar')).not.toBeNull();
   });
+  it('should have app-business-hero component', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('app-business-hero')).not.toBeNull();
+  });
+  it('should have app-business-products-tabs component', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('app-business-products-tabs')).not.toBeNull();
+  });
+  it('should have app-business-get-in-touch component', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('app-business-get-in-touch')).not.toBeNull();
+  });
+  it('should have app-business-download-banner component', () => {
+    const compiled = fixture.nativeElement;
+    expect(
+      compiled.querySelector('app-business-download-banner')
+    ).not.toBeNull();
+  });
+  it('should have app-business-where-to-begin component', () => {
+    const compiled = fixture.nativeElement;
+    expect(
+      compiled.querySelector('app-business-where-to-begin')
+    ).not.toBeNull();
+  });
+  it('should have a footer component', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('app-business-footer')).not.toBeNull();
+  });
 });
