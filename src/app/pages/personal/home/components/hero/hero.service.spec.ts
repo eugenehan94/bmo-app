@@ -47,4 +47,24 @@ describe('Personal home hero component service', () => {
     expect(req.request.method).toBe('GET');
     req.flush(mockData);
   });
+
+  it('should handle HTTP errors', () => {
+    const errorMessage = 'Error Code: 404\nMessage: Not Found';
+
+    service.getHeroBannerOptions().subscribe({
+      next: () => fail('should have failed with 404 error'),
+      error: (error) => {
+        expect(error.message).toContain('404');
+        expect(error.message).toContain('Not Found');
+      },
+    });
+    // For the service we have retry(2) so it must try two times before it fails
+    for (let i = 0; i <= 2; i++) {
+      const req = httpMock.expectOne(
+        'http://localhost:5000/api/v1/personal/home/hero'
+      );
+      expect(req.request.method).toBe('GET');
+      req.flush('Not Found', { status: 404, statusText: 'Not Found' });
+    }
+  });
 });

@@ -18,10 +18,20 @@ export class HeroComponent implements OnInit {
     this.store.select('screenSizeReducer').subscribe((res) => {
       this.currentScreenSize = res.currentScreenSize;
     });
-    this.service.getHeroBannerOptions().subscribe((res) => {
-      // Randomly select one of the objects from the array of objects
-      let randomIndex: number = Math.floor(Math.random() * res.length);
-      this.selectedBanner = res[randomIndex];
+    // this.service.getHeroBannerOptions().subscribe((res) => {
+    //   // Randomly select one of the objects from the array of objects
+    //   let randomIndex: number = Math.floor(Math.random() * res.length);
+    //   this.selectedBanner = res[randomIndex];
+    // });
+    this.service.getHeroBannerOptions().subscribe({
+      next: (res) => {
+        // Randomly select one of the objects from the array of objects
+        let randomIndex: number = Math.floor(Math.random() * res.length);
+        this.selectedBanner = res[randomIndex];
+      },
+      error: (error) => {
+        console.error('An error occurred: ', error);
+      },
     });
   }
 }
