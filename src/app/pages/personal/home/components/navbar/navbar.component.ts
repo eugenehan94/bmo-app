@@ -16,5 +16,13 @@ export class NavbarComponent implements OnInit {
     this.navbarService.getNavigationOptions().subscribe((res) => {
       this.innerNavbarOptions = res;
     });
+    this.navbarService.getNavigationOptions().subscribe({
+      next: (res) => {
+        this.innerNavbarOptions = res;
+      },
+      error: (error) => {
+        console.error('An error occurred: ', error);
+      },
+    });
   }
 }

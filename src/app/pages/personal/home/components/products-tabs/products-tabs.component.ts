@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductsTabsService } from './products-tabs.service';
 import { TabsType } from 'src/app/core/interfaces';
 
@@ -24,8 +24,13 @@ export class ProductsTabsComponent implements OnInit {
     this.store.select('screenSizeReducer').subscribe((res) => {
       this.currentScreenSize = res.currentScreenSize;
     });
-    this.productsTabService.getTabs().subscribe((res) => {
-      this.tabContents = res;
+    this.productsTabService.getTabs().subscribe({
+      next: (res) => {
+        this.tabContents = res;
+      },
+      error: (error) => {
+        console.error('An error occurred: ', error);
+      },
     });
   }
 }
