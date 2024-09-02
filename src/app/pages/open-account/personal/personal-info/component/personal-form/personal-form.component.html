@@ -3,30 +3,45 @@
     >Chequing Account with Performance Plan</span
   >
   <!-- Form -->
-  <div>
+  <form [formGroup]="personalInfoForm" (ngSubmit)="onSubmit()">
     <div>
-      <h1>Let's get started</h1>
-      <p>Please enter your full legal name</p>
       <div>
-        <div class="personal-first-name-container">
-          <div>
-            <label
-              for="name-block-first-name-element"
-              id="name-block-first-name-label"
-              class="personal-first-name-label"
-              >First name/Given name</label
-            >
-            <div class="personal-first-name-input-container">
-              <input
-                id="name-block-first-name-element"
-                aria-labelledby="name-block-first-name-label"
-                aria-invalid="false"
-                class="personal-first-name-input-field"
-              />
+        <h1>Let's get started</h1>
+        <p>Please enter your full legal name</p>
+        <div>
+          <div class="personal-first-name-container">
+            <div>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>First name / Given name</mat-label>
+                <input matInput formControlName="firstName" required />
+                @if(this.firstName.hasError('required')){
+                <mat-error>Looks like you missed your name</mat-error>
+                }@else if( this.firstName.hasError('minlength')){
+                <mat-error>You'll need to enter at least 2 letters</mat-error>
+                }@else if(this.firstName.hasError('charactersOnly')){
+                <mat-error
+                  >Name contains invalid characters or consecutive
+                  spaces</mat-error
+                >
+                }
+              </mat-form-field>
+              <!-- <label
+                for="name-block-first-name-element"
+                id="name-block-first-name-label"
+                class="personal-first-name-label"
+                >First name/Given name</label
+              >
+              <div class="personal-first-name-input-container">
+                <input
+                  id="name-block-first-name-element"
+                  aria-labelledby="name-block-first-name-label"
+                  aria-invalid="false"
+                  class="personal-first-name-input-field"
+                />
+              </div> -->
             </div>
           </div>
-        </div>
-        <div class="personal-middle-name-container">
+          <!-- <div class="personal-middle-name-container">
           <div>
             <label
               for="name-block-middle-name-element"
@@ -42,29 +57,43 @@
               />
             </div>
           </div>
-        </div>
-        <div class="personal-last-name-container">
-          <div>
-            <label
-              for="name-block-last-name-element"
-              id="name-block-last-name-label"
-              class="personal-last-name-label"
-              >Last name/Family name</label
-            >
-            <div class="personal-last-name-input-container">
-              <input
-                aria-labelledby="name-block-last-name-label"
-                id="name-block-last-name-element"
-                aria-invalid="false"
-                class="personal-last-name-input-field"
-              />
+        </div> -->
+          <div class="personal-last-name-container">
+            <div>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Last name/Family name</mat-label>
+                <input matInput formControlName="lastName" />
+                @if(this.lastName.hasError('required')){
+                <mat-error>Looks like you missed your name</mat-error>
+                }@else if(this.lastName.hasError('minlength')){
+                <mat-error>You'll need to enter at least 2 letters</mat-error>
+                }@else if(this.firstName.hasError('charactersOnly')){
+                <mat-error
+                  >Name contains invalid characters or consecutive
+                  spaces</mat-error
+                >
+                }
+              </mat-form-field>
+              <!-- <label
+                for="name-block-last-name-element"
+                id="name-block-last-name-label"
+                class="personal-last-name-label"
+                >Last name/Family name</label
+              >
+              <div class="personal-last-name-input-container">
+                <input
+                  aria-labelledby="name-block-last-name-label"
+                  id="name-block-last-name-element"
+                  aria-invalid="false"
+                  class="personal-last-name-input-field"
+                />
+              </div> -->
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <!-- <div>
+      <div>
+        <!-- <div>
         <h2>When's your birth date?</h2>
         <div>
           <div>
@@ -82,29 +111,49 @@
           </p>
         </div>
       </div> -->
-    </div>
-  </div>
-  <!-- Form button -->
-  <div>
-    <div class="personal-form-button-inner-container">
-      <div class="personal-form-next-button-container">
-        <button
-          type="button"
-          aria-disabled="false"
-          class="personal-form-next-button-btn"
-        >
-          Next
-        </button>
-      </div>
-      <div class="personal-form-back-button-container">
-        <button
-          type="button"
-          aria-disabled="false"
-          class="personal-form-back-button-btn"
-        >
-          Back
-        </button>
       </div>
     </div>
-  </div>
+    <!-- Form button -->
+    <div>
+      <div
+        class="personal-form-button-inner-container"
+        [ngClass]="{
+          medium: currentScreenSize === 'Medium',
+          large: currentScreenSize === 'Large'
+        }"
+      >
+        <div
+          class="personal-form-next-button-container"
+          [ngClass]="{
+            medium: currentScreenSize === 'Medium',
+            large: currentScreenSize === 'Large'
+          }"
+        >
+          <button
+            type="submit"
+            aria-disabled="false"
+            class="personal-form-next-button-btn"
+          >
+            Next
+          </button>
+        </div>
+        <div
+          class="personal-form-back-button-container"
+          [ngClass]="{
+            medium: currentScreenSize === 'Medium',
+            large: currentScreenSize === 'Large'
+          }"
+        >
+          <button
+            type="button"
+            aria-disabled="false"
+            class="personal-form-back-button-btn"
+            (click)="openDialog()"
+          >
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>

@@ -1,10 +1,86 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { ExitApplicationDialogComponent } from '../exit-application-dialog/exit-application-dialog.component';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  AbstractControl,
+  ValidatorFn,
+} from '@angular/forms';
+//ngrx
+import { Store } from '@ngrx/store';
+import { setScreenSize } from 'src/app/store/app/actions/app.actions';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-personal-form',
   templateUrl: './personal-form.component.html',
-  styleUrls: ['./personal-form.component.css']
+  styleUrls: ['./personal-form.component.css'],
 })
-export class PersonalFormComponent {
+export class PersonalFormComponent implements OnInit {
+  constructor(
+    private store: Store<any>,
+    private breakpointObserver: BreakpointObserver,
+    private dialog: MatDialog
+  ) {}
+  currentScreenSize?: string;
+  personalInfoForm = new FormGroup({
+    firstName: new FormControl('', [
+      Validators.required,
+      Validators.minLength(2),
+      charactersOnlyValidator(),
+    ]),
+    lastName: new FormControl('', [
+      Validators.required,
+      Validators.minLength(2),
+      charactersOnlyValidator(),
+    ]),
+  });
 
+  ngOnInit(): void {
+    this.breakpointObserver
+      .observe([
+        '(max-width: 599.99px)',
+        '(min-width: 600px) and (max-width: 1023.99px)',
+        '(min-width: 1024px)',
+      ])
+      .subscribe((result) => {
+        const breakpoints = result.breakpoints;
+        if (this.breakpointObserver.isMatched('(max-width: 599.99px)')) {
+          this.store.dispatch(setScreenSize({ screenSize: 'Small' }));
+        } else if (
+          this.breakpointObserver.isMatched(
+            '(min-width: 600px) and (max-width:1024px)'
+          )
+        ) {
+          this.store.dispatch(setScreenSize({ screenSize: 'Medium' }));
+        } else {
+          this.store.dispatch(setScreenSize({ screenSize: 'Large' }));
+        }
+      });
+    this.store.select('screenSizeReducer').subscribe((res) => {
+      this.currentScreenSize = res.currentScreenSize;
+    });
+  }
+
+  get firstName(): any {
+    return this.personalInfoForm.get('firstName');
+  }
+  get lastName(): any {
+    return this.personalInfoForm.get('lastName');
+  }
+  onSubmit() {
+    console.log('form: ', this.personalInfoForm);
+    console.log('firstName get: ', this.firstName);
+  }
+  openDialog() {
+    const dialogRef = this.dialog.open(ExitApplicationDialogComponent, {});
+  }
+}
+// Character only validators and also it allows ' and spaces
+export function charactersOnlyValidator(): ValidatorFn {
+  return (control: AbstractControl): { [key: string]: any } | null => {
+    const valid = /^[a-zA-Z' ]+$/.test(control.value);
+    return valid ? null : { charactersOnly: { value: control.value } };
+  };
 }

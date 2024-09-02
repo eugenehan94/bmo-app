@@ -9,6 +9,9 @@
   display: block;
   margin-bottom: 16px;
 }
+mat-form-field {
+  width: 100%;
+}
 .personal-first-name-container {
   width: 100%;
   padding-bottom: 24px;
@@ -109,11 +112,28 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 56px;
+  width: 100%;
+}
+.personal-form-button-inner-container.medium {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.personal-form-button-inner-container.large {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 .personal-form-next-button-container {
   /* order: 1; */
   width: 100%;
   margin-top: 16px;
+}
+.personal-form-next-button-container.medium {
+  width: 160px;
+}
+.personal-form-next-button-container.large {
+  width: 160px;
 }
 .personal-form-next-button-btn {
   background-color: #0075be;
@@ -138,11 +158,19 @@
   padding-right: 32px;
   width: 100%;
 }
-
+.personal-form-next-button-btn.medium {
+  width: 160px;
+}
 .personal-form-back-button-container {
   /* order: 2 */
   width: 100%;
   margin-top: 16px;
+}
+.personal-form-back-button-container.medium {
+  width: 160px;
+}
+.personal-form-back-button-container.large {
+  width: 160px;
 }
 .personal-form-back-button-btn {
   background-color: transparent;
