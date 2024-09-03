@@ -2,12 +2,20 @@
   <div class="dialog-inner-container">
     <div>
       <div>
-        <h2>Are you sure you want to exit the application</h2>
+        <h2 class="dialog-title">
+          Are you sure you want to exit the application
+        </h2>
         <p>Your info won't be saved</p>
       </div>
-      <div>
-        <div><button>Yes, exit</button></div>
-        <div><button>No, continue</button></div>
+      <div class="button-container">
+        <div class="exit-button-container">
+          <button mat-flat-button class="exit-button" (click)="onYesClick()">
+            Yes, exit
+          </button>
+        </div>
+        <div>
+          <button mat-button (click)="onNoClick()">No, continue</button>
+        </div>
       </div>
     </div>
   </div>

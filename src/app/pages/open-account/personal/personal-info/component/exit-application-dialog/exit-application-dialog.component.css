@@ -1,0 +1,27 @@
+.dialog-inner-container {
+  padding: 32px;
+}
+
+.dialog-title {
+  font-size: 28px;
+  margin: 0;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.exit-button-container {
+  margin-bottom: 16px;
+}
+.exit-button.mat-mdc-unelevated-button:not(:disabled) {
+  background-color: #0075be;
+  color: #ffffff;
+  padding: 24px;
+}
+.exit-button {
+  width: 170px;
+  border-radius: 32px;
+}
