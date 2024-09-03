@@ -1,8 +1,17 @@
 <div class="personal-info-container">
   <app-navbar></app-navbar>
-  <div class="personal-info-content-containter">
-    <app-display-image></app-display-image>
-    <app-personal-form></app-personal-form>
+  <div
+    class="personal-info-content-containter"
+    [ngClass]="{
+      medium: currentScreenSize === 'Medium',
+      large: currentScreenSize === 'Large'
+    }"
+  >
+    @if(currentScreenSize === 'Large' || currentScreenSize === 'Medium'){
+    <app-progress-list class="flex-item-1"></app-progress-list>
+    }
+    <app-display-image class="flex-item-2"></app-display-image>
+    <app-personal-form class="flex-item-3"></app-personal-form>
   </div>
   <app-footer></app-footer>
 </div>

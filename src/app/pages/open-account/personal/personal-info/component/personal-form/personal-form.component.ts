@@ -12,6 +12,7 @@ import { Store } from '@ngrx/store';
 import { setScreenSize } from 'src/app/store/app/actions/app.actions';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-personal-form',
   templateUrl: './personal-form.component.html',
@@ -21,7 +22,8 @@ export class PersonalFormComponent implements OnInit {
   constructor(
     private store: Store<any>,
     private breakpointObserver: BreakpointObserver,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private router: Router
   ) {}
   currentScreenSize?: string;
   personalInfoForm = new FormGroup({
@@ -74,7 +76,16 @@ export class PersonalFormComponent implements OnInit {
     console.log('firstName get: ', this.firstName);
   }
   openDialog() {
-    const dialogRef = this.dialog.open(ExitApplicationDialogComponent, {});
+    const dialogRef = this.dialog.open(ExitApplicationDialogComponent, {
+      // css class located at global styles file
+      backdropClass: 'darker-backdrop',
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result === 'Yes') {
+        window.scrollTo(0, 0);
+        this.router.navigate(['/']);
+      }
+    });
   }
 }
 // Character only validators and also it allows ' and spaces

@@ -5,3 +5,32 @@
   margin: 0 16px;
   padding-bottom: 5rem;
 }
+
+.personal-info-content-containter.medium {
+  display: flex;
+  /* max-width: 1010px; */
+  justify-content: center;
+  margin: 2.5rem auto;
+  gap: 0;
+}
+
+.personal-info-content-containter.large {
+  display: flex;
+  max-width: 1010px;
+  justify-content: center;
+  margin: 2.5rem auto;
+  gap: 2rem;
+}
+
+.flex-item-1 {
+  order: 1;
+  flex: 1;
+}
+.flex-item-2 {
+  order: 3;
+  flex: 1;
+}
+.flex-item-3 {
+  order: 2;
+  flex: 2;
+}

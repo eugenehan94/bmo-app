@@ -4,6 +4,7 @@ import { PersonalInfoRoutingModule } from './personal-info-routing.module';
 import { PersonalInfoComponent } from './personal-info.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { ExitApplicationDialogComponent } from './component/exit-application-dialog/exit-application-dialog.component';
+import { ProgressListComponent } from './component/progress-list/progress-list.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { DisplayImageComponent } from './component/display-image/display-image.component';
 import { PersonalFormComponent } from './component/personal-form/personal-form.component';
@@ -18,6 +19,7 @@ import { MaterialDesignModule } from '../../../../shared/material-design/materia
     PersonalFormComponent,
     FooterComponent,
     ExitApplicationDialogComponent,
+    ProgressListComponent,
   ],
   imports: [
     CommonModule,
