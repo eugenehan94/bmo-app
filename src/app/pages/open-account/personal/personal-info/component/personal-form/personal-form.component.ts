@@ -74,7 +74,23 @@ export class PersonalFormComponent implements OnInit {
   onSubmit() {
     console.log('form: ', this.personalInfoForm);
     console.log('firstName get: ', this.firstName);
+    let randomCardNumber = Math.floor(Math.random() * 10000) + 1;
+    console.log('random card number:', randomCardNumber);
+    let randomPassword: string = this.generateRandomText(4);
+    console.log('random password: ', randomPassword);
   }
+  generateRandomText(length: number) {
+    const characters =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(
+        Math.floor(Math.random() * characters.length)
+      );
+    }
+    return result;
+  }
+
   openDialog() {
     const dialogRef = this.dialog.open(ExitApplicationDialogComponent, {
       // css class located at global styles file
