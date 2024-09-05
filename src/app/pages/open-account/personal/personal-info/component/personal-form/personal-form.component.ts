@@ -13,6 +13,8 @@ import { setScreenSize } from 'src/app/store/app/actions/app.actions';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+
+import { PersonalFormService } from './personal-form.service';
 @Component({
   selector: 'app-personal-form',
   templateUrl: './personal-form.component.html',
@@ -23,7 +25,8 @@ export class PersonalFormComponent implements OnInit {
     private store: Store<any>,
     private breakpointObserver: BreakpointObserver,
     private dialog: MatDialog,
-    private router: Router
+    private router: Router,
+    private service: PersonalFormService
   ) {}
   currentScreenSize?: string;
   personalInfoForm = new FormGroup({
@@ -74,21 +77,11 @@ export class PersonalFormComponent implements OnInit {
   onSubmit() {
     console.log('form: ', this.personalInfoForm);
     console.log('firstName get: ', this.firstName);
-    let randomCardNumber = Math.floor(Math.random() * 10000) + 1;
-    console.log('random card number:', randomCardNumber);
-    let randomPassword: string = this.generateRandomText(4);
-    console.log('random password: ', randomPassword);
-  }
-  generateRandomText(length: number) {
-    const characters =
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < length; i++) {
-      result += characters.charAt(
-        Math.floor(Math.random() * characters.length)
-      );
-    }
-    return result;
+    const data = {
+      firstName: this.firstName.value,
+      lastName: this.lastName.value,
+    };
+    this.service.createAccount(data).subscribe();
   }
 
   openDialog() {
