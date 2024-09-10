@@ -78,16 +78,12 @@ export class PersonalFormComponent implements OnInit {
     if (this.personalInfoForm.invalid) {
       return;
     }
-    console.log('form: ', this.personalInfoForm);
-    console.log('firstName get: ', this.firstName);
     const data = {
       firstName: this.firstName.value,
       lastName: this.lastName.value,
     };
     this.service.createAccount(data).subscribe({
-      next: (res) => {
-        console.log('success');
-      },
+      next: (res) => {},
       error: (error) => {
         console.error('An error occurred: ', error);
       },

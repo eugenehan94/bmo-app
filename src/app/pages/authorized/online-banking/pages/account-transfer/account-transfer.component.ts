@@ -63,7 +63,6 @@ export class AccountTransferComponent {
     });
 
     this.userAccounts = this.storageService.getUser().userAccounts;
-    console.log('userAccounts: ', this.userAccounts);
   }
 
   accountMatching() {
@@ -83,7 +82,6 @@ export class AccountTransferComponent {
       return;
     }
 
-    console.log('transferForm: ', this.transferForm);
     this.fromAccountType = this.userAccounts.find((account: any) => {
       return account.AccountNumber === this.transferForm.value.fromAccount;
     });
@@ -119,7 +117,6 @@ export class AccountTransferComponent {
 
     dialogRef.afterClosed().subscribe((result) => {
       window.scrollTo(0, 0);
-      console.log('Dialog closed: ', result);
       if (result === 'Clear') {
         this.transferForm.reset();
         this.formDirective.resetForm();

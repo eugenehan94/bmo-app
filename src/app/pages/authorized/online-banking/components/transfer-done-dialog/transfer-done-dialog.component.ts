@@ -25,7 +25,6 @@ export class TransferDoneDialogComponent implements OnInit {
   toAccount = this.data.toAccount;
   toAccountType = this.data.toAccountType.AccountType;
   ngOnInit(): void {
-    console.log('this.data: ', this.data);
     this.breakpointObserver
       .observe([
         '(max-width: 599.99px)',

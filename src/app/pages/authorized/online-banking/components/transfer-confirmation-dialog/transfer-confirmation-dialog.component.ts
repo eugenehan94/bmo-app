@@ -34,9 +34,7 @@ export class TransferConfirmationDialogComponent {
     private http: HttpClient,
     private storageService: StorageService,
     private secondDialog: MatDialog
-  ) {
-    console.log('Dialog content: ', this.dialogData);
-  }
+  ) {}
   currentScreenSize?: string;
   fromAccount? = this.dialogData.fromAccount;
   fromAccountName? = this.dialogData.fromAccountType.AccountType;
@@ -84,17 +82,9 @@ export class TransferConfirmationDialogComponent {
     this.dialogRef.close();
   }
   confirmTransfer() {
-    console.log(
-      'Confirm Selected: ',
-      this.fromAccountAmount,
-      this.fromAccount,
-      this.toAccountAmount,
-      this.toAccount
-    );
     let roundedFromAccountAmount =
       Math.round(this.fromAccountAmount! * 100) / 100;
     let roundedToAccountAmount = Math.round(this.toAccountAmount! * 100) / 100;
-    console.log('customer ID: ', this.customerId);
     return this.http
       .post(
         'http://localhost:5000/api/v1/sign-in/transferFunds',
@@ -111,10 +101,8 @@ export class TransferConfirmationDialogComponent {
         }
       )
       .subscribe((result) => {
-        console.log('return result: ', result);
         this.storageService.update(result, 'auth-user');
         this.userAccounts = this.storageService.getUser().userAccounts;
-        console.log('userAccounts in transfer funds: ', this.userAccounts);
         const dialogRefTwo = this.secondDialog.open(
           TransferDoneDialogComponent,
           {
@@ -133,7 +121,6 @@ export class TransferConfirmationDialogComponent {
         );
 
         dialogRefTwo.afterClosed().subscribe((result) => {
-          console.log('second dialog closed');
           this.dialogRef.close({ newUserAccountData: this.userAccounts });
         });
       });
