@@ -26,6 +26,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'private-wealth',
+    loadChildren: () =>
+      import('./pages/private-wealth/home/home.module').then(
+        (m) => m.HomeModule
+      ),
+  },
+  {
     path: 'login',
     loadChildren: () =>
       import('./pages/sign-in/online-banking/online-banking.module').then(

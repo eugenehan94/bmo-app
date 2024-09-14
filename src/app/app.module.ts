@@ -21,7 +21,7 @@ import { MaterialDesignModule } from './shared/material-design/material-design.m
 import { PersonalHomeModule } from './pages/personal/home/home.module';
 import { PersonalBankAccountsMainModule } from './pages/personal/bank-accounts/main/main.module';
 import { BusinessHomeModule } from './pages/business/home/home.module';
-
+import { HomeModule as PrivateWealthHomeModule } from './pages/private-wealth/home/home.module';
 import { DirectivesModule } from './core/directives/directives.module';
 
 @NgModule({
@@ -42,6 +42,7 @@ import { DirectivesModule } from './core/directives/directives.module';
     PersonalHomeModule,
     PersonalBankAccountsMainModule,
     BusinessHomeModule,
+    PrivateWealthHomeModule,
     DirectivesModule,
     ReactiveFormsModule,
     FormsModule,
