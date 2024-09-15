@@ -1,1 +1,15 @@
-<p>home works!</p>
+<div>
+  <header role="banner">
+    <a
+      class="home-skip-navigation"
+      tabindex="0"
+      (click)="handleSkipNav($event, 'nav-skip')"
+      (keydown.enter)="handleSkipNav($event, 'nav-skip')"
+      >Skip navigation</a
+    >
+    <app-navbar></app-navbar>
+    <span id="nav-skip" tabindex="-1" class="home-skip-navigation-end"
+      >Navigation skipped</span
+    >
+  </header>
+</div>

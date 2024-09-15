@@ -1,0 +1,40 @@
+<div>
+  <mat-toolbar>
+    <a aria-label="Bank of Montreal logo">
+      <div class="mobile-logo-wrapper">
+        <img
+          src="assets/svg/bmoLogo.svg"
+          alt="Bank of Montreal logo"
+          class="logo-xsmall"
+        />
+      </div>
+    </a>
+    <span class="spacer"></span>
+    <div class="sign-in-btn-container">
+      <button mat-button (click)="toggleSignInMenu()" class="full-height-btn">
+        {{ isMobileSignInMenuOpen ? "Close" : "Sign In" }}
+      </button>
+    </div>
+    <div>
+      <button mat-button (click)="toggleHamburgerMenu()">
+        <span
+          class="close-container"
+          [ngClass]="isMobileMenuOpen ? 'open' : null"
+        >
+          <span
+            class="hamburger-icon-top"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+          <span
+            class="hamburger-icon-middle"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+          <span
+            class="hamburger-icon-bottom"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+        </span>
+      </button>
+    </div>
+  </mat-toolbar>
+</div>
