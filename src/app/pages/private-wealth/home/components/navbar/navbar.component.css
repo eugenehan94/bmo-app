@@ -1,3 +1,9 @@
+mat-toolbar {
+  border-bottom: 1px solid #d9dce1;
+}
+mat-toolbar.medium {
+  height: 101px;
+}
 .mobile-logo-container {
   height: 100%;
   flex-basis: 1;
@@ -11,15 +17,36 @@
   width: 100px;
   height: 27px;
 }
+.logo-medium {
+  width: auto;
+  height: 33px;
+}
 .spacer {
   flex: 1 1 auto;
 }
 .sign-in-btn-container {
   display: flex;
   height: 100%;
+  width: 140px;
+  border-left: 1px solid #d9dce1;
+  border-right: 1px solid #d9dce1;
+}
+.sign-in-btn-container.medium {
+  border-left: transparent;
+  border-right: transparent;
 }
 .full-height-btn {
   flex: 1;
+  height: 100%;
+}
+.sign-in-label-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0075be;
+}
+.hamburger-btn-container {
+  display: flex;
   height: 100%;
 }
 

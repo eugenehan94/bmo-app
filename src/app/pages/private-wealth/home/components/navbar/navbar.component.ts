@@ -1,6 +1,8 @@
 import { Component, OnInit, DestroyRef } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -9,12 +11,15 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 export class NavbarComponent implements OnInit {
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private destroyRef: DestroyRef
+    private destroyRef: DestroyRef,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) {}
 
   currentScreenSize?: string;
   isMobileMenuOpen?: boolean = false;
   isMobileSignInMenuOpen?: boolean = false;
+  originalPath?: string;
   ngOnInit() {
     this.breakpointObserver
       .observe([
@@ -38,12 +43,16 @@ export class NavbarComponent implements OnInit {
           }
         }
       });
+    let path = this.activatedRoute.snapshot.pathFromRoot[1].routeConfig?.path;
+    this.originalPath = path;
   }
 
   toggleSignInMenu() {
+    this.isMobileMenuOpen = false;
     this.isMobileSignInMenuOpen = !this.isMobileSignInMenuOpen;
   }
   toggleHamburgerMenu() {
+    this.isMobileSignInMenuOpen = false;
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 }
