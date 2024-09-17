@@ -1,0 +1,57 @@
+<div>
+  <mat-toolbar>
+    <a
+      aria-label="Bank of Montreal logo"
+      href="/{{ originalPath }}"
+      target="_self"
+    >
+      <div class="mobile-logo-wrapper">
+        <img
+          src="assets/svg/bmoLogo.svg"
+          alt="Bank of Montreal logo"
+          class="logo-xsmall"
+        />
+      </div>
+    </a>
+    <span class="spacer"></span>
+    <div class="sign-in-btn-container">
+      <button mat-button (click)="toggleSignInMenu()" class="full-height-btn">
+        @if(isMobileSignInMenuOpen){
+        <span class="sign-in-label-container">
+          <mat-icon aria-hidden="true">close</mat-icon>
+          <span>Close</span>
+        </span>
+        } @else {
+        <span class="sign-in-label-container">
+          <mat-icon aria-hidden="true">lock_open</mat-icon
+          ><span>Sign In</span> </span
+        >}
+      </button>
+    </div>
+    <div class="hamburger-btn-container">
+      <button
+        mat-button
+        (click)="toggleHamburgerMenu()"
+        class="full-height-btn"
+      >
+        <span
+          class="close-container"
+          [ngClass]="isMobileMenuOpen ? 'open' : null"
+        >
+          <span
+            class="hamburger-icon-top"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+          <span
+            class="hamburger-icon-middle"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+          <span
+            class="hamburger-icon-bottom"
+            [ngClass]="isMobileMenuOpen ? 'open' : null"
+          ></span>
+        </span>
+      </button>
+    </div>
+  </mat-toolbar>
+</div>

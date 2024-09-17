@@ -4,8 +4,15 @@ import { PrivateWealthRoutingModule } from './home-routing.module';
 import { MaterialDesignModule } from 'src/app/shared/material-design/material-design.module';
 import { HomeComponent } from './home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavbarMobileComponent } from './components/navbar-mobile/navbar-mobile.component';
+import { NavbarMediumComponent } from './components/navbar-medium/navbar-medium.component';
 @NgModule({
-  declarations: [HomeComponent, NavbarComponent],
+  declarations: [
+    HomeComponent,
+    NavbarComponent,
+    NavbarMobileComponent,
+    NavbarMediumComponent,
+  ],
   imports: [CommonModule, PrivateWealthRoutingModule, MaterialDesignModule],
 })
 export class HomeModule {}
