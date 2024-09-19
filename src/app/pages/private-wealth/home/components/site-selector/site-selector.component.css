@@ -1,0 +1,12 @@
+.full-height-btn {
+  /* flex: 1; */
+  height: 100%;
+}
+.site-selector-button {
+  border-right: 1px solid #d9dce1;
+}
+.site-selector-button-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

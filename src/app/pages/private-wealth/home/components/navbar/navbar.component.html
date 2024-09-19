@@ -8,4 +8,6 @@
   [(isMobileMenuOpen)]="isMobileMenuOpen"
   [(isMobileSignInMenuOpen)]="isMobileSignInMenuOpen"
 ></app-navbar-medium>
+} @else if (currentScreenSize === 'Large'){
+<app-navbar-large></app-navbar-large>
 }

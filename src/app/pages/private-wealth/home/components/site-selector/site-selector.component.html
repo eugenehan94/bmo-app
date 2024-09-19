@@ -1,0 +1,19 @@
+<button
+  mat-button
+  [matMenuTriggerFor]="siteSelector"
+  #siteSelectorTrigger="matMenuTrigger"
+  class="full-height-btn site-selector-button"
+>
+  <span class="site-selector-button-text">
+    Private Wealth @if(siteSelectorTrigger.menuOpen){
+    <mat-icon>expand_less</mat-icon>}@else {
+    <mat-icon>expand_more</mat-icon>
+    }
+  </span>
+</button>
+
+<mat-menu #siteSelector="matMenu">
+  <button mat-menu-item>Personal</button>
+  <button mat-menu-item>Business</button>
+  <button mat-menu-item>Private Wealth</button>
+</mat-menu>

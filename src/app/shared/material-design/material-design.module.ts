@@ -21,6 +21,7 @@ import { NativeDateAdapter } from '@angular/material/core';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   declarations: [],
   imports: [CommonModule, MatNativeDateModule],
@@ -43,6 +44,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatFormFieldModule,
     MatDialogModule,
     MatDividerModule,
+    MatMenuModule,
   ],
   providers: [NativeDateAdapter],
 })
