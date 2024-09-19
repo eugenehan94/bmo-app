@@ -12,8 +12,12 @@
   </span>
 </button>
 
-<mat-menu #siteSelector="matMenu">
-  <button mat-menu-item>Personal</button>
-  <button mat-menu-item>Business</button>
-  <button mat-menu-item>Private Wealth</button>
+<mat-menu #siteSelector="matMenu" yPosition="below">
+  <a mat-menu-item [routerLink]="['/']">Personal</a>
+  <a mat-menu-item [routerLink]="['/business']">Business</a>
+  <a mat-menu-item>Private Wealth</a>
+  <a mat-menu-item>Commercial</a>
+  <a mat-menu-item>Capital Markets</a>
+  <a mat-menu-item>Global Asset Management</a>
+  <a mat-menu-item>About BMO</a>
 </mat-menu>
