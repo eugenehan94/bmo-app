@@ -9,6 +9,7 @@ import { NavbarMediumComponent } from './components/navbar-medium/navbar-medium.
 import { NavbarLargeComponent } from './components/navbar-large/navbar-large.component';
 import { SiteSelectorComponent } from './components/site-selector/site-selector.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { CountrySelectorComponent } from './components/country-selector/country-selector.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -18,6 +19,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     NavbarLargeComponent,
     SiteSelectorComponent,
     SearchBarComponent,
+    CountrySelectorComponent,
   ],
   imports: [CommonModule, PrivateWealthRoutingModule, MaterialDesignModule],
 })

@@ -1,23 +1,134 @@
-<button
-  mat-button
-  [matMenuTriggerFor]="siteSelector"
-  #siteSelectorTrigger="matMenuTrigger"
-  class="full-height-btn site-selector-button"
->
-  <span class="site-selector-button-text">
-    Private Wealth @if(siteSelectorTrigger.menuOpen){
-    <mat-icon>expand_less</mat-icon>}@else {
-    <mat-icon>expand_more</mat-icon>
-    }
-  </span>
-</button>
-
-<mat-menu #siteSelector="matMenu" yPosition="below">
-  <a mat-menu-item [routerLink]="['/']">Personal</a>
-  <a mat-menu-item [routerLink]="['/business']">Business</a>
-  <a mat-menu-item>Private Wealth</a>
-  <a mat-menu-item>Commercial</a>
-  <a mat-menu-item>Capital Markets</a>
-  <a mat-menu-item>Global Asset Management</a>
-  <a mat-menu-item>About BMO</a>
-</mat-menu>
+<div class="site-selector-container">
+  <div class="site-selector-wrapper">
+    <label class="site-selector-label">Site Selector</label>
+    <div
+      tabindex="0"
+      role="combobox"
+      [attr.aria-expanded]="isSelectedSiteOpen"
+      aria-controls="site-selector-dropdown-list"
+      aria-haspopup="listbox"
+      aria-labelledby="site-selector-label"
+      [attr.aria-activedescendant]="ariaActiveDescendent"
+      class="site-select-wrapper open"
+      (click)="handleSelectedSiteMenuClick($event)"
+      (keyup.enter)="handleSelectedSiteMenuClick($event)"
+      (keydown.Space)="handleSelectedSiteMenuClick($event)"
+      [ngClass]="{ open: isSelectedSiteOpen }"
+    >
+      <span>{{ selectedSiteOption }}</span>
+      <div class="expand-more-chevron-wrapper">
+        <mat-icon
+          class="expand-more-chevron"
+          [ngClass]="{ open: isSelectedSiteOpen }"
+          >expand_more</mat-icon
+        >
+      </div>
+    </div>
+    <ul
+      role="listbox"
+      aria-labelledby="site-selector-label"
+      id="site-selector-dropdown-list"
+      class="site-select-list"
+      tabindex="-1"
+      *ngIf="isSelectedSiteOpen"
+    >
+      <!-- https://angular.io/api/common/NgForOf#local-variables -->
+      <li
+        role="option"
+        aria-disabled="false"
+        id="{{ 'site-selector_' + 0 }}"
+        aria-selected="false"
+      >
+        <a
+          routerLink="/"
+          aria-label="Personal"
+          (focus)="optionOnFocus(0)"
+          (click)="toggleSiteSelector()"
+          >Personal</a
+        >
+      </li>
+      <li
+        role="option"
+        aria-disabled="false"
+        id="{{ 'site-selector_' + 1 }}"
+        aria-selected="false"
+      >
+        <a
+          routerLink="/business"
+          aria-label="Business"
+          (focus)="optionOnFocus(1)"
+          (click)="toggleSiteSelector()"
+          >Business</a
+        >
+      </li>
+      <li
+        role="option"
+        aria-disabled="false"
+        id="{{ 'site-selector_' + 2 }}"
+        aria-selected="true"
+      >
+        <a (focus)="optionOnFocus(2)">Private Wealth</a>
+      </li>
+      <li
+        role="option"
+        aria-disabled="false"
+        id="{{ 'site-selector_' + 3 }}"
+        aria-selected="false"
+      >
+        <a
+          href="https://commercial.bmo.com/en/ca/?icid=tl-FEAT2953BRND4-AJBMOH17"
+          aria-label="Commercial"
+          target="_blank"
+          (focus)="optionOnFocus(3)"
+          (click)="toggleSiteSelector()"
+          >Commercial</a
+        >
+      </li>
+      <li
+        role="option"
+        aria-disabled="false"
+        id="{{ 'site-selector_' + 4 }}"
+        aria-selected="false"
+      >
+        <a
+          href="https://capitalmarkets.bmo.com/en/?icid=tl-FEAT2953BRND4-AJBMOH18"
+          aria-label="Capital Markets"
+          target="_blank"
+          (focus)="optionOnFocus(4)"
+          (click)="toggleSiteSelector()"
+          >Capital Markets</a
+        >
+      </li>
+      <li
+        role="option"
+        aria-disabled="false"
+        id="{{ 'site-selector_' + 5 }}"
+        aria-selected="false"
+      >
+        <a
+          href="https://www.bmogam.com/?icid=tl-FEAT2953BRND4-AJBMOH19"
+          aria-label="Global Asset Management"
+          target="_blank"
+          (focus)="optionOnFocus(5)"
+          (click)="toggleSiteSelector()"
+          >Global Asset Management</a
+        >
+      </li>
+      <li
+        role="option"
+        aria-disabled="false"
+        id="{{ 'site-selector_' + 6 }}"
+        aria-selected="false"
+      >
+        <a
+          href="https://www.bmo.com/main/about-bmo/"
+          aria-label="About BMO"
+          target="_blank"
+          (focus)="optionOnFocus(6)"
+          (click)="toggleSiteSelector()"
+          >About BMO</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
