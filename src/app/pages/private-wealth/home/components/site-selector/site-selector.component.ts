@@ -1,29 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NavbarService } from 'src/app/shared/components/navbar/navbar.service';
-import { SiteOptionsType } from 'src/app/core/interfaces';
-import { DesktopService } from 'src/app/shared/components/navbar/desktop/desktop.service';
+
 @Component({
   selector: 'app-site-selector',
   templateUrl: './site-selector.component.html',
   styleUrl: './site-selector.component.css',
 })
 export class SiteSelectorComponent {
-  constructor(
-    private navbarService: NavbarService,
-    private desktopService: DesktopService,
-    private activatedRoute: ActivatedRoute
-  ) {}
-  isSelectedSiteOpen?: boolean;
+  constructor(private activatedRoute: ActivatedRoute) {}
+  @Input() isSelectedSiteOpen?: boolean;
+  @Output() isSelectedSiteOpenChange = new EventEmitter<boolean>();
+  @Input() isCountrySelectMenuOpen?: boolean;
+  @Output() isCountrySelectMenuOpenChange = new EventEmitter<boolean>();
   selectedSiteOption?: string;
-  siteOptions: SiteOptionsType[] = this.navbarService.siteOptions;
   ariaActiveDescendent?: string = '';
 
   ngOnInit(): void {
-    this.desktopService.isSelectedSiteOpen.subscribe((isOpen: boolean) => {
-      this.isSelectedSiteOpen = isOpen;
-    });
-
     let path = this.activatedRoute.snapshot.pathFromRoot[1].routeConfig?.path;
     let pathCapital = `${path?.charAt(0).toUpperCase()}` + `${path?.slice(1)}`;
     this.selectedSiteOption = pathCapital;
@@ -31,13 +23,16 @@ export class SiteSelectorComponent {
 
   handleSelectedSiteMenuClick(event: any): void {
     event.preventDefault();
-    this.desktopService.setIsSelectedSiteOpen(!this.isSelectedSiteOpen);
+    this.isSelectedSiteOpenChange.emit(!this.isSelectedSiteOpen);
+    if (this.isCountrySelectMenuOpen) {
+      this.isCountrySelectMenuOpenChange.emit(false);
+    }
   }
 
   optionOnFocus(i: number): void {
     this.ariaActiveDescendent = 'site-selector_' + i;
   }
   toggleSiteSelector(): any {
-    this.desktopService.setIsSelectedSiteOpen(!this.isSelectedSiteOpen);
+    this.isSelectedSiteOpenChange.emit(!this.isSelectedSiteOpen);
   }
 }

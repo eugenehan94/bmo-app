@@ -5,4 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './navbar-large.component.html',
   styleUrl: './navbar-large.component.css',
 })
-export class NavbarLargeComponent {}
+export class NavbarLargeComponent {
+  isSelectedSiteOpen?: boolean = false;
+  isCountrySelectMenuOpen?: boolean = false;
+  isLanguageSelectMenuOpen?: boolean = false;
+  isSigninMenuOpen?: boolean = false;
+}

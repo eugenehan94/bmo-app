@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { NavbarService } from 'src/app/shared/components/navbar/navbar.service';
 import { CountryOptionsType } from 'src/app/core/interfaces';
-import { DesktopService } from 'src/app/shared/components/navbar/desktop/desktop.service';
 
 @Component({
   selector: 'app-country-selector',
@@ -9,24 +8,21 @@ import { DesktopService } from 'src/app/shared/components/navbar/desktop/desktop
   styleUrl: './country-selector.component.css',
 })
 export class CountrySelectorComponent {
-  constructor(
-    private navbarService: NavbarService,
-    private desktopService: DesktopService
-  ) {}
-  isCountrySelectMenuOpen?: boolean;
+  constructor(private navbarService: NavbarService) {}
+  @Input() isCountrySelectMenuOpen?: boolean;
+  @Output() isCountrySelectMenuOpenChange = new EventEmitter<boolean>();
+  @Input() isSelectedSiteOpen?: boolean;
+  @Output() isSelectedSiteOpenChange = new EventEmitter<boolean>();
   countryOptions: CountryOptionsType[] = this.navbarService.countryOptions;
   ariaActiveDescendent?: string = '';
 
-  ngOnInit(): void {
-    this.desktopService.isCountrySelectMenuOpen.subscribe((isOpen: boolean) => {
-      this.isCountrySelectMenuOpen = isOpen;
-    });
-  }
+  ngOnInit(): void {}
   handleCountrySelectMenuClick(event: any): void {
     event.preventDefault();
-    this.desktopService.setIsCountrySelectMenuOpen(
-      !this.isCountrySelectMenuOpen
-    );
+    this.isCountrySelectMenuOpenChange.emit(!this.isCountrySelectMenuOpen);
+    if (this.isSelectedSiteOpen) {
+      this.isSelectedSiteOpenChange.emit(false);
+    }
   }
   optionOnFocus(number: number): void {
     this.ariaActiveDescendent = 'country_selector_' + number;

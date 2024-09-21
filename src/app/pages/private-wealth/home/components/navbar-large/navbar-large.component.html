@@ -1,9 +1,21 @@
 <div>
   <mat-toolbar>
     <mat-toolbar-row class="first-mat-toolbar-row">
-      <app-site-selector></app-site-selector>
-      <app-search-bar></app-search-bar>
-      <app-country-selector></app-country-selector>
+      <app-site-selector
+        [(isSelectedSiteOpen)]="isSelectedSiteOpen"
+        [(isCountrySelectMenuOpen)]="isCountrySelectMenuOpen"
+      ></app-site-selector>
+      <app-search-bar style="flex: 1"></app-search-bar>
+      <div class="navbar-btns-container">
+        <app-country-selector
+          [(isSelectedSiteOpen)]="isSelectedSiteOpen"
+          [(isCountrySelectMenuOpen)]="isCountrySelectMenuOpen"
+        ></app-country-selector>
+        <app-language-selector
+          [(isLanguageSelectMenuOpen)]="isLanguageSelectMenuOpen"
+        ></app-language-selector>
+        <app-sign-in [(isSigninMenuOpen)]="isSigninMenuOpen"></app-sign-in>
+      </div>
     </mat-toolbar-row>
     <mat-toolbar-row></mat-toolbar-row>
   </mat-toolbar>

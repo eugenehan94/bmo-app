@@ -8,3 +8,7 @@ app-site-selector {
 .first-mat-toolbar-row {
   height: 44px;
 }
+.navbar-btns-container {
+  display: flex;
+  justify-content: flex-end;
+}

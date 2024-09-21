@@ -10,6 +10,8 @@ import { NavbarLargeComponent } from './components/navbar-large/navbar-large.com
 import { SiteSelectorComponent } from './components/site-selector/site-selector.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { CountrySelectorComponent } from './components/country-selector/country-selector.component';
+import { LanguageSelectorComponent } from './components/language-selector/language-selector.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -20,6 +22,8 @@ import { CountrySelectorComponent } from './components/country-selector/country-
     SiteSelectorComponent,
     SearchBarComponent,
     CountrySelectorComponent,
+    LanguageSelectorComponent,
+    SignInComponent,
   ],
   imports: [CommonModule, PrivateWealthRoutingModule, MaterialDesignModule],
 })

@@ -1,0 +1,90 @@
+<div class="signin-btn-container">
+  <div
+    class="signin-btn-inner-container"
+    [ngClass]="isSigninMenuOpen ? 'open' : null"
+  >
+    <button
+      class="signin-btn"
+      id="signin-btn"
+      (click)="handleSigninMenuClick()"
+      (focus)="handleFocu()"
+      aria-expanded="false"
+      aria-label="Toggle sign in menu navigation"
+      aria-controls="header-sign-in-tablet-dropdown"
+    >
+      <span
+        class="signin-btn-inner-wrapper"
+        [ngClass]="isSigninMenuOpen ? ' open' : null"
+        ><span><mat-icon aria-hidden="true">lock</mat-icon></span
+        ><span class="signin-btn-signin-text">Sign In</span
+        ><span> <mat-icon aria-hidden="true">expand_more</mat-icon></span></span
+      >
+    </button>
+    <div
+      *ngIf="isSigninMenuOpen"
+      class="signin-btn-menu-container"
+      id="header-sign-in-tablet-dropdown"
+    >
+      <div class="signin-btn-menu-inner-container">
+        <div class="signin-btn-online-banking-wrapper">
+          <a
+            [routerLink]="['/login']"
+            href="https://www1.bmo.com/onlinebanking/cgi-bin/netbnx/NBmain?product=5"
+            class="signin-btn-online-banking-link"
+            aria-label="Access online banking, opens in new tab"
+          >
+            <div>Sign in to Online Banking</div>
+            <div>
+              <mat-icon aria-hidden="true">chevron_right</mat-icon>
+            </div>
+          </a>
+        </div>
+        <div class="signin-btn-register-container">
+          <span class="signin-btn-register-wrapper">
+            <p style="margin: 0px; color: #9da2a8">
+              Register for online banking with a
+            </p>
+            <p>
+              <a
+                class="signin-btn-register-link"
+                href="https://www1.bmo.com/selfreg/#/step0"
+                target="_blank"
+                rel="nofollow"
+                >BMO Debit Card</a
+              >
+              or
+              <a
+                class="signin-btn-register-link"
+                href="/online/creditcards/registration/?lang=en"
+                target="_blank"
+                rel="nofollow"
+                >Credit Card</a
+              >
+            </p>
+          </span>
+        </div>
+        <ul class="signin-btn-dropdown-list" role="list">
+          <li
+            *ngFor="let signInOption of signInMenuOptions; let last = last"
+            role="listitem"
+          >
+            <a
+              class="signin-btn-dropdown-option-link"
+              [attr.aria-label]="signInOption.ariaLabel"
+              href="{{ signInOption.link }}"
+              target="_blank"
+              ><div>{{ signInOption.title }}</div></a
+            >
+            <button
+              *ngIf="last"
+              (focus)="backtoSignBtn()"
+              class="desktop-back-to-signin-btn"
+            >
+              Last
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
