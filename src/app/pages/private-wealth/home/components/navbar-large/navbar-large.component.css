@@ -4,11 +4,49 @@ mat-toolbar-row {
 app-site-selector {
   height: 100%;
 }
-
+mat-list-item {
+  width: auto;
+  padding: 0 12px;
+  height: 100% !important;
+  border: 3px solid transparent;
+}
+mat-list-item:hover::before {
+  background: transparent !important;
+}
+mat-list-item:hover {
+  border-bottom: 3px solid #0075be;
+}
 .first-mat-toolbar-row {
   height: 44px;
 }
 .navbar-btns-container {
   display: flex;
   justify-content: flex-end;
+}
+.logo-wrapper {
+  margin-top: 10px;
+  padding-left: 1rem;
+}
+.logo-large {
+  width: auto;
+  height: 33px;
+}
+.horizontal-list {
+  display: flex;
+  flex-direction: row;
+  margin-left: 12px;
+  height: 100%;
+}
+.mat-nav-list-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border: 3px solid transparent;
+  margin: 0 8px;
+}
+.mat-nav-list-link:hover {
+  border-bottom: 3px solid #0075be;
+}
+.mat-nav-list-link:focus {
+  border-bottom: 3px solid #0075be;
 }

@@ -12,6 +12,10 @@ export class SiteSelectorComponent {
   @Output() isSelectedSiteOpenChange = new EventEmitter<boolean>();
   @Input() isCountrySelectMenuOpen?: boolean;
   @Output() isCountrySelectMenuOpenChange = new EventEmitter<boolean>();
+  @Input() isLanguageSelectMenuOpen?: boolean;
+  @Output() isLanguageSelectMenuOpenChange = new EventEmitter<boolean>();
+  @Input() isSigninMenuOpen?: boolean;
+  @Output() isSigninMenuOpenChange = new EventEmitter<boolean>();
   selectedSiteOption?: string;
   ariaActiveDescendent?: string = '';
 
@@ -26,6 +30,12 @@ export class SiteSelectorComponent {
     this.isSelectedSiteOpenChange.emit(!this.isSelectedSiteOpen);
     if (this.isCountrySelectMenuOpen) {
       this.isCountrySelectMenuOpenChange.emit(false);
+    }
+    if (this.isLanguageSelectMenuOpen) {
+      this.isLanguageSelectMenuOpenChange.emit(false);
+    }
+    if (this.isSigninMenuOpen) {
+      this.isSigninMenuOpenChange.emit(false);
     }
   }
 

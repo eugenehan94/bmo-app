@@ -4,19 +4,74 @@
       <app-site-selector
         [(isSelectedSiteOpen)]="isSelectedSiteOpen"
         [(isCountrySelectMenuOpen)]="isCountrySelectMenuOpen"
+        [(isLanguageSelectMenuOpen)]="isLanguageSelectMenuOpen"
+        [(isSigninMenuOpen)]="isSigninMenuOpen"
       ></app-site-selector>
       <app-search-bar style="flex: 1"></app-search-bar>
       <div class="navbar-btns-container">
         <app-country-selector
           [(isSelectedSiteOpen)]="isSelectedSiteOpen"
           [(isCountrySelectMenuOpen)]="isCountrySelectMenuOpen"
+          [(isLanguageSelectMenuOpen)]="isLanguageSelectMenuOpen"
+          [(isSigninMenuOpen)]="isSigninMenuOpen"
         ></app-country-selector>
         <app-language-selector
+          [(isSelectedSiteOpen)]="isSelectedSiteOpen"
+          [(isCountrySelectMenuOpen)]="isCountrySelectMenuOpen"
           [(isLanguageSelectMenuOpen)]="isLanguageSelectMenuOpen"
+          [(isSigninMenuOpen)]="isSigninMenuOpen"
         ></app-language-selector>
-        <app-sign-in [(isSigninMenuOpen)]="isSigninMenuOpen"></app-sign-in>
+        <app-sign-in
+          [(isSelectedSiteOpen)]="isSelectedSiteOpen"
+          [(isCountrySelectMenuOpen)]="isCountrySelectMenuOpen"
+          [(isLanguageSelectMenuOpen)]="isLanguageSelectMenuOpen"
+          [(isSigninMenuOpen)]="isSigninMenuOpen"
+        ></app-sign-in>
       </div>
     </mat-toolbar-row>
-    <mat-toolbar-row></mat-toolbar-row>
+    <mat-toolbar-row>
+      <a
+        aria-label="Bank of Montreal logo"
+        href="/{{ originalPath }}"
+        target="_self"
+      >
+        <div class="logo-wrapper">
+          <img
+            src="assets/svg/bmo-private-wealth-blue-on-transparent-en.svg"
+            alt="Bank of Montreal private wealth logo"
+            class="logo-large"
+          />
+        </div>
+      </a>
+      <mat-nav-list class="horizontal-list">
+        <a
+          matListItemTitle
+          href="https://www.bmo.com/en-ca/main/privatewealth/about-us/"
+          target="_blank"
+          class="mat-nav-list-link"
+          >Why BMO</a
+        >
+
+        <mat-list-item [disableRipple]="true">
+          <a matListItemTitle>Our Solutions</a>
+        </mat-list-item>
+
+        <a
+          matListItemTitle
+          href="https://privatewealth-insights.bmo.com/"
+          target="_blank"
+          class="mat-nav-list-link"
+          >Insights</a
+        >
+
+        <a
+          matListItemTitle
+          href="https://www.bmo.com/en-ca/main/privatewealth/contact/"
+          target="_blank"
+          class="mat-nav-list-link"
+          >Find a Wealth Professional</a
+        >
+      </mat-nav-list>
+    </mat-toolbar-row>
   </mat-toolbar>
 </div>

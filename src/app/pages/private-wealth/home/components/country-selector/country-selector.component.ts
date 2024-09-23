@@ -13,6 +13,10 @@ export class CountrySelectorComponent {
   @Output() isCountrySelectMenuOpenChange = new EventEmitter<boolean>();
   @Input() isSelectedSiteOpen?: boolean;
   @Output() isSelectedSiteOpenChange = new EventEmitter<boolean>();
+  @Input() isLanguageSelectMenuOpen?: boolean;
+  @Output() isLanguageSelectMenuOpenChange = new EventEmitter<boolean>();
+  @Input() isSigninMenuOpen?: boolean;
+  @Output() isSigninMenuOpenChange = new EventEmitter<boolean>();
   countryOptions: CountryOptionsType[] = this.navbarService.countryOptions;
   ariaActiveDescendent?: string = '';
 
@@ -22,6 +26,12 @@ export class CountrySelectorComponent {
     this.isCountrySelectMenuOpenChange.emit(!this.isCountrySelectMenuOpen);
     if (this.isSelectedSiteOpen) {
       this.isSelectedSiteOpenChange.emit(false);
+    }
+    if (this.isLanguageSelectMenuOpen) {
+      this.isLanguageSelectMenuOpenChange.emit(false);
+    }
+    if (this.isSigninMenuOpen) {
+      this.isSigninMenuOpenChange.emit(false);
     }
   }
   optionOnFocus(number: number): void {
