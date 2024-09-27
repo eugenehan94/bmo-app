@@ -1,0 +1,112 @@
+.sign-in-btn-container {
+  display: flex;
+  height: 100%;
+  width: 140px;
+  border-left: 1px solid #d9dce1;
+  border-right: 1px solid #d9dce1;
+}
+.full-height-btn {
+  flex: 1;
+  height: 100%;
+}
+.sign-in-label-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0075be;
+}
+
+.sign-in-dropdown {
+  position: absolute;
+  top: 56px;
+  right: 0px;
+  width: 0%;
+  height: auto;
+  min-height: calc(-56.9886px + 100vh);
+  transition: width 0.2s;
+  box-sizing: border-box;
+  display: flex;
+  /* justify-content: flex-end; */
+  z-index: 801;
+}
+.sign-in-dropdown.open {
+  width: 100%;
+}
+.sign-in-inner-container {
+  transition: width 0.2s;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f5f6f7;
+  /* color: #fefefe; */
+  overflow: hidden;
+  height: 100%;
+}
+.sign-in-inner-container.open {
+  transition: width 0.2s;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f5f6f7;
+  /* color: #fefefe; */
+  overflow: initial;
+  height: auto;
+}
+.online-banking-container {
+  background-color: #fefefe;
+  padding: 1.5rem 1.5rem 0px;
+  box-sizing: inherit;
+}
+.online-banking-link {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+  font-weight: 700;
+  display: flex;
+  color: #0075be;
+  text-align: left;
+}
+.register-container {
+  background-color: #fefefe;
+  color: #646c76;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #d9dce1;
+  box-sizing: inherit;
+}
+.register-p-wrapper {
+  padding-bottom: 0;
+  overflow-wrap: break-word;
+}
+.register-paragraph-tag {
+  margin: 0;
+  line-height: 24p;
+  padding-left: 0px;
+  font-size: inherit;
+}
+.register-link {
+  line-height: 0px;
+  color: #0075be;
+  margin-bottom: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.sign-in-menu-ul {
+  margin: 0;
+  padding: 1.5rem 1.5rem 100px;
+  background-color: #f5f6f7;
+}
+.sign-in-menu-li {
+  list-style: none;
+}
+.sign-in-menu-li-link {
+  color: #001928;
+  letter-spacing: 0.15px;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  display: flex;
+  text-decoration: none;
+}

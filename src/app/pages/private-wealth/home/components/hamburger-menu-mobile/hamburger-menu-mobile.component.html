@@ -1,0 +1,54 @@
+<div class="hamburger-btn-container">
+  <button
+    #hamburgerMenuBtn
+    mat-button
+    (click)="toggleHamburgerMenu()"
+    class="full-height-btn"
+  >
+    <span class="close-container" [ngClass]="isMobileMenuOpen ? 'open' : null">
+      <span
+        class="hamburger-icon-top"
+        [ngClass]="isMobileMenuOpen ? 'open' : null"
+      ></span>
+      <span
+        class="hamburger-icon-middle"
+        [ngClass]="isMobileMenuOpen ? 'open' : null"
+      ></span>
+      <span
+        class="hamburger-icon-bottom"
+        [ngClass]="isMobileMenuOpen ? 'open' : null"
+      ></span>
+    </span>
+  </button>
+  <div class="hamburger-menu-container" [ngClass]="{ open: isMobileMenuOpen }">
+    <div>
+      <div>
+        <!-- Search bar -->
+        <div>
+          <div>
+            <div>
+              <form>
+                <div>
+                  <label>Search box</label>
+                  <input
+                    autocomplete="off"
+                    placeholder="Search"
+                    role="combobox"
+                    aria-label="Search"
+                    aria-autocomplete="list"
+                    aria-expanded="false"
+                    aria-labelledby="header-search-mobile-label"
+                    aria-owns="header-search-mobile-list"
+                    aria-activedescendant=""
+                    type="text"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</div>

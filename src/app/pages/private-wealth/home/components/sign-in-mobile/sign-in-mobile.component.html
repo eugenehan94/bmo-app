@@ -1,0 +1,81 @@
+<div class="sign-in-btn-container">
+  <button
+    #signInBtn
+    mat-button
+    (click)="toggleSignInMenu()"
+    (keydown)="onKeyDown($event)"
+    class="full-height-btn"
+    id="sign-in-btn"
+  >
+    @if(isMobileSignInMenuOpen){
+    <span class="sign-in-label-container">
+      <mat-icon aria-hidden="true">close</mat-icon>
+      <span>Close</span>
+    </span>
+    } @else {
+    <span class="sign-in-label-container">
+      <mat-icon aria-hidden="true">lock_open</mat-icon
+      ><span>Sign In</span> </span
+    >}
+  </button>
+  <div class="sign-in-dropdown" [ngClass]="{ open: isMobileSignInMenuOpen }">
+    <div
+      class="sign-in-inner-container"
+      [ngClass]="{ open: isMobileSignInMenuOpen }"
+    >
+      <div class="online-banking-container">
+        <a
+          [routerLink]="['/login']"
+          aria-label="Access online banking"
+          target="_self"
+          class="online-banking-link"
+        >
+          <div>Online Banking</div>
+          <div aria-hidden="true"><mat-icon>chevron_right</mat-icon></div>
+        </a>
+      </div>
+      <div lang="en" class="register-container">
+        <span class="register-p-wrapper">
+          <p class="register-paragraph-tag">
+            Register for online banking with
+            <a
+              href="https://www1.bmo.com/selfreg/#/step0"
+              target="_blank"
+              rel="nofollow"
+              class="register-link"
+              >BMO Debit Card</a
+            >
+            or
+            <a
+              href="https://www.bmo.com/online/creditcards/registration/?lang=en"
+              target="_blank"
+              rel="nofollow"
+              class="register-link"
+              >Credit Card</a
+            >
+          </p>
+        </span>
+      </div>
+      <div>
+        <ul role="list" aria-hidden="false" class="sign-in-menu-ul">
+          <li
+            *ngFor="let signInMenuOption of signInMenuOptions; let last = last"
+            #signInListItem
+            role="listitem"
+            aria-hidden="false"
+            class="sign-in-menu-li"
+          >
+            <a
+              href="{{ signInMenuOptions.href }}"
+              [attr.aria-label]="signInMenuOptions.ariaLabel"
+              target="_blank"
+              (keydown)="onKeyDownSignInList($event, last)"
+              class="sign-in-menu-li-link"
+              >{{ signInMenuOption.text }}</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

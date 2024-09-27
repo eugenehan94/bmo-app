@@ -12,6 +12,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { CountrySelectorComponent } from './components/country-selector/country-selector.component';
 import { LanguageSelectorComponent } from './components/language-selector/language-selector.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignInMobileComponent } from './components/sign-in-mobile/sign-in-mobile.component';
+import { HamburgerMenuMobileComponent } from './components/hamburger-menu-mobile/hamburger-menu-mobile.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -24,6 +26,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
     CountrySelectorComponent,
     LanguageSelectorComponent,
     SignInComponent,
+    SignInMobileComponent,
+    HamburgerMenuMobileComponent,
   ],
   imports: [CommonModule, PrivateWealthRoutingModule, MaterialDesignModule],
 })
