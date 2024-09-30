@@ -4,6 +4,7 @@
     mat-button
     (click)="toggleHamburgerMenu()"
     class="full-height-btn"
+    id="mobile-hamburger-menu-btn"
   >
     <span class="close-container" [ngClass]="isMobileMenuOpen ? 'open' : null">
       <span
@@ -21,16 +22,28 @@
     </span>
   </button>
   <div class="hamburger-menu-container" [ngClass]="{ open: isMobileMenuOpen }">
-    <div>
-      <div>
+    <div
+      class="hamburger-first-group-container"
+      [ngClass]="{ open: isMobileMenuOpen }"
+    >
+      <div
+        class="hamburger-first-group-inner-container"
+        [ngClass]="{ open: isMobileMenuOpen }"
+      >
         <!-- Search bar -->
         <div>
           <div>
             <div>
               <form>
-                <div>
-                  <label>Search box</label>
+                <div class="search-form-inner-container">
+                  <label
+                    class="search-label"
+                    aria-hidden="true"
+                    for="header-search-mobile"
+                    >Search box</label
+                  >
                   <input
+                    #searchInput
                     autocomplete="off"
                     placeholder="Search"
                     role="combobox"
@@ -41,14 +54,64 @@
                     aria-owns="header-search-mobile-list"
                     aria-activedescendant=""
                     type="text"
+                    (click)="handleSearchMenuSelected(true)"
+                    (focus)="handleSearchMenuSelected(true)"
+                    class="search-input"
                   />
+                  <button
+                    aria-label="Cancel, clear search results and close"
+                    type="reset"
+                    class="search-cancel-btn"
+                    [ngClass]="{ show: isSearchMenuSelected }"
+                    (click)="handleSearchMenuSelected(false)"
+                    (focusout)="handleSearchCancelBtnFocusout()"
+                  >
+                    <span>Cancel</span>
+                    <span></span>
+                  </button>
                 </div>
               </form>
             </div>
           </div>
         </div>
+        <!-- Country selector -->
+        <div>
+          <label class="search-label">Country Selector</label>
+          <div
+            aria-expanded="false"
+            aria-controls="country-selector-mobile-dropdown-list"
+            aria-haspopup="listbox"
+            aria-labelledby="country-selector-mobile-dropdown-label"
+            role="combobox"
+            tabindex="0"
+            class="country-selector-dropdown-container"
+          >
+            <div class="country-selector-text-container">
+              <span
+                ><img
+                  alt="Canada flag"
+                  height="100%"
+                  width="25"
+                  src="assets/svg/flag-canada.svg"
+              /></span>
+              <span class="country-selector-selected-text-container">
+                <div>
+                  <span>CA</span>
+                  <span class="screen-reader-text"
+                    >You're on B M O Canada website</span
+                  >
+                </div>
+                <div class="country-selector-chevron-container">
+                  <mat-icon class="country-selector-chevron"
+                    >chevron_right</mat-icon
+                  >
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div></div>
     </div>
+    <div></div>
   </div>
 </div>

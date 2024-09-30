@@ -19,8 +19,8 @@ export class SignInMobileComponent {
   @Input() isMobileSignInMenuOpen?: boolean;
   @Output() isMobileSignInMenuOpenChange = new EventEmitter<boolean>();
   @ViewChild('signInBtn') signInBtn?: any;
-  @ViewChild('hamburgerMenuBtn') hamburgerMenuBtn?: any;
   signInMenuOptions: any = this.navbarService.signInMenuOptions;
+
   onKeyDown(event: KeyboardEvent) {
     // Prevents tab navigation from leaving button that toggles the menu if its opened
     if (event.key === 'Tab' && event.shiftKey && this.isMobileSignInMenuOpen) {
@@ -33,7 +33,10 @@ export class SignInMobileComponent {
       !this.isMobileSignInMenuOpen
     ) {
       event.preventDefault();
-      this.hamburgerMenuBtn.focus();
+      const hamburgerMenuBtnElement = document.querySelector(
+        '#mobile-hamburger-menu-btn'
+      ) as HTMLButtonElement;
+      hamburgerMenuBtnElement?.focus();
     }
   }
 
