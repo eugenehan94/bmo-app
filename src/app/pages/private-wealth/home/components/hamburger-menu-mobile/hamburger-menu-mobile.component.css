@@ -159,3 +159,60 @@
   height: 100%;
   font-size: 28px;
 }
+.country-selector-chevron.open {
+  transform: rotate(90deg);
+}
+.country-selector-dropdown-list-container {
+  box-sizing: border-box;
+  width: 100%;
+  border: 0;
+  overflow-y: auto;
+  transition: max-height 0.2s;
+  display: none;
+}
+.country-selector-dropdown-list-container.open {
+  display: block;
+}
+.country-selector-dropdown-list-option-container {
+  padding-bottom: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 6px 2rem;
+  position: relative;
+  cursor: pointer;
+}
+.country-selector-dropdown-list-option-text-container {
+  width: 100%;
+  text-indent: 0;
+  display: inline-flex;
+  align-items: flex-start;
+}
+.country-selector-dropdown-list-option-text-caption-container {
+  padding-bottom: 0;
+  width: 100%;
+  margin-left: 8px;
+  font-size: 16px;
+}
+.site-selector-mobile-dropdown-container {
+  padding: 8px 0;
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+.site-selector-mobile-dropdown-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+}
+.site-selector-mobile-dropdown-chevron {
+  font-size: 28px;
+}
+.site-selector-mobile-dropdown-chevron.open {
+  transform: rotate(90deg);
+}

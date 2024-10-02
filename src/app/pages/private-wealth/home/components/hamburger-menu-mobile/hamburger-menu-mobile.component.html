@@ -76,15 +76,21 @@
         </div>
         <!-- Country selector -->
         <div>
-          <label class="search-label">Country Selector</label>
+          <label
+            class="search-label"
+            id="country-selector-mobile-dropdown-label"
+            >Country Selector</label
+          >
           <div
-            aria-expanded="false"
+            [attr.aria-expanded]="isCountrySelectorOpen"
             aria-controls="country-selector-mobile-dropdown-list"
             aria-haspopup="listbox"
             aria-labelledby="country-selector-mobile-dropdown-label"
             role="combobox"
             tabindex="0"
             class="country-selector-dropdown-container"
+            (click)="toggleIsCountrySelectorOpen()"
+            (keydown)="countrySelectorKeyDown($event)"
           >
             <div class="country-selector-text-container">
               <span
@@ -102,14 +108,78 @@
                   >
                 </div>
                 <div class="country-selector-chevron-container">
-                  <mat-icon class="country-selector-chevron"
+                  <mat-icon
+                    class="country-selector-chevron"
+                    [ngClass]="{ open: isCountrySelectorOpen }"
                     >chevron_right</mat-icon
                   >
                 </div>
               </span>
             </div>
           </div>
+          <div
+            role="listbox"
+            aria-labelledby="country-selector-mobile-dropdown-label"
+            tabindex="-1"
+            class="country-selector-dropdown-list-container"
+            [ngClass]="{ open: isCountrySelectorOpen }"
+          >
+            <div
+              role="option"
+              *ngFor="let options of countrySelectorMenuOptions"
+              id="country-selector-mobile_0"
+              aria-selected="true"
+              class="country-selector-dropdown-list-option-container"
+            >
+              <div class="country-selector-dropdown-list-option-text-container">
+                <span>
+                  <img src="{{ options.icon }}" width="20" height="20" />
+                </span>
+                <span
+                  class="country-selector-dropdown-list-option-text-caption-container"
+                >
+                  <div>{{ options.country }}</div></span
+                >
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- Site selector -->
+        <div>
+          <label id="site-selector-mobile-dropdown-label" class="search-label"
+            >Site Selector</label
+          >
+          <div
+            [attr.aria-expanded]="isSiteSelectorOpen"
+            aria-controls="site-selector-mobile-dropdown-list"
+            aria-haspopup="listbox"
+            aria-labelledby="site-selector-mobile-dropdown-label"
+            role="combobox"
+            tabindex="0"
+            class="site-selector-mobile-dropdown-container"
+            (click)="toggleIsSiteSelectorOpen()"
+          >
+            <div class="site-selector-mobile-dropdown-text-container">
+              <span>Private Wealth</span>
+              <mat-icon
+                class="site-selector-mobile-dropdown-chevron"
+                [ngClass]="{ open: isSiteSelectorOpen }"
+                >chevron_right</mat-icon
+              >
+            </div>
+          </div>
+          <ul
+            role="listbox"
+            id="site-selector-mobile-dropdown-list"
+            aria-labelledby="site-selector-mobile-dropdown-label"
+            tabindex="-1"
+          >
+            <li role="option" id="site-selector-mobile_0" aria-selected="false">
+              <a href="" aria-label="Personal"> Personal </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Language selector -->
       </div>
     </div>
     <div></div>

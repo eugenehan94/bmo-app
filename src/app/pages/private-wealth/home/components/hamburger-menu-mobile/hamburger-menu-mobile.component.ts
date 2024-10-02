@@ -7,19 +7,25 @@ import {
   ElementRef,
 } from '@angular/core';
 
+import { HamburgerMenuMobileService } from './hamburger-menu-mobile.service';
+
 @Component({
   selector: 'app-hamburger-menu-mobile',
   templateUrl: './hamburger-menu-mobile.component.html',
   styleUrl: './hamburger-menu-mobile.component.css',
 })
 export class HamburgerMenuMobileComponent {
-  constructor() {}
+  constructor(private hamburgerMenuMobileService: HamburgerMenuMobileService) {}
   @Input() isMobileMenuOpen?: boolean;
   @Output() isMobileMenuOpenChange = new EventEmitter<boolean>();
   @Input() isMobileSignInMenuOpen?: boolean;
   @Output() isMobileSignInMenuOpenChange = new EventEmitter<boolean>();
   @ViewChild('searchInput') searchInput?: ElementRef;
   isSearchMenuSelected: boolean = false;
+  countrySelectorMenuOptions: any =
+    this.hamburgerMenuMobileService.countrySelectorMenuOptions;
+  isCountrySelectorOpen: boolean = false;
+  isSiteSelectorOpen: boolean = false;
   toggleHamburgerMenu() {
     this.isMobileSignInMenuOpenChange.emit(false);
     this.isMobileMenuOpenChange.emit(!this.isMobileMenuOpen);
@@ -30,5 +36,16 @@ export class HamburgerMenuMobileComponent {
   }
   handleSearchCancelBtnFocusout() {
     this.isSearchMenuSelected = false;
+  }
+  toggleIsCountrySelectorOpen() {
+    this.isCountrySelectorOpen = !this.isCountrySelectorOpen;
+  }
+  countrySelectorKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Enter' || event.code === 'Space') {
+      this.toggleIsCountrySelectorOpen();
+    }
+  }
+  toggleIsSiteSelectorOpen() {
+    this.isSiteSelectorOpen = !this.isSiteSelectorOpen;
   }
 }
