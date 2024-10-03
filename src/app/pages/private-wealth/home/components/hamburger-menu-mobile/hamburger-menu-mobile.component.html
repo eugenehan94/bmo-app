@@ -158,6 +158,7 @@
             tabindex="0"
             class="site-selector-mobile-dropdown-container"
             (click)="toggleIsSiteSelectorOpen()"
+            (keydown)="siteSelectorKeyDown($event)"
           >
             <div class="site-selector-mobile-dropdown-text-container">
               <span>Private Wealth</span>
@@ -173,13 +174,85 @@
             id="site-selector-mobile-dropdown-list"
             aria-labelledby="site-selector-mobile-dropdown-label"
             tabindex="-1"
+            class="site-selector-ul-container"
+            [ngClass]="{ open: isSiteSelectorOpen }"
           >
-            <li role="option" id="site-selector-mobile_0" aria-selected="false">
-              <a href="" aria-label="Personal"> Personal </a>
+            <li
+              *ngFor="let option of siteSelectorMenuOptions"
+              role="option"
+              id="site-selector-mobile_{{ option.id }}"
+              aria-selected="false"
+              class="site-selector-ul-li-container"
+            >
+              @if(option.routerLink){
+              <a
+                href="{{ option.routerLink }}"
+                target="_blank"
+                [attr.aria-label]="option.ariaLabel"
+                class="site-selector-ul-li-link"
+              >
+                {{ option.linkName }}
+              </a>
+              }@else {
+              <a
+                href="{{ option.hrefLink }}"
+                target="_blank"
+                [attr.aria-label]="option.ariaLabel"
+                class="site-selector-ul-li-link"
+              >
+                {{ option.linkName }}
+              </a>
+              }
             </li>
           </ul>
         </div>
         <!-- Language selector -->
+        <div>
+          <label id="lang-selector-mobile-dropdown-label" class="search-label"
+            >Language Selector</label
+          >
+          <div
+            aria-expanded="false"
+            aria-controls="lang-selector-mobile-dropdown-list"
+            aria-haspopup="listbox"
+            aria-labelledby="lang-selector-mobile-dropdown-label"
+            id="lang-selector-mobile-dropdown-combobox"
+            role="combobox"
+            tabindex="0"
+            class="lang-selector-mobile-dropdown-container"
+            (click)="toggleIsLangSelectorOpen()"
+            (keydown)="langSelectorKeyDown($event)"
+          >
+            <div class="lang-selector-mobile-dropdown-text-container">
+              <span>English</span>
+              <mat-icon
+                aria-hidden="true"
+                class="lang-selector-mobile-dropdown-chevron"
+                [ngClass]="{ open: isLangSelectorOpen }"
+                >chevron_right</mat-icon
+              >
+            </div>
+          </div>
+          <ul
+            role="listbox"
+            id="lang-selector-mobile-dropdown-list"
+            aria-labelledby="lang-selector-mobile-dropdown-label"
+            tabindex="-1"
+            class="lang-selector-mobile-ul-container"
+            [ngClass]="{ open: isLangSelectorOpen }"
+          >
+            <li
+              *ngFor="let option of langSelectorMenuOptions"
+              role="option"
+              aria-selected="false"
+              id="site-selector-mobile-{{ option.id }}"
+            >
+              <a href="{{ option.href }}" target="_blank">{{
+                option.language
+              }}</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div></div>

@@ -47,5 +47,46 @@ export class HamburgerMenuMobileService {
       ariaLabel: 'Commercial',
       linkName: 'Commercial',
     },
+    {
+      id: 4,
+      hrefLink:
+        'https://capitalmarkets.bmo.com/en/?icid=tl-FEAT2953BRND4-AJBMOH18',
+      ariaLabel: 'Capital Markets',
+      linkName: 'Capital Markets',
+    },
+    {
+      id: 5,
+      hrefLink: 'https://www.bmogam.com/?icid=tl-FEAT2953BRND4-AJBMOH19',
+      ariaLabel: 'Global Asset Management',
+      linkName: 'Global Asset Management',
+    },
+    {
+      id: 6,
+      hrefLink: 'https://www.bmo.com/main/about-bmo/',
+      ariaLabel: 'About B M O',
+      linkName: 'About BMO',
+    },
+  ];
+
+  langSelectorMenuOptions = [
+    {
+      id: 0,
+      language: 'English',
+    },
+    {
+      id: 1,
+      language: 'Français',
+      href: 'https://www.bmo.com/fr-ca/principal/gestionprivee/',
+    },
+    {
+      id: 2,
+      language: '简体中文',
+      href: 'https://www.zs.bmo.com/privatewealth/',
+    },
+    {
+      id: 3,
+      language: '繁體中文',
+      href: 'https://www.zh.bmo.com/privatewealth/',
+    },
   ];
 }

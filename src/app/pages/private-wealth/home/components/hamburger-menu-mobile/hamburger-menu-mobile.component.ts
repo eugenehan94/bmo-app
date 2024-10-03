@@ -26,6 +26,11 @@ export class HamburgerMenuMobileComponent {
     this.hamburgerMenuMobileService.countrySelectorMenuOptions;
   isCountrySelectorOpen: boolean = false;
   isSiteSelectorOpen: boolean = false;
+  siteSelectorMenuOptions: any =
+    this.hamburgerMenuMobileService.siteSelectorMenuOptions;
+  isLangSelectorOpen: boolean = false;
+  langSelectorMenuOptions: any =
+    this.hamburgerMenuMobileService.langSelectorMenuOptions;
   toggleHamburgerMenu() {
     this.isMobileSignInMenuOpenChange.emit(false);
     this.isMobileMenuOpenChange.emit(!this.isMobileMenuOpen);
@@ -47,5 +52,18 @@ export class HamburgerMenuMobileComponent {
   }
   toggleIsSiteSelectorOpen() {
     this.isSiteSelectorOpen = !this.isSiteSelectorOpen;
+  }
+  siteSelectorKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Enter' || event.code === 'Space') {
+      this.toggleIsSiteSelectorOpen();
+    }
+  }
+  toggleIsLangSelectorOpen() {
+    this.isLangSelectorOpen = !this.isLangSelectorOpen;
+  }
+  langSelectorKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Enter' || event.code === 'Space') {
+      this.toggleIsLangSelectorOpen();
+    }
   }
 }
