@@ -212,7 +212,7 @@
             >Language Selector</label
           >
           <div
-            aria-expanded="false"
+            [attr.aria-expanded]="isLangSelectorOpen"
             aria-controls="lang-selector-mobile-dropdown-list"
             aria-haspopup="listbox"
             aria-labelledby="lang-selector-mobile-dropdown-label"
@@ -246,15 +246,37 @@
               role="option"
               aria-selected="false"
               id="site-selector-mobile-{{ option.id }}"
+              class="lang-selector-mobile-ul-li-container"
             >
-              <a href="{{ option.href }}" target="_blank">{{
-                option.language
-              }}</a>
+              <a
+                href="{{ option.href }}"
+                target="_blank"
+                class="lang-selector-mobile-ul-li-link"
+                >{{ option.language }}</a
+              >
             </li>
           </ul>
         </div>
       </div>
+      <nav>
+        <div>
+          <ul role="list">
+            <li role="listitem">
+              <a
+                href="https://www.bmo.com/en-ca/main/privatewealth/about-us/"
+                aria-label="Why B M O page"
+                aria-current="false"
+                target="_blank"
+                rel="false"
+                >Why BMO</a
+              >
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-    <div></div>
   </div>
 </div>

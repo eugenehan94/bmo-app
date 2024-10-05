@@ -295,3 +295,20 @@
   box-sizing: inherit;
   display: block;
 }
+.lang-selector-mobile-ul-li-container {
+  display: flex;
+  list-style: none;
+  padding: 8px 0;
+  text-indent: 32px;
+  position: relative;
+  cursor: pointer;
+}
+.lang-selector-mobile-ul-li-link {
+  color: #001928;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+}
